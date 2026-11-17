@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface SocialLinks {
     github?: string;
@@ -34,14 +35,15 @@ const SOCIAL_ICON_MAP: { key: keyof SocialLinks; src: string; label: string }[] 
 interface TeamMemberCardProps {
     image: string;
     name: string;
-    role: string;
+    role?: string;
+    profileHref?: string;
     isBoardMember?: boolean;
     links?: SocialLinks;
     fundedBy?: string;
     easterEggImage?: string;
 }
 
-export function TeamMemberCard({ image, name, role, isBoardMember, links, fundedBy, easterEggImage }: TeamMemberCardProps) {
+export function TeamMemberCard({ image, name, role, profileHref, isBoardMember, links, fundedBy, easterEggImage }: TeamMemberCardProps) {
     const [imgError, setImgError] = useState(false);
     const [showEgg, setShowEgg] = useState(false);
     const lastPointerType = useRef('');
@@ -106,11 +108,13 @@ export function TeamMemberCard({ image, name, role, isBoardMember, links, funded
             </div>
             <div className="flex flex-col gap-1 px-1 pb-2">
                 <h3 className="font-space-mono text-lg font-normal text-foreground leading-tight">
-                    {name}
+                    {profileHref ? <Link className="hover:text-primary hover:underline focus-visible:underline" href={profileHref}>{name}</Link> : name}
                 </h3>
-                <p className="font-poppins text-xs font-normal text-foreground-secondary leading-relaxed">
-                    {role}
-                </p>
+                {role && (
+                    <p className="font-poppins text-xs font-normal text-foreground-secondary leading-relaxed">
+                        {role}
+                    </p>
+                )}
                 {fundedBy && (
                     <p className="font-poppins text-[11px] text-foreground/40 leading-relaxed">
                         Funded by <span className="text-primary/70 font-medium">{fundedBy}</span>

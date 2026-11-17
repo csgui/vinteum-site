@@ -1,15 +1,18 @@
 "use client";
 
+import type { LocalizedText } from "@/data/people";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { SocialLinks, TeamMemberCard } from "./TeamMemberCard";
 import { SectionTitle } from "./SectionTitle";
 
-export type AlumniMember = {
-    nameKey: string;
-    roleKey: string;
+export type ProgramMember = {
+    slug: string;
+    name: string;
+    work?: LocalizedText;
     image: string;
     status?: "current" | "past";
+    fundedBy?: string;
     links?: SocialLinks;
     easterEggImage?: string;
 };
@@ -18,7 +21,7 @@ type Filter = "all" | "current" | "past";
 
 type Props = {
     titleKey: string;
-    members: AlumniMember[];
+    members: ProgramMember[];
     /** Show Current / Past filter tabs */
     showFilter?: boolean;
     filterCurrentKey?: string;
@@ -44,7 +47,7 @@ export function AlumniCarouselSection({
     initialVisible = 8,
     initialFilter = "all",
 }: Props) {
-    const { t } = useLanguage();
+    const { t, locale } = useLanguage();
     const [filter, setFilter] = useState<Filter>(initialFilter);
     const [expanded, setExpanded] = useState(false);
 
@@ -98,13 +101,14 @@ export function AlumniCarouselSection({
                 <div className="flex flex-wrap justify-center gap-4 md:gap-6">
                     {visible.map((member) => (
                         <div
-                            key={member.nameKey}
+                            key={member.slug}
                             className="w-full sm:w-[calc(50%-8px)] md:w-[calc(33.333%-10.667px)] lg:w-[calc(25%-18px)]"
                         >
                             <TeamMemberCard
                                 image={member.image}
-                                name={t(member.nameKey)}
-                                role={t(member.roleKey)}
+                                name={member.name}
+                                role={member.work?.[locale]}
+                                profileHref={`/people/${member.slug}`}
                                 links={member.links}
                                 easterEggImage={member.easterEggImage}
                             />

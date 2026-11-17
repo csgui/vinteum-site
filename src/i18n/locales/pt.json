@@ -38,7 +38,8 @@
             "hackerhouse": "Casa21 hackhouse",
             "grants": "Grants Program",
             "contact": "Contato"
-        }
+        },
+        "people": "Pessoas"
     },
     "footer": {
         "newsletter": {
@@ -374,17 +375,7 @@
             "filterCurrent": "Grantees Atuais",
             "filterPast": "Ex-Grantees",
             "showMore": "Ver todos os grantees",
-            "showLess": "Ver menos",
-            "members": {
-                "leonardoLima": { "name": "Leonardo Lima", "role": "Bitcoin Dev Kit" },
-                "davidsonSouza": { "name": "Davidson Souza", "role": "Floresta" },
-                "plebhash": { "name": "plebhash", "role": "Stratum V2" },
-                "pins": { "name": "Pins", "role": "LND" },
-                "chrisG": { "name": "Chris G.", "role": "Floresta" },
-                "johnnySantos": { "name": "Johnny Santos", "role": "P2Pool V2" },
-                "erickCestari": { "name": "Erick Cestari", "role": "Bitcoinfuzz / Smite" },
-                "thgOO": { "name": "thgO-O", "role": "BtcPayServer" }
-            }
+            "showLess": "Ver menos"
         }
     },
     "fellowship": {
@@ -428,36 +419,7 @@
             "filterCurrent": "Fellows Atuais",
             "filterPast": "Ex-Fellows",
             "showMore": "Ver todos os fellows",
-            "showLess": "Ver menos",
-            "members": {
-                "viniciusCestari": { "name": "Vinicius Cestari", "role": "Bitcoin Core" },
-                "chrisG": { "name": "Chris G.", "role": "Floresta" },
-                "johnnySantos": { "name": "Johnny Santos", "role": "P2Pool V2" },
-                "bc1cindy": { "name": "bc1cindy", "role": "Payjoin Dev Kit" },
-                "caioUeda": { "name": "Caio Ueda Sampaio (K-YU)", "role": "Bitcoinfuzz" },
-                "allocz": { "name": "Allocz", "role": "btcd" },
-                "octavioLucca": { "name": "Octavio Lucca", "role": "Peer Observer" },
-                "victorAndre": { "name": "Victor André", "role": "BIP324" },
-                "isaqueFranklin": { "name": "Isaque Franklin", "role": "Estudando criptografia Bitcoin" },
-                "lucasLima": { "name": "Lucas Lima", "role": "Secure Fountain Codes" },
-                "renatoBritto": { "name": "Renato Britto (satsfy)", "role": "Rust-Bitcoin" },
-                "m4ycon": { "name": "m4ycon", "role": "Peer Observer" },
-                "jayrMotta": { "name": "Jayr Motta", "role": "Mujina" },
-                "lucasBalieiro": { "name": "Lucas Balieiro", "role": "Stratum V2" },
-                "joao": { "name": "João Leal", "role": "Floresta" },
-                "luis": { "name": "Luis Schwab", "role": "BDK / Floresta" },
-                "luca0x46": { "name": "Luca0x46", "role": "Second" },
-                "gustavoStingelin": { "name": "Gustavo Stingelin", "role": "Lightning Labs" },
-                "moisePompilio": { "name": "Moises Pompilio", "role": "Floresta" },
-                "erickCestari": { "name": "Erick Cestari", "role": "Bitcoinfuzz / Smite" },
-                "guilhermeMartins": { "name": "Guilherme Martins", "role": "Krux" },
-                "theMhv": { "name": "TheMhv", "role": "CDK" },
-                "joaozinho": { "name": "joaozinho", "role": "Krux" },
-                "caio": { "name": "Caio", "role": "Boltz" },
-                "lang": { "name": "Lang", "role": "Tether" },
-                "thgOO": { "name": "thgO-O", "role": "BtcPayServer" },
-                "yan": { "name": "Yan", "role": "Bitcoin Dev Kit" }
-            }
+            "showLess": "Ver menos"
         }
     },
     "launchpad": {
@@ -509,11 +471,26 @@
         },
         "timeline": {
             "title": "Cronograma\nde 12 Semanas",
-            "week1": { "title": "Semanas 1-2", "subtitle": "Onboarding no Bitcoin Core e construção de carteiras" },
-            "week2": { "title": "Semanas 3-5", "subtitle": "Cultura FOSS, transações testnet, PR Review Club" },
-            "week3": { "title": "Semanas 6-9", "subtitle": "Mineração, redes, contribuições open-source" },
-            "week4": { "title": "Semana 10", "subtitle": "Fundamentos da Lightning Network" },
-            "week5": { "title": "Semanas 11-12", "subtitle": "Hackathon presencial e offboarding (para os melhores participantes)" }
+            "week1": {
+                "title": "Semanas 1-2",
+                "subtitle": "Onboarding no Bitcoin Core e construção de carteiras"
+            },
+            "week2": {
+                "title": "Semanas 3-5",
+                "subtitle": "Cultura FOSS, transações testnet, PR Review Club"
+            },
+            "week3": {
+                "title": "Semanas 6-9",
+                "subtitle": "Mineração, redes, contribuições open-source"
+            },
+            "week4": {
+                "title": "Semana 10",
+                "subtitle": "Fundamentos da Lightning Network"
+            },
+            "week5": {
+                "title": "Semanas 11-12",
+                "subtitle": "Hackathon presencial e offboarding (para os melhores participantes)"
+            }
         },
         "whoItsFor": {
             "badge": "Sobre",
@@ -786,22 +763,90 @@
             "item4": "Insights da nossa equipe e da comunidade global de Bitcoin"
         }
     },
-  "oranje": {
-      "eyebrow": "Do Brasil para o Bitcoin · Oranje Summit",
-      "title": "Quem desenvolve o Bitcoin que você compra?",
-      "lead": "Bitcoin não tem CEO nem um departamento central de tecnologia. Uma comunidade de desenvolvedores e pesquisadores trabalha todos os dias para manter a rede segura e melhorar seu software.",
-      "supportLink": "Quero apoiar",
-      "reportLabel": "Transparência · Relatório anual",
-      "reportTitle": "Conheça nosso trabalho.",
-      "reportBody": "O relatório do quarto ano reúne os projetos, a trajetória dos desenvolvedores apoiados e o que mudou na organização, com um relatório individual de cada contribuidor.",
-      "reportCta": "Ler o relatório",
-      "reportNote": "PDF · 57 páginas · Em inglês · Abre em nova aba",
-      "reportAlt": "Capa do relatório Vinteum Year Four",
-      "supportLabel": "Faça parte",
-      "supportTitle": "Apoie os próximos passos.",
-      "supportBody": "Seu apoio mantém pessoas trabalhando na tecnologia da qual o Bitcoin depende. Fale pelo WhatsApp para saber como você ou sua empresa podem participar, ou faça uma doação.",
-      "whatsapp": "Falar pelo WhatsApp",
-      "whatsappMessage": "Olá! Conheci a Vinteum no Oranje Summit e gostaria de saber como apoiar o trabalho de vocês.",
-      "donate": "Fazer uma doação"
-  }
+    "oranje": {
+        "eyebrow": "Do Brasil para o Bitcoin · Oranje Summit",
+        "title": "Quem desenvolve o Bitcoin que você compra?",
+        "lead": "Bitcoin não tem CEO nem um departamento central de tecnologia. Uma comunidade de desenvolvedores e pesquisadores trabalha todos os dias para manter a rede segura e melhorar seu software.",
+        "supportLink": "Quero apoiar",
+        "reportLabel": "Transparência · Relatório anual",
+        "reportTitle": "Conheça nosso trabalho.",
+        "reportBody": "O relatório do quarto ano reúne os projetos, a trajetória dos desenvolvedores apoiados e o que mudou na organização, com um relatório individual de cada contribuidor.",
+        "reportCta": "Ler o relatório",
+        "reportNote": "PDF · 57 páginas · Em inglês · Abre em nova aba",
+        "reportAlt": "Capa do relatório Vinteum Year Four",
+        "supportLabel": "Faça parte",
+        "supportTitle": "Apoie os próximos passos.",
+        "supportBody": "Seu apoio mantém pessoas trabalhando na tecnologia da qual o Bitcoin depende. Fale pelo WhatsApp para saber como você ou sua empresa podem participar, ou faça uma doação.",
+        "whatsapp": "Falar pelo WhatsApp",
+        "whatsappMessage": "Olá! Conheci a Vinteum no Oranje Summit e gostaria de saber como apoiar o trabalho de vocês.",
+        "donate": "Fazer uma doação"
+    },
+    "people": {
+        "roles": {
+            "grantee": "Grantee",
+            "fellow": "Fellow",
+            "alumni": "Alumni"
+        },
+        "directory": "Pessoas",
+        "description": "Os desenvolvedores e pesquisadores que a Vinteum forma, orienta e financia, e suas contribuições open source para o Bitcoin.",
+        "filterRole": "Filtrar por vínculo",
+        "filters": {
+            "all": "Todos",
+            "grantee": "Grantees",
+            "fellow": "Fellows",
+            "alumni": "Alumni"
+        },
+        "focus": "Áreas de atuação",
+        "allFocus": "Todas as áreas",
+        "search": "Buscar nome, projeto ou tema",
+        "count": "pessoas",
+        "countSingular": "pessoa",
+        "empty": "Nenhuma pessoa encontrada com esses filtros.",
+        "clearFilters": "Limpar filtros",
+        "profileDetails": "Detalhes do perfil",
+        "affiliations": "Vínculos",
+        "present": "Atual",
+        "programs": "Comunidade e programas",
+        "updated": "Atualizado em",
+        "connections": "Pessoas relacionadas",
+        "profileNavigation": "Seções do perfil",
+        "since": "desde",
+        "pseudonymous": "pseudônimo",
+        "mediaVideo": "Vídeo",
+        "mediaArticle": "Matéria",
+        "viewAllMedia": "Ver todas as participações",
+        "featuredContribution": "Contribuição em destaque",
+        "viewAll": "Ver todos",
+        "current": "Atual",
+        "past": "Anterior",
+        "noContributions": "Nenhuma contribuição deste tipo.",
+        "contributionType": "Filtrar contribuições por tipo",
+        "tabs": {
+            "overview": "Visão geral",
+            "projects": "Projetos",
+            "contributions": "Contribuições",
+            "discussions": "Discussões",
+            "writing": "Publicações",
+            "media": "Mídia"
+        },
+        "headings": {
+            "projects": "Projetos",
+            "contributions": "Contribuições selecionadas",
+            "discussions": "Discussões técnicas",
+            "writing": "Publicações e artigos",
+            "media": "Palestras, podcasts e mídia"
+        },
+        "supportTitle": "Apoie o trabalho open source em Bitcoin",
+        "supportDescription": "Grants e fellowships da Vinteum são financiados por pessoas e empresas que acreditam que o Bitcoin precisa de mais desenvolvedores independentes.",
+        "supportAction": "Apoie a Vinteum",
+        "title": "Proof of work",
+        "grid": "Grade",
+        "map": "Mapa",
+        "otherWork": "Outros trabalhos",
+        "cohort": "Turma",
+        "fundedBy": "Financiado por",
+        "affiliationEnd": "Encerrado em",
+        "view": "Visualização do diretório",
+        "mapScroll": "Mapa rolável de pessoas e projetos"
+    }
 }
