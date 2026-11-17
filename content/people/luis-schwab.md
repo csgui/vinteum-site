@@ -100,6 +100,17 @@ contributions:
       EN: "Organized Brasília BitDevs and assisted with university Bitcoin courses alongside open-source development."
       BR: "Organizou o Brasília BitDevs e apoiou disciplinas universitárias de Bitcoin em paralelo ao desenvolvimento open source."
 updatedAt: '2026-11-17'
+affiliations:
+  - organization: Human Rights Foundation (Bitcoin Development Fund)
+    role: { EN: Grantee, BR: Bolsista }
+    status: current
+    start: '2026-09'
+    href: 'https://x.com/gladstein/status/2092304834770923522'
+  - organization: Bitcoin Dev Kit Foundation
+    role: { EN: Grantee, BR: Bolsista }
+    status: current
+    start: '2025-09'
+    href: 'https://bitcoindevkit.org/foundation/grantees/'
 ---
 ## EN
 

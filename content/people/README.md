@@ -96,6 +96,12 @@ Grantee role, status, dates, work and description. Other programme participation
 such as the Bitcoin Dev Launchpad, stays under **Community & programs**. Do not
 create duplicate fellowship/grant rows in `affiliations` just for display.
 
+Grants and fellowships from other organizations also belong in `affiliations`,
+with their own role, status and period. Keep concurrent funding relationships
+separate: a current external grant does not erase a past Vinteum fellowship or
+imply that another grant has ended. Check the external-affiliation register as
+well as the programme rosters when updating a profile.
+
 ## Initial profiles
 
 The Fellowship and Grants rosters provide the initial names, photos, program

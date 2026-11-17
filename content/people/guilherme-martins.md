@@ -87,6 +87,12 @@ contributions:
       BR: Melhorou os testes funcionais do Floresta e a compatibilidade com o RPC do Bitcoin Core;
         depois levou esse foco em testes de volta ao Krux.
 updatedAt: '2026-11-17'
+affiliations:
+  - organization: OpenSats
+    role: { EN: Grantee, BR: Bolsista }
+    status: current
+    start: '2025-02'
+    href: 'https://opensats.org/blog/open-hardware-for-open-money'
 ---
 ## EN
 

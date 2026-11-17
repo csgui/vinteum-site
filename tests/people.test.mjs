@@ -206,6 +206,35 @@ test("keeps bios short and link-free while details live in profile sections", ()
     }
 });
 
+test("includes external grants as affiliations alongside Vinteum fellowship history", () => {
+    const expected = [
+        ["joao-leal", "OpenSats"],
+        ["joaozinho", "OpenSats"],
+        ["lucas-balieiro", "OpenSats"],
+        ["luis-schwab", "Bitcoin Dev Kit Foundation"],
+        ["luis-schwab", "Human Rights Foundation (Bitcoin Development Fund)"],
+        ["moises-pompilio", "OpenSats"],
+        ["guilherme-martins", "OpenSats"],
+        ["renato-britto", "Spiral"],
+        ["leonardo-lima", "Btrust"],
+        ["plebhash", "Btrust"],
+    ];
+    for (const [slug, organization] of expected) {
+        const { affiliations } = profileData.getProfileRelationships(getPerson(slug));
+        const entries = affiliations.filter((entry) => entry.organization === organization);
+        assert.equal(entries.length, 1, `${slug}: ${organization}`);
+        assert.equal(entries[0].role.EN, "Grantee", `${slug}: ${organization}`);
+        assert.equal(entries[0].status, "current", `${slug}: ${organization}`);
+    }
+    for (const slug of ["luis-schwab", "moises-pompilio"]) {
+        const { affiliations, programs } = profileData.getProfileRelationships(getPerson(slug));
+        assert.ok(affiliations.some(({ organization, role, status }) =>
+            organization === "Vinteum" && role.EN === "Fellow" && status === "past"), slug);
+        assert.ok(programs.every(({ program }) => program !== "fellowship" && program !== "grants"), slug);
+        assert.equal(getDirectoryRole(getPerson(slug)), "alumni", slug);
+    }
+});
+
 const baseUrl = process.env.PEOPLE_TEST_URL;
 test("built directory links to every canonical profile and unknown profiles return 404", { skip: !baseUrl }, async () => {
     const directory = await fetch(new URL("/people", baseUrl));

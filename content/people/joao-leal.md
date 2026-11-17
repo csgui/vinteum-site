@@ -85,6 +85,12 @@ contributions:
       EN: "Implemented consensus rules under mentorship before focusing on RPC compatibility so existing applications could use Floresta as a backend. Also built floresta-nix."
       BR: "Implementou regras de consenso com mentoria antes de se concentrar na compatibilidade RPC para que aplicações existentes pudessem usar o Floresta como backend. Também criou o floresta-nix."
 updatedAt: '2026-11-17'
+affiliations:
+  - organization: OpenSats
+    role: { EN: Grantee, BR: Bolsista }
+    status: current
+    start: '2026-09'
+    href: 'https://opensats.org/blog/fourteenth-wave-of-bitcoin-grants'
 ---
 ## EN
 

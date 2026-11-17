@@ -77,6 +77,12 @@ contributions:
       EN: "Worked on solo-mining tools such as sv2-ui and interoperability and compliance infrastructure through interoperability-tests-sv2."
       BR: "Trabalhou em ferramentas de mineração solo como sv2-ui e em infraestrutura de interoperabilidade e conformidade pelo interoperability-tests-sv2."
 updatedAt: '2026-11-17'
+affiliations:
+  - organization: OpenSats
+    role: { EN: Grantee, BR: Bolsista }
+    status: current
+    start: '2026-01'
+    href: 'https://opensats.org/blog/sixteenth-wave-of-bitcoin-grants'
 ---
 ## EN
 

@@ -99,6 +99,12 @@ media:
       BR: Passou da primeira turma do Launchpad aos testes de interoperabilidade no fellowship
         e à ampliação das contribuições ao Floresta com apoio da OpenSats.
     mediaType: article
+affiliations:
+  - organization: OpenSats
+    role: { EN: Grantee, BR: Bolsista }
+    status: current
+    start: '2025-11'
+    href: 'https://opensats.org/projects/floresta'
 ---
 ## EN
 

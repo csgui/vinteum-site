@@ -86,6 +86,11 @@ contributions:
         do Core.
     type: Tooling
 updatedAt: '2026-11-17'
+affiliations:
+  - organization: Btrust
+    role: { EN: Grantee, BR: Bolsista }
+    status: current
+    start: '2026-09'
 ---
 ## EN
 
