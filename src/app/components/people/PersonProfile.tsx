@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { formatPersonDate, getPrimaryParticipation, sortProfileItems, type Affiliation, type Person, type ProfileItem } from "@/data/people";
@@ -238,6 +238,17 @@ export function PersonProfile({
         (item) => contributionType === "all" || item.type === contributionType,
     );
 
+    useLayoutEffect(() => {
+        if (active === "overview") return;
+
+        const headingId = `heading-${active}`;
+        if (window.location.hash !== `#${headingId}`) return;
+
+        const heading = document.getElementById(headingId);
+        heading?.focus({ preventScroll: true });
+        heading?.scrollIntoView({ block: "start", behavior: "instant" });
+    }, [active]);
+
     function sectionLink(section: Section, type?: string) {
         const query = new URLSearchParams();
         if (section !== "overview") query.set("tab", section);
@@ -339,11 +350,11 @@ export function PersonProfile({
                                         className={styles.contentSection}
                                     >
                                         <div className={styles.contentHeading}>
-                                            <h2 id={`heading-${section}`}>
+                                            <h2 id={`heading-${section}`} tabIndex={-1}>
                                                 {t(`people.headings.${section}`)}
                                             </h2>
                                             {isOverview && items.length > visibleCount && (
-                                                <Link href={sectionLink(section)} scroll={false}>
+                                                <Link href={`${sectionLink(section)}#heading-${section}`} scroll={false}>
                                                     {t(section === "media" ? "people.viewAllMedia" : "people.viewAll")} {items.length}
                                                 </Link>
                                             )}
