@@ -80,7 +80,13 @@ test("keeps the four additional prototype profiles discoverable with their edito
         assert.ok(person.writing.length + person.contributions.length + person.discussions.length > 0, slug);
         assert.ok(filterPeople(people, { role, focus: "", query: person.name, locale: "EN" })
             .some((match) => match.slug === slug), slug);
-        assert.equal(person.programs.length, 0, slug);
+        if (role === "fellow") {
+            assert.ok(person.programs.some(({ program, organization, status }) =>
+                program === "fellowship" && organization === "Vinteum" && status === "current",
+            ), slug);
+        } else {
+            assert.equal(person.programs.length, 0, slug);
+        }
     }
     const githubLinks = getPerson("yan").links.filter(({ icon }) => icon === "github");
     assert.ok(githubLinks.some(({ href }) => href === "https://github.com/yan-pi"));

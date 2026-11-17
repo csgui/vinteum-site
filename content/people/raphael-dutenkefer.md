@@ -10,12 +10,14 @@ links:
   - label: GitHub
     href: 'https://github.com/dutenrapha'
     icon: github
-affiliations:
-  - organization: Vinteum
+programs:
+  - program: fellowship
+    name: Fellowship
+    organization: Vinteum
     role:
       EN: Fellow
       BR: Fellow
-    directoryRole: fellow
+    status: current
 projects:
   - name: Bitcoin Topology Discovery
     href: 'https://github.com/dutenrapha/bitcoin-topology-discovery'

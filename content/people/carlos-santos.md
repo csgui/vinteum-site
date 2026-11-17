@@ -8,12 +8,14 @@ links:
   - label: Blog
     icon: blog
     href: 'https://www.carlossantos.sh/'
-affiliations:
-  - organization: Vinteum
+programs:
+  - program: fellowship
+    name: Fellowship
+    organization: Vinteum
     role:
       EN: Fellow
       BR: Fellow
-    directoryRole: fellow
+    status: current
 writing:
   - id: personal-blog-payjoin-bip77-bip78
     title:

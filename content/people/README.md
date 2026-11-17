@@ -48,13 +48,11 @@ with `/`. The directory uses initials when a portrait is unavailable.
   participation becomes past. Use quoted ISO dates at the precision supported by
   the source (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`). An affiliation can set
   `directoryRole: team` or `directoryRole: fellow` to show that role in the
-  directory. Program listings use `programs` entries.
-- **Program cards:** Vinteum entries with `program: fellowship` or
-  `program: grants` and a status feed the existing program listings and the
-  directory filters. `work` is the translated project or topic label for that
+  directory. The existing program pages maintain their own rosters.
+- **Directory filters:** Vinteum entries with `program: fellowship` or
+  `program: grants` and a status determine the directory filters. `work` is the translated project or topic label for that
   participation. `name` is the program’s display name. For Launchpad alumni
   (`bitcoin-dev-launchpad`), add `cohort` and, where published, `fundedBy`.
-  Every card links to the same canonical profile.
 - **Projects:** Each `projects` item has a `name` and optional `href`,
   localized `description` and `contribution`, and a boolean `current`.
 - **Activity:** `contributions`, `discussions`, `writing` and `media` use unique

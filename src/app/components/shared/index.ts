@@ -13,7 +13,7 @@ export { BulletListWithTitleSection } from "./BulletListWithTitleSection";
 export { TwoCardCTASection } from "./TwoCardCTASection";
 export { Hero } from "./Hero";
 
-export type { ProgramMember } from "./AlumniCarouselSection";
+export type { AlumniMember } from "./AlumniCarouselSection";
 export type { CheckCardItem } from "./CheckCardGridSection";
 export type { FeatureShowcaseProps } from "./FeatureShowcase";
 export type { HeroProps, HeroVariant } from "./Hero";
