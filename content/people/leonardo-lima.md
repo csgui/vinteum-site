@@ -15,6 +15,9 @@ programs:
       EN: Bitcoin Dev Kit
       BR: Bitcoin Dev Kit
     href: /programs/grants
+    description:
+      EN: "Became a BDK maintainer in April 2025, following earlier BDK and Fedimint work through Summer of Bitcoin."
+      BR: "Tornou-se mantenedor do BDK em abril de 2025, após trabalho no BDK e no Fedimint pelo Summer of Bitcoin."
 focus:
   - Wallets
   - Rust
@@ -39,8 +42,8 @@ projects:
         Biblioteca Rust para construir carteiras Bitcoin baseadas em
         descriptors.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: "Contributed 2 merged pull requests on canonicalization and transaction ordering. Maintenance work also includes reviews, releases and contributor guidance."
+      BR: "Contribuiu com 2 pull requests integrados sobre canonicalização e ordenação de transações. A manutenção também inclui revisões, lançamentos e orientação a contribuidores."
 contributions:
   - id: github-bitcoindevkit-bdk-2038
     title:
@@ -54,6 +57,9 @@ contributions:
     source: 'bitcoindevkit/bdk · #2038'
     type: PR
     href: 'https://github.com/bitcoindevkit/bdk/pull/2038'
+    description:
+      EN: "Merged canonicalization refactor separating computation from I/O through a generic ChainQuery interface, allowing chain-data sources to vary without coupling them to canonicalization logic."
+      BR: "Refatoração integrada da canonicalização que separa processamento e I/O por uma interface genérica ChainQuery, permitindo variar fontes de dados da cadeia sem acoplá-las à lógica de canonicalização."
   - id: github-bitcoindevkit-bdk-2027
     title:
       EN: 'feat(chain): add new list_ordered_canonical_txs method'
@@ -62,25 +68,46 @@ contributions:
     source: 'bitcoindevkit/bdk · #2027'
     type: PR
     href: 'https://github.com/bitcoindevkit/bdk/pull/2027'
+  - id: bdk-structure-aware-fuzzing-signing
+    title:
+      EN: "Structure-aware wallet fuzzing and signing separation"
+      BR: "Fuzzing estruturado de carteiras e separação de assinatura"
+    source: "Vinteum · Year Four Report · August 2025–August 2026"
+    type: Tooling
+    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    description:
+      EN: "Developed structure-aware fuzzing that generates valid but adversarial wallet states, and worked toward separating signing from bdk_wallet."
+      BR: "Desenvolveu fuzzing estruturado que gera estados de carteira válidos, mas adversariais, e trabalhou para separar a assinatura do bdk_wallet."
+  - id: bdk-kernel-ipc-utxo-research
+    title:
+      EN: "BitcoinKernel, IPC and UTXO-oriented wallet research"
+      BR: "Pesquisa de carteiras com BitcoinKernel, IPC e orientação a UTXOs"
+    source: "Vinteum · Year Four Report · August 2025–August 2026"
+    type: Research
+    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    description:
+      EN: "BitcoinKernel- and IPC-based chain sources and a more UTXO-oriented wallet model remained research directions during August 2025–August 2026."
+      BR: "Fontes de dados da cadeia baseadas em BitcoinKernel e IPC e um modelo de carteira mais orientado a UTXOs permaneciam direções de pesquisa entre agosto de 2025 e agosto de 2026."
 updatedAt: '2026-11-17'
 affiliations:
   - organization: Btrust
     role: { EN: Grantee, BR: Bolsista }
     status: current
     start: '2026-09'
+media:
+  - id: bdk-maintainer-announcement
+    title:
+      EN: Leonardo Lima named BDK maintainer
+      BR: Leonardo Lima se torna mantenedor do BDK
+    source: Vinteum
+    href: 'https://www.vinteum.org/blog/leonardo-lima-named-bdk-maintainer-and-renews-his-vinteum-grant'
+    date: '2025-04'
+    mediaType: article
 ---
 ## EN
 
-Leonardo Lima has contributed to Bitcoin Dev Kit. Selected work includes BDK transaction graphs, canonicalization and transaction ordering.
-
-Vinteum [announced Leonardo's BDK maintainership in April 2025](https://www.vinteum.org/blog/leonardo-lima-named-bdk-maintainer-and-renews-his-vinteum-grant), following earlier work in BDK and Fedimint through Summer of Bitcoin. The [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) describes his subsequent work on wallet correctness and architecture: a merged canonicalization refactor separated computation from I/O through a generic ChainQuery interface, allowing chain-data sources to vary without coupling them to the canonicalization logic.
-
-His work also includes structure-aware fuzzing that generates valid but adversarial wallet states, work toward separating signing from bdk_wallet, and maintenance through reviews, releases and contributor guidance. BitcoinKernel- and IPC-based chain sources and a more UTXO-oriented model remained research directions during the report period.
+Leonardo Lima is a Bitcoin Dev Kit maintainer working on wallet correctness and architecture in Rust. His contributions include transaction graphs, canonicalization and transaction ordering, alongside fuzz testing, code review and contributor guidance.
 
 ## PT
 
-Leonardo Lima tem contribuições em Bitcoin Dev Kit. Seu trabalho inclui grafos de transações, canonicalização e ordenação de transações no BDK.
-
-A Vinteum [anunciou Leonardo como mantenedor do BDK em abril de 2025](https://www.vinteum.org/blog/leonardo-lima-named-bdk-maintainer-and-renews-his-vinteum-grant), após contribuições ao BDK e ao Fedimint pelo Summer of Bitcoin. O [relatório do quarto ano](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve seu trabalho posterior em correção e arquitetura de carteiras: uma refatoração integrada da canonicalização separou processamento e I/O por meio da interface genérica ChainQuery, permitindo variar as fontes de dados da cadeia sem acoplá-las à lógica de canonicalização.
-
-Seu trabalho também inclui fuzzing estruturado que gera estados de carteira válidos, mas adversariais, trabalho para separar a assinatura do bdk_wallet e manutenção por meio de revisões, lançamentos e orientação a contribuidores. Fontes de dados baseadas em BitcoinKernel e IPC e um modelo mais orientado a UTXOs permaneciam direções de pesquisa no período coberto pelo relatório.
+Leonardo Lima é mantenedor do Bitcoin Dev Kit e trabalha em correção e arquitetura de carteiras em Rust. Suas contribuições incluem grafos de transações, canonicalização e ordenação de transações, além de fuzzing, revisão de código e orientação a contribuidores.

@@ -50,8 +50,15 @@ projects:
       EN: 'A lightweight and embeddable Bitcoin client, built for sovereignty.'
       BR: Cliente Bitcoin compacto e integrável em outras aplicações.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Contributed one merged pull request. Maintainer work includes component modularization,
+        clearer subsystem boundaries, development roadmaps and contributor coordination, alongside
+        architectural proposals, mentoring and guidance on implementation decisions. The architecture
+        targets both an embeddable Bitcoin backend and a standalone node.
+      BR: Contribuiu com um pull request integrado. A manutenção inclui modularização de componentes,
+        limites mais claros entre subsistemas, planejamento do desenvolvimento e coordenação de
+        contribuidores, além de propostas de arquitetura, mentoria e orientação de decisões de implementação.
+        A arquitetura visa tanto um backend Bitcoin integrável em outras aplicações quanto um nó
+        independente.
   - name: hintsfile
     href: 'https://github.com/2140-dev/hintsfile'
     description:
@@ -81,6 +88,20 @@ contributions:
     source: '2140-dev/hintsfile · #11'
     type: PR
     href: 'https://github.com/2140-dev/hintsfile/pull/11'
+  - id: chris-g-utreexo-lisp
+    title:
+      EN: Independent Utreexo reference implementation in Lisp
+      BR: Implementação de referência independente de Utreexo em Lisp
+    source: Vinteum · 2026 annual report
+    type: Research
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Was developing an independent Utreexo reference implementation in Lisp in 2026. Reimplementing
+        the accumulator separately allows examination of its operations and assumptions without
+        inheriting production-code abstractions.
+      BR: Em 2026, desenvolvia uma implementação de referência independente de Utreexo em Lisp.
+        Reimplementar o acumulador separadamente permite examinar suas operações e premissas sem
+        herdar as abstrações do código de produção.
 writing:
   - id: personal-blog-article-p-adics
     title:
@@ -93,16 +114,8 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-Chris G. has contributed to Floresta, hintsfile. Selected work includes Floresta consensus validation and defensive parsing.
-
-The [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) describes Chris's Floresta work beyond individual code changes: component modularization, clearer subsystem boundaries, development roadmaps and contributor coordination. His maintainer responsibilities include architectural proposals, mentoring and guidance on implementation decisions. The architectural goal is to make Floresta usable as an embeddable Bitcoin backend as well as a standalone node.
-
-During the report period, he was also developing an independent Utreexo reference implementation in Lisp for research. Reimplementing the accumulator separately provides a way to examine its operations and assumptions without inheriting the production code's abstractions.
+Chris G. maintains Floresta, working on its architecture, consensus validation and use as an embeddable Bitcoin backend. He also contributes to defensive parsing in hintsfile, and his research includes an independent Utreexo implementation.
 
 ## PT
 
-Chris G. tem contribuições em Floresta, hintsfile. Seu trabalho inclui validação de consenso no Floresta e parsing defensivo.
-
-O [relatório anual de 2026](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve o trabalho de Chris no Floresta além das mudanças individuais de código: modularização de componentes, limites mais claros entre subsistemas, planejamento do desenvolvimento e coordenação de contribuidores. Suas responsabilidades de manutenção incluem propostas de arquitetura, mentoria e orientação de decisões de implementação. O objetivo arquitetural é permitir o uso do Floresta como backend Bitcoin integrável em outras aplicações, além de nó independente.
-
-No período coberto pelo relatório, também desenvolvia uma implementação de referência independente de Utreexo em Lisp para pesquisa. Reimplementar o acumulador separadamente permite examinar suas operações e premissas sem herdar as abstrações do código de produção.
+Chris G. atua na manutenção do Floresta, trabalhando em arquitetura, validação de consenso e uso como backend Bitcoin integrável em outras aplicações. Também contribui para o parsing defensivo em hintsfile, e sua pesquisa inclui uma implementação independente de Utreexo.

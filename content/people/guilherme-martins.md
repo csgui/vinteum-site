@@ -43,8 +43,10 @@ projects:
       EN: Open-source signing device firmware for Bitcoin
       BR: Firmware open source para dispositivos de assinatura Bitcoin.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: Contributed 2 merged pull requests covering SeedXOR backups and button tests. Work on
+        Krux also covers CI, hardware support and wallet functionality.
+      BR: Contribuiu com 2 pull requests integrados, envolvendo backups SeedXOR e testes de botões.
+        O trabalho no Krux também abrange CI, suporte a hardware e funcionalidades de carteira.
 contributions:
   - id: github-selfcustody-krux-727
     title:
@@ -62,16 +64,34 @@ contributions:
     source: 'selfcustody/krux · #600'
     type: PR
     href: 'https://github.com/selfcustody/krux/pull/600'
+  - id: guilherme-martins-installer
+    title:
+      EN: Krux Installer
+      BR: Krux Installer
+    source: Vinteum · First-cohort alumni outlook
+    type: Tooling
+    href: https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook
+    description:
+      EN: Created Krux Installer before working on Floresta testing.
+      BR: Criou o Krux Installer antes de trabalhar em testes do Floresta.
+  - id: guilherme-martins-floresta-testing
+    title:
+      EN: Floresta functional tests and RPC compatibility
+      BR: Testes funcionais e compatibilidade RPC no Floresta
+    source: Vinteum · First-cohort alumni outlook
+    type: Tooling
+    href: https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook
+    description:
+      EN: Improved Floresta functional tests and compatibility with Bitcoin Core RPC, then brought
+        that testing focus back to Krux.
+      BR: Melhorou os testes funcionais do Floresta e a compatibilidade com o RPC do Bitcoin Core;
+        depois levou esse foco em testes de volta ao Krux.
 updatedAt: '2026-11-17'
 ---
 ## EN
 
-Guilherme Martins has contributed to krux. Selected work includes Krux signing-device features, SeedXOR backups and tests.
-
-In the [August 2026 alumni account](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), Guilherme (qlrd) describes creating Krux Installer, then improving Floresta functional tests and Bitcoin Core RPC compatibility. He brought that testing focus back to Krux through CI, hardware support and wallet functionality.
+Guilherme Martins contributes to Krux, working on signing-device features, SeedXOR backups and tests. He created Krux Installer and has also worked on Floresta functional tests and Bitcoin Core RPC compatibility.
 
 ## PT
 
-Guilherme Martins tem contribuições em krux. Seu trabalho inclui funcionalidades do dispositivo de assinatura Krux, backups SeedXOR e testes.
-
-No [relato de ex-participantes de agosto de 2026](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), Guilherme (qlrd) descreve a criação do Krux Installer e melhorias nos testes funcionais e na compatibilidade RPC do Floresta com Bitcoin Core. Depois, levou esse foco em testes ao Krux, trabalhando em CI, suporte a hardware e funcionalidades de carteira.
+Guilherme Martins contribui para o Krux, trabalhando em funcionalidades do dispositivo de assinatura, backups SeedXOR e testes. Criou o Krux Installer e também trabalhou em testes funcionais do Floresta e compatibilidade com o RPC do Bitcoin Core.

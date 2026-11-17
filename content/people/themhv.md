@@ -15,6 +15,11 @@ programs:
       EN: Cashu Dev Kit
       BR: Cashu Dev Kit
     href: /programs/fellowship
+    description:
+      EN: Progressed from the first Bitcoin Dev Launchpad cohort into the fellowship and
+        CDK contributions, alongside further study of cryptography.
+      BR: Passou da primeira turma do Bitcoin Dev Launchpad ao fellowship e às contribuições
+        ao CDK, acompanhadas de estudo de criptografia.
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
     organization: Vinteum
@@ -57,6 +62,10 @@ contributions:
     source: 'cashubtc/cdk · #2226'
     type: PR
     href: 'https://github.com/cashubtc/cdk/pull/2226'
+    description:
+      EN: Removes redundant database storage for DLEQ proofs that can be derived deterministically.
+      BR: Remove armazenamento redundante no banco de dados de provas DLEQ que podem ser
+        derivadas deterministicamente.
   - id: github-cashubtc-cdk-1958
     title:
       EN: 'Fix: Wallet can get mint info without specify mint_url'
@@ -65,16 +74,30 @@ contributions:
     source: 'cashubtc/cdk · #1958'
     type: PR
     href: 'https://github.com/cashubtc/cdk/pull/1958'
+    description:
+      EN: Enables mint-information retrieval without explicitly supplying the mint URL and
+        adds CLI HTTP-proxy support.
+      BR: Permite consultar informações da mint sem fornecer explicitamente sua URL e adiciona
+        suporte a proxy HTTP na CLI.
 updatedAt: '2026-11-17'
+media:
+  - id: themhv-alumni-outlook-2026
+    title:
+      EN: From Launchpad to CDK and cryptography
+      BR: Do Launchpad ao CDK e à criptografia
+    source: Vinteum · August 2026
+    href: https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook
+    description:
+      EN: Progressed from the first Launchpad cohort into the fellowship, CDK contributions
+        and further cryptography study.
+      BR: Passou da primeira turma do Launchpad ao fellowship, às contribuições ao CDK e
+        ao estudo de criptografia.
+    mediaType: article
 ---
 ## EN
 
-TheMhv contributes to Cashu Development Kit, working on wallet tooling and proof-storage behaviour. His merged [DLEQ storage change](https://github.com/cashubtc/cdk/pull/2226) removes redundant database storage for proofs that can be derived deterministically. Another merged [wallet/CLI change](https://github.com/cashubtc/cdk/pull/1958) enables mint-information retrieval without explicitly supplying the mint URL and adds CLI HTTP-proxy support.
-
-Vinteum’s [August 2026 alumni retrospective](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook) describes his path from the first Bitcoin Dev Launchpad cohort into its fellowship and CDK contributions, alongside further study of cryptography.
+TheMhv contributes to Cashu Development Kit, working on wallet tooling and proof-storage behaviour. He joined Vinteum’s fellowship after the first Bitcoin Dev Launchpad cohort and continued studying cryptography alongside his CDK contributions.
 
 ## PT
 
-TheMhv contribui para o Cashu Development Kit, com trabalho em ferramentas de carteiras e armazenamento de provas. Sua [mudança no armazenamento de DLEQ](https://github.com/cashubtc/cdk/pull/2226), já integrada, remove armazenamento redundante no banco de dados de provas que podem ser derivadas deterministicamente. Outra [mudança em carteiras e na CLI](https://github.com/cashubtc/cdk/pull/1958) permite consultar informações da mint sem fornecer explicitamente sua URL e adiciona suporte a proxy HTTP na CLI.
-
-A [retrospectiva de agosto de 2026 da Vinteum](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook) descreve sua trajetória da primeira turma do Bitcoin Dev Launchpad ao fellowship e às contribuições ao CDK, acompanhadas de estudo de criptografia.
+TheMhv contribui para o Cashu Development Kit, com trabalho em ferramentas de carteiras e armazenamento de provas. Entrou no fellowship da Vinteum após a primeira turma do Bitcoin Dev Launchpad e continuou estudando criptografia enquanto contribuía para o CDK.

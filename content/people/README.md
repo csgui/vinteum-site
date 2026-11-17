@@ -85,6 +85,17 @@ alone does not imply a fellowship. Keep pseudonymous contributors under their
 chosen public identity, and confirm permission for biographies, photos and
 personal links before publication.
 
+Keep biographies to one short paragraph per language, without links or source
+attribution such as "according to the report". Put technical detail in project
+summaries, selected-contribution descriptions, publications and programme history.
+Keep the supporting public link with the relevant entry instead of in the bio.
+
+Fellowships and grants remain in `programs` as the single source used by directory
+filters. The profile renders them as **Affiliations**, using their Fellow or
+Grantee role, status, dates, work and description. Other programme participation,
+such as the Bitcoin Dev Launchpad, stays under **Community & programs**. Do not
+create duplicate fellowship/grant rows in `affiliations` just for display.
+
 ## Initial profiles
 
 The Fellowship and Grants rosters provide the initial names, photos, program

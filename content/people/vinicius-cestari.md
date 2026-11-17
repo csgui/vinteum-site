@@ -64,8 +64,11 @@ projects:
         Biblioteca C++ para chamadas de funções e referências a objetos entre
         processos.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Contributed one merged pull request. Worked on serialization helpers, generated
+        code, process-error handling, tests and builds, alongside IPC review.
+      BR: Contribuição por meio de um pull request integrado. Trabalhou em helpers de serialização,
+        código gerado, tratamento de erros de processos, testes e builds, além de revisão
+        de IPC.
 contributions:
   - id: github-bitcoin-core-secp256k1-1972
     title:
@@ -75,6 +78,9 @@ contributions:
     source: 'bitcoin-core/secp256k1 · #1972'
     type: PR
     href: 'https://github.com/bitcoin-core/secp256k1/pull/1972'
+    description:
+      EN: Consolidates repeated Silent Payments test setup into reusable helpers.
+      BR: Consolida a preparação repetida dos testes de Silent Payments em helpers reutilizáveis.
   - id: github-bitcoin-core-libmultiprocess-324
     title:
       EN: 'proxy: Name threads spawned by the event loop'
@@ -83,6 +89,23 @@ contributions:
     source: 'bitcoin-core/libmultiprocess · #324'
     type: PR
     href: 'https://github.com/bitcoin-core/libmultiprocess/pull/324'
+    description:
+      EN: Makes event-loop worker and cleanup threads distinguishable in process tools and
+        logs.
+      BR: Permite distinguir workers e threads de limpeza do event loop nas ferramentas
+        de processos e nos logs.
+  - id: vinicius-rpc-over-ipc-prototype
+    title:
+      EN: RPC-over-IPC prototype in the 2140 fork
+      BR: Protótipo de RPC via IPC no fork 2140
+    source: Vinteum · 2026
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Developed an RPC-over-IPC prototype in the 2140 fork that evolved toward a generic
+        Cap’n Proto interface after feedback.
+      BR: Desenvolveu um protótipo de RPC via IPC no fork 2140 que evoluiu, após feedback,
+        para uma interface Cap’n Proto genérica.
+    type: Research
 writing:
   - id: personal-blog-hunting-live-mutants
     title:
@@ -102,12 +125,8 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-Vinicius Cestari contributes to Bitcoin Core infrastructure, especially interprocess communication and libmultiprocess. Vinteum’s [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documents work on serialization helpers, generated code, process-error handling, tests and builds, alongside IPC review. It also describes an RPC-over-IPC prototype in the 2140 fork that evolved toward a generic Cap’n Proto interface after feedback.
-
-His merged [thread-naming change](https://github.com/bitcoin-core/libmultiprocess/pull/324) makes event-loop worker and cleanup threads distinguishable in process tools and logs. In libsecp256k1, a merged [Silent Payments test refactor](https://github.com/bitcoin-core/secp256k1/pull/1972) consolidates repeated setup into reusable helpers.
+Vinicius Cestari contributes to Bitcoin Core infrastructure, especially interprocess communication and libmultiprocess. His work spans serialization, generated code, error handling and testing, alongside IPC review and experiments with RPC interfaces.
 
 ## PT
 
-Vinicius Cestari contribui para a infraestrutura do Bitcoin Core, especialmente comunicação entre processos e libmultiprocess. O [relatório do quarto ano da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documenta trabalho em helpers de serialização, código gerado, tratamento de erros de processos, testes e builds, além de revisão de IPC. Também descreve um protótipo de RPC via IPC no fork 2140 que evoluiu, após feedback, para uma interface Cap’n Proto genérica.
-
-Sua [mudança de nomes de threads](https://github.com/bitcoin-core/libmultiprocess/pull/324), já integrada, permite distinguir workers e threads de limpeza do event loop nas ferramentas de processos e nos logs. Na libsecp256k1, um [refactor de testes de Silent Payments](https://github.com/bitcoin-core/secp256k1/pull/1972) consolida a preparação repetida em helpers reutilizáveis.
+Vinicius Cestari contribui para a infraestrutura do Bitcoin Core, especialmente comunicação entre processos e libmultiprocess. Seu trabalho abrange serialização, código gerado, tratamento de erros e testes, além de revisão de IPC e experimentos com interfaces RPC.

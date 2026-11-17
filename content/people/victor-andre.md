@@ -58,6 +58,27 @@ contributions:
     source: 'bitcoinfuzz/bitcoinfuzz · #637'
     type: PR
     href: 'https://github.com/bitcoinfuzz/bitcoinfuzz/pull/637'
+    description:
+      EN: Adds rust-bitcoin to differential testing of EllSwift decoding and secret-key
+        round trips.
+      BR: Adiciona rust-bitcoin ao teste diferencial da decodificação EllSwift e de round
+        trips a partir de chaves secretas.
+  - id: victor-bip324-traffic-lab
+    title:
+      EN: BIP324 Traffic Lab and passive traffic analysis
+      BR: BIP324 Traffic Lab e análise passiva de tráfego
+    source: Vinteum · 2026
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Developed a Warnet-based BIP324 Traffic Lab and a passive-analysis pipeline examining
+        packet size, timing, direction, flow structure and ports. The work investigates
+        what remains observable despite encryption. In 2026, port randomisation was still
+        an implementation and discussion direction.
+      BR: Desenvolveu um BIP324 Traffic Lab baseado em Warnet e um pipeline de análise passiva
+        de tamanho, tempo, direção dos pacotes, estrutura dos fluxos e portas. O trabalho
+        investiga o que permanece observável apesar da criptografia. Em 2026, a randomização
+        de portas ainda era uma direção de implementação e discussão.
+    type: Research
 discussions:
   - id: passive-traffic-bnoc
     title:
@@ -66,6 +87,11 @@ discussions:
     source: BNOC
     date: '2026-08-13'
     href: 'https://bnoc.xyz/t/passive-traffic-analysis-of-bitcoin-p2p-v2/161'
+    description:
+      EN: Passive-analysis research examining what remains observable in encrypted BIP324
+        traffic.
+      BR: Pesquisa de análise passiva sobre o que permanece observável no tráfego criptografado
+        BIP324.
 writing:
   - id: github-ClubeBitcoinUnB-theses-4
     title:
@@ -96,12 +122,8 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-Victor André studies Bitcoin P2P privacy and encrypted transport. Vinteum’s [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) describes his Warnet-based BIP324 Traffic Lab and a passive-analysis pipeline examining packet size, timing, direction, flow structure and ports. The work investigates what remains observable despite encryption; port randomisation remained an implementation and discussion direction during the report period.
-
-He also contributed merged [bitcoinfuzz targets](https://github.com/bitcoinfuzz/bitcoinfuzz/pull/637) that add rust-bitcoin to differential testing of EllSwift decoding and secret-key round trips.
+Victor André studies Bitcoin P2P privacy and encrypted transport. His work combines passive analysis of BIP324 traffic with differential fuzzing, investigating what network observers can still infer from encrypted connections.
 
 ## PT
 
-Victor André pesquisa privacidade P2P do Bitcoin e transporte criptografado. O [relatório do quarto ano da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve seu BIP324 Traffic Lab baseado em Warnet e um pipeline de análise passiva de tamanho, tempo, direção dos pacotes, estrutura dos fluxos e portas. O trabalho investiga o que permanece observável apesar da criptografia; a randomização de portas permanecia uma direção de implementação e discussão no período coberto pelo relatório.
-
-Ele também contribuiu com [alvos de bitcoinfuzz](https://github.com/bitcoinfuzz/bitcoinfuzz/pull/637), já integrados, que adicionam rust-bitcoin ao teste diferencial da decodificação EllSwift e de round trips a partir de chaves secretas.
+Victor André pesquisa privacidade P2P do Bitcoin e transporte criptografado. Seu trabalho combina análise passiva do tráfego BIP324 e fuzzing diferencial para investigar o que observadores da rede ainda podem inferir de conexões criptografadas.

@@ -76,20 +76,32 @@ contributions:
     source: 'bitcoin/bitcoin · #36686'
     type: PR
     href: 'https://github.com/bitcoin/bitcoin/pull/36686'
+  - id: bitcoinfuzz-libbitcoin-system-integration
+    title:
+      EN: "libbitcoin-system differential-fuzzing integration"
+      BR: "Integração de libbitcoin-system para fuzzing diferencial"
+    source: "Vinteum · Year Four Report · August 2025–August 2026"
+    type: Research
+    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    description:
+      EN: "Completed the libbitcoin-system integration in Bitcoinfuzz, examining script verification, transaction validation, address parsing and block deserialization. Investigated disagreements to distinguish genuine bugs from permissible implementation differences, with upstream fixes and improvements to corpora, CI and documentation."
+      BR: "Concluiu a integração de libbitcoin-system ao Bitcoinfuzz, examinando verificação de scripts, validação de transações, interpretação de endereços e desserialização de blocos. Investigou divergências para distinguir bugs reais de diferenças permitidas de implementação, com correções upstream e melhorias em corpora, CI e documentação."
+  - id: bitcoin-core-psbtv2-kernel-review
+    title:
+      EN: "Bitcoin Core workflow, PSBTv2 and BitcoinKernel review"
+      BR: "Fluxo de desenvolvimento do Bitcoin Core e revisão de PSBTv2 e BitcoinKernel"
+    source: "Vinteum · Year Four Report · August 2025–August 2026"
+    type: Code Review
+    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    description:
+      EN: "As the Bitcoinfuzz integration matured, studied Bitcoin Core’s build system, tests and development workflow. Began reviewing changes involving PSBTv2, BitcoinKernel bindings and transaction encapsulation."
+      BR: "Com o amadurecimento da integração ao Bitcoinfuzz, estudou o sistema de compilação, os testes e o fluxo de desenvolvimento do Bitcoin Core. Passou a revisar mudanças envolvendo PSBTv2, bindings de BitcoinKernel e encapsulamento de transações."
 updatedAt: '2026-11-17'
 ---
 ## EN
 
-K-YU has contributed to Bitcoinfuzz Corpora, Bitcoin Core. Selected work includes Bitcoin Core validation tests and differential-fuzzing corpora.
-
-In the [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf), covering August 2025–August 2026, K-YU's work progressed from extending fuzzing coverage to investigating how independent Bitcoin implementations disagree. He completed the libbitcoin-system integration in bitcoinfuzz, examining script verification, transaction validation, address parsing and block deserialization. The work included upstream fixes and improvements to corpora, CI and documentation.
-
-As that integration matured, he began studying Bitcoin Core's build system, tests and development workflow and reviewing changes involving PSBTv2, BitcoinKernel bindings and transaction encapsulation. His differential-fuzzing work involves investigating disagreements to distinguish genuine bugs from permissible implementation differences.
+K-YU contributes to Bitcoin Core testing and differential fuzzing with Bitcoinfuzz. His work examines disagreements between Bitcoin implementations, extends validation coverage and improves test corpora, including integration of libbitcoin-system into Bitcoinfuzz.
 
 ## PT
 
-K-YU tem contribuições em Bitcoinfuzz Corpora, Bitcoin Core. Seu trabalho inclui testes de validação no Bitcoin Core e corpus para fuzzing diferencial.
-
-No [relatório do quarto ano](/assets/files/Vinteum-Year-Four-Report-2026.pdf), que cobre agosto de 2025 a agosto de 2026, o trabalho de K-YU avançou da ampliação da cobertura de fuzzing para a investigação de divergências entre implementações independentes de Bitcoin. Ele concluiu a integração de libbitcoin-system ao bitcoinfuzz, examinando verificação de scripts, validação de transações, interpretação de endereços e desserialização de blocos. O trabalho incluiu correções upstream e melhorias em corpora, CI e documentação.
-
-Com o amadurecimento dessa integração, passou a estudar o sistema de compilação, os testes e o fluxo de desenvolvimento do Bitcoin Core e a revisar mudanças envolvendo PSBTv2, bindings de BitcoinKernel e encapsulamento de transações. Seu trabalho de fuzzing diferencial envolve investigar divergências para distinguir bugs reais de diferenças permitidas de implementação.
+K-YU contribui para testes do Bitcoin Core e fuzzing diferencial com Bitcoinfuzz. Seu trabalho investiga divergências entre implementações de Bitcoin, amplia a cobertura de validação e melhora corpora de teste, incluindo a integração de libbitcoin-system ao Bitcoinfuzz.

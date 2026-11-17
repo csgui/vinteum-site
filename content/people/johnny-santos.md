@@ -25,6 +25,9 @@ programs:
       EN: P2Pool V2
       BR: P2Pool V2
     href: /programs/bitcoin-dev-launchpad
+    description:
+      EN: "Developed a proof of concept during Bitcoin Dev Launchpad that became the starting point for P2Poolv2 compact-block relay work."
+      BR: "Desenvolveu uma prova de conceito durante o Bitcoin Dev Launchpad que se tornou o ponto de partida para o trabalho de retransmissão de blocos compactos no P2Poolv2."
     fundedBy: Vinteum
 focus:
   - Mining
@@ -72,6 +75,26 @@ contributions:
     source: 'p2poolv2/p2poolv2 · #623'
     type: PR
     href: 'https://github.com/p2poolv2/p2poolv2/pull/623'
+  - id: p2poolv2-compact-relay
+    title:
+      EN: "Compact-block relay for P2Poolv2"
+      BR: "Retransmissão de blocos compactos no P2Poolv2"
+    source: "Vinteum · Year Four Report · August 2025–August 2026"
+    type: Tooling
+    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    description:
+      EN: "Adapted compact-block relay to P2Poolv2’s architecture, changing synchronization, message flow and reconstruction. The implementation was approaching completion in August 2026."
+      BR: "Adaptou a retransmissão de blocos compactos à arquitetura do P2Poolv2, com mudanças em sincronização, fluxo de mensagens e reconstrução. A implementação estava próxima da conclusão em agosto de 2026."
+  - id: p2poolv2-network-testing-capnp
+    title:
+      EN: "Persistent testnet deployment and Bitcoin Core IPC experiments"
+      BR: "Implantação persistente em testnet e experimentos com IPC do Bitcoin Core"
+    source: "Vinteum · Year Four Report · August 2025–August 2026"
+    type: Tooling
+    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    description:
+      EN: "Used testnet nodes to investigate header synchronization, storage and networking problems, with a persistent deployment for longer-running tests. Improved containers and CI, and experimented with Bitcoin Core’s Cap’n Proto interface through bitcoin-capnp."
+      BR: "Usou nós em testnet para investigar problemas de sincronização de cabeçalhos, armazenamento e comunicação, com implantação persistente para testes prolongados. Melhorou contêineres e CI e experimentou a interface Cap’n Proto do Bitcoin Core pelo bitcoin-capnp."
 writing:
   - id: personal-blog-my-work-on-p2poolv2
     title:
@@ -84,16 +107,8 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-Johnny Santos has contributed to P2Pool V2. Selected work includes P2Pool V2 mining and deterministic share processing.
-
-The [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf), covering August 2025–August 2026, describes how Johnny's Bitcoin Dev Launchpad proof of concept grew into work on P2Poolv2's compact block relay. Adapting the protocol to the project's architecture required changes to synchronization, message flow and reconstruction. At the report’s cutoff, the relay implementation was approaching completion.
-
-His work also expanded into realistic network testing: testnet nodes exposed header-sync, storage and networking problems, while a persistent deployment supported longer-running investigations. The report records container and CI improvements and bitcoin-capnp, an experiment with Bitcoin Core's Cap'n Proto interface.
+Johnny Santos contributes to P2Pool V2, working on decentralized Bitcoin mining infrastructure. His work includes compact-block relay, deterministic share processing and network testing, alongside tooling for deployment and experiments with Bitcoin Core interfaces.
 
 ## PT
 
-Johnny Santos tem contribuições em P2Pool V2. Seu trabalho inclui mineração com P2Pool V2 e processamento determinístico de shares.
-
-O [relatório do quarto ano](/assets/files/Vinteum-Year-Four-Report-2026.pdf), que cobre agosto de 2025 a agosto de 2026, descreve como a prova de conceito de Johnny no Bitcoin Dev Launchpad se tornou trabalho de retransmissão de blocos compactos no P2Poolv2. Adaptar o protocolo à arquitetura do projeto exigiu mudanças em sincronização, fluxo de mensagens e reconstrução. Ao final do período coberto pelo relatório, a implementação estava próxima da conclusão.
-
-O trabalho também avançou para testes em condições de rede mais realistas: nós em testnet revelaram problemas de sincronização de cabeçalhos, armazenamento e comunicação, enquanto uma implantação persistente permitiu investigações prolongadas. O relatório registra melhorias em contêineres e CI e o bitcoin-capnp, um experimento com a interface Cap'n Proto do Bitcoin Core.
+Johnny Santos contribui para o P2Pool V2, trabalhando em infraestrutura de mineração descentralizada de Bitcoin. Seu trabalho inclui retransmissão de blocos compactos, processamento determinístico de shares e testes de rede, além de ferramentas de implantação e experimentos com interfaces do Bitcoin Core.

@@ -16,6 +16,9 @@ programs:
       EN: Floresta
       BR: Floresta
     href: /programs/fellowship
+    description:
+      EN: "Studied networking and systems during the fellowship while contributing to Floresta. After the first Bitcoin Dev Launchpad cohort, moved into QA engineering at Second, drawing on his Floresta contributions and study."
+      BR: "Estudou redes e sistemas durante a fellowship enquanto contribuía ao Floresta. Após a primeira turma do Bitcoin Dev Launchpad, passou à engenharia de QA na Second, com base nas contribuições ao Floresta e nos estudos."
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
     organization: Vinteum
@@ -59,25 +62,36 @@ contributions:
     source: 'getfloresta/Floresta · #565'
     type: PR
     href: 'https://github.com/getfloresta/Floresta/pull/565'
+  - id: second-bark-automated-testing
+    title:
+      EN: "Bark, SDK and application test infrastructure"
+      BR: "Infraestrutura de testes de Bark, SDK e aplicações"
+    source: "Vinteum · August 2026 alumni outlook"
+    type: Tooling
+    href: "https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook"
+    description:
+      EN: "At Second, worked on automated testing across Bark, its SDK and applications, including specialized test harnesses and fuzzing infrastructure."
+      BR: "Na Second, trabalhou em testes automatizados de Bark, seu SDK e aplicações, incluindo ferramentas especializadas de teste e infraestrutura de fuzzing."
 updatedAt: '2026-11-17'
 affiliations:
   - organization: Second
     role: { EN: QA Engineer, BR: Engenheiro de QA }
     status: current
     start: '2026-01'
+media:
+  - id: year-four-contributor-trajectory
+    title:
+      EN: Contributor trajectory in the Vinteum Year Four Report
+      BR: Trajetória no relatório do quarto ano da Vinteum
+    source: Vinteum
+    href: '/assets/files/Vinteum-Year-Four-Report-2026.pdf'
+    date: '2026-08'
+    mediaType: article
 ---
 ## EN
 
-Luca0x46 has contributed to Floresta. Selected work includes peer verification and Utreexo accumulator handling in Floresta.
-
-The [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) records Luca's move from the first Bitcoin Dev Launchpad cohort into a QA engineering role at Second. In his [August 2026 alumni account](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), he connects that transition to earlier Floresta contributions and deliberate study of networking and systems during his fellowship.
-
-At Second, he described working on automated testing across Bark, its SDK and applications, including specialized harnesses and fuzzing infrastructure.
+Luca0x46 is a QA engineer at Second and a Floresta contributor. His work includes Utreexo accumulator handling, peer verification and automated testing, with specialized test harnesses and fuzzing infrastructure for Bark, its SDK and applications.
 
 ## PT
 
-Luca0x46 tem contribuições em Floresta. Seu trabalho inclui verificação de peers e tratamento do acumulador Utreexo no Floresta.
-
-O [relatório do quarto ano](/assets/files/Vinteum-Year-Four-Report-2026.pdf) registra a passagem de Luca da primeira turma do Bitcoin Dev Launchpad para uma função de engenharia de QA na Second. Em seu [depoimento de agosto de 2026](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), ele relaciona essa transição às contribuições anteriores ao Floresta e ao estudo de redes e sistemas durante a fellowship.
-
-Na Second, relatou trabalhar em testes automatizados de Bark, seu SDK e aplicações, incluindo ferramentas especializadas de teste e infraestrutura de fuzzing.
+Luca0x46 é engenheiro de QA na Second e contribuidor do Floresta. Seu trabalho inclui tratamento do acumulador Utreexo, verificação de peers e testes automatizados, com ferramentas especializadas de teste e infraestrutura de fuzzing para Bark, seu SDK e aplicações.

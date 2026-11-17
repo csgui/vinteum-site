@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { formatPersonDate, getPrimaryParticipation, sortProfileItems, type Affiliation, type Person, type ProfileItem } from "@/data/people";
+import { formatPersonDate, getPrimaryParticipation, getProfileRelationships, sortProfileItems, type Affiliation, type Person, type ProfileItem } from "@/data/people";
 import Markdown from "react-markdown";
 import { PeopleHeroArt, PeopleSupport, PersonAvatar } from "./PeoplePrimitives";
 import styles from "./people.module.css";
@@ -109,13 +109,14 @@ function AffiliationDetails({ entry }: { entry: Affiliation }) {
 
 function ProfileSidebar({ person, relatedPeople }: { person: Person; relatedPeople: Person[] }) {
     const { locale, t } = useLanguage();
+    const { affiliations, programs } = getProfileRelationships(person);
     return (
         <aside className={styles.sidebar} aria-label={t("people.profileDetails")}>
-            {!!person.affiliations.length && (
+            {!!affiliations.length && (
                 <section>
                     <h2>{t("people.affiliations")}</h2>
                     <ul className={styles.affiliations}>
-                        {person.affiliations.map((affiliation, index) => (
+                        {affiliations.map((affiliation, index) => (
                             <li key={`${affiliation.organization}-${affiliation.start}-${index}`}>
                                 <span className={styles.organizationIcon} aria-hidden="true">
                                     {affiliation.organization === "Vinteum" ? (
@@ -142,17 +143,19 @@ function ProfileSidebar({ person, relatedPeople }: { person: Person; relatedPeop
                                         )}
                                     </h3>
                                     <AffiliationDetails entry={affiliation} />
+                                    {affiliation.work && <p>{affiliation.work[locale]}</p>}
+                                    {affiliation.description && <p>{affiliation.description[locale]}</p>}
                                 </div>
                             </li>
                         ))}
                     </ul>
                 </section>
             )}
-            {!!person.programs.length && (
+            {!!programs.length && (
                 <section>
                     <h2>{t("people.programs")}</h2>
                     <ul className={styles.programs}>
-                        {person.programs.map((program, index) => (
+                        {programs.map((program, index) => (
                             <li key={`${program.program}-${index}`}>
                                 <h3>
                                     {program.href ? (

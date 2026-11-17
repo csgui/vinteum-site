@@ -16,6 +16,13 @@ programs:
       EN: Floresta
       BR: Floresta
     href: /programs/fellowship
+    description:
+      EN: After the first Bitcoin Dev Launchpad cohort, tested LDK-node interoperability
+        during the fellowship. Later expanded Floresta work to RPCs, Electrum and wallets
+        with OpenSats support.
+      BR: Após a primeira turma do Bitcoin Dev Launchpad, testou interoperabilidade no LDK-node
+        durante o fellowship. Depois ampliou o trabalho no Floresta para RPCs, Electrum
+        e carteiras, com apoio da OpenSats.
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
     organization: Vinteum
@@ -58,6 +65,11 @@ contributions:
     source: 'getfloresta/Floresta · #1376'
     type: PR
     href: 'https://github.com/getfloresta/Floresta/pull/1376'
+    description:
+      EN: Separates errors attributable to the block sender from Utreexo-proof errors. Adds
+        chain-mocked tests for peer punishment and request-state cleanup.
+      BR: Separa erros atribuíveis ao remetente do bloco de erros nas provas Utreexo. Acrescenta
+        testes com uma cadeia simulada para punição de peers e limpeza do estado das requisições.
   - id: github-getfloresta-Floresta-1375
     title:
       EN: 'refactor(chain): separate block structure and BIP34 validation'
@@ -66,16 +78,32 @@ contributions:
     source: 'getfloresta/Floresta · #1375'
     type: PR
     href: 'https://github.com/getfloresta/Floresta/pull/1375'
+    description:
+      EN: Separates block-structure checks for Merkle roots, witness commitments and block
+        weight from the height-dependent BIP34 coinbase check, with reusable fixtures and
+        tests for invalid blocks.
+      BR: Separa verificações estruturais de raízes de Merkle, compromissos de witness e
+        peso dos blocos da verificação de altura da coinbase exigida pelo BIP34, com fixtures
+        reutilizáveis e testes de blocos inválidos.
 updatedAt: '2026-11-17'
+media:
+  - id: moises-alumni-outlook-2026
+    title:
+      EN: From LDK-node interoperability to Floresta
+      BR: Da interoperabilidade do LDK-node ao Floresta
+    source: Vinteum · August 2026
+    href: https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook
+    description:
+      EN: Progressed from the first Launchpad cohort to fellowship interoperability testing
+        and broader Floresta contributions with OpenSats support.
+      BR: Passou da primeira turma do Launchpad aos testes de interoperabilidade no fellowship
+        e à ampliação das contribuições ao Floresta com apoio da OpenSats.
+    mediaType: article
 ---
 ## EN
 
-Moises Pompilio contributes to Floresta, a lightweight Bitcoin node using Utreexo. His merged validation refactor separates block-structure checks (Merkle roots, witness commitments and block weight) from the height-dependent BIP34 coinbase check, with reusable fixtures and tests for invalid blocks. A companion change separates errors attributable to the block sender from Utreexo-proof errors, and adds chain-mocked tests for peer punishment and request-state cleanup. See [block validation](https://github.com/getfloresta/Floresta/pull/1375) and [wire error handling](https://github.com/getfloresta/Floresta/pull/1376).
-
-In Vinteum’s [August 2026 alumni retrospective](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), he describes moving from the first Bitcoin Dev Launchpad cohort into a fellowship testing LDK-node interoperability, then expanding his Floresta work into RPCs, Electrum and wallets with OpenSats support.
+Moises Pompilio contributes to Floresta, a lightweight Bitcoin node using Utreexo. His work covers block validation, network error handling, RPCs and wallet integration, following interoperability testing with LDK-node during his Vinteum fellowship.
 
 ## PT
 
-Moises Pompilio contribui para o Floresta, um nó Bitcoin leve que utiliza Utreexo. Seu refactor integrado separa verificações estruturais dos blocos (raízes de Merkle, compromissos de witness e peso) da verificação de altura da coinbase exigida pelo BIP34, com fixtures reutilizáveis e testes de blocos inválidos. Uma mudança complementar distingue erros atribuíveis ao remetente do bloco de erros nas provas Utreexo e acrescenta testes com uma cadeia simulada para punição de peers e limpeza do estado das requisições. Veja a [validação de blocos](https://github.com/getfloresta/Floresta/pull/1375) e o [tratamento de erros de rede](https://github.com/getfloresta/Floresta/pull/1376).
-
-Na [retrospectiva de agosto de 2026 da Vinteum](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), ele descreve a passagem da primeira turma do Bitcoin Dev Launchpad ao fellowship, com testes de interoperabilidade no LDK-node, e depois a ampliação do trabalho no Floresta para RPCs, Electrum e carteiras, com apoio da OpenSats.
+Moises Pompilio contribui para o Floresta, um nó Bitcoin leve que utiliza Utreexo. Trabalha com validação de blocos, tratamento de erros de rede, RPCs e integração com carteiras, após testar a interoperabilidade do LDK-node durante seu fellowship na Vinteum.

@@ -34,15 +34,39 @@ writing:
     date: '2026-03-10'
     source: brunoerg.xyz
     href: 'https://brunoerg.xyz/2026/03/10/dos-floresta.html'
+projects:
+  - name: Bitcoinfuzz
+    href: 'https://brunoerg.xyz/2025/08/21/the-state-of-bitcoinfuzz.html'
+    description:
+      EN: Differential-fuzzing framework comparing how independent Bitcoin, Lightning and related library implementations process identical inputs.
+      BR: Framework de fuzzing diferencial que compara como implementações independentes de Bitcoin, Lightning e bibliotecas relacionadas processam as mesmas entradas.
+    contribution:
+      EN: Created the framework to investigate implementation disagreements and detect bugs.
+      BR: Criou o framework para investigar divergências entre implementações e detectar bugs.
+  - name: Bitcoin Dev Launchpad
+    href: 'https://opensats.org/blog/developer-spotlight-bruno-garcia'
+    description:
+      EN: Technical training and mentorship connecting protocol study with upstream contribution.
+      BR: Formação técnica e mentoria que conectam o estudo do protocolo à contribuição nos projetos.
+    contribution:
+      EN: Helped launch the programme and mentors fellows and grantees.
+      BR: Ajudou a criar o programa e orienta fellows e grantees.
+contributions:
+  - id: core-fuzzing-mutation-testing
+    type: Tooling
+    title:
+      EN: Fuzzing, mutation testing and Bitcoin Core review
+      BR: Fuzzing, testes de mutação e revisão do Bitcoin Core
+    href: 'https://opensats.org/blog/developer-spotlight-bruno-garcia'
+    source: OpenSats developer spotlight
+    description:
+      EN: Finds failures with generated inputs and evaluates test coverage by checking whether tests detect deliberately introduced faults. Code review complements these automated techniques.
+      BR: Busca falhas com entradas geradas e avalia a cobertura dos testes verificando se eles detectam defeitos introduzidos deliberadamente. A revisão de código complementa essas técnicas automatizadas.
 ---
 ## EN
 
-Bruno Garcia is Head of Engineering at Vinteum and a Bitcoin Core contributor. His technical work focuses on fuzzing, mutation testing and code review: finding failures with generated inputs and checking whether tests detect deliberately introduced faults.
-
-He created Bitcoinfuzz, a differential-fuzzing framework that compares how independent implementations handle the same inputs. Its scope includes Bitcoin, Lightning and related libraries, helping distinguish implementation differences from bugs. Alongside this work, he mentors fellows and grantees and helped launch the Bitcoin Dev Launchpad, connecting technical study with upstream contribution. [Read the OpenSats developer spotlight](https://opensats.org/blog/developer-spotlight-bruno-garcia).
+Bruno Garcia is Head of Engineering at Vinteum and a Bitcoin Core contributor focused on software testing. He created Bitcoinfuzz and mentors developers entering Bitcoin open source.
 
 ## PT
 
-Bruno Garcia é Head of Engineering da Vinteum e contribuidor do Bitcoin Core. Seu trabalho técnico se concentra em fuzzing, testes de mutação e revisão de código: encontrar falhas com entradas geradas e verificar se os testes detectam defeitos introduzidos deliberadamente.
-
-Criou o Bitcoinfuzz, um framework de fuzzing diferencial que compara como implementações independentes processam as mesmas entradas. Seu escopo inclui Bitcoin, Lightning e bibliotecas relacionadas, ajudando a distinguir diferenças de implementação de bugs. Em paralelo, orienta fellows e grantees e ajudou a criar o Bitcoin Dev Launchpad, conectando estudo técnico à contribuição nos projetos. [Leia o perfil publicado pela OpenSats](https://opensats.org/blog/developer-spotlight-bruno-garcia).
+Bruno Garcia é Head of Engineering da Vinteum e contribuidor do Bitcoin Core, com foco em testes de software. Criou o Bitcoinfuzz e orienta desenvolvedores que estão entrando no Bitcoin open source.

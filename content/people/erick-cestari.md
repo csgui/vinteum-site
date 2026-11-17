@@ -66,22 +66,25 @@ projects:
         Fuzzing diferencial de implementações e bibliotecas do protocolo
         Bitcoin.
     contribution:
-      EN: >-
-        Improves differential tests and the handling of known divergences
-        between implementations.
-      BR: >-
-        Aprimora testes diferenciais e o tratamento de divergências conhecidas
-        entre implementações.
+      EN: Maintains Bitcoinfuzz, reviews contributor changes and investigates whether divergences
+        indicate implementation defects or protocol ambiguities. Targets include Lightning P2P parsing,
+        BOLT 4 onion decoding, Schnorr signature verification and PSBT parsing. Improves differential
+        tests and handling of known divergences.
+      BR: Mantém o Bitcoinfuzz, revisa mudanças de contribuidores e investiga se divergências indicam
+        defeitos nas implementações ou ambiguidades no protocolo. Os alvos incluem parsing de mensagens
+        P2P Lightning, decodificação onion de BOLT 4, verificação de assinaturas Schnorr e parsing
+        de PSBTs. Aprimora testes diferenciais e o tratamento de divergências conhecidas.
   - name: Smite
     href: 'https://github.com/lnfuzz/smite'
     description:
       EN: Snapshot fuzzing for the Bitcoin Lightning Network.
       BR: Fuzzing baseado em snapshots para a Lightning Network.
     contribution:
-      EN: Implements BOLT 4 onion routing to exercise Lightning protocol behavior.
-      BR: >-
-        Implementa roteamento onion de BOLT 4 para exercitar o comportamento do
-        protocolo Lightning.
+      EN: Implements BOLT 4 onion routing to exercise Lightning protocol behavior. His snapshot-fuzzing
+        work on Smite also forms part of his undergraduate thesis.
+      BR: Implementa roteamento onion de BOLT 4 para exercitar o comportamento do protocolo Lightning.
+        Seu trabalho com fuzzing baseado em snapshots no Smite também faz parte do trabalho de conclusão
+        de curso.
 contributions:
   - id: github-bitcoinfuzz-bitcoinfuzz-708
     title:
@@ -106,6 +109,19 @@ contributions:
     source: 'lnfuzz/smite · #170'
     type: PR
     href: 'https://github.com/lnfuzz/smite/pull/170'
+  - id: erick-cestari-fuzzing-infrastructure
+    title:
+      EN: Fuzz harnesses and encrypted-transport testing
+      BR: Harnesses de fuzzing e testes de transporte criptografado
+    source: Vinteum · 2026 annual report
+    type: Tooling
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Improved fuzz harnesses, corpus management and CI across Bitcoin projects. Added BIP324
+        encrypted-transport support in Fuzzamoto, extending node-level testing beyond legacy transport.
+      BR: Melhorou harnesses de fuzzing, gerenciamento de corpus e CI em projetos Bitcoin. Adicionou
+        suporte ao transporte criptografado BIP324 no Fuzzamoto, ampliando os testes de nós além
+        do transporte legado.
 writing:
   - id: personal-blog-eclair-oom-pending-channels
     title:
@@ -127,14 +143,6 @@ updatedAt: '2026-11-17'
 
 Erick Cestari works on Bitcoinfuzz and Smite, testing Bitcoin and Lightning implementations through differential and snapshot fuzzing. His contributions include P2P message testing and BOLT 4 onion routing.
 
-Vinteum's [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documents Erick's role as a bitcoinfuzz maintainer and his work comparing Bitcoin and Lightning implementations. His targets include Lightning P2P parsing, BOLT 4 onion decoding, Schnorr signature verification and PSBT parsing. This work also involves reviewing other contributors' changes and investigating whether disagreements reflect implementation defects or ambiguities in protocol requirements.
-
-His snapshot-fuzzing work on Smite is also part of his undergraduate thesis. He has improved fuzz harnesses, corpus management and CI across Bitcoin projects and added BIP324 encrypted-transport support in Fuzzamoto, extending node-level testing beyond legacy transport.
-
 ## PT
 
 Erick Cestari trabalha no Bitcoinfuzz e no Smite, testando implementações de Bitcoin e Lightning com fuzzing diferencial e baseado em snapshots. Suas contribuições incluem testes de mensagens P2P e roteamento onion de BOLT 4.
-
-O [relatório anual de 2026 da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documenta a atuação de Erick como mantenedor do bitcoinfuzz e seu trabalho de comparação entre implementações de Bitcoin e Lightning. Seus alvos incluem parsing de mensagens P2P Lightning, decodificação onion de BOLT 4, verificação de assinaturas Schnorr e parsing de PSBTs. O trabalho também envolve revisar mudanças de outros contribuidores e investigar se divergências indicam defeitos nas implementações ou ambiguidades nos requisitos do protocolo.
-
-Seu trabalho com fuzzing baseado em snapshots no Smite também faz parte do trabalho de conclusão de curso. Melhorou harnesses, gerenciamento de corpus e CI em projetos Bitcoin e adicionou suporte ao transporte criptografado BIP324 no Fuzzamoto, ampliando os testes de nós além do transporte legado.

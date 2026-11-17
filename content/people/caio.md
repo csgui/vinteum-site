@@ -23,15 +23,32 @@ affiliations:
   - organization: Boltz
     role: { EN: Developer, BR: Desenvolvedor }
     status: past
+projects:
+  - name: Boltz atomic-swap client
+    href: 'https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook'
+    current: false
+    description:
+      EN: Non-custodial swap client covering the full swap lifecycle, including normal operation and failure recovery.
+      BR: Cliente de swaps sem custódia que cobre todo o ciclo da operação, incluindo o funcionamento normal e a recuperação em caso de falha.
+    contribution:
+      EN: Worked on hardware-wallet compatibility, mobile support and client-side verification. User support and bug reports helped guide reliability improvements.
+      BR: Trabalhou com compatibilidade de hardware wallets, suporte móvel e verificação no cliente. O suporte aos usuários e relatos de bugs orientaram melhorias de confiabilidade.
+contributions:
+  - id: boltz-rust-swap-recovery
+    type: Tooling
+    title:
+      EN: Rust tool for recovering swap data
+      BR: Ferramenta em Rust para recuperação de dados de swaps
+    href: 'https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook'
+    source: Bitcoin Dev Launchpad alumni outlook, August 2026
+    description:
+      EN: Built a rescue tool that recovers the information needed to claim or refund funds when a user loses local swap data.
+      BR: Criou uma ferramenta para recuperar as informações necessárias ao resgate ou reembolso de fundos quando o usuário perde os dados locais do swap.
 ---
 ## EN
 
-Caio is an alumnus of the first Bitcoin Dev Launchpad cohort whose path led to engineering work at Boltz. In Vinteum’s August 2026 alumni outlook, he described working on Boltz’s non-custodial atomic-swap client across the swap lifecycle: hardware-wallet compatibility, mobile support, client-side verification and recovery when a swap fails.
-
-He also described building a Rust rescue tool to recover the information needed to claim or refund funds when a user loses local swap data. Support conversations and bug reports helped guide this reliability work. [Read the alumni outlook](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook).
+Caio is an alumnus of the first Bitcoin Dev Launchpad cohort. His Bitcoin engineering work has focused on non-custodial atomic swaps, client-side verification and recovery tools at Boltz.
 
 ## PT
 
-Caio é ex-participante da primeira turma do Bitcoin Dev Launchpad, de onde seguiu para o trabalho de engenharia na Boltz. No balanço de ex-participantes publicado pela Vinteum em agosto de 2026, descreveu sua atuação no cliente de atomic swaps sem custódia da Boltz ao longo de todo o ciclo da operação: compatibilidade com hardware wallets, suporte móvel, verificação no cliente e recuperação em caso de falha.
-
-Também relatou a criação de uma ferramenta em Rust para recuperar os dados necessários ao resgate ou reembolso de fundos quando o usuário perde os dados locais do swap. Conversas de suporte e relatos de bugs ajudaram a orientar esse trabalho de confiabilidade. [Leia o balanço de ex-participantes](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook).
+Caio é ex-participante da primeira turma do Bitcoin Dev Launchpad. Seu trabalho em engenharia Bitcoin se concentrou em atomic swaps sem custódia, verificação no cliente e ferramentas de recuperação na Boltz.

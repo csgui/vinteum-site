@@ -16,6 +16,9 @@ programs:
       EN: BDK / Floresta
       BR: BDK / Floresta
     href: /programs/fellowship
+    description:
+      EN: "After Summer of Bitcoin work on BDK and Bitcoin Dev Launchpad, focused his Vinteum fellowship on bdk-floresta. Work on the integration, Floresta and Utreexo continued after the fellowship and remained in progress in August 2026."
+      BR: "Após trabalho no BDK pelo Summer of Bitcoin e participação no Bitcoin Dev Launchpad, concentrou sua fellowship da Vinteum no bdk-floresta. O trabalho na integração, no Floresta e no Utreexo continuou após a fellowship e permanecia em andamento em agosto de 2026."
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
     organization: Vinteum
@@ -49,8 +52,8 @@ projects:
         servers over HTTP.
       BR: Clientes e tipos Rust para consultar servidores Esplora por HTTP.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: "Contributed one merged pull request extending Esplora APIs. Also maintained BDK’s Esplora and Electrum clients and contributed to rust-bitcoin."
+      BR: "Contribuiu com um pull request integrado que amplia as APIs Esplora. Também manteve os clientes Esplora e Electrum do BDK e contribuiu ao rust-bitcoin."
   - name: Floresta
     href: 'https://github.com/getfloresta/Floresta'
     description:
@@ -76,20 +79,32 @@ contributions:
     source: 'getfloresta/Floresta · #523'
     type: PR
     href: 'https://github.com/getfloresta/Floresta/pull/523'
+  - id: bdk-floresta-validating-wallet-client
+    title:
+      EN: "Connecting BDK wallets to Floresta"
+      BR: "Integração de carteiras BDK com Floresta"
+    source: "Vinteum · August 2026 alumni outlook"
+    type: Tooling
+    href: "https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook"
+    description:
+      EN: "Worked on bdk-floresta to connect BDK wallets to Floresta as a private, fully validating client. The integration remained in progress in August 2026."
+      BR: "Trabalhou no bdk-floresta para conectar carteiras BDK ao Floresta como cliente privado com validação completa. A integração permanecia em andamento em agosto de 2026."
+  - id: brasilia-bitdevs-university-courses
+    title:
+      EN: "Brasília BitDevs and university Bitcoin courses"
+      BR: "Brasília BitDevs e disciplinas universitárias de Bitcoin"
+    source: "Vinteum · August 2026 alumni outlook"
+    type: Documentation
+    href: "https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook"
+    description:
+      EN: "Organized Brasília BitDevs and assisted with university Bitcoin courses alongside open-source development."
+      BR: "Organizou o Brasília BitDevs e apoiou disciplinas universitárias de Bitcoin em paralelo ao desenvolvimento open source."
 updatedAt: '2026-11-17'
 ---
 ## EN
 
-Luis Schwab has contributed to rust-esplora-client, Floresta. Selected work includes wallet infrastructure, Electrum server configuration and Esplora APIs.
-
-In his [August 2026 alumni account](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), Luis traces his path from Summer of Bitcoin work on BDK to Bitcoin Dev Launchpad and a Vinteum fellowship focused on bdk-floresta. The integration aimed to connect BDK wallets to Floresta as a private, fully validating client; work on the integration, Floresta and Utreexo continued after the fellowship and was still in progress in August 2026.
-
-He also describes maintaining BDK's Esplora and Electrum clients and contributing to rust-bitcoin. Alongside development, he organized Brasília BitDevs and assisted with university Bitcoin courses.
+Luis Schwab contributes to Bitcoin wallet and node infrastructure in Rust. His work spans BDK clients, Floresta and Utreexo, including Esplora APIs, Electrum server configuration and an in-progress integration connecting BDK wallets to Floresta.
 
 ## PT
 
-Luis Schwab tem contribuições em rust-esplora-client, Floresta. Seu trabalho inclui infraestrutura de carteiras, configuração de servidores Electrum e APIs Esplora.
-
-Em seu [depoimento de agosto de 2026](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), Luis descreve o caminho do Summer of Bitcoin, contribuindo ao BDK, até o Bitcoin Dev Launchpad e uma fellowship da Vinteum dedicada ao bdk-floresta. A integração buscava conectar carteiras BDK ao Floresta como cliente privado com validação completa; o trabalho na integração, no Floresta e no Utreexo continuou após a fellowship e permanecia em andamento em agosto de 2026.
-
-Ele também relata a manutenção dos clientes Esplora e Electrum do BDK e contribuições ao rust-bitcoin. Além do desenvolvimento, organizou o Brasília BitDevs e apoiou disciplinas universitárias de Bitcoin.
+Luis Schwab contribui para infraestrutura de carteiras e nós Bitcoin em Rust. Seu trabalho abrange clientes do BDK, Floresta e Utreexo, incluindo APIs Esplora, configuração de servidores Electrum e uma integração em andamento entre carteiras BDK e Floresta.

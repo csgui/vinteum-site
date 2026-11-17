@@ -73,20 +73,50 @@ contributions:
     source: 'johnnyasantoss/minesploit · #1'
     type: PR
     href: 'https://github.com/johnnyasantoss/minesploit/pull/1'
+  - id: jayr-motta-stratum-v2
+    title:
+      EN: Stratum V2 integration in Mujina
+      BR: Integração de Stratum V2 no Mujina
+    source: Vinteum · 2026 annual report
+    type: Research
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Worked on Stratum V2 integration, addressing reviewer feedback and studying channel
+        design and BIP 323. Integration was in progress in 2026.
+      BR: Trabalhou na integração de Stratum V2, respondendo a revisões e estudando o desenho
+        de canais e o BIP 323. A integração estava em andamento em 2026.
+  - id: jayr-motta-nonce-slicing
+    title:
+      EN: Nonce-space slicing across ASIC chips
+      BR: Divisão do espaço de nonces entre chips ASIC
+    source: Vinteum · 2026 annual report
+    type: Research
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Experimented with nonce-space slicing to understand how mining work is distributed across
+        ASIC chips.
+      BR: Experimentou a divisão do espaço de nonces para entender como o trabalho de mineração
+        é distribuído entre chips ASIC.
+  - id: jayr-motta-firmware-configuration
+    title:
+      EN: Mujina configuration and hardware development
+      BR: Configuração e desenvolvimento de hardware no Mujina
+    source: Vinteum · 2026 annual report
+    type: Tooling
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Work in progress in 2026 included a configuration-system proof of concept following
+        review of MIP-0001, firmware work such as fan control, and preparation of a small hardware
+        lab.
+      BR: As frentes em andamento em 2026 incluíam uma prova de conceito do sistema de configuração
+        após a revisão da MIP-0001, trabalho no firmware, como controle de ventoinhas, e preparação
+        de um pequeno laboratório de hardware.
 updatedAt: '2026-11-17'
 ---
 ## EN
 
-Jayr Motta has contributed to mujina, minesploit. Selected work includes Bitcoin mining tools, interactive payload execution and contributor documentation.
-
-The [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) describes Jayr's Mujina work at the intersection of mining protocols, firmware and physical devices. His Stratum V2 integration work was in progress during the report period and involved addressing reviewer feedback and studying channel design and BIP 323. He also experimented with nonce-space slicing to understand how mining work is distributed across ASIC chips.
-
-Other work in progress included a configuration-system proof of concept following review of MIP-0001, firmware work such as fan control, and preparation of a small hardware lab.
+Jayr Motta works on Bitcoin mining software, connecting protocols, firmware and physical devices. His contributions include Mujina contributor documentation and interactive payload execution in minesploit, alongside experimental work on mining-job distribution.
 
 ## PT
 
-Jayr Motta tem contribuições em mujina, minesploit. Seu trabalho inclui ferramentas de mineração Bitcoin, execução interativa de payloads e documentação para contribuidores.
-
-O [relatório anual de 2026](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve o trabalho de Jayr no Mujina na interseção entre protocolos de mineração, firmware e dispositivos físicos. O trabalho de integração de Stratum V2 estava em andamento no período coberto pelo relatório e envolveu responder a revisões e estudar o desenho de canais e o BIP 323. Também experimentou a divisão do espaço de nonces para entender a distribuição do trabalho entre chips ASIC.
-
-Outras frentes em andamento incluíam uma prova de conceito do sistema de configuração após a revisão da MIP-0001, trabalho no firmware, como controle de ventoinhas, e preparação de um pequeno laboratório de hardware.
+Jayr Motta trabalha com software de mineração Bitcoin, conectando protocolos, firmware e dispositivos físicos. Suas contribuições incluem documentação para contribuidores do Mujina e execução interativa de payloads no minesploit, além de experimentos com distribuição do trabalho de mineração.

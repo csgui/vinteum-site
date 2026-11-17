@@ -43,8 +43,10 @@ projects:
       EN: An alternative full node bitcoin implementation written in Go (golang)
       BR: Implementação de nó Bitcoin em Go.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Contributed one merged pull request. Improved the RPC integration-test harness and debug-event
+        assertions to test changes in node behavior.
+      BR: Contribuiu com um pull request integrado. Melhorou o ambiente de testes de integração
+        RPC e as verificações de eventos de depuração para testar mudanças no comportamento do nó.
   - name: secp256k1 (Go)
     href: 'https://github.com/decred/dcrd'
     description:
@@ -72,20 +74,38 @@ contributions:
     source: 'decred/dcrd · #3714'
     type: PR
     href: 'https://github.com/decred/dcrd/pull/3714'
+  - id: allocz-btcd-storage-ibd
+    title:
+      EN: btcd initial block download and storage
+      BR: Download inicial e armazenamento do btcd
+    source: Vinteum · 2026 annual report
+    type: Research
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Investigated resource usage during initial block download. UTXO-cache misses led to
+        skip_prevout_fetch to avoid unnecessary disk reads; a separate investigation led to depth-based
+        pruning of the spend journal.
+      BR: Investigou o consumo de recursos no download inicial de blocos. Falhas de acesso ao
+        cache de UTXOs levaram a skip_prevout_fetch para evitar leituras desnecessárias em disco;
+        outra investigação levou à poda do spend journal por profundidade.
+  - id: allocz-go-secp256k1-backends
+    title:
+      EN: Portable Go secp256k1 and native-backend experiments
+      BR: secp256k1 portátil em Go e experimentos com backend nativo
+    source: Vinteum · 2026 annual report
+    type: Research
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Worked on a portable Go secp256k1 library with an optional libsecp256k1 backend when
+        CGO is available. Substitution into btcd was experimental.
+      BR: Trabalhou em uma biblioteca secp256k1 portátil em Go, com backend opcional de libsecp256k1
+        quando CGO está disponível. A substituição da biblioteca no btcd era experimental.
 updatedAt: '2026-11-17'
 ---
 ## EN
 
-Allocz has contributed to btcd, secp256k1 (Go). Selected work includes btcd RPC robustness and secp256k1 performance.
-
-Vinteum's [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documents allocz's investigation of btcd's initial block download, connecting resource usage to specific storage mechanisms. UTXO-cache misses led to the skip_prevout_fetch optimization to avoid unnecessary disk reads; a separate investigation led to depth-based pruning of the spend journal. He also improved the RPC integration-test harness and debug-event assertions, so changes in node behavior can be tested more directly.
-
-Allocz also worked on a portable Go secp256k1 library with an optional libsecp256k1 backend when CGO is available. Substituting this library into btcd remained an experiment, separate from an upstream backend migration.
+Allocz contributes to btcd and Go cryptography libraries. His work covers node storage, RPC reliability and testing, alongside experiments with portable secp256k1 implementations and optional native cryptographic backends.
 
 ## PT
 
-Allocz tem contribuições em btcd, secp256k1 (Go). Seu trabalho inclui robustez do RPC do btcd e desempenho de secp256k1.
-
-O [relatório anual de 2026 da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documenta a investigação de allocz sobre o download inicial de blocos do btcd, relacionando o consumo de recursos a mecanismos específicos de armazenamento. Falhas de acesso ao cache de UTXOs levaram à otimização skip_prevout_fetch para evitar leituras desnecessárias em disco; outra investigação levou à poda do spend journal por profundidade. Também melhorou o ambiente de testes de integração RPC e as verificações de eventos de depuração, permitindo testar mudanças no comportamento do nó de forma mais direta.
-
-Allocz também trabalhou em uma biblioteca secp256k1 portátil em Go, com backend opcional de libsecp256k1 quando CGO está disponível. A substituição da biblioteca criptográfica do btcd permaneceu um experimento, separado de uma migração integrada ao projeto.
+Allocz contribui para o btcd e bibliotecas de criptografia em Go. Seu trabalho abrange armazenamento do nó, confiabilidade do RPC e testes, além de experimentos com implementações portáteis de secp256k1 e backends criptográficos nativos opcionais.

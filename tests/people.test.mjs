@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 import { filterPeople, formatPersonDate, getDirectoryRole } from "../src/data/people.ts";
+import * as profileData from "../src/data/people.ts";
 import { getPerson, parseProfile, readPeople } from "../src/lib/people.ts";
 
 const minimal = "---\nname: Álvaro\n---\n";
@@ -147,6 +148,62 @@ test("keeps relationship history separate from current funding and employment", 
         assert.ok(getDirectoryRole(getPerson(slug)) === "alumni", slug);
     }
     assert.equal(getPerson("luca0x46").programs.find(({ program }) => program === "fellowship").work.EN, "Floresta");
+});
+
+test("displays grants and fellowships as affiliations without duplicating programme history", () => {
+    assert.equal(typeof profileData.getProfileRelationships, "function");
+    const person = parseProfile("alvaro.md", `---
+name: Álvaro
+affiliations:
+  - organization: External project
+    role: { EN: Developer, BR: Desenvolvedor }
+programs:
+  - program: fellowship
+    name: Fellowship
+    organization: Vinteum
+    role: { EN: Fellow, BR: Fellow }
+    status: past
+    start: '2025-03'
+    end: '2025-08'
+    work: { EN: Floresta, BR: Floresta }
+    description: { EN: Functional testing, BR: Testes funcionais }
+  - program: grants
+    name: Grants
+    organization: Vinteum
+    role: { EN: Grantee, BR: Bolsista }
+    status: current
+    start: '2026-01'
+  - program: bitcoin-dev-launchpad
+    name: Bitcoin Dev Launchpad
+    organization: Vinteum
+    role: { EN: Alumnus, BR: Ex-participante }
+    status: past
+    cohort: 1
+---
+`);
+    const before = JSON.stringify(person);
+    const { affiliations, programs } = profileData.getProfileRelationships(person);
+    assert.deepEqual(affiliations.map(({ role }) => role.EN), ["Developer", "Fellow", "Grantee"]);
+    assert.deepEqual(programs.map(({ program }) => program), ["bitcoin-dev-launchpad"]);
+    assert.equal(affiliations[1].start, "2025-03");
+    assert.equal(affiliations[1].end, "2025-08");
+    assert.equal(affiliations[1].description.BR, "Testes funcionais");
+    assert.equal(affiliations[1].work.EN, "Floresta");
+    assert.equal(affiliations[2].status, "current");
+    assert.equal(getDirectoryRole(person), "grantee");
+    assert.equal(JSON.stringify(person), before);
+});
+
+test("keeps bios short and link-free while details live in profile sections", () => {
+    for (const person of readPeople()) {
+        for (const locale of ["EN", "BR"]) {
+            const bio = person.bio?.[locale];
+            assert.ok(bio?.trim(), `${person.slug}: ${locale}`);
+            assert.ok(bio.trim().split(/\s+/u).length <= 55, `${person.slug}: ${locale} bio exceeds 55 words`);
+            assert.doesNotMatch(bio, /\n\s*\n|https?:\/\/|\]\(|<a\b/i, `${person.slug}: ${locale} bio must be one link-free paragraph`);
+            assert.doesNotMatch(bio, /according to|relatório|annual report|year-four report|alumni retrospective/i, `${person.slug}: ${locale} bio contains source scaffolding`);
+        }
+    }
 });
 
 const baseUrl = process.env.PEOPLE_TEST_URL;

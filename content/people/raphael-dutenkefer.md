@@ -29,10 +29,10 @@ projects:
       EN: A crawler for observing the public Bitcoin peer-to-peer network.
       BR: Crawler para observar a rede pública peer-to-peer do Bitcoin.
     contribution:
-      EN: 'Implemented discovery from DNS seeds, handshake checks and data export.'
-      BR: >-
-        Implementou descoberta a partir de seeds DNS, verificação de handshakes
-        e exportação de dados.
+      EN: Implemented discovery from DNS seeds, handshake checks and data export. The crawler
+        provides a partial view of the network through the peers it observes.
+      BR: Implementou descoberta a partir de seeds DNS, verificação de handshakes e exportação
+        de dados. O crawler oferece uma visão parcial da rede a partir dos peers que observa.
 contributions:
   - id: bitcoin-topology-crawler
     title:
@@ -44,12 +44,12 @@ contributions:
     href: >-
       https://github.com/dutenrapha/bitcoin-topology-discovery/commit/ff1cfe01b0c368b9524dbbcd24ec59137640e642
     description:
-      EN: >-
-        Records announced IPv4 peers and successful handshakes, with event logs
-        and validated Parquet exports.
-      BR: >-
-        Registra peers IPv4 anunciados e handshakes bem-sucedidos, com logs de
-        eventos e exportação validada para Parquet.
+      EN: Discovers peers from DNS seeds, records announced IPv4 peers and successful handshakes,
+        and produces event logs and validated Parquet exports. Observations provide a partial
+        view of the network.
+      BR: Descobre peers a partir de seeds DNS, registra peers IPv4 anunciados e handshakes
+        bem-sucedidos e produz logs de eventos e exportações validadas para Parquet. As
+        observações oferecem uma visão parcial da rede.
 discussions:
   - id: bnoc-electrum-header-propagation
     title:
@@ -66,15 +66,22 @@ discussions:
       BR: >-
         Pesquisa sobre os tempos de propagação de cabeçalhos de blocos entre
         servidores Electrum públicos.
+media:
+  - id: raphael-data-science-alumni-2026
+    title:
+      EN: Data science for Bitcoin privacy and network research
+      BR: Ciência de dados para privacidade e redes Bitcoin
+    source: Vinteum · August 2026
+    href: https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook
+    description:
+      EN: Explores data science for Bitcoin privacy and network research.
+      BR: Explora ciência de dados para privacidade e pesquisa de redes Bitcoin.
+    mediaType: article
 ---
 ## EN
 
-Raphael Dutenkefer is a Vinteum fellow building tools to observe the Bitcoin P2P network. His Bitcoin Topology Discovery crawler records announced peers and successful handshakes to support network analysis.
-
-Vinteum documents his exploration of data science for Bitcoin privacy and network research in its [August 2026 alumni retrospective](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook). The [public crawler implementation](https://github.com/dutenrapha/bitcoin-topology-discovery/commit/ff1cfe01b0c368b9524dbbcd24ec59137640e642) turns this direction into tooling: DNS-seed discovery, IPv4 peer announcements, handshake checks, event logging and Parquet export. The crawler provides a partial view of the network through the peers it observes.
+Raphael Dutenkefer is a Vinteum fellow building tools to observe the Bitcoin P2P network. His work brings data science to Bitcoin privacy and network research through peer discovery, handshake observation and analysis of public network data.
 
 ## PT
 
-Raphael Dutenkefer é fellow da Vinteum e desenvolve ferramentas de observação da rede P2P do Bitcoin. Seu crawler Bitcoin Topology Discovery registra peers anunciados e handshakes bem-sucedidos para apoiar a análise da rede.
-
-A exploração de ciência de dados para privacidade e redes Bitcoin aparece na [retrospectiva de agosto de 2026 da Vinteum](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook). A [implementação pública do crawler](https://github.com/dutenrapha/bitcoin-topology-discovery/commit/ff1cfe01b0c368b9524dbbcd24ec59137640e642) transforma essa direção em ferramentas: descoberta por seeds DNS, anúncios de peers IPv4, verificação de handshakes, logs de eventos e exportação para Parquet. O crawler oferece uma visão parcial da rede a partir dos peers que observa.
+Raphael Dutenkefer é fellow da Vinteum e desenvolve ferramentas de observação da rede P2P do Bitcoin. Seu trabalho aproxima ciência de dados, privacidade e pesquisa de redes por meio da descoberta de peers, observação de handshakes e análise de dados públicos.

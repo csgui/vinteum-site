@@ -14,6 +14,9 @@ programs:
       EN: Krux
       BR: Krux
     href: /programs/bitcoin-dev-launchpad
+    description:
+      EN: "After Bitcoin Dev Launchpad, continued studying, reading code and experimenting at Casa21 before contributing to Krux. Moved into independently supported open-source work and entered 42 School to deepen his computer-science foundations."
+      BR: "Após o Bitcoin Dev Launchpad, continuou estudando, lendo código e experimentando na Casa21 antes de contribuir ao Krux. Passou a trabalhar com apoio independente em open source e ingressou na 42 School para aprofundar sua formação em ciência da computação."
     fundedBy: OpenSats
 focus:
   - Hardware Wallets
@@ -37,8 +40,8 @@ projects:
         Aplicativo gráfico para instalar o firmware Krux em dispositivos
         compatíveis.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: "Contributed 2 merged pull requests adding Nix compatibility and tzt device support, extending installation across development environments and hardware."
+      BR: "Contribuiu com 2 pull requests integrados para compatibilidade com Nix e suporte ao dispositivo tzt, ampliando os ambientes de desenvolvimento e o hardware atendidos pelo instalador."
 contributions:
   - id: github-selfcustody-krux-installer-162
     title:
@@ -61,19 +64,20 @@ affiliations:
   - organization: OpenSats
     role: { EN: Grantee, BR: Bolsista }
     status: current
+media:
+  - id: bdl-alumni-krux-trajectory
+    title:
+      EN: From Bitcoin Dev Launchpad to Krux
+      BR: Do Bitcoin Dev Launchpad ao Krux
+    source: Vinteum
+    href: 'https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook'
+    date: '2026-08'
+    mediaType: article
 ---
 ## EN
 
-joaozinho has contributed to krux-installer. Selected work includes Krux installation tooling, Nix compatibility and device support.
-
-In the [August 2026 alumni retrospective](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), joaozinho described continuing to study, read code and experiment with projects at Casa21 after Bitcoin Dev Launchpad before finding a contribution path in Krux. The article records his move into independently supported open-source work and his admission to 42 School to deepen his computer-science foundations.
-
-His installer contributions support Krux installation in different development environments and on additional hardware.
+joaozinho contributes to Krux installation tooling for hardware wallets. His work on krux-installer includes Nix compatibility and support for additional devices, helping users install firmware across different development environments and hardware.
 
 ## PT
 
-joaozinho tem contribuições em krux-installer. Seu trabalho inclui ferramentas de instalação do Krux, compatibilidade com Nix e suporte a dispositivos.
-
-Na [retrospectiva de agosto de 2026](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), joaozinho contou que continuou estudando, lendo código e experimentando projetos na Casa21 após o Bitcoin Dev Launchpad, até encontrar um caminho de contribuição no Krux. O artigo registra sua passagem para trabalho open source com apoio independente e a entrada na 42 School para aprofundar sua formação em ciência da computação.
-
-Seu trabalho no instalador permite a instalação do Krux em diferentes ambientes de desenvolvimento e em hardware adicional.
+joaozinho contribui para ferramentas de instalação do Krux em carteiras de hardware. Seu trabalho no krux-installer inclui compatibilidade com Nix e suporte a dispositivos adicionais, permitindo instalar o firmware em diferentes ambientes de desenvolvimento e equipamentos.

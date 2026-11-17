@@ -74,6 +74,9 @@ contributions:
     source: 'bitcoindevkit/bdk-cli · #312'
     type: PR
     href: 'https://github.com/bitcoindevkit/bdk-cli/pull/312'
+    description:
+      EN: Deletes saved wallet configuration entries without deleting wallet databases.
+      BR: Remove configurações salvas de carteiras sem apagar seus bancos de dados.
   - id: github-ClubeBitcoinUnB-BlockSci-14
     title:
       EN: Change from Travis/CircleCi in favor of Github Actions
@@ -82,6 +85,29 @@ contributions:
     source: 'ClubeBitcoinUnB/BlockSci · #14'
     type: PR
     href: 'https://github.com/ClubeBitcoinUnB/BlockSci/pull/14'
+    description:
+      EN: Migrates CI to GitHub Actions with Linux, macOS ARM64 and Nix checks in the Clube
+        Bitcoin UnB BlockSci fork.
+      BR: Migra o CI para GitHub Actions com verificações de Linux, macOS ARM64 e Nix no
+        fork do BlockSci do Clube Bitcoin UnB.
+  - id: yan-compact-descriptor-metadata
+    title:
+      EN: Compact descriptor metadata and research API
+      BR: Metadados compactos de descritores e API de pesquisa
+    source: Vinteum · 2026
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Researched compact metadata for derived, revealed and used script indices, building
+        on proposed BIP393 annotations and exploring Elias–Fano encoding. Expanded a proof
+        of concept into a reusable research API for encoding, decoding, wallet import/export
+        and selected-index derivation. In 2026, the research remained in benchmarking and
+        validation.
+      BR: Pesquisou metadados compactos para índices de scripts derivados, revelados e usados,
+        partindo das anotações propostas no BIP393 e explorando a codificação Elias–Fano.
+        Ampliou uma prova de conceito para uma API reutilizável de pesquisa com codificação,
+        decodificação, importação/exportação de carteiras e derivação de índices específicos.
+        Em 2026, a pesquisa permanecia em benchmarking e validação.
+    type: Research
 writing:
   - id: personal-blog-floresta-mainnet-journey
     title:
@@ -101,12 +127,8 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-Yan works on Bitcoin wallet infrastructure and BDK. Vinteum’s [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) describes research into compact descriptor metadata for script indices that were derived, revealed or used, building on proposed BIP393 annotations and exploring Elias–Fano encoding. He developed a reusable research API from an earlier proof of concept, including encoding, decoding, wallet import/export and selected-index derivation. The research remained in benchmarking and validation during the report period.
-
-His merged [bdk-cli command](https://github.com/bitcoindevkit/bdk-cli/pull/312) deletes saved configuration entries without deleting wallet databases. In the [Clube Bitcoin UnB BlockSci fork](https://github.com/ClubeBitcoinUnB/BlockSci/pull/14), he migrated CI to GitHub Actions with Linux, macOS ARM64 and Nix checks.
+Yan works on Bitcoin wallet infrastructure and BDK. His work combines wallet configuration tooling with research into compact descriptor metadata, exploring how wallets can preserve information about derived, revealed and used script indices.
 
 ## PT
 
-Yan trabalha com infraestrutura de carteiras Bitcoin e BDK. O [relatório do quarto ano da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve pesquisa sobre metadados compactos de descritores para índices de scripts derivados, revelados ou usados, partindo das anotações propostas no BIP393 e explorando a codificação Elias–Fano. Ele desenvolveu uma API reutilizável de pesquisa a partir de uma prova de conceito, com codificação, decodificação, importação/exportação de carteiras e derivação de índices específicos. A pesquisa permanecia em benchmarking e validação no período coberto pelo relatório.
-
-Seu [comando no bdk-cli](https://github.com/bitcoindevkit/bdk-cli/pull/312), já integrado, remove configurações salvas sem apagar os bancos de dados das carteiras. No [fork do BlockSci do Clube Bitcoin UnB](https://github.com/ClubeBitcoinUnB/BlockSci/pull/14), migrou o CI para GitHub Actions com verificações de Linux, macOS ARM64 e Nix.
+Yan trabalha com infraestrutura de carteiras Bitcoin e BDK. Seu trabalho combina ferramentas de configuração de carteiras e pesquisa sobre metadados compactos de descritores, explorando como preservar informações sobre índices de scripts derivados, revelados e usados.

@@ -15,6 +15,9 @@ programs:
       EN: libsecp256k1
       BR: libsecp256k1
     href: /programs/fellowship
+    description:
+      EN: Pursues a research-oriented path in Bitcoin cryptography, guided by Edil Medeiros.
+      BR: Segue uma trajetória de pesquisa em criptografia Bitcoin, orientada por Edil Medeiros.
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
     organization: Vinteum
@@ -51,8 +54,9 @@ projects:
       EN: 'Odin language bindings for Bitcoin secp256k1 library. '
       BR: Bindings da biblioteca secp256k1 para a linguagem Odin.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Contributed one merged pull request while experimenting with Odin bindings for libsecp256k1.
+      BR: Contribuiu com um pull request integrado enquanto experimentava bindings de libsecp256k1
+        para Odin.
   - name: WalletWasabi
     href: 'https://github.com/WalletWasabi/WalletWasabi'
     description:
@@ -80,6 +84,31 @@ contributions:
     source: 'WalletWasabi/WalletWasabi · #14639'
     type: PR
     href: 'https://github.com/WalletWasabi/WalletWasabi/pull/14639'
+  - id: isaque-franklin-libsecp256k1-study
+    title:
+      EN: libsecp256k1 arithmetic and exhaustive testing
+      BR: Aritmética e testes exaustivos em libsecp256k1
+    source: Vinteum · 2026 annual report
+    type: Research
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Studied field and group operations, modular inversion, safeGCD and exhaustive testing
+        in libsecp256k1, connecting mathematical foundations with implementation choices in a
+        production cryptographic library. Produced technical writing from this study.
+      BR: Estudou operações de campo e de grupo, inversão modular, safeGCD e testes exaustivos
+        em libsecp256k1, conectando fundamentos matemáticos às escolhas de implementação de uma
+        biblioteca criptográfica de produção. Produziu textos técnicos a partir desse estudo.
+  - id: isaque-franklin-nested-musig2
+    title:
+      EN: Nested MuSig2 paper and fork implementation review
+      BR: Artigo de Nested MuSig2 e revisão de implementação em fork
+    source: Vinteum · 2026 annual report
+    type: Code Review
+    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    description:
+      EN: Worked through the Nested MuSig2 paper and reviewed an implementation in a libsecp256k1
+        fork.
+      BR: Estudou o artigo de Nested MuSig2 e revisou uma implementação em um fork de libsecp256k1.
 writing:
   - id: personal-blog-understanding-libsecp256k1s-ecdh-module
     title:
@@ -97,16 +126,8 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-Isaque Franklin has contributed to odin-secp256k1, WalletWasabi. Selected work includes secp256k1 bindings and Silent Payments validation.
-
-The [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) describes Isaque's research-oriented trajectory into Bitcoin cryptography, guided by Edil Medeiros. His libsecp256k1 study covers field and group operations, modular inversion, safeGCD and exhaustive testing, connecting mathematical foundations to the implementation choices in a production cryptographic library. He also produced technical writing from that study.
-
-A separate strand involves working through the Nested MuSig2 paper and reviewing an implementation in a libsecp256k1 fork. Alongside that research, he worked on the Wasabi Wallet BIP 352 k_max check and experimented with Odin bindings.
+Isaque Franklin works on Bitcoin cryptography, studying libsecp256k1 and contributing to Silent Payments validation and Odin bindings. His research connects mathematical foundations with cryptographic implementation and includes study of Nested MuSig2.
 
 ## PT
 
-Isaque Franklin tem contribuições em odin-secp256k1, WalletWasabi. Seu trabalho inclui bindings de secp256k1 e validação de Silent Payments.
-
-O [relatório anual de 2026](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve a trajetória de Isaque na pesquisa em criptografia Bitcoin, orientada por Edil Medeiros. Seu estudo de libsecp256k1 abrange operações de campo e de grupo, inversão modular, safeGCD e testes exaustivos, conectando fundamentos matemáticos às escolhas de implementação de uma biblioteca criptográfica de produção. Também produziu textos técnicos a partir desse estudo.
-
-Outra frente envolve a leitura do artigo de Nested MuSig2 e a revisão de uma implementação em um fork de libsecp256k1. Em paralelo, trabalhou na verificação de k_max do BIP 352 no Wasabi Wallet e experimentou bindings para Odin.
+Isaque Franklin trabalha com criptografia Bitcoin, estudando libsecp256k1 e contribuindo para validação de Silent Payments e bindings para Odin. Sua pesquisa conecta fundamentos matemáticos à implementação criptográfica e inclui o estudo de Nested MuSig2.

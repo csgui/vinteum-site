@@ -91,6 +91,17 @@ export function getPrimaryParticipation(person: Person): Participation | undefin
     );
 }
 
+export function getProfileRelationships(person: Person): {
+    affiliations: (Affiliation & { work?: LocalizedText; description?: LocalizedText })[];
+    programs: Participation[];
+} {
+    const isAffiliation = ({ program }: Participation) => program === "grants" || program === "fellowship";
+    return {
+        affiliations: [...person.affiliations, ...person.programs.filter(isAffiliation)],
+        programs: person.programs.filter((entry) => !isAffiliation(entry)),
+    };
+}
+
 export function getProjectLabel(person: Person, locale: "EN" | "BR") {
     return getPrimaryParticipation(person)?.work?.[locale] ?? person.projectLabel ?? person.projects[0]?.name
         ?? person.affiliations.find(({ directoryRole }) => directoryRole === "team")?.role[locale];

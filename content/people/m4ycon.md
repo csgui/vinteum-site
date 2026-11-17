@@ -45,8 +45,8 @@ projects:
         honey pot nodes
       BR: Ferramentas para monitorar anomalias e ataques na rede P2P do Bitcoin.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: "Contributed 2 merged pull requests on compact-block reconstruction monitoring and dashboards. Progressed from operating network-observation infrastructure to building research tools, using long-running instrumented nodes and retained debug logs for experiments."
+      BR: "Contribuiu com 2 pull requests integrados sobre monitoramento de reconstrução de blocos compactos e dashboards. Passou da operação de infraestrutura de observação da rede à criação de ferramentas de pesquisa, usando nós instrumentados de longa duração e logs de depuração preservados nos experimentos."
 contributions:
   - id: github-peer-observer-peer-observer-465
     title:
@@ -64,6 +64,29 @@ contributions:
     source: 'peer-observer/peer-observer · #420'
     type: PR
     href: 'https://github.com/peer-observer/peer-observer/pull/420'
+    description:
+      EN: "Merged compact-block reconstruction monitoring, enabling analysis of when nodes reconstruct blocks immediately and when they must request additional transactions."
+      BR: "Monitoramento de reconstrução de blocos compactos integrado, permitindo analisar quando nós reconstroem blocos imediatamente e quando precisam pedir transações adicionais."
+  - id: compact-block-prefilling-measurements
+    title:
+      EN: "Measuring a compact-block-prefilling proposal"
+      BR: "Medições de uma proposta de pré-preenchimento de blocos compactos"
+    source: "Vinteum · Year Four Report · August 2025–August 2026"
+    type: Research
+    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    description:
+      EN: "Ran patched Bitcoin Core nodes to investigate a proposed compact-block-prefilling change and feed measurements into review."
+      BR: "Executou nós Bitcoin Core modificados para investigar uma proposta de mudança no pré-preenchimento de blocos compactos e levar medições à revisão."
+  - id: cluster-mempool-observer-recorder
+    title:
+      EN: "Cluster Mempool Observer recorder and replayer"
+      BR: "Gravador e reprodutor Cluster Mempool Observer"
+    source: "Vinteum · Year Four Report · August 2025–August 2026"
+    type: Tooling
+    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    description:
+      EN: "Worked on a recorder and replayer to preserve a node’s mempool history for later analysis. As of August 2026, backend and data-integrity work were underway, and public access remained a goal."
+      BR: "Trabalhou em um gravador e reprodutor para preservar o histórico do mempool de um nó para análise posterior. Em agosto de 2026, havia trabalho em backend e integridade dos dados, e o acesso público permanecia um objetivo."
 discussions:
   - id: compact-block-degradation
     title:
@@ -81,16 +104,8 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-m4ycon has contributed to peer-observer. Selected work includes compact-block reconstruction metrics and Bitcoin network observability.
-
-The [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf), covering August 2025–August 2026, describes m4ycon's progression from operating network-observation infrastructure to building research tools. His compact-block reconstruction contribution to peer-observer was merged, supporting analysis of when a node can reconstruct a block immediately and when it must request more transactions. He also ran patched Bitcoin Core nodes to investigate a proposed compact-block-prefilling change and feed measurements into review.
-
-Another project was Cluster Mempool Observer, a recorder and replayer intended to preserve a node's mempool history for later analysis. At the report's cutoff, backend and data-integrity work were underway and public access remained a goal. Long-running instrumented nodes and retained debug logs supported this experimental work.
+m4ycon works on Bitcoin network observability and research tooling. His contributions to peer-observer track compact-block reconstruction, while his experimental work uses instrumented nodes, retained logs and mempool recording to investigate network behavior.
 
 ## PT
 
-m4ycon tem contribuições em peer-observer. Seu trabalho inclui métricas de reconstrução de blocos compactos e observabilidade da rede Bitcoin.
-
-O [relatório do quarto ano](/assets/files/Vinteum-Year-Four-Report-2026.pdf), que cobre agosto de 2025 a agosto de 2026, descreve a passagem de m4ycon da operação de infraestrutura de observação da rede à criação de ferramentas de pesquisa. Sua contribuição de reconstrução de blocos compactos ao peer-observer foi integrada, permitindo analisar quando um nó reconstrói um bloco imediatamente e quando precisa pedir mais transações. Ele também executou nós Bitcoin Core modificados para investigar uma proposta de pré-preenchimento de blocos compactos e levar medições à revisão.
-
-Outro projeto foi o Cluster Mempool Observer, um gravador e reprodutor destinado a preservar o histórico do mempool de um nó para análise posterior. Até o período coberto pelo relatório, havia trabalho em backend e integridade dos dados, e o acesso público permanecia um objetivo. Nós instrumentados e logs de depuração preservados apoiavam os experimentos.
+m4ycon trabalha em observabilidade da rede Bitcoin e ferramentas de pesquisa. Suas contribuições ao peer-observer acompanham a reconstrução de blocos compactos, enquanto seus experimentos usam nós instrumentados, logs preservados e gravação do mempool para investigar o comportamento da rede.

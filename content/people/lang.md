@@ -10,6 +10,9 @@ programs:
       BR: Ex-participante
     status: past
     cohort: 1
+    description:
+      EN: Combined hands-on Bitcoin development and open-source collaboration with technical guidance and introductions during a career transition.
+      BR: Combinou desenvolvimento prático em Bitcoin e colaboração open source com orientação técnica e conexões durante uma mudança de carreira.
     work:
       EN: Tether
       BR: Tether
@@ -23,15 +26,18 @@ affiliations:
   - organization: Tether
     role: { EN: QVAC contributor, BR: Contribuidor do QVAC }
     status: current
+projects:
+  - name: QVAC
+    href: 'https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook'
+    current: true
+    contribution:
+      EN: Joined the project at Tether after transitioning from corporate software engineering.
+      BR: Passou a trabalhar no projeto na Tether após a transição de uma carreira corporativa em engenharia de software.
 ---
 ## EN
 
-Lang is an alumnus of the first Bitcoin Dev Launchpad cohort. Vinteum’s August 2026 alumni outlook records his transition from a corporate software-engineering role to Tether, where he joined the QVAC project.
-
-In that account, he described the Launchpad as a bridge into Bitcoin and the broader freedom-tech ecosystem, combining hands-on Bitcoin development with experience in open-source collaboration. Vinteum also helped with technical direction and introductions during the career transition. [Read the alumni outlook](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook).
+Lang is a software engineer working on QVAC at Tether and an alumnus of the first Bitcoin Dev Launchpad cohort. The programme supported his transition into Bitcoin and freedom-tech development.
 
 ## PT
 
-Lang é ex-participante da primeira turma do Bitcoin Dev Launchpad. O balanço de ex-participantes publicado pela Vinteum em agosto de 2026 registra sua transição de uma carreira corporativa em engenharia de software para a Tether, onde passou a trabalhar no projeto QVAC.
-
-Nesse relato, descreveu o Launchpad como uma ponte para o Bitcoin e o ecossistema mais amplo de tecnologias de liberdade, combinando desenvolvimento prático em Bitcoin com experiência de colaboração open source. A Vinteum também ajudou com orientação técnica e conexões durante a mudança de carreira. [Leia o balanço de ex-participantes](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook).
+Lang é engenheiro de software, trabalha no QVAC na Tether e participou da primeira turma do Bitcoin Dev Launchpad. O programa apoiou sua transição para o desenvolvimento de Bitcoin e tecnologias de liberdade.
