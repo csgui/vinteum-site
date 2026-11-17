@@ -35,12 +35,6 @@ links:
   - label: Blog
     href: 'https://blog.dlsouza.lol'
     icon: blog
-affiliations:
-  - organization: Floresta
-    role:
-      EN: Creator and developer
-      BR: Criador e desenvolvedor
-    href: 'https://github.com/getfloresta/Floresta'
 projects:
   - name: Floresta
     href: 'https://github.com/getfloresta/Floresta'

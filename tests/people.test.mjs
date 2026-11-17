@@ -254,6 +254,18 @@ test("provides a local logo for every affiliation organization and initials only
     assert.equal(profileData.getOrganizationLogo("constructor"), undefined);
 });
 
+test("keeps Davidson's Floresta creator role in Projects rather than Affiliations", () => {
+    const person = getPerson("davidson-souza");
+    const { affiliations } = profileData.getProfileRelationships(person);
+    assert.ok(!affiliations.some(({ organization }) => organization === "Floresta"));
+    assert.ok(affiliations.some(({ organization, role, status }) =>
+        organization === "Vinteum" && role.EN === "Grantee" && status === "current"));
+    const floresta = person.projects.find(({ name }) => name === "Floresta");
+    assert.equal(floresta.href, "https://github.com/getfloresta/Floresta");
+    assert.match(floresta.contribution.EN, /Creator/);
+    assert.match(floresta.contribution.BR, /Criador/);
+});
+
 const baseUrl = process.env.PEOPLE_TEST_URL;
 test("built directory links to every canonical profile and unknown profiles return 404", { skip: !baseUrl }, async () => {
     const directory = await fetch(new URL("/people", baseUrl));

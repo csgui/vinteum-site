@@ -102,6 +102,11 @@ separate: a current external grant does not erase a past Vinteum fellowship or
 imply that another grant has ended. Check the external-affiliation register as
 well as the programme rosters when updating a profile.
 
+Keep contributor roles in software projects under `projects`, including creator,
+maintainer, developer and reviewer. Those roles alone do not establish an
+institutional affiliation. For example, BDK belongs in Projects while a grant
+from the Bitcoin Dev Kit Foundation belongs in Affiliations.
+
 ## Initial profiles
 
 The Fellowship and Grants rosters provide the initial names, photos, program
