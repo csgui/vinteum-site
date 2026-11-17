@@ -785,7 +785,8 @@
         "roles": {
             "grantee": "Grantee",
             "fellow": "Fellow",
-            "alumni": "Alumni"
+            "alumni": "Alumni",
+            "team": "Equipe"
         },
         "directory": "Pessoas",
         "description": "Os desenvolvedores e pesquisadores que a Vinteum forma, orienta e financia, e suas contribuições open source para o Bitcoin.",
@@ -794,7 +795,8 @@
             "all": "Todos",
             "grantee": "Grantees",
             "fellow": "Fellows",
-            "alumni": "Alumni"
+            "alumni": "Alumni",
+            "team": "Equipe"
         },
         "focus": "Áreas de atuação",
         "allFocus": "Todas as áreas",

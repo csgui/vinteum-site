@@ -119,6 +119,7 @@ writing:
     date: '2026-08-25'
     source: erickcestari.dev
     href: 'https://erickcestari.dev/blog/ping-flood-oom/'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

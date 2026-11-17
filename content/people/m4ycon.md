@@ -76,6 +76,7 @@ discussions:
     date: '2026-10-22'
     href: >-
       https://bnoc.xyz/t/compact-block-reconstruction-degradation-between-september-october-2026/198
+updatedAt: '2026-11-17'
 ---
 ## EN
 

@@ -60,6 +60,7 @@ contributions:
     source: 'selfcustody/krux · #600'
     type: PR
     href: 'https://github.com/selfcustody/krux/pull/600'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

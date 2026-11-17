@@ -39,14 +39,16 @@ languages if a translation is unavailable. Localized frontmatter uses `EN` and
 with `/`. The directory uses initials when a portrait is unavailable.
 
 - **Identity:** `name`, `image`, `handle` (without @), `pseudonymous`,
-  localized `location`, `focus` (a list of topics), and `links` (label, URL, and
+  localized `location`, an optional `projectLabel` for the directory, `focus` (a list of topics), and `links` (label, URL, and
   optional icon). `updatedAt` is an optional editorial date.
 - **History:** Add an item to `programs` for each program participation and to
   `affiliations` for other roles or organizations. Each item has an
   `organization` and a localized `role`. Add `status` (`current` or `past`),
   `start`, `end`, and `href` when known. Preserve the original role when a
   participation becomes past. Use quoted ISO dates at the precision supported by
-  the source (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`).
+  the source (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`). An affiliation can set
+  `directoryRole: team` or `directoryRole: fellow` to show that role in the
+  directory. Program listings use `programs` entries.
 - **Program cards:** Vinteum entries with `program: fellowship` or
   `program: grants` and a status feed the existing program listings and the
   directory filters. `work` is the translated project or topic label for that
@@ -73,7 +75,7 @@ check rendered routes, start the production build with `pnpm start` and run
 
 The Fellowship and Grants rosters provide the initial names, photos, program
 status and work labels. The Launchpad alumni roster supplies the cohort and
-funding context on that page. Where the supplied prototype matched a roster
-identity, its sourced projects, bios and activity were brought across. Update
+funding context on that page. The supplied prototype also provides four additional people and enriches the
+roster profiles with biographies, links, projects and published activity. Update
 these fields when the upstream information changes and leave unpublished dates
 and affiliations out.

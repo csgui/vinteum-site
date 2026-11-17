@@ -81,6 +81,7 @@ discussions:
     date: '2026-06-20'
     href: >-
       https://delvingbitcoin.org/t/fountain-codes-a-way-to-reduce-blockchain-storage-costs/2624
+updatedAt: '2026-11-17'
 ---
 ## EN
 

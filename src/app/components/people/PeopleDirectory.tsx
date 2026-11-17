@@ -7,7 +7,7 @@ import { PeopleHeroArt, PersonAvatar } from "./PeoplePrimitives";
 import { ProjectMap } from "./ProjectMap";
 import styles from "./people.module.css";
 
-const roles = ["all", "grantee", "fellow", "alumni"] as const;
+const roles = ["all", "grantee", "fellow", "alumni", "team"] as const;
 
 export function PeopleDirectory({ people, filters = "" }: { people: Person[]; filters?: string }) {
     const { locale, t } = useLanguage();

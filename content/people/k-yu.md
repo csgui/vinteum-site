@@ -75,6 +75,7 @@ contributions:
     source: 'bitcoin/bitcoin · #36686'
     type: PR
     href: 'https://github.com/bitcoin/bitcoin/pull/36686'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

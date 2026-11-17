@@ -92,6 +92,7 @@ writing:
       BR: Intuition about the GLV endomorphism on secp256k1
     source: harlock.xyz
     href: 'https://www.harlock.xyz/intuition-about-the-glv-endomorphism-on-secp256k1'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

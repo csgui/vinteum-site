@@ -79,6 +79,7 @@ contributions:
     source: 'rust-bitcoin/rust-bitcoin · #6212'
     type: PR
     href: 'https://github.com/rust-bitcoin/rust-bitcoin/pull/6212'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

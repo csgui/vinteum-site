@@ -64,6 +64,7 @@ contributions:
     source: 'cashubtc/cdk · #1958'
     type: PR
     href: 'https://github.com/cashubtc/cdk/pull/1958'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

@@ -290,6 +290,7 @@ media:
     date: '2023-08-20'
     mediaType: article
     thumbnail: /assets/images/people/grantees/davidsonsouza.jpg
+updatedAt: '2026-11-17'
 ---
 ## EN
 

@@ -77,6 +77,7 @@ contributions:
     source: 'btcpayserver/btcpayserver · #7329'
     type: PR
     href: 'https://github.com/btcpayserver/btcpayserver/pull/7329'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

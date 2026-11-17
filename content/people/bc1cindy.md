@@ -72,6 +72,7 @@ contributions:
     source: 'payjoin/rust-payjoin · #945'
     type: PR
     href: 'https://github.com/payjoin/rust-payjoin/pull/945'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

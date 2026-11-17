@@ -89,6 +89,7 @@ writing:
     date: '2026-06-02'
     source: imchris.me
     href: 'https://www.imchris.me/article-p-adics'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

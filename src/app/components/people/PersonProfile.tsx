@@ -225,7 +225,7 @@ export function PersonProfile({
 }) {
     const { locale, t } = useLanguage();
     const availableSections = sections.filter((section) => person[section].length > 0);
-    const primary = getPrimaryParticipation(person);
+    const primary = getPrimaryParticipation(person) ?? person.affiliations.find(({ directoryRole }) => directoryRole);
     const requested = requestedTab;
     const active: Section = availableSections.includes(requested as ContentSection)
         ? (requested as ContentSection)

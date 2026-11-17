@@ -58,6 +58,7 @@ contributions:
     source: 'lightningnetwork/lnd · #9975'
     type: PR
     href: 'https://github.com/lightningnetwork/lnd/pull/9975'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

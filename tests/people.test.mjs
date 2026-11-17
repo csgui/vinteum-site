@@ -68,6 +68,25 @@ test("maintains one identity per contributor and covers the published program ro
     }
 });
 
+test("keeps the four additional prototype profiles discoverable with their editorial content", () => {
+    const people = readPeople();
+    for (const [slug, role] of [
+        ["bruno-garcia", "team"], ["edil-medeiros", "team"],
+        ["carlos-santos", "fellow"], ["raphael-dutenkefer", "fellow"],
+    ]) {
+        const person = getPerson(slug);
+        assert.ok(person?.bio?.EN && person.bio.BR, slug);
+        assert.ok(person.links.some(({ icon }) => icon === "github"), slug);
+        assert.ok(person.writing.length + person.contributions.length + person.discussions.length > 0, slug);
+        assert.ok(filterPeople(people, { role, focus: "", query: person.name, locale: "EN" })
+            .some((match) => match.slug === slug), slug);
+        assert.equal(person.programs.length, 0, slug);
+    }
+    const githubLinks = getPerson("yan").links.filter(({ icon }) => icon === "github");
+    assert.ok(githubLinks.some(({ href }) => href === "https://github.com/yan-pi"));
+    assert.ok(githubLinks.some(({ href }) => href === "https://github.com/yanfsb"));
+});
+
 test("retains date precision when only a year or a month is known", () => {
     assert.equal(formatPersonDate("2025", "EN"), "2025");
     assert.equal(formatPersonDate("2025-05", "EN"), "May 2025");

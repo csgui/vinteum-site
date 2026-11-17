@@ -1,12 +1,13 @@
 // Shared profile types and formatting. Profile content lives in content/people/*.md.
 export type LocalizedText = { EN: string; BR: string };
 export const text = (EN: string, BR: string): LocalizedText => ({ EN, BR });
-export type DirectoryRole = "grantee" | "fellow" | "alumni";
+export type DirectoryRole = "grantee" | "fellow" | "alumni" | "team";
 export type ParticipationStatus = "current" | "past";
 
 export interface Affiliation {
     organization: string;
     role: LocalizedText;
+    directoryRole?: "team" | "fellow";
     status?: ParticipationStatus;
     start?: string;
     end?: string;
@@ -54,6 +55,7 @@ export interface Person {
     location?: LocalizedText;
     bio?: LocalizedText;
     focus: string[];
+    projectLabel?: string;
     updatedAt?: string;
     links: {
         label: string;
@@ -78,6 +80,9 @@ export function getDirectoryRoles(person: Person): DirectoryRole[] {
     if (participations.some(({ program, status }) =>
         (program === "grants" || program === "fellowship") && status === "past",
     )) roles.push("alumni");
+    for (const { directoryRole } of person.affiliations) {
+        if (directoryRole && !roles.includes(directoryRole)) roles.push(directoryRole);
+    }
     return roles;
 }
 
@@ -92,7 +97,8 @@ export function getPrimaryParticipation(person: Person): Participation | undefin
 }
 
 export function getProjectLabel(person: Person, locale: "EN" | "BR") {
-    return getPrimaryParticipation(person)?.work?.[locale] ?? person.projects[0]?.name;
+    return getPrimaryParticipation(person)?.work?.[locale] ?? person.projectLabel ?? person.projects[0]?.name
+        ?? person.affiliations.find(({ directoryRole }) => directoryRole === "team")?.role[locale];
 }
 
 export function formatPersonDate(date: string, locale: "EN" | "BR", full = false): string {
@@ -132,6 +138,7 @@ export function filterPeople(
         (!search || normalizeSearch([
             person.name,
             person.handle,
+            getProjectLabel(person, locale),
             person.bio?.[locale],
             ...person.focus,
             ...person.programs.map(({ work }) => work?.[locale]),

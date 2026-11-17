@@ -785,7 +785,8 @@
         "roles": {
             "grantee": "Grantee",
             "fellow": "Fellow",
-            "alumni": "Alumni"
+            "alumni": "Alumni",
+            "team": "Team"
         },
         "directory": "People",
         "description": "The developers and researchers Vinteum funds, trains and mentors, and the open-source work they ship for Bitcoin.",
@@ -794,7 +795,8 @@
             "all": "All",
             "grantee": "Grantees",
             "fellow": "Fellows",
-            "alumni": "Alumni"
+            "alumni": "Alumni",
+            "team": "Team"
         },
         "focus": "Areas of focus",
         "allFocus": "All focus areas",

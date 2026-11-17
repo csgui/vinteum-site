@@ -90,6 +90,7 @@ writing:
     source: victorandre957.github.io
     href: >-
       https://victorandre957.github.io/personal_blog/posts/what-bip324-changes-for-bitcoin-p2p/
+updatedAt: '2026-11-17'
 ---
 ## EN
 

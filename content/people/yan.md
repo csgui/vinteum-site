@@ -44,6 +44,9 @@ links:
   - label: Blog
     href: 'https://indianboy.sh/'
     icon: blog
+  - label: GitHub
+    href: 'https://github.com/yanfsb'
+    icon: github
 projects:
   - name: bdk-cli
     href: 'https://github.com/bitcoindevkit/bdk-cli'
@@ -93,6 +96,7 @@ writing:
     date: '2026-04-10'
     source: indianboy.sh
     href: 'https://indianboy.sh/blog/floresta-on-steamdeck'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

@@ -68,6 +68,7 @@ contributions:
     source: 'selfcustody/krux-installer · #158'
     type: PR
     href: 'https://github.com/selfcustody/krux-installer/pull/158'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

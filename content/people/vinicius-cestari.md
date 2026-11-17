@@ -97,6 +97,7 @@ writing:
     date: '2026-08-14'
     source: viniciuscestari.dev
     href: 'https://viniciuscestari.dev/posts/bitcoin-core-ipc-on-the-wire'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

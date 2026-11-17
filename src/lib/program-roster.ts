@@ -13,7 +13,10 @@ export function getProgramRoster(program: string, cohort?: number): ProgramMembe
             image: person.image ?? "",
             status: entry.status,
             fundedBy: entry.fundedBy,
-            links: Object.fromEntries(person.links.filter(({ icon }) => icon).map(({ icon, href }) => [icon, href])),
+            // Profile links may contain multiple accounts. Program cards use the first per icon.
+            links: Object.fromEntries(
+                [...person.links].reverse().filter(({ icon }) => icon).map(({ icon, href }) => [icon, href]),
+            ),
             easterEggImage: person.alternateImage,
         })),
     );

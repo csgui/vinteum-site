@@ -80,6 +80,7 @@ writing:
     date: '2026-08-05'
     source: johnnyasantos.com
     href: 'https://johnnyasantos.com/blog/2026/08/05/my-work-on-p2poolv2/'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

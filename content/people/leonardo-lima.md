@@ -60,6 +60,7 @@ contributions:
     source: 'bitcoindevkit/bdk · #2027'
     type: PR
     href: 'https://github.com/bitcoindevkit/bdk/pull/2027'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

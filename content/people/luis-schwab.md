@@ -74,6 +74,7 @@ contributions:
     source: 'getfloresta/Floresta · #523'
     type: PR
     href: 'https://github.com/getfloresta/Floresta/pull/523'
+updatedAt: '2026-11-17'
 ---
 ## EN
 

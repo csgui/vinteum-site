@@ -37,6 +37,7 @@ const item = z.object({
 const affiliation = z.object({
     organization: z.string().trim().min(1),
     role: localized,
+    directoryRole: z.enum(["team", "fellow"]).optional(),
     status: z.enum(["current", "past"]).optional(),
     start: date.optional(),
     end: date.optional(),
@@ -53,6 +54,7 @@ const schema: z.ZodType<Person> = z.object({
     location: localized.optional(),
     bio: localized.optional(),
     updatedAt: date.optional(),
+    projectLabel: z.string().trim().min(1).optional(),
     focus: z.array(z.string().trim().min(1)).default([]),
     links: z
         .array(
