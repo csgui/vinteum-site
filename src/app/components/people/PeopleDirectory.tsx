@@ -45,17 +45,19 @@ export function PeopleDirectory({ people, filters = "" }: { people: Person[]; fi
                         ))}
                     </div>
                     {areas.length > 0 && (
-                        <select aria-label={t("people.focus")} value={focus}
-                            onChange={(event) => updateFilter("focus", event.target.value)}>
-                            <option value="">{t("people.allFocus")}</option>
-                            {areas.map((area) => <option key={area}>{area}</option>)}
-                        </select>
+                        <div className={styles.focusFilter}>
+                            <select aria-label={t("people.focus")} value={focus}
+                                onChange={(event) => updateFilter("focus", event.target.value)}>
+                                <option value="">{t("people.allFocus")}</option>
+                                {areas.map((area) => <option key={area}>{area}</option>)}
+                            </select>
+                        </div>
                     )}
                     <form className={styles.search} role="search" onSubmit={(event) => event.preventDefault()}>
                         <input type="search" value={query} onChange={(event) => updateFilter("q", event.target.value)}
                             aria-label={t("people.search")} placeholder={t("people.search")} />
                     </form>
-                    <span className={styles.resultCount} role="status">
+                    <span className="sr-only" role="status">
                         {filtered.length} {t(filtered.length === 1 ? "people.countSingular" : "people.count")}
                     </span>
                 </div>
