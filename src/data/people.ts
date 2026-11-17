@@ -72,18 +72,11 @@ export interface Person {
     connections: { slug: string; reason: LocalizedText }[];
 }
 
-export function getDirectoryRoles(person: Person): DirectoryRole[] {
-    const participations = person.programs.filter(({ organization }) => organization === "Vinteum");
-    const roles: DirectoryRole[] = [];
-    if (participations.some(({ program, status }) => program === "grants" && status === "current")) roles.push("grantee");
-    if (participations.some(({ program, status }) => program === "fellowship" && status === "current")) roles.push("fellow");
-    if (participations.some(({ program, status }) =>
-        (program === "grants" || program === "fellowship") && status === "past",
-    )) roles.push("alumni");
-    for (const { directoryRole } of person.affiliations) {
-        if (directoryRole && !roles.includes(directoryRole)) roles.push(directoryRole);
-    }
-    return roles;
+export function getDirectoryRole(person: Person): DirectoryRole | undefined {
+    const primary = getPrimaryParticipation(person);
+    if (primary?.status === "past") return "alumni";
+    if (primary?.status === "current") return primary.program === "grants" ? "grantee" : "fellow";
+    return person.affiliations.find(({ directoryRole }) => directoryRole)?.directoryRole;
 }
 
 export function getPrimaryParticipation(person: Person): Participation | undefined {
@@ -133,7 +126,7 @@ export function filterPeople(
 ) {
     const search = normalizeSearch(query.trim());
     return people.filter((person) =>
-        (role === "all" || getDirectoryRoles(person).includes(role)) &&
+        (role === "all" || getDirectoryRole(person) === role) &&
         (!focus || person.focus.includes(focus)) &&
         (!search || normalizeSearch([
             person.name,

@@ -3,7 +3,7 @@ import { existsSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
-import { filterPeople, formatPersonDate, getDirectoryRoles } from "../src/data/people.ts";
+import { filterPeople, formatPersonDate, getDirectoryRole } from "../src/data/people.ts";
 import { getPerson, parseProfile, readPeople } from "../src/lib/people.ts";
 
 const minimal = "---\nname: Álvaro\n---\n";
@@ -50,12 +50,12 @@ test("maintains one identity per contributor and covers the published program ro
     for (const slug of ["erick-cestari", "thgo-o"]) {
         const person = getPerson(slug);
         assert.ok(person);
-        const roles = getDirectoryRoles(person);
-        assert.ok(roles.includes("grantee"));
-        assert.ok(roles.includes("alumni"));
-        assert.ok(!roles.includes("fellow"));
+        assert.equal(getDirectoryRole(person), "grantee");
+        assert.ok(person.programs.some(({ program, status }) => program === "fellowship" && status === "past"));
+        assert.ok(!filterPeople(people, { role: "alumni", focus: "", query: "", locale: "EN" })
+            .some((match) => match.slug === slug));
     }
-    assert.ok(getPerson("k-yu"));
+    assert.equal(getPerson("k-yu")?.name, "K-YU");
     assert.ok(getPerson("caio"));
     assert.equal(getPerson("marina-okada"), undefined);
     assert.equal(getPerson("nullbyte"), undefined);

@@ -866,13 +866,8 @@
         "supportDescription": "Vinteum grants and fellowships are funded by people and companies who believe Bitcoin needs more independent developers.",
         "supportAction": "Support Vinteum",
         "title": "Proof of work",
-        "grid": "Grid",
-        "map": "Map",
-        "otherWork": "Other work",
         "cohort": "Cohort",
         "fundedBy": "Funded by",
-        "affiliationEnd": "Ended",
-        "view": "Directory view",
-        "mapScroll": "Scrollable contributor and project map"
+        "affiliationEnd": "Ended"
     }
 }

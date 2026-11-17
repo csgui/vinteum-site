@@ -866,13 +866,8 @@
         "supportDescription": "Grants e fellowships da Vinteum são financiados por pessoas e empresas que acreditam que o Bitcoin precisa de mais desenvolvedores independentes.",
         "supportAction": "Apoie a Vinteum",
         "title": "Proof of work",
-        "grid": "Grade",
-        "map": "Mapa",
-        "otherWork": "Outros trabalhos",
         "cohort": "Turma",
         "fundedBy": "Financiado por",
-        "affiliationEnd": "Encerrado em",
-        "view": "Visualização do diretório",
-        "mapScroll": "Mapa rolável de pessoas e projetos"
+        "affiliationEnd": "Encerrado em"
     }
 }

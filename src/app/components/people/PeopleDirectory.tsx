@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { filterPeople, getDirectoryRoles, getPrimaryParticipation, getProjectLabel, type Person } from "@/data/people";
+import { filterPeople, getDirectoryRole, getPrimaryParticipation, getProjectLabel, type Person } from "@/data/people";
 import { PeopleHeroArt, PersonAvatar } from "./PeoplePrimitives";
-import { ProjectMap } from "./ProjectMap";
 import styles from "./people.module.css";
 
 const roles = ["all", "grantee", "fellow", "alumni", "team"] as const;
@@ -15,7 +14,6 @@ export function PeopleDirectory({ people, filters = "" }: { people: Person[]; fi
     const role = roles.find((value) => params.get("role") === value) ?? "all";
     const focus = params.get("focus") ?? "";
     const query = params.get("q") ?? "";
-    const view = params.get("view") === "map" ? "map" : "grid";
     const areas = [...new Set(people.flatMap(({ focus }) => focus))].sort();
     const filtered = filterPeople(people, { role, focus, query, locale });
 
@@ -60,14 +58,6 @@ export function PeopleDirectory({ people, filters = "" }: { people: Person[]; fi
                     <span className={styles.resultCount} role="status">
                         {filtered.length} {t(filtered.length === 1 ? "people.countSingular" : "people.count")}
                     </span>
-                    <div className={`${styles.roleFilters} ${styles.viewFilters}`} role="group" aria-label={t("people.view")}>
-                        {(["grid", "map"] as const).map((value) => (
-                            <button type="button" key={value} aria-pressed={view === value}
-                                onClick={() => updateFilter("view", value === "grid" ? "" : value)}>
-                                {t(`people.${value}`)}
-                            </button>
-                        ))}
-                    </div>
                 </div>
             </div>
             <div className={`${styles.container} ${styles.directoryBody}`}>
@@ -78,12 +68,11 @@ export function PeopleDirectory({ people, filters = "" }: { people: Person[]; fi
                             {t("people.clearFilters")}
                         </button>
                     </div>
-                ) : view === "map" ? (
-                    <ProjectMap people={filtered} />
                 ) : (
                     <ul className={styles.peopleGrid}>
                         {filtered.map((person, index) => {
                             const project = getProjectLabel(person, locale);
+                            const personRole = getDirectoryRole(person);
                             const start = getPrimaryParticipation(person)?.start;
                             return (
                                 <li key={person.slug}>
@@ -91,14 +80,12 @@ export function PeopleDirectory({ people, filters = "" }: { people: Person[]; fi
                                         <PersonAvatar person={person} priority={index < 4} />
                                         <h2>{person.name}</h2>
                                         {project && <p>{project}</p>}
-                                        <div className={styles.cardRoles}>
-                                            {getDirectoryRoles(person).map((role, index) => (
-                                                <span key={role} className={styles.role} data-role={role}>
-                                                    {t(`people.roles.${role}`)}
-                                                    {start && index === 0 && ` · ${start.slice(0, 4)}`}
-                                                </span>
-                                            ))}
-                                        </div>
+                                        {personRole && (
+                                            <span className={styles.role} data-role={personRole}>
+                                                {t(`people.roles.${personRole}`)}
+                                                {start && ` · ${start.slice(0, 4)}`}
+                                            </span>
+                                        )}
                                     </Link>
                                 </li>
                             );

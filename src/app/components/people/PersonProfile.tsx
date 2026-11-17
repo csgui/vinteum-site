@@ -281,7 +281,6 @@ export function PersonProfile({
                                 {person.pseudonymous && `${person.handle ? " · " : ""}${t("people.pseudonymous")}`}
                             </p>
                         )}
-                        {person.location && <p className={styles.handle}>{person.location[locale]}</p>}
                         {person.bio && (
                             <div className={styles.bio}>
                                 <Markdown skipHtml>{person.bio[locale]}</Markdown>

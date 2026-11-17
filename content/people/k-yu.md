@@ -1,5 +1,5 @@
 ---
-name: Caio Ueda Sampaio (K-YU)
+name: K-YU
 image: /assets/images/people/fellows/caioueda.jpg
 programs:
   - program: fellowship
