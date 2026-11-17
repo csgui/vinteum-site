@@ -102,6 +102,29 @@ export function getProfileRelationships(person: Person): {
     };
 }
 
+export interface OrganizationLogo {
+    src: string;
+    background?: string;
+}
+
+const organizationLogos: Readonly<Record<string, OrganizationLogo>> = {
+    Vinteum: { src: "/assets/logos/vinteum.svg" },
+    "Bitcoin Dev Kit Foundation": { src: "/assets/logos/affiliations/bdk-foundation.svg", background: "#ffffff" },
+    "Boltz": { src: "/assets/logos/affiliations/boltz.svg" },
+    "Btrust": { src: "/assets/logos/affiliations/btrust.svg", background: "#222222" },
+    "Floresta": { src: "/assets/logos/affiliations/floresta.svg", background: "#ffffff" },
+    "Human Rights Foundation (Bitcoin Development Fund)": { src: "/assets/logos/affiliations/hrf.svg", background: "#ffffff" },
+    "Lightning Labs": { src: "/assets/logos/affiliations/lightning-labs.png", background: "#ffffff" },
+    "OpenSats": { src: "/assets/logos/affiliations/opensats.png" },
+    "Second": { src: "/assets/logos/affiliations/second.png", background: "#ffffff" },
+    "Spiral": { src: "/assets/logos/affiliations/spiral.svg", background: "#ffffff" },
+    "Tether": { src: "/assets/logos/affiliations/tether.png" },
+};
+
+export function getOrganizationLogo(organization: string): OrganizationLogo | undefined {
+    return Object.hasOwn(organizationLogos, organization) ? organizationLogos[organization] : undefined;
+}
+
 export function getProjectLabel(person: Person, locale: "EN" | "BR") {
     return getPrimaryParticipation(person)?.work?.[locale] ?? person.projectLabel ?? person.projects[0]?.name
         ?? person.affiliations.find(({ directoryRole }) => directoryRole === "team")?.role[locale];

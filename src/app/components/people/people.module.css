@@ -701,6 +701,11 @@
     color: var(--people-muted);
     overflow: hidden;
 }
+.affiliationLogo {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
 .logoCrop {
     display: block;
     width: 20px;

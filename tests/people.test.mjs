@@ -235,6 +235,25 @@ test("includes external grants as affiliations alongside Vinteum fellowship hist
     }
 });
 
+test("provides a local logo for every affiliation organization and initials only for unknown names", () => {
+    assert.equal(typeof profileData.getOrganizationLogo, "function");
+    const organizations = new Set(readPeople().flatMap((person) =>
+        profileData.getProfileRelationships(person).affiliations.map(({ organization }) => organization)));
+    for (const organization of organizations) {
+        const logo = profileData.getOrganizationLogo(organization);
+        assert.ok(logo?.src?.startsWith("/assets/logos/"), organization);
+        assert.ok(existsSync(join("public", logo.src)), `Missing logo for ${organization}`);
+        assert.ok(!/^https?:/.test(logo.src), organization);
+        if (logo.src.endsWith(".svg")) {
+            const svg = readFileSync(join("public", logo.src), "utf8");
+            assert.match(svg, /<svg\b/, organization);
+            assert.doesNotMatch(svg, /<script\b|<foreignObject\b|\bon[a-z]+\s*=|(?:xlink:)?href\s*=\s*["'](?:https?:|\/\/|javascript:)/i, organization);
+        }
+    }
+    assert.equal(profileData.getOrganizationLogo("Unknown future organization"), undefined);
+    assert.equal(profileData.getOrganizationLogo("constructor"), undefined);
+});
+
 const baseUrl = process.env.PEOPLE_TEST_URL;
 test("built directory links to every canonical profile and unknown profiles return 404", { skip: !baseUrl }, async () => {
     const directory = await fetch(new URL("/people", baseUrl));

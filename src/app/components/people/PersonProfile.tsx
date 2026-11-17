@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { formatPersonDate, getPrimaryParticipation, getProfileRelationships, sortProfileItems, type Affiliation, type Person, type ProfileItem } from "@/data/people";
+import { formatPersonDate, getOrganizationLogo, getPrimaryParticipation, getProfileRelationships, sortProfileItems, type Affiliation, type Person, type ProfileItem } from "@/data/people";
 import Markdown from "react-markdown";
 import { PeopleHeroArt, PeopleSupport, PersonAvatar } from "./PeoplePrimitives";
 import styles from "./people.module.css";
@@ -107,6 +107,27 @@ function AffiliationDetails({ entry }: { entry: Affiliation }) {
     );
 }
 
+function OrganizationIcon({ organization }: { organization: string }) {
+    const logo = getOrganizationLogo(organization);
+    return (
+        <span
+            className={styles.organizationIcon}
+            style={logo?.background ? { background: logo.background } : undefined}
+            aria-hidden="true"
+        >
+            {logo ? (
+                organization === "Vinteum" ? (
+                    <span className={styles.logoCrop}>
+                        <Image src={logo.src} alt="" width={78} height={20} />
+                    </span>
+                ) : (
+                    <Image className={styles.affiliationLogo} src={logo.src} alt="" width={25} height={25} />
+                )
+            ) : organization.slice(0, 2)}
+        </span>
+    );
+}
+
 function ProfileSidebar({ person, relatedPeople }: { person: Person; relatedPeople: Person[] }) {
     const { locale, t } = useLanguage();
     const { affiliations, programs } = getProfileRelationships(person);
@@ -118,20 +139,7 @@ function ProfileSidebar({ person, relatedPeople }: { person: Person; relatedPeop
                     <ul className={styles.affiliations}>
                         {affiliations.map((affiliation, index) => (
                             <li key={`${affiliation.organization}-${affiliation.start}-${index}`}>
-                                <span className={styles.organizationIcon} aria-hidden="true">
-                                    {affiliation.organization === "Vinteum" ? (
-                                        <span className={styles.logoCrop}>
-                                            <Image
-                                                src="/assets/logos/vinteum.svg"
-                                                alt=""
-                                                width={78}
-                                                height={20}
-                                            />
-                                        </span>
-                                    ) : (
-                                        affiliation.organization.slice(0, 2)
-                                    )}
-                                </span>
+                                <OrganizationIcon organization={affiliation.organization} />
                                 <div>
                                     <h3>
                                         {affiliation.href ? (
