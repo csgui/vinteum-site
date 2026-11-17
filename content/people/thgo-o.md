@@ -9,6 +9,8 @@ programs:
       EN: Fellow
       BR: Fellow
     status: past
+    end: '2026-01'
+    start: '2025-08'
     cohort: 1
     work:
       EN: BtcPayServer
@@ -81,8 +83,12 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-thgO-O has contributed to BTCPay Server. Selected work includes BTCPay Server multisig setup and wallet permissions.
+thgO-O contributes to BTCPay Server. Vinteum’s [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documents his progression from fellow to grantee and membership of the project’s core development team. His work spans the plugin ecosystem, a native macOS ARM64 BTCPay Vault build and a redesign of Payment Requests. He also worked on an experimental Floresta-backed on-chain plugin and on Lightning Manager’s support for multiple Lightning backends.
+
+His merged [multisig setup flow](https://github.com/btcpayserver/btcpayserver/pull/7218) guides store owners through signing policies, signer invitations, key collection and address review. A separate [wallet-permissions change](https://github.com/btcpayserver/btcpayserver/pull/7329) moves the wallet interface into a plugin area and separates permissions for viewing, creating, signing and broadcasting transactions.
 
 ## PT
 
-thgO-O tem contribuições em BTCPay Server. Seu trabalho inclui configuração de multisig e permissões de carteiras no BTCPay Server.
+thgO-O contribui para o BTCPay Server. O [relatório do quarto ano da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documenta sua passagem de fellow a bolsista e sua entrada na equipe central de desenvolvimento do projeto. Seu trabalho abrange o ecossistema de plugins, uma versão nativa do BTCPay Vault para macOS ARM64 e a reformulação de Payment Requests. Também trabalhou em um plugin experimental com Floresta como backend on-chain e no suporte do Lightning Manager a múltiplos backends Lightning.
+
+Seu [fluxo de configuração multisig](https://github.com/btcpayserver/btcpayserver/pull/7218), já integrado, orienta lojistas na escolha de políticas de assinatura, convites a signatários, coleta de chaves e revisão de endereços. Outra [mudança nas permissões de carteiras](https://github.com/btcpayserver/btcpayserver/pull/7329) move a interface para uma área de plugin e separa permissões para visualizar, criar, assinar e transmitir transações.

@@ -16,6 +16,10 @@ programs:
       EN: Fellow
       BR: Fellow
     status: current
+    work:
+      EN: Payjoin Dev Kit
+      BR: Payjoin Dev Kit
+    start: '2026-09'
 writing:
   - id: personal-blog-payjoin-bip77-bip78
     title:
@@ -76,6 +80,10 @@ projects:
 
 Carlos Santos has contributed to Payjoin Dev Kit. Selected work includes Payjoin v2 fuzzing and receiver FFI testing.
 
+Carlos's Payjoin testing work extends to the boundary between the Rust implementation and applications using its foreign-function interface. His [receiver-checklist fuzz target](https://github.com/payjoin/rust-payjoin/pull/2022), merged in November 2026, exercises callback and checklist paths with malformed or mismatched host responses. The tests cover callback failures, refused saves, and synchronous and asynchronous persistence adapters, replaying saved state to check integration behavior beyond the core receiver logic.
+
 ## PT
 
 Carlos Santos tem contribuições em Payjoin Dev Kit. Seu trabalho inclui fuzzing de Payjoin v2 e testes da FFI de recebedores.
+
+O trabalho de Carlos em testes de Payjoin alcança a fronteira entre a implementação Rust e os aplicativos que usam sua interface para outras linguagens. Seu [alvo de fuzzing dos checklists do recebedor](https://github.com/payjoin/rust-payjoin/pull/2022), integrado em novembro de 2026, exercita os caminhos de callbacks e checklists com respostas malformadas ou incompatíveis da aplicação. Os testes cobrem falhas de callbacks, recusas de gravação e adaptadores síncronos e assíncronos de persistência, reconstruindo o estado salvo para verificar a integração além da lógica central do recebedor.

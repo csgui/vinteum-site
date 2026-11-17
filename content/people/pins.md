@@ -62,8 +62,12 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-Pins has contributed to btcd, lnd. Selected work includes Lightning invoices, Taproot fallback addresses and ECDSA validation.
+Pins contributes to LND and the Go Bitcoin ecosystem. His merged [BOLT-11 change](https://github.com/lightningnetwork/lnd/pull/9975) adds Taproot (P2TR) fallback addresses to Lightning invoices, while a [btcd contribution](https://github.com/btcsuite/btcd/pull/2524) introduces a VerifyLowS helper for ECDSA signatures.
+
+Vinteum’s [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) records a shift in his 2026 work toward coverage-guided fuzzing: he built targets for LND’s Channel Link and Funding Manager state machines and expanded reusable testing infrastructure. This broadens his invoice and signature work into testing the state transitions involved in channel operation and funding. The report also documents his participation in the Lightning specification meeting, where implementation teams coordinate interoperability.
 
 ## PT
 
-Pins tem contribuições em btcd, lnd. Seu trabalho inclui invoices Lightning, endereços Taproot de fallback e validação ECDSA.
+Pins contribui para o LND e o ecossistema Bitcoin em Go. Sua [mudança no BOLT-11](https://github.com/lightningnetwork/lnd/pull/9975), já integrada, adiciona endereços Taproot (P2TR) de fallback às invoices Lightning; uma [contribuição ao btcd](https://github.com/btcsuite/btcd/pull/2524) introduz o helper VerifyLowS para assinaturas ECDSA.
+
+O [relatório do quarto ano da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) registra uma mudança de foco em 2026 para fuzzing guiado por cobertura: ele construiu alvos para as máquinas de estados Channel Link e Funding Manager do LND e ampliou a infraestrutura reutilizável de testes. Isso estende o trabalho com invoices e assinaturas ao teste das transições de estado na operação e no financiamento de canais. O relatório também documenta sua participação no encontro de especificação Lightning, no qual equipes de implementações coordenam interoperabilidade.

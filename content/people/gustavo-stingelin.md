@@ -9,6 +9,8 @@ programs:
       EN: Fellow
       BR: Fellow
     status: past
+    end: '2026-06'
+    start: '2025-10'
     cohort: 1
     work:
       EN: Lightning Labs
@@ -64,11 +66,20 @@ contributions:
     type: PR
     href: 'https://github.com/btcsuite/btcwallet/pull/1485'
 updatedAt: '2026-11-17'
+affiliations:
+  - organization: Lightning Labs
+    role: { EN: Developer, BR: Desenvolvedor }
+    status: current
+    start: '2026-07'
 ---
 ## EN
 
 Gustavo Stingelin has contributed to btcwallet. Selected work includes btcwallet key handling and wallet internals.
 
+In the [August 2026 alumni account](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), Gustavo describes moving from LND contributions to btcwallet's SQL migration, supporting SQLite and PostgreSQL. He reported joining Lightning Labs in July 2026 to work on Loop alongside btcwallet; the migration was still ongoing in that account.
+
 ## PT
 
 Gustavo Stingelin tem contribuições em btcwallet. Seu trabalho inclui tratamento de chaves e componentes internos do btcwallet.
+
+No [relato de ex-participantes de agosto de 2026](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), Gustavo descreve a passagem de contribuições no LND à migração do btcwallet para SQL, com SQLite e PostgreSQL. Relatou ingressar na Lightning Labs em julho de 2026 para trabalhar no Loop e no btcwallet; a migração permanecia em andamento.

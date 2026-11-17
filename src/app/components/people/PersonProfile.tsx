@@ -35,7 +35,7 @@ function ItemList({ items }: { items: ProfileItem[] }) {
                             )}
                         </div>
                         {(item.type || item.source) && (
-                            <p className={styles.itemMeta}>{[item.type, item.source].filter(Boolean).join(" · ")}</p>
+                            <p className={styles.itemMeta}>{[item.type && t(`people.contributionTypes.${item.type}`), item.source].filter(Boolean).join(" · ")}</p>
                         )}
                         {item.description && (
                             <p className={styles.itemDescription}>{item.description[locale]}</p>
@@ -387,7 +387,7 @@ export function PersonProfile({
                                                                 : undefined
                                                         }
                                                     >
-                                                        {type}{" "}
+                                                        {t(`people.contributionTypes.${type}`)}{" "}
                                                         <span>
                                                             {
                                                                 person.contributions.filter(

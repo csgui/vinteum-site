@@ -18,6 +18,10 @@ programs:
       EN: Fellow
       BR: Fellow
     status: current
+    work:
+      EN: BNOC
+      BR: BNOC
+    start: '2026-10'
 projects:
   - name: Bitcoin Topology Discovery
     href: 'https://github.com/dutenrapha/bitcoin-topology-discovery'
@@ -67,6 +71,10 @@ discussions:
 
 Raphael Dutenkefer is a Vinteum fellow building tools to observe the Bitcoin P2P network. His Bitcoin Topology Discovery crawler records announced peers and successful handshakes to support network analysis.
 
+Vinteum documents his exploration of data science for Bitcoin privacy and network research in its [August 2026 alumni retrospective](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook). The [public crawler implementation](https://github.com/dutenrapha/bitcoin-topology-discovery/commit/ff1cfe01b0c368b9524dbbcd24ec59137640e642) turns this direction into tooling: DNS-seed discovery, IPv4 peer announcements, handshake checks, event logging and Parquet export. The crawler provides a partial view of the network through the peers it observes.
+
 ## PT
 
 Raphael Dutenkefer é fellow da Vinteum e desenvolve ferramentas de observação da rede P2P do Bitcoin. Seu crawler Bitcoin Topology Discovery registra peers anunciados e handshakes bem-sucedidos para apoiar a análise da rede.
+
+A exploração de ciência de dados para privacidade e redes Bitcoin aparece na [retrospectiva de agosto de 2026 da Vinteum](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook). A [implementação pública do crawler](https://github.com/dutenrapha/bitcoin-topology-discovery/commit/ff1cfe01b0c368b9524dbbcd24ec59137640e642) transforma essa direção em ferramentas: descoberta por seeds DNS, anúncios de peers IPv4, verificação de handshakes, logs de eventos e exportação para Parquet. O crawler oferece uma visão parcial da rede a partir dos peers que observa.

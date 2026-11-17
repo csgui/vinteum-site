@@ -86,6 +86,8 @@ export function getPrimaryParticipation(person: Person): Participation | undefin
         organization === "Vinteum" && program === "fellowship" && status === "current",
     ) ?? person.programs.find(({ organization, program }) =>
         organization === "Vinteum" && (program === "grants" || program === "fellowship"),
+    ) ?? person.programs.find(({ organization, program }) =>
+        organization === "Vinteum" && program === "bitcoin-dev-launchpad",
     );
 }
 

@@ -37,8 +37,12 @@ writing:
 ---
 ## EN
 
-Bruno Garcia is Head of Engineering at Vinteum and a Bitcoin Core contributor. He helps shape Vinteum’s technical direction and mentors developers contributing to Bitcoin open source.
+Bruno Garcia is Head of Engineering at Vinteum and a Bitcoin Core contributor. His technical work focuses on fuzzing, mutation testing and code review: finding failures with generated inputs and checking whether tests detect deliberately introduced faults.
+
+He created Bitcoinfuzz, a differential-fuzzing framework that compares how independent implementations handle the same inputs. Its scope includes Bitcoin, Lightning and related libraries, helping distinguish implementation differences from bugs. Alongside this work, he mentors fellows and grantees and helped launch the Bitcoin Dev Launchpad, connecting technical study with upstream contribution. [Read the OpenSats developer spotlight](https://opensats.org/blog/developer-spotlight-bruno-garcia).
 
 ## PT
 
-Bruno Garcia é Head of Engineering da Vinteum e contribuidor do Bitcoin Core. Ajuda a definir a direção técnica da organização e orienta desenvolvedores que contribuem para o Bitcoin open source.
+Bruno Garcia é Head of Engineering da Vinteum e contribuidor do Bitcoin Core. Seu trabalho técnico se concentra em fuzzing, testes de mutação e revisão de código: encontrar falhas com entradas geradas e verificar se os testes detectam defeitos introduzidos deliberadamente.
+
+Criou o Bitcoinfuzz, um framework de fuzzing diferencial que compara como implementações independentes processam as mesmas entradas. Seu escopo inclui Bitcoin, Lightning e bibliotecas relacionadas, ajudando a distinguir diferenças de implementação de bugs. Em paralelo, orienta fellows e grantees e ajudou a criar o Bitcoin Dev Launchpad, conectando estudo técnico à contribuição nos projetos. [Leia o perfil publicado pela OpenSats](https://opensats.org/blog/developer-spotlight-bruno-garcia).

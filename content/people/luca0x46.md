@@ -9,10 +9,12 @@ programs:
       EN: Fellow
       BR: Fellow
     status: past
+    end: '2025-08'
+    start: '2025-03'
     cohort: 1
     work:
-      EN: Second
-      BR: Second
+      EN: Floresta
+      BR: Floresta
     href: /programs/fellowship
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
@@ -58,11 +60,24 @@ contributions:
     type: PR
     href: 'https://github.com/getfloresta/Floresta/pull/565'
 updatedAt: '2026-11-17'
+affiliations:
+  - organization: Second
+    role: { EN: QA Engineer, BR: Engenheiro de QA }
+    status: current
+    start: '2026-01'
 ---
 ## EN
 
 Luca0x46 has contributed to Floresta. Selected work includes peer verification and Utreexo accumulator handling in Floresta.
 
+The [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) records Luca's move from the first Bitcoin Dev Launchpad cohort into a QA engineering role at Second. In his [August 2026 alumni account](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), he connects that transition to earlier Floresta contributions and deliberate study of networking and systems during his fellowship.
+
+At Second, he described working on automated testing across Bark, its SDK and applications, including specialized harnesses and fuzzing infrastructure.
+
 ## PT
 
 Luca0x46 tem contribuições em Floresta. Seu trabalho inclui verificação de peers e tratamento do acumulador Utreexo no Floresta.
+
+O [relatório do quarto ano](/assets/files/Vinteum-Year-Four-Report-2026.pdf) registra a passagem de Luca da primeira turma do Bitcoin Dev Launchpad para uma função de engenharia de QA na Second. Em seu [depoimento de agosto de 2026](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), ele relaciona essa transição às contribuições anteriores ao Floresta e ao estudo de redes e sistemas durante a fellowship.
+
+Na Second, relatou trabalhar em testes automatizados de Bark, seu SDK e aplicações, incluindo ferramentas especializadas de teste e infraestrutura de fuzzing.

@@ -9,6 +9,8 @@ programs:
       EN: Fellow
       BR: Fellow
     status: past
+    end: '2025-08'
+    start: '2025-03'
     cohort: 1
     work:
       EN: Krux
@@ -66,6 +68,10 @@ updatedAt: '2026-11-17'
 
 Guilherme Martins has contributed to krux. Selected work includes Krux signing-device features, SeedXOR backups and tests.
 
+In the [August 2026 alumni account](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), Guilherme (qlrd) describes creating Krux Installer, then improving Floresta functional tests and Bitcoin Core RPC compatibility. He brought that testing focus back to Krux through CI, hardware support and wallet functionality.
+
 ## PT
 
 Guilherme Martins tem contribuições em krux. Seu trabalho inclui funcionalidades do dispositivo de assinatura Krux, backups SeedXOR e testes.
+
+No [relato de ex-participantes de agosto de 2026](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), Guilherme (qlrd) descreve a criação do Krux Installer e melhorias nos testes funcionais e na compatibilidade RPC do Floresta com Bitcoin Core. Depois, levou esse foco em testes ao Krux, trabalhando em CI, suporte a hardware e funcionalidades de carteira.

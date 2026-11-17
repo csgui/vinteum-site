@@ -8,11 +8,13 @@ programs:
     role:
       EN: Fellow
       BR: Fellow
-    status: current
+    status: past
+    end: '2026-09'
+    start: '2026-04'
     cohort: 2
     work:
-      EN: Peer Observer
-      BR: Peer Observer
+      EN: Peer Observer / BNOC
+      BR: Peer Observer / BNOC
     href: /programs/fellowship
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
@@ -73,8 +75,12 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-Octavio Lucca has contributed to peer-observer. Selected work includes Bitcoin P2P monitoring, archive parsing and bandwidth-aware tooling.
+Octavio Lucca works on Bitcoin network observability. Vinteum’s [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) describes his trajectory from peer-observer data collection and archiving to a reusable replay library that can be tested without invoking the CLI. Adapting this tooling to Floresta led to getpeerinfo RPC contributions and a Floresta-compatible fork-observer deployment; the report also documents work on Prometheus/Grafana monitoring and tracking DNS seed behaviour.
+
+His merged [low-data archive mode](https://github.com/peer-observer/peer-observer/pull/482) preserves transaction identifiers and block metadata while omitting large raw payloads. A later [archive-reader fix](https://github.com/peer-observer/peer-observer/pull/509) avoids allocating memory solely from an untrusted length prefix and reports truncated data as an I/O error.
 
 ## PT
 
-Octavio Lucca tem contribuições em peer-observer. Seu trabalho inclui monitoramento P2P do Bitcoin, parsing de arquivos e ferramentas para reduzir uso de banda.
+Octavio Lucca trabalha com observabilidade da rede Bitcoin. O [relatório do quarto ano da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve sua trajetória da coleta e do arquivamento de dados no peer-observer a uma biblioteca de replay reutilizável, testável sem executar a CLI. A adaptação dessas ferramentas ao Floresta levou a contribuições no RPC getpeerinfo e à implantação de um fork-observer compatível; o relatório também registra trabalho com Prometheus/Grafana e acompanhamento do comportamento dos seeds DNS.
+
+Seu [modo de arquivamento low-data](https://github.com/peer-observer/peer-observer/pull/482), já integrado, preserva identificadores de transações e metadados de blocos sem armazenar os grandes payloads brutos. Uma [correção posterior no leitor de arquivos](https://github.com/peer-observer/peer-observer/pull/509) evita alocar memória apenas com base em um prefixo de tamanho não confiável e retorna erro de I/O para dados truncados.

@@ -69,6 +69,22 @@ Run `pnpm test:people` (Node 22.13 or newer) and `pnpm build` before review. To
 check rendered routes, start the production build with `pnpm start` and run
 `PEOPLE_TEST_URL=http://localhost:3000 pnpm test:people`.
 
+## Source and relationship checks
+
+Technical descriptions can be enriched from Vinteum's published annual reports,
+public announcements and upstream contributions. Keep useful public source links
+with the text. Do not copy private reports, internal register links, assessments,
+compensation or undisclosed security findings into these files.
+
+Programme history and current affiliations are separate records. Check status and
+dates against the canonical community register before marking a relationship
+`current`; a historical roster or annual report does not establish current
+funding. Record later employment or grants from other organizations under
+`affiliations`, not as the work of a past Vinteum fellowship. BDL participation
+alone does not imply a fellowship. Keep pseudonymous contributors under their
+chosen public identity, and confirm permission for biographies, photos and
+personal links before publication.
+
 ## Initial profiles
 
 The Fellowship and Grants rosters provide the initial names, photos, program

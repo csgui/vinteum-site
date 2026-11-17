@@ -9,6 +9,7 @@ programs:
       EN: Fellow
       BR: Fellow
     status: current
+    start: '2026-04'
     cohort: 2
     work:
       EN: btcd
@@ -77,6 +78,14 @@ updatedAt: '2026-11-17'
 
 Allocz has contributed to btcd, secp256k1 (Go). Selected work includes btcd RPC robustness and secp256k1 performance.
 
+Vinteum's [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documents allocz's investigation of btcd's initial block download, connecting resource usage to specific storage mechanisms. UTXO-cache misses led to the skip_prevout_fetch optimization to avoid unnecessary disk reads; a separate investigation led to depth-based pruning of the spend journal. He also improved the RPC integration-test harness and debug-event assertions, so changes in node behavior can be tested more directly.
+
+Allocz also worked on a portable Go secp256k1 library with an optional libsecp256k1 backend when CGO is available. Substituting this library into btcd remained an experiment, separate from an upstream backend migration.
+
 ## PT
 
 Allocz tem contribuições em btcd, secp256k1 (Go). Seu trabalho inclui robustez do RPC do btcd e desempenho de secp256k1.
+
+O [relatório anual de 2026 da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documenta a investigação de allocz sobre o download inicial de blocos do btcd, relacionando o consumo de recursos a mecanismos específicos de armazenamento. Falhas de acesso ao cache de UTXOs levaram à otimização skip_prevout_fetch para evitar leituras desnecessárias em disco; outra investigação levou à poda do spend journal por profundidade. Também melhorou o ambiente de testes de integração RPC e as verificações de eventos de depuração, permitindo testar mudanças no comportamento do nó de forma mais direta.
+
+Allocz também trabalhou em uma biblioteca secp256k1 portátil em Go, com backend opcional de libsecp256k1 quando CGO está disponível. A substituição da biblioteca criptográfica do btcd permaneceu um experimento, separado de uma migração integrada ao projeto.

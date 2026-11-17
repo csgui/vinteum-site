@@ -9,6 +9,8 @@ programs:
       EN: Fellow
       BR: Fellow
     status: past
+    end: '2025-08'
+    start: '2024-12'
     cohort: 1
     work:
       EN: Floresta
@@ -75,6 +77,14 @@ updatedAt: '2026-11-17'
 
 João Leal has contributed to rust-bitcoinkernel, rust-bitcoin. Selected work includes Android support for rust-bitcoinkernel and Rust Bitcoin network APIs.
 
+In his [August 2026 alumni account](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), João traced his route from São Paulo BitDevs and Summer of Bitcoin to Floresta, the Vinteum fellowship and Bitcoin Dev Launchpad. His early Floresta work involved implementing consensus rules under mentorship; his later focus was RPC compatibility, helping existing applications use Floresta as a backend.
+
+He also built floresta-nix, added Android support to rust-bitcoinkernel and returned to Summer of Bitcoin as a mentor.
+
 ## PT
 
 João Leal tem contribuições em rust-bitcoinkernel, rust-bitcoin. Seu trabalho inclui suporte a Android no rust-bitcoinkernel e APIs de rede do Rust Bitcoin.
+
+Em seu [depoimento de agosto de 2026](https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook), João descreveu o caminho de São Paulo BitDevs e Summer of Bitcoin até o Floresta, a fellowship da Vinteum e o Bitcoin Dev Launchpad. Seu trabalho inicial no Floresta envolveu implementar regras de consenso com mentoria; mais tarde, o foco passou à compatibilidade RPC, facilitando o uso do Floresta como backend por aplicações existentes.
+
+Também criou o floresta-nix, adicionou suporte a Android no rust-bitcoinkernel e voltou ao Summer of Bitcoin como mentor.

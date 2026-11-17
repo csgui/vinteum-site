@@ -9,10 +9,11 @@ programs:
       EN: Fellow
       BR: Fellow
     status: current
+    start: '2026-04'
     cohort: 2
     work:
-      EN: Secure Fountain Codes
-      BR: Secure Fountain Codes
+      EN: btcd
+      BR: btcd
     href: /programs/fellowship
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
@@ -87,6 +88,14 @@ updatedAt: '2026-11-17'
 
 Lucas Lima has contributed to Bitcoin Core, Floresta. Selected work includes libbitcoinkernel APIs and Floresta command-line tooling.
 
+The [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf), covering August 2025–August 2026, describes Lucas's research into whether fountain codes could let pruned nodes contribute historical block data. He moved from simulations to a btcd proof of concept that groups blocks into epochs, stores encoded droplets and exchanges them between peers, including isolated regtest experiments using Warnet.
+
+The approach remained experimental: larger network measurements of bandwidth, peer requirements and reconstruction costs were planned, with malicious peers and storage–bandwidth tradeoffs still open questions. The same report describes his btcd compact-block relay implementation and review-driven iteration, covering reconstruction, missing-transaction requests and fallback behavior.
+
 ## PT
 
 Lucas Lima tem contribuições em Bitcoin Core, Floresta. Seu trabalho inclui APIs de libbitcoinkernel e ferramentas de linha de comando do Floresta.
+
+O [relatório do quarto ano](/assets/files/Vinteum-Year-Four-Report-2026.pdf), que cobre agosto de 2025 a agosto de 2026, descreve a pesquisa de Lucas sobre o uso de fountain codes para permitir que nós podados contribuam dados históricos de blocos. Ele avançou de simulações para uma prova de conceito no btcd que agrupa blocos em épocas, armazena fragmentos codificados e os troca entre peers, incluindo experimentos isolados em regtest com Warnet.
+
+A abordagem permanecia experimental: medições de rede maiores sobre banda, requisitos de peers e custos de reconstrução estavam planejadas, com peers maliciosos e os compromissos entre armazenamento e banda ainda em discussão. O mesmo relatório descreve a implementação de retransmissão de blocos compactos no btcd e os ajustes após revisão, incluindo reconstrução, pedidos de transações ausentes e fallback.

@@ -8,7 +8,9 @@ programs:
     role:
       EN: Fellow
       BR: Fellow
-    status: current
+    status: past
+    end: '2026-09'
+    start: '2026-04'
     cohort: 2
     work:
       EN: Mujina
@@ -77,6 +79,14 @@ updatedAt: '2026-11-17'
 
 Jayr Motta has contributed to mujina, minesploit. Selected work includes Bitcoin mining tools, interactive payload execution and contributor documentation.
 
+The [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) describes Jayr's Mujina work at the intersection of mining protocols, firmware and physical devices. His Stratum V2 integration work was in progress during the report period and involved addressing reviewer feedback and studying channel design and BIP 323. He also experimented with nonce-space slicing to understand how mining work is distributed across ASIC chips.
+
+Other work in progress included a configuration-system proof of concept following review of MIP-0001, firmware work such as fan control, and preparation of a small hardware lab.
+
 ## PT
 
 Jayr Motta tem contribuições em mujina, minesploit. Seu trabalho inclui ferramentas de mineração Bitcoin, execução interativa de payloads e documentação para contribuidores.
+
+O [relatório anual de 2026](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve o trabalho de Jayr no Mujina na interseção entre protocolos de mineração, firmware e dispositivos físicos. O trabalho de integração de Stratum V2 estava em andamento no período coberto pelo relatório e envolveu responder a revisões e estudar o desenho de canais e o BIP 323. Também experimentou a divisão do espaço de nonces para entender a distribuição do trabalho entre chips ASIC.
+
+Outras frentes em andamento incluíam uma prova de conceito do sistema de configuração após a revisão da MIP-0001, trabalho no firmware, como controle de ventoinhas, e preparação de um pequeno laboratório de hardware.

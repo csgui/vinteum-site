@@ -9,6 +9,7 @@ programs:
       EN: Fellow
       BR: Fellow
     status: current
+    start: '2026-04'
     cohort: 2
     work:
       EN: Bitcoin Core
@@ -101,8 +102,12 @@ updatedAt: '2026-11-17'
 ---
 ## EN
 
-Vinicius Cestari has contributed to libsecp256k1, libmultiprocess. Selected work includes multiprocess infrastructure and cryptographic tests.
+Vinicius Cestari contributes to Bitcoin Core infrastructure, especially interprocess communication and libmultiprocess. Vinteum’s [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documents work on serialization helpers, generated code, process-error handling, tests and builds, alongside IPC review. It also describes an RPC-over-IPC prototype in the 2140 fork that evolved toward a generic Cap’n Proto interface after feedback.
+
+His merged [thread-naming change](https://github.com/bitcoin-core/libmultiprocess/pull/324) makes event-loop worker and cleanup threads distinguishable in process tools and logs. In libsecp256k1, a merged [Silent Payments test refactor](https://github.com/bitcoin-core/secp256k1/pull/1972) consolidates repeated setup into reusable helpers.
 
 ## PT
 
-Vinicius Cestari tem contribuições em libsecp256k1, libmultiprocess. Seu trabalho inclui infraestrutura multiprocessos e testes de criptografia.
+Vinicius Cestari contribui para a infraestrutura do Bitcoin Core, especialmente comunicação entre processos e libmultiprocess. O [relatório do quarto ano da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documenta trabalho em helpers de serialização, código gerado, tratamento de erros de processos, testes e builds, além de revisão de IPC. Também descreve um protótipo de RPC via IPC no fork 2140 que evoluiu, após feedback, para uma interface Cap’n Proto genérica.
+
+Sua [mudança de nomes de threads](https://github.com/bitcoin-core/libmultiprocess/pull/324), já integrada, permite distinguir workers e threads de limpeza do event loop nas ferramentas de processos e nos logs. Na libsecp256k1, um [refactor de testes de Silent Payments](https://github.com/bitcoin-core/secp256k1/pull/1972) consolida a preparação repetida em helpers reutilizáveis.

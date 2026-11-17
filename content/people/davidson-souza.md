@@ -296,6 +296,14 @@ updatedAt: '2026-11-17'
 
 Davidson Souza is a Vinteum grantee and the creator of Floresta, a Bitcoin node written in Rust that uses Utreexo to reduce storage requirements. His work focuses on node synchronization and wallet integration, making independent verification more accessible.
 
+The [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documents Davidson's role in developing Floresta as a maintained, reusable project: reviewing work across Floresta and rustreexo, strengthening security and testing practices, and introducing a public roadmap. It describes a combination of manual analysis, automated tests and monitoring to investigate defects, alongside work to simplify the codebase and remove synchronization bottlenecks.
+
+His synchronization research covered two tracks: collaboration with JoseSK999 on an assumevalid-based Swift Sync implementation, and experiments with a faster design that does not rely on assumevalid. He also worked on compact-filter improvements to support historical rescans before full chain processing finishes. Both synchronization designs and the filter improvements were in progress during the report period.
+
 ## PT
 
 Davidson Souza é grantee da Vinteum e criador do Floresta, um nó Bitcoin em Rust que usa Utreexo para reduzir os requisitos de armazenamento. Seu trabalho foca na sincronização de nós e na integração com carteiras para tornar a verificação independente mais acessível.
+
+O [relatório anual de 2026](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documenta o papel de Davidson no desenvolvimento do Floresta como projeto mantido e reutilizável: revisão de contribuições em Floresta e rustreexo, fortalecimento das práticas de segurança e testes e criação de um roadmap público. Ele descreve a combinação de análise manual, testes automatizados e monitoramento para investigar defeitos, junto ao trabalho de simplificar o código e remover gargalos de sincronização.
+
+Sua pesquisa em sincronização abrangeu duas frentes: a colaboração com JoseSK999 em uma implementação de Swift Sync baseada em assumevalid e experimentos com um desenho mais rápido que não depende de assumevalid. Também trabalhou em melhorias nos filtros compactos para permitir buscas por transações históricas antes do processamento completo da cadeia. Os dois desenhos de sincronização e as melhorias de filtros estavam em desenvolvimento naquele período.

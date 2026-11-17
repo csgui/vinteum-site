@@ -847,6 +847,14 @@
         "past": "Past",
         "noContributions": "No contributions match this type.",
         "contributionType": "Filter contributions by type",
+        "contributionTypes": {
+            "PR": "PR",
+            "Code Review": "Code Review",
+            "Research": "Research",
+            "Tooling": "Tooling",
+            "Documentation": "Documentation",
+            "Protocol Specification": "Protocol Specification"
+        },
         "tabs": {
             "overview": "Overview",
             "projects": "Projects",

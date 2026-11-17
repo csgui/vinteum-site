@@ -9,6 +9,8 @@ programs:
       EN: Fellow
       BR: Fellow
     status: past
+    end: '2025-06'
+    start: '2025-03'
     cohort: 1
     work:
       EN: Bitcoinfuzz / Smite
@@ -125,6 +127,14 @@ updatedAt: '2026-11-17'
 
 Erick Cestari works on Bitcoinfuzz and Smite, testing Bitcoin and Lightning implementations through differential and snapshot fuzzing. His contributions include P2P message testing and BOLT 4 onion routing.
 
+Vinteum's [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documents Erick's role as a bitcoinfuzz maintainer and his work comparing Bitcoin and Lightning implementations. His targets include Lightning P2P parsing, BOLT 4 onion decoding, Schnorr signature verification and PSBT parsing. This work also involves reviewing other contributors' changes and investigating whether disagreements reflect implementation defects or ambiguities in protocol requirements.
+
+His snapshot-fuzzing work on Smite is also part of his undergraduate thesis. He has improved fuzz harnesses, corpus management and CI across Bitcoin projects and added BIP324 encrypted-transport support in Fuzzamoto, extending node-level testing beyond legacy transport.
+
 ## PT
 
 Erick Cestari trabalha no Bitcoinfuzz e no Smite, testando implementações de Bitcoin e Lightning com fuzzing diferencial e baseado em snapshots. Suas contribuições incluem testes de mensagens P2P e roteamento onion de BOLT 4.
+
+O [relatório anual de 2026 da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) documenta a atuação de Erick como mantenedor do bitcoinfuzz e seu trabalho de comparação entre implementações de Bitcoin e Lightning. Seus alvos incluem parsing de mensagens P2P Lightning, decodificação onion de BOLT 4, verificação de assinaturas Schnorr e parsing de PSBTs. O trabalho também envolve revisar mudanças de outros contribuidores e investigar se divergências indicam defeitos nas implementações ou ambiguidades nos requisitos do protocolo.
+
+Seu trabalho com fuzzing baseado em snapshots no Smite também faz parte do trabalho de conclusão de curso. Melhorou harnesses, gerenciamento de corpus e CI em projetos Bitcoin e adicionou suporte ao transporte criptografado BIP324 no Fuzzamoto, ampliando os testes de nós além do transporte legado.

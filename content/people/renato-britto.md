@@ -9,7 +9,9 @@ programs:
     role:
       EN: Fellow
       BR: Fellow
-    status: current
+    status: past
+    end: '2026-09'
+    start: '2026-04'
     cohort: 2
     work:
       EN: Rust-Bitcoin
@@ -80,11 +82,20 @@ contributions:
     type: PR
     href: 'https://github.com/rust-bitcoin/rust-bitcoin/pull/6212'
 updatedAt: '2026-11-17'
+affiliations:
+  - organization: Spiral
+    role: { EN: Grantee, BR: Bolsista }
+    status: current
+    start: '2026-10'
 ---
 ## EN
 
-Renato Britto (satsfy) has contributed to corepc, rust-bitcoin. Selected work includes BIP32 seed validation and Bitcoin Core RPC support in Rust.
+Renato Britto (satsfy) contributes across the rust-bitcoin ecosystem. Vinteum’s [year-four report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) traces his move from production backend and authentication systems into Bitcoin open source after the Bitcoin Dev Launchpad. His work includes dependency and CI maintenance, seed corpora for fuzzing, and a compatibility-layer effort intended to let downstream projects migrate across breaking APIs incrementally rather than all at once.
+
+His merged [BIP32 seed validation](https://github.com/rust-bitcoin/rust-bitcoin/pull/6212) introduces a validated seed type so invalid lengths are rejected at construction. In [corepc](https://github.com/rust-bitcoin/corepc/pull/615), he completed Bitcoin Core v31 support across client methods, response types and integration tests, including cluster-mempool and private-broadcast RPCs.
 
 ## PT
 
-Renato Britto (satsfy) tem contribuições em corepc, rust-bitcoin. Seu trabalho inclui validação de seeds BIP32 e suporte ao RPC do Bitcoin Core em Rust.
+Renato Britto (satsfy) contribui em diferentes projetos do ecossistema rust-bitcoin. O [relatório do quarto ano da Vinteum](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve sua transição de sistemas de backend e autenticação em produção para o código aberto Bitcoin após o Bitcoin Dev Launchpad. Seu trabalho inclui manutenção de dependências e CI, corpora iniciais para fuzzing e uma iniciativa de camada de compatibilidade para permitir migrações graduais de projetos dependentes entre APIs incompatíveis.
+
+Sua [validação de seeds BIP32](https://github.com/rust-bitcoin/rust-bitcoin/pull/6212), já integrada, introduz um tipo de seed validado que rejeita comprimentos inválidos na construção. No [corepc](https://github.com/rust-bitcoin/corepc/pull/615), concluiu o suporte ao Bitcoin Core v31 em métodos do cliente, tipos de resposta e testes de integração, incluindo RPCs de cluster mempool e transmissão privada.

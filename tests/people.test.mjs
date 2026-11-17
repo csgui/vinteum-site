@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -43,9 +43,12 @@ test("maintains one identity per contributor and covers the published program ro
     const count = (program, status) => people.filter(({ programs }) =>
         programs.some((entry) => entry.organization === "Vinteum" && entry.program === program && entry.status === status),
     ).length;
-    assert.ok(count("fellowship", "current") >= 12);
-    assert.ok(count("fellowship", "past") >= 13);
-    assert.ok(count("grants", "current") >= 8);
+    // Relationship snapshot checked against the canonical register on 2026-11-17.
+    // The public programme pages keep independent rosters and may lag this directory.
+    assert.equal(count("fellowship", "current"), 11);
+    assert.equal(count("fellowship", "past"), 13);
+    assert.equal(count("grants", "current"), 7);
+    assert.equal(count("grants", "past"), 1);
 
     for (const slug of ["erick-cestari", "thgo-o"]) {
         const person = getPerson(slug);
@@ -96,6 +99,54 @@ test("keeps the four additional prototype profiles discoverable with their edito
 test("retains date precision when only a year or a month is known", () => {
     assert.equal(formatPersonDate("2025", "EN"), "2025");
     assert.equal(formatPersonDate("2025-05", "EN"), "May 2025");
+});
+
+test("provides translated contribution-type labels without changing filter identifiers", () => {
+    const types = ["PR", "Code Review", "Research", "Tooling", "Documentation", "Protocol Specification"];
+    for (const locale of ["en", "pt"]) {
+        const labels = JSON.parse(readFileSync(new URL(`../src/i18n/locales/${locale}.json`, import.meta.url), "utf8"))
+            .people.contributionTypes;
+        assert.ok(labels, `Missing contribution labels for ${locale}`);
+        for (const type of types) assert.ok(labels[type]?.trim(), `${locale}: ${type}`);
+    }
+    const portuguese = JSON.parse(readFileSync(new URL("../src/i18n/locales/pt.json", import.meta.url), "utf8"));
+    assert.equal(portuguese.people.contributionTypes.Documentation, "Documentação");
+    assert.equal(portuguese.people.contributionTypes["Protocol Specification"], "Especificação de protocolo");
+});
+
+test("BDL-only alumni remain filterable without inventing a fellowship", () => {
+    const person = parseProfile("alvaro.md", `---
+name: Álvaro
+programs:
+  - program: bitcoin-dev-launchpad
+    name: Bitcoin Dev Launchpad
+    organization: Vinteum
+    role: { EN: Alumnus, BR: Ex-participante }
+    status: past
+---
+`);
+    assert.equal(getDirectoryRole(person), "alumni");
+    assert.equal(filterPeople([person], { role: "alumni", focus: "", query: "", locale: "EN" }).length, 1);
+});
+
+test("keeps relationship history separate from current funding and employment", () => {
+    for (const slug of ["jayr-motta", "octavio-lucca", "renato-britto", "victor-andre"]) {
+        const person = getPerson(slug);
+        const fellowship = person.programs.find(({ program }) => program === "fellowship");
+        assert.equal(fellowship.status, "past", slug);
+        assert.equal(fellowship.end, "2026-09", slug);
+        assert.ok(getDirectoryRole(person) !== "fellow", slug);
+    }
+    const leo = getPerson("leonardo-lima");
+    assert.equal(leo.programs.find(({ program }) => program === "grants").end, "2026-08");
+    assert.ok(getDirectoryRole(leo) !== "grantee");
+    assert.ok(leo.affiliations.some(({ organization, status }) => organization === "Btrust" && status === "current"));
+    assert.ok(getDirectoryRole(getPerson("themhv")) === "fellow");
+    for (const slug of ["caio", "lang", "joaozinho"]) {
+        assert.ok(!getPerson(slug).programs.some(({ program }) => program === "fellowship"), slug);
+        assert.ok(getDirectoryRole(getPerson(slug)) === "alumni", slug);
+    }
+    assert.equal(getPerson("luca0x46").programs.find(({ program }) => program === "fellowship").work.EN, "Floresta");
 });
 
 const baseUrl = process.env.PEOPLE_TEST_URL;

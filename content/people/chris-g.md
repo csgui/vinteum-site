@@ -95,6 +95,14 @@ updatedAt: '2026-11-17'
 
 Chris G. has contributed to Floresta, hintsfile. Selected work includes Floresta consensus validation and defensive parsing.
 
+The [2026 annual report](/assets/files/Vinteum-Year-Four-Report-2026.pdf) describes Chris's Floresta work beyond individual code changes: component modularization, clearer subsystem boundaries, development roadmaps and contributor coordination. His maintainer responsibilities include architectural proposals, mentoring and guidance on implementation decisions. The architectural goal is to make Floresta usable as an embeddable Bitcoin backend as well as a standalone node.
+
+During the report period, he was also developing an independent Utreexo reference implementation in Lisp for research. Reimplementing the accumulator separately provides a way to examine its operations and assumptions without inheriting the production code's abstractions.
+
 ## PT
 
 Chris G. tem contribuições em Floresta, hintsfile. Seu trabalho inclui validação de consenso no Floresta e parsing defensivo.
+
+O [relatório anual de 2026](/assets/files/Vinteum-Year-Four-Report-2026.pdf) descreve o trabalho de Chris no Floresta além das mudanças individuais de código: modularização de componentes, limites mais claros entre subsistemas, planejamento do desenvolvimento e coordenação de contribuidores. Suas responsabilidades de manutenção incluem propostas de arquitetura, mentoria e orientação de decisões de implementação. O objetivo arquitetural é permitir o uso do Floresta como backend Bitcoin integrável em outras aplicações, além de nó independente.
+
+No período coberto pelo relatório, também desenvolvia uma implementação de referência independente de Utreexo em Lisp para pesquisa. Reimplementar o acumulador separadamente permite examinar suas operações e premissas sem herdar as abstrações do código de produção.
