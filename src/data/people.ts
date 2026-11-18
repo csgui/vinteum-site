@@ -130,7 +130,7 @@ export function getProfileRelationships(person: Person): {
         affiliations: [...person.affiliations, ...person.programs.filter(isAffiliation).map(
             ({ organization, role, directoryRole, status, start, end, href }) =>
                 ({ organization, role, directoryRole, status, start, end, href }),
-        )],
+        )].sort((a, b) => Number(b.status === "current") - Number(a.status === "current")),
         programs: person.programs.filter((entry) => !isAffiliation(entry)).map((entry) =>
             entry.program === "bitcoin-dev-launchpad" || entry.program === "summer-of-bitcoin"
                 ? { program: entry.program, name: entry.name, organization: entry.organization, cohort: entry.cohort, href: entry.href }

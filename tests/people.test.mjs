@@ -275,7 +275,7 @@ programs:
 `);
     const before = JSON.stringify(person);
     const { affiliations, programs } = profileData.getProfileRelationships(person);
-    assert.deepEqual(affiliations.map(({ role }) => role.EN), ["Developer", "Fellow", "Grantee"]);
+    assert.deepEqual(affiliations.map(({ role }) => role.EN), ["Grantee", "Developer", "Fellow"]);
     assert.deepEqual(programs.map(({ program }) => program), ["bitcoin-dev-launchpad"]);
     assert.equal(programs[0].organization, "Vinteum");
     assert.equal(programs[0].cohort, 1);
@@ -283,14 +283,25 @@ programs:
     assert.equal(programs[0].status, undefined);
     assert.equal(programs[0].work, undefined);
     assert.equal(programs[0].fundedBy, undefined);
-    assert.equal(affiliations[1].start, "2025-03");
-    assert.equal(affiliations[1].end, "2025-08");
-    assert.equal(affiliations[1].description, undefined);
-    assert.equal(affiliations[1].work, undefined);
+    const fellowship = affiliations.find(({ role }) => role.EN === "Fellow");
+    assert.equal(fellowship.start, "2025-03");
+    assert.equal(fellowship.end, "2025-08");
+    assert.equal(fellowship.description, undefined);
+    assert.equal(fellowship.work, undefined);
     assert.equal(person.programs[0].work.EN, "Floresta");
     assert.equal(person.programs[0].description.BR, "Testes funcionais");
-    assert.equal(affiliations[2].status, "current");
+    assert.equal(affiliations[0].status, "current");
     assert.equal(getDirectoryRole(person), "grantee");
+    assert.equal(JSON.stringify(person), before);
+});
+
+test("puts current affiliations first while preserving history and source order within groups", () => {
+    const person = parseProfile("affiliation-order.md", `---\nname: Order fixture\naffiliations:\n  - organization: Former employer\n    role: { EN: Intern, BR: Estagiário }\n    status: past\n  - organization: Undated organization\n    role: { EN: Contributor, BR: Colaborador }\n  - organization: Current funder\n    role: { EN: Grantee, BR: Grantee }\n    status: current\nprograms:\n  - program: fellowship\n    name: Fellowship\n    organization: Vinteum\n    role: { EN: Fellow, BR: Fellow }\n    status: past\n  - program: grants\n    name: Grants\n    organization: Vinteum\n    role: { EN: Grantee, BR: Grantee }\n    status: current\n---\n`);
+    const before = JSON.stringify(person);
+    const affiliations = profileData.getProfileRelationships(person).affiliations;
+    assert.deepEqual(affiliations.map(({ organization, role }) => `${organization}: ${role.EN}`), [
+        "Current funder: Grantee", "Vinteum: Grantee", "Former employer: Intern", "Undated organization: Contributor", "Vinteum: Fellow",
+    ]);
     assert.equal(JSON.stringify(person), before);
 });
 
