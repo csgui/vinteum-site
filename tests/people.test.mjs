@@ -332,6 +332,15 @@ test("prioritizes Bitcoin Core in Bruno's projects without treating BDL as a sof
     assert.ok(bruno.contributions.some(({ href }) => href.startsWith("https://github.com/bitcoin/bitcoin/pull/")));
 });
 
+test("provides local image thumbnails for Bruno's media cards", () => {
+    const bruno = getPerson("bruno-garcia");
+    assert.ok(bruno.media.length > 0);
+    for (const item of bruno.media) {
+        assert.ok(item.thumbnail?.startsWith("/assets/images/people/media/"), `${item.id} needs an image thumbnail`);
+        assert.ok(existsSync(join("public", item.thumbnail)), `${item.id}: missing thumbnail file`);
+    }
+});
+
 test("shows Fungi as Cindy's current project while retaining historical Payjoin pull requests", () => {
     const cindy = getPerson("bc1cindy");
     assert.equal(cindy.projects[0]?.name, "Fungi Protocol");

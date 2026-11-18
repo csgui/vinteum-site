@@ -76,6 +76,7 @@ media:
       BR: Bruno Garcia Is Making Bitcoin More Resilient Through Testing and Education
     source: OpenSats
     href: 'https://opensats.org/blog/developer-spotlight-bruno-garcia'
+    thumbnail: /assets/images/people/media/bruno-opensats-spotlight.jpg
     date: '2026-09-17'
     mediaType: article
     description:
@@ -87,6 +88,7 @@ media:
       BR: Engenheiro brasileiro que trabalha na segurança do Bitcoin lança livro sobre como encontrar falhas em softwares
     source: Livecoins
     href: 'https://livecoins.com.br/engenheiro-brasileiro-que-trabalha-na-seguranca-do-bitcoin-lanca-livro-sobre-como-encontrar-falhas-em-softwares/'
+    thumbnail: /assets/images/people/media/bruno-livecoins-fuzzing-book.jpg
     date: '2026-11-12'
     mediaType: article
     description:
@@ -98,6 +100,7 @@ media:
       BR: Mutation + Fuzzing | Bruno Garcia | bitcoin++ exploits edition | Feb 2026 Florianópolis, Brazil
     source: bitcoin++
     href: 'https://www.youtube.com/watch?v=seDBHbkXFbg'
+    thumbnail: /assets/images/people/media/bruno-btcplusplus-mutation-fuzzing.jpg
     date: '2026-03-11'
     mediaType: video
     description:
