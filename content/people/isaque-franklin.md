@@ -15,9 +15,7 @@ programs:
       EN: libsecp256k1
       BR: libsecp256k1
     href: /programs/fellowship
-    description:
-      EN: Pursues a research-oriented path in Bitcoin cryptography, guided by Edil Medeiros.
-      BR: Segue uma trajetória de pesquisa em criptografia Bitcoin, orientada por Edil Medeiros.
+
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
     organization: Vinteum
@@ -54,17 +52,16 @@ projects:
       EN: 'Odin language bindings for Bitcoin secp256k1 library. '
       BR: Bindings da biblioteca secp256k1 para a linguagem Odin.
     contribution:
-      EN: Contributed one merged pull request while experimenting with Odin bindings for libsecp256k1.
-      BR: Contribuiu com um pull request integrado enquanto experimentava bindings de libsecp256k1 para
-        Odin.
+      EN: "Contributed build tooling for integrating libsecp256k1 with Odin, with dependency verification and reproducible library configuration."
+      BR: "Contribuiu com ferramentas de compilação para integrar o libsecp256k1 ao Odin, com verificação de dependências e configuração reproduzível da biblioteca."
   - name: WalletWasabi
     href: https://github.com/WalletWasabi/WalletWasabi
     description:
       EN: Open-source, non-custodial, privacy preserving Bitcoin wallet for Windows, Linux, and Mac.
       BR: Carteira Bitcoin open source com foco em privacidade.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: "Contributed to Silent Payments validation in Wasabi, enforcing protocol limits that bound receiver scanning costs."
+      BR: "Contribuiu para a validação de Silent Payments no Wasabi, aplicando limites do protocolo que restringem o custo de varredura do recebedor."
   - name: libsecp256k1
     href: https://github.com/bitcoin-core/secp256k1
     description:
@@ -116,7 +113,7 @@ writing:
       BR: Intuition about the GLV endomorphism on secp256k1
     source: harlock.xyz
     href: 'https://www.harlock.xyz/intuition-about-the-glv-endomorphism-on-secp256k1'
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

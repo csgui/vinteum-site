@@ -59,17 +59,16 @@ projects:
       EN: Rust library for interacting with Bitcoin Core over JSONRPC
       BR: Biblioteca Rust para interagir com o Bitcoin Core via JSON-RPC.
     contribution:
-      EN: Completed Bitcoin Core v31 RPC support, response types and integration tests.
-      BR: Concluiu o suporte aos RPCs do Bitcoin Core v31, tipos de resposta e testes de integração.
+      EN: "Works on Rust RPC-client compatibility with Bitcoin Core, aligning typed request and response interfaces and integration tests with changes across Core releases, including v31."
+      BR: "Trabalha na compatibilidade do cliente RPC em Rust com o Bitcoin Core, alinhando interfaces tipadas de requisições e respostas e testes de integração às mudanças entre versões do Core, incluindo a v31."
   - name: rust-bitcoin
     href: 'https://github.com/rust-bitcoin/rust-bitcoin'
     description:
       EN: Rust Bitcoin library
       BR: Bibliotecas Rust para desenvolver aplicações Bitcoin.
     contribution:
-      EN: Added BIP32 seed-length validation and daily corpus-based fuzzing CI.
-      BR: Adicionou validação do comprimento de seeds BIP32 e CI diário de fuzzing baseado em
-        corpus.
+      EN: "Contributes to Rust Bitcoin library correctness and regression testing, working on validated cryptographic inputs and corpus-based fuzzing infrastructure."
+      BR: "Contribui para a correção das bibliotecas Bitcoin em Rust e seus testes de regressão, trabalhando na validação de entradas criptográficas e na infraestrutura de fuzzing baseado em corpus."
 contributions:
   - id: github-rust-bitcoin-corepc-615
     title:
@@ -108,10 +107,10 @@ contributions:
         crashes. Merged pull request.
       BR: Adiciona fuzzing diário a partir de um corpus persistente em qa-assets, salva entradas
         atualizadas e relata crashes. Pull request integrado.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 affiliations:
   - organization: Spiral
-    role: { EN: Grantee, BR: Bolsista }
+    role: { EN: Grantee, BR: Grantee }
     status: current
     start: '2026-10'
 ---

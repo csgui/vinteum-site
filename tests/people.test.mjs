@@ -48,6 +48,15 @@ test("preserves preprint status and DOI without presenting it as a published jou
     assert.deepEqual(person.publications, [citation]);
 });
 
+test("loads video courses as a separate optional section", () => {
+    const course = { id: "course-fixture", title: { EN: "Course fixture", BR: "Curso de teste" }, href: "https://example.org/course", mediaType: "video", thumbnail: "/assets/images/people/media/course-fixture.jpg" };
+    const person = parseProfile("teaching.md", `---\nname: Teaching fixture\ncourses: ${JSON.stringify([course])}\n---\n`);
+    assert.deepEqual(person.courses, [course]);
+    assert.deepEqual(person.media, []);
+    assert.deepEqual(profileData.getProfileSections(person), ["courses"]);
+    assert.deepEqual(parseProfile("empty.md", minimal).courses, []);
+});
+
 test("shows an academic-publications section only when a profile has publications", () => {
     assert.equal(typeof profileData.getProfileSections, "function");
     const person = parseProfile("academic.md", minimal);
@@ -55,6 +64,12 @@ test("shows an academic-publications section only when a profile has publication
     const withPaper = { ...person, publications: [{ id: "paper-fixture" }] };
     assert.deepEqual(profileData.getProfileSections(withPaper), ["publications"]);
     assert.deepEqual(profileData.getProfileSections({ ...withPaper, writing: [{ id: "blog-fixture" }] }), ["writing", "publications"]);
+});
+
+test("accepts GitLab profile links with a local official icon", () => {
+    const person = parseProfile("gitlab.md", '---\nname: GitLab fixture\nlinks:\n  - label: GitLab\n    icon: gitlab\n    href: https://gitlab.com/example\n---\n');
+    assert.equal(person.links[0].icon, "gitlab");
+    assert.ok(existsSync("public/assets/icons/social/gitlab.svg"));
 });
 
 test("rejects invalid slugs, missing names and unsupported link protocols", () => {
@@ -136,6 +151,25 @@ test("keeps the four additional prototype profiles discoverable with their edito
     assert.ok(githubLinks.some(({ href }) => href === "https://github.com/yanfsb"));
 });
 
+test("omits the start year from a current fellow's directory role without deleting history", () => {
+    const person = parseProfile("fellow-card.md", `---\nname: Fellow fixture\nprograms:\n  - program: fellowship\n    name: Fellowship\n    organization: Vinteum\n    role: { EN: Fellow, BR: Fellow }\n    status: current\n    start: '2025-03'\n---\n`);
+    assert.equal(typeof profileData.getDirectoryRoleDetails, "function");
+    assert.equal(profileData.getDirectoryRoleDetails(person, "EN").role, "fellow");
+    assert.equal(profileData.getDirectoryRoleDetails(person, "EN").year, undefined);
+    assert.equal(person.programs[0].start, "2025-03");
+    person.programs[0].status = "past";
+    assert.equal(profileData.getDirectoryRoleDetails(person, "EN").role, "alumni");
+    assert.equal(profileData.getDirectoryRoleDetails(person, "EN").year, "2025");
+});
+
+test("uses the current Vinteum team position as the directory title, not an unrelated affiliation", () => {
+    const person = parseProfile("team-card.md", `---\nname: Team fixture\naffiliations:\n  - organization: University\n    role: { EN: Professor, BR: Professor }\n    directoryRole: team\n    status: current\n  - organization: Vinteum\n    role: { EN: Head of Research, BR: Head of Research }\n    directoryRole: team\n    status: current\n---\n`);
+    assert.equal(profileData.getDirectoryRoleDetails(person, "EN").title, "Head of Research");
+    assert.equal(profileData.getDirectoryRoleDetails(person, "BR").title, "Head of Research");
+    person.affiliations[1].status = "past";
+    assert.equal(profileData.getDirectoryRoleDetails(person, "EN").title, undefined);
+});
+
 test("retains date precision when only a year or a month is known", () => {
     assert.equal(formatPersonDate("2025", "EN"), "2025");
     assert.equal(formatPersonDate("2025-05", "EN"), "May 2025");
@@ -152,6 +186,13 @@ test("provides translated contribution-type labels without changing filter ident
     const portuguese = JSON.parse(readFileSync(new URL("../src/i18n/locales/pt.json", import.meta.url), "utf8"));
     assert.equal(portuguese.people.contributionTypes.Documentation, "Documentação");
     assert.equal(portuguese.people.contributionTypes["Protocol Specification"], "Especificação de protocolo");
+});
+
+test("provides the programme attribution label in the people translation namespace", () => {
+    for (const [locale, expected] of [["en", "By"], ["pt", "Por"]]) {
+        const data = JSON.parse(readFileSync(new URL(`../src/i18n/locales/${locale}.json`, import.meta.url), "utf8"));
+        assert.equal(data.people.by, expected);
+    }
 });
 
 test("BDL-only alumni remain filterable without inventing a fellowship", () => {
@@ -224,13 +265,54 @@ programs:
     const { affiliations, programs } = profileData.getProfileRelationships(person);
     assert.deepEqual(affiliations.map(({ role }) => role.EN), ["Developer", "Fellow", "Grantee"]);
     assert.deepEqual(programs.map(({ program }) => program), ["bitcoin-dev-launchpad"]);
+    assert.equal(programs[0].organization, "Vinteum");
+    assert.equal(programs[0].cohort, 1);
+    assert.equal(programs[0].role, undefined);
+    assert.equal(programs[0].status, undefined);
+    assert.equal(programs[0].work, undefined);
+    assert.equal(programs[0].fundedBy, undefined);
     assert.equal(affiliations[1].start, "2025-03");
     assert.equal(affiliations[1].end, "2025-08");
-    assert.equal(affiliations[1].description.BR, "Testes funcionais");
-    assert.equal(affiliations[1].work.EN, "Floresta");
+    assert.equal(affiliations[1].description, undefined);
+    assert.equal(affiliations[1].work, undefined);
+    assert.equal(person.programs[0].work.EN, "Floresta");
+    assert.equal(person.programs[0].description.BR, "Testes funcionais");
     assert.equal(affiliations[2].status, "current");
     assert.equal(getDirectoryRole(person), "grantee");
     assert.equal(JSON.stringify(person), before);
+});
+
+test("presents Summer of Bitcoin as community participation without inventing a Vinteum fellowship", () => {
+    const person = parseProfile("summer-student.md", `---\nname: Summer fixture\nprograms:\n  - program: summer-of-bitcoin\n    name: Summer of Bitcoin\n    organization: Summer of Bitcoin\n    role: { EN: Student, BR: Estudante }\n    status: past\n    cohort: 2021\n    work: { EN: Project work, BR: Trabalho no projeto }\n    description: { EN: Historical detail, BR: Detalhe histórico }\n    href: https://example.org/summer\n---\n`);
+    const before = JSON.stringify(person);
+    const { affiliations, programs } = profileData.getProfileRelationships(person);
+    assert.deepEqual(affiliations, []);
+    assert.deepEqual(programs, [{ program: "summer-of-bitcoin", name: "Summer of Bitcoin", organization: "Summer of Bitcoin", cohort: 2021, href: "https://example.org/summer" }]);
+    assert.equal(getDirectoryRole(person), undefined);
+    assert.equal(JSON.stringify(person), before);
+});
+
+test("does not present an employer-valued programme field as the directory project label", () => {
+    const person = parseProfile("project-label.md", `---\nname: Project label fixture\nprograms:\n  - program: fellowship\n    name: Fellowship\n    organization: Vinteum\n    role: { EN: Fellow, BR: Fellow }\n    status: past\n    work: { EN: Lightning Labs, BR: Lightning Labs }\naffiliations:\n  - organization: Lightning Labs\n    role: { EN: Engineer, BR: Engenheiro }\n    status: current\nprojects:\n  - name: btcwallet\n---\n`);
+    assert.equal(profileData.getProjectLabel(person, "EN"), "btcwallet");
+    assert.equal(person.programs[0].work.EN, "Lightning Labs");
+});
+
+test("uses status labels only when affiliation dates do not convey the relationship state", () => {
+    assert.equal(typeof profileData.getAffiliationStatusLabel, "function");
+    assert.equal(profileData.getAffiliationStatusLabel({ status: "current", start: "2026-07" }), undefined);
+    assert.equal(profileData.getAffiliationStatusLabel({ status: "past", start: "2025-03", end: "2025-08" }), undefined);
+    assert.equal(profileData.getAffiliationStatusLabel({ status: "past", start: "2025-03" }), "past");
+    assert.equal(profileData.getAffiliationStatusLabel({ status: "current" }), "current");
+    assert.equal(profileData.getAffiliationStatusLabel({}), undefined);
+});
+
+test("keeps Grantee untranslated in Portuguese relationship roles", () => {
+    for (const person of readPeople()) {
+        for (const entry of [...person.affiliations, ...person.programs]) {
+            if (entry.role.EN === "Grantee") assert.equal(entry.role.BR, "Grantee", person.slug);
+        }
+    }
 });
 
 test("keeps bios short and link-free while details live in profile sections", () => {
@@ -351,6 +433,15 @@ test("shows Fungi as Cindy's current project while retaining historical Payjoin 
 });
 
 const baseUrl = process.env.PEOPLE_TEST_URL;
+test("places the profile-wide update date in the header rather than below the last section", { skip: !baseUrl }, async () => {
+    const response = await fetch(new URL("/people/bruno-garcia", baseUrl));
+    assert.equal(response.status, 200);
+    const html = await response.text();
+    const hero = html.match(/<section[^>]+aria-labelledby="person-title"[^>]*>([\s\S]*?)<\/section>/);
+    assert.ok(hero, "Profile header is missing");
+    assert.match(hero[1], /Profile updated[\s\S]*?<time dateTime=|Profile updated[\s\S]*?<time datetime=/);
+});
+
 test("built directory links to every canonical profile and unknown profiles return 404", { skip: !baseUrl }, async () => {
     const directory = await fetch(new URL("/people", baseUrl));
     assert.equal(directory.status, 200);

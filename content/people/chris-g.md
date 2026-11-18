@@ -7,7 +7,7 @@ programs:
     organization: Vinteum
     role:
       EN: Grantee
-      BR: Bolsista
+      BR: Grantee
     status: current
     work:
       EN: Floresta
@@ -50,19 +50,16 @@ projects:
       EN: A lightweight and embeddable Bitcoin client, built for sovereignty.
       BR: Cliente Bitcoin compacto e integrável em outras aplicações.
     contribution:
-      EN: Maintains Floresta and contributes consensus validation changes. Rebased and resolved conflicts
-        in the BIP68 implementation while preserving the original contributor’s commits and authorship.
-      BR: Atua na manutenção do Floresta e contribui com mudanças de validação de consenso. Rebaseou e
-        resolveu conflitos na implementação de BIP68, preservando os commits e a autoria do contribuidor
-        original.
+      EN: "Maintains Floresta and contributes to consensus validation and integration of contributor work."
+      BR: "Atua na manutenção do Floresta e contribui para a validação de consenso e a integração do trabalho de outros contribuidores."
   - name: hintsfile
     href: 'https://github.com/2140-dev/hintsfile'
     description:
       EN: Concise representation of UTXO positions
       BR: Representação compacta de posições de UTXOs.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: "Contributed to robust hintsfile parsing and regression testing, improving how malformed input is handled."
+      BR: "Contribuiu para a robustez do parsing de hintsfiles e os testes de regressão, melhorando o tratamento de entradas malformadas."
 contributions:
   - id: github-getfloresta-Floresta-1410
     title:
@@ -92,7 +89,7 @@ writing:
     date: '2026-06-02'
     source: imchris.me
     href: 'https://www.imchris.me/article-p-adics'
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

@@ -741,8 +741,8 @@
     font-size: 12px;
     color: var(--people-muted);
 }
-.profileUpdated {
-    margin: 32px 0 0;
+.profileText .profileUpdated {
+    margin: 18px 0 0;
     color: var(--people-muted);
     font: 12px/1.6 var(--font-poppins), sans-serif;
 }

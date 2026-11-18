@@ -1,7 +1,7 @@
 ---
 name: Raphael Dutenkefer
 image: /assets/images/people/github/raphael-dutenkefer.jpg
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 focus:
   - P2P Networking
   - Monitoring
@@ -10,6 +10,9 @@ links:
   - label: GitHub
     href: 'https://github.com/dutenrapha'
     icon: github
+  - label: "X"
+    href: "https://x.com/dutenrapha"
+    icon: "twitter"
 programs:
   - program: fellowship
     name: Fellowship
@@ -29,10 +32,8 @@ projects:
       EN: A crawler for observing the public Bitcoin peer-to-peer network.
       BR: Crawler para observar a rede pública peer-to-peer do Bitcoin.
     contribution:
-      EN: Implemented discovery from DNS seeds, handshake checks and data export. The crawler
-        provides a partial view of the network through the peers it observes.
-      BR: Implementou descoberta a partir de seeds DNS, verificação de handshakes e exportação
-        de dados. O crawler oferece uma visão parcial da rede a partir dos peers que observa.
+      EN: "Develops a Bitcoin P2P measurement pipeline for discovering reachable peers and collecting handshake and address-relay observations for analysis. Its crawl data represents the peers observed, not a complete network topology."
+      BR: "Desenvolve um pipeline de medição da rede P2P do Bitcoin para descobrir peers acessíveis e coletar observações de handshakes e retransmissão de endereços para análise. Os dados representam os peers observados, não uma topologia completa da rede."
 contributions:
   - id: bitcoin-topology-crawler
     title:

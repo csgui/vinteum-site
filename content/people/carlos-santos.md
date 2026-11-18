@@ -8,6 +8,9 @@ links:
   - label: Blog
     icon: blog
     href: 'https://www.carlossantos.sh/'
+  - label: "X"
+    href: "https://x.com/caarlosBtc"
+    icon: "twitter"
 programs:
   - program: fellowship
     name: Fellowship
@@ -39,7 +42,7 @@ focus:
   - Payjoin
   - Fuzzing
   - Rust
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 contributions:
   - id: github-payjoin-rust-payjoin-2022
     title:
@@ -68,11 +71,97 @@ contributions:
     href: 'https://github.com/payjoin/rust-payjoin/pull/1887'
     description:
       EN: >-
-        Reviewed and refined the fuzz harness initially implemented by
-        @benalleng.
+        Reviewed and refined the receiver fuzz harness initially implemented by
+        @benalleng, including test correctness and harness invariants. The harness
+        encrypts mutated plaintext with HPKE and OHTTP so inputs reach the v2
+        receiver state machine rather than stopping at authentication checks.
+        Merged in October 2026.
       BR: >-
-        Revisou e refinou o harness de fuzzing inicialmente implementado por
-        @benalleng.
+        Revisou e refinou o harness de fuzzing do recebedor inicialmente implementado
+        por @benalleng, incluindo a correção dos testes e invariantes do harness.
+        O harness cifra texto mutado com HPKE e OHTTP para que as entradas alcancem
+        a máquina de estados do recebedor v2, em vez de parar nas verificações de
+        autenticação. Integrado em outubro de 2026.
+  - id: github-payjoin-rust-payjoin-1983
+    title:
+      EN: Reject mailbox payloads that cannot round-trip through the gateway
+      BR: Rejeitar mensagens de mailbox que não cabem na resposta do gateway
+    date: '2026-10-28'
+    source: 'payjoin/rust-payjoin · #1983'
+    type: PR
+    href: 'https://github.com/payjoin/rust-payjoin/pull/1983'
+    description:
+      EN: >-
+        Limited stored mailbox payloads to what the OHTTP gateway can return,
+        rejecting oversized v1 requests and returning an error instead of
+        truncating gateway responses. Added boundary tests for successful
+        retrieval and oversized-payload rejection. Merged in October 2026.
+      BR: >-
+        Limitou as mensagens armazenadas na mailbox ao tamanho que o gateway OHTTP
+        consegue retornar, rejeitando requisições v1 grandes demais e retornando
+        erro em vez de truncar respostas do gateway. Adicionou testes de limite
+        para recuperação completa e rejeição de mensagens grandes demais.
+        Integrado em outubro de 2026.
+  - id: github-payjoin-rust-payjoin-1998-review
+    title:
+      EN: Review repeated receiver input contributions
+      BR: Revisão de contribuições repetidas de inputs do recebedor
+    date: '2026-10-20'
+    source: 'payjoin/rust-payjoin · #1998 review'
+    type: Code Review
+    href: 'https://github.com/payjoin/rust-payjoin/pull/1998#pullrequestreview-5587714927'
+    description:
+      EN: >-
+        Reproduced a bug in another contributor's PR where repeated input
+        contributions left change missing from the receiver's output. Asked for
+        coverage of a second contribution smaller than the first and questioned
+        unnecessary test-helper visibility changes. The PR remains open.
+      BR: >-
+        Reproduziu um bug no PR de outro contribuidor em que contribuições
+        repetidas de inputs deixavam de creditar parte do troco ao output do
+        recebedor. Pediu cobertura para uma segunda contribuição menor que a
+        primeira e questionou mudanças desnecessárias na visibilidade de
+        auxiliares de teste. O PR permanece aberto.
+  - id: github-payjoin-rust-payjoin-1872
+    title:
+      EN: Fuzz the v1 Payjoin roundtrip
+      BR: Fuzzing do ciclo completo de Payjoin v1
+    date: '2026-09-10'
+    source: 'payjoin/rust-payjoin · #1872'
+    type: PR
+    href: 'https://github.com/payjoin/rust-payjoin/pull/1872'
+    description:
+      EN: >-
+        Added a libFuzzer target connecting sender request construction, receiver
+        state transitions and sender proposal parsing. A custom mutator preserves
+        a seeded PSBT while varying BIP 78 query parameters to reach protocol
+        logic beyond PSBT deserialization. Merged in September 2026.
+      BR: >-
+        Adicionou um alvo de libFuzzer que conecta a construção da requisição pelo
+        remetente, as transições de estado do recebedor e a leitura da proposta
+        pelo remetente. Um mutador preserva uma PSBT de referência e varia os
+        parâmetros de consulta do BIP 78 para alcançar a lógica do protocolo
+        além da desserialização da PSBT. Integrado em setembro de 2026.
+  - id: github-payjoin-rust-payjoin-1615
+    title:
+      EN: Explore no_std support for embedded Payjoin integrations
+      BR: Pesquisa de suporte no_std para integração de Payjoin em sistemas embarcados
+    date: '2026-06-07'
+    source: 'payjoin/rust-payjoin · #1615'
+    type: Research
+    href: 'https://github.com/payjoin/rust-payjoin/pull/1615'
+    description:
+      EN: >-
+        Open proposal separating alloc-based protocol logic from std-dependent
+        transport code through Cargo feature gates. Investigates embedded build
+        requirements and ARM cross-compilation for hardware-signer integration;
+        this work has not been merged upstream.
+      BR: >-
+        Proposta aberta que separa a lógica do protocolo baseada em alloc do
+        transporte dependente de std por meio de features do Cargo. Investiga
+        requisitos de compilação embarcada e compilação cruzada para ARM visando
+        integração com dispositivos de assinatura; o trabalho ainda não foi
+        integrado ao projeto upstream.
 projects:
   - name: Payjoin Dev Kit
     href: 'https://github.com/payjoin/rust-payjoin'
@@ -82,8 +171,8 @@ projects:
         Implementação de Payjoin para pagamentos colaborativos com maior
         privacidade.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: "Contributes to Payjoin protocol testing and implementation reliability through fuzzing, receiver review and gateway validation. Also explores support for embedded integrations through an open no_std proposal."
+      BR: "Contribui para os testes do protocolo Payjoin e a confiabilidade da implementação por meio de fuzzing, revisão do recebedor e validação do gateway. Também explora suporte a integrações embarcadas em uma proposta no_std aberta."
 ---
 ## EN
 

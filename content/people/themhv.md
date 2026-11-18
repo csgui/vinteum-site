@@ -51,10 +51,8 @@ projects:
       EN: Cashu Development Kit
       BR: Kit de desenvolvimento para aplicações Cashu.
     contribution:
-      EN: Removed redundant DLEQ proof storage and improved mint-information retrieval and CLI
-        HTTP-proxy support.
-      BR: Removeu armazenamento redundante de provas DLEQ e melhorou a consulta de informações
-        da mint e o suporte a proxy HTTP na CLI.
+      EN: "Contributes to Cashu wallet tooling and proof-storage behavior in CDK, improving mint-information access and avoiding redundant storage of deterministically derived proofs."
+      BR: "Contribui para ferramentas de carteiras Cashu e para o armazenamento de provas no CDK, melhorando o acesso a informações de mints e evitando o armazenamento redundante de provas derivadas deterministicamente."
 contributions:
   - id: github-cashubtc-cdk-2226
     title:
@@ -77,11 +75,9 @@ contributions:
     type: PR
     href: 'https://github.com/cashubtc/cdk/pull/1958'
     description:
-      EN: Enables mint-information retrieval without explicitly supplying the mint URL and
-        adds CLI HTTP-proxy support.
-      BR: Permite consultar informações da mint sem fornecer explicitamente sua URL e adiciona
-        suporte a proxy HTTP na CLI.
-updatedAt: '2026-11-17'
+      EN: Enables mint-information retrieval without explicitly supplying the mint URL.
+      BR: Permite consultar informações da mint sem fornecer explicitamente sua URL.
+updatedAt: '2026-11-18'
 media:
   - id: themhv-alumni-outlook-2026
     title:

@@ -36,6 +36,9 @@ links:
   - label: GitHub
     href: 'https://github.com/qlrd'
     icon: github
+  - label: "X"
+    href: "https://x.com/qlrddev"
+    icon: "twitter"
 projects:
   - name: krux
     href: https://github.com/selfcustody/krux
@@ -43,10 +46,8 @@ projects:
       EN: Open-source signing device firmware for Bitcoin
       BR: Firmware open source para dispositivos de assinatura Bitcoin.
     contribution:
-      EN: Contributed 2 merged pull requests covering SeedXOR backups and button tests. Work on Krux also
-        covers CI, hardware support and wallet functionality.
-      BR: Contribuiu com 2 pull requests integrados, envolvendo backups SeedXOR e testes de botões. O trabalho
-        no Krux também abrange CI, suporte a hardware e funcionalidades de carteira.
+      EN: "Contributes to signing-device features, seed-backup support and automated testing in Krux."
+      BR: "Contribui para funcionalidades do dispositivo de assinatura, suporte a backups de seeds e testes automatizados no Krux."
   - name: Krux Installer
     href: https://github.com/selfcustody/krux-installer
     description:
@@ -97,10 +98,10 @@ contributions:
         fields.
       BR: Corrigiu valores, confirmações, informações de coinbase e campos de scriptPubKey na resposta de
         gettxout; PR integrado.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 affiliations:
   - organization: OpenSats
-    role: { EN: Grantee, BR: Bolsista }
+    role: { EN: Grantee, BR: Grantee }
     status: current
     start: '2025-02'
     href: 'https://opensats.org/blog/open-hardware-for-open-money'

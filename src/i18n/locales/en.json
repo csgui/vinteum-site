@@ -833,7 +833,8 @@
         "affiliations": "Affiliations",
         "present": "Present",
         "programs": "Community & programs",
-        "updated": "Last updated",
+        "by": "By",
+        "updated": "Profile updated",
         "connections": "Connected people",
         "profileNavigation": "Profile sections",
         "since": "since",
@@ -869,6 +870,7 @@
             "discussions": "Discussions",
             "writing": "Writing",
             "publications": "Academic publications",
+            "courses": "Courses",
             "media": "Media"
         },
         "headings": {
@@ -877,6 +879,7 @@
             "discussions": "Technical discussions",
             "writing": "Articles & writing",
             "publications": "Academic publications",
+            "courses": "Courses",
             "media": "Talks, podcasts & media"
         },
         "supportTitle": "Fund open-source Bitcoin work",

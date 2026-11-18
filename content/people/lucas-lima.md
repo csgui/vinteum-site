@@ -40,22 +40,22 @@ links:
     href: 'https://x.com/Lucaslgol05'
     icon: twitter
 projects:
-  - name: Bitcoin Core
-    href: 'https://github.com/bitcoin/bitcoin'
+  - name: btcd
+    href: https://github.com/btcsuite/btcd
     description:
-      EN: Bitcoin Core integration/staging tree
-      BR: 'Bitcoin Core: implementação de nó e carteira Bitcoin.'
+      EN: Bitcoin full-node implementation in Go.
+      BR: Implementação de nó completo Bitcoin em Go.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
-  - name: Floresta
-    href: 'https://github.com/getfloresta/Floresta'
+      EN: Develops P2P block-relay functionality and its tests across the wire, peer and synchronization layers. His BIP152 compact-block implementation remains under upstream review.
+      BR: Desenvolve funcionalidades de retransmissão P2P de blocos e seus testes nas camadas de mensagens, peers e sincronização. Sua implementação de blocos compactos BIP152 segue em revisão upstream.
+  - name: Fountain Codes Research
+    href: https://github.com/lucasdbr05/btcd/tree/poc/fountain-codes
     description:
-      EN: 'A lightweight and embeddable Bitcoin client, built for sovereignty.'
-      BR: Cliente Bitcoin compacto e integrável em outras aplicações.
+      EN: Experimental research on fountain-coded storage and recovery of historical Bitcoin blocks.
+      BR: Pesquisa experimental sobre armazenamento e recuperação de blocos históricos do Bitcoin com fountain codes.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Studies storage, bandwidth and recovery tradeoffs through a btcd proof of concept that encodes block epochs into droplets and exchanges them between peers. The approach remains experimental, not an upstream btcd feature.
+      BR: Estuda compromissos entre armazenamento, banda e recuperação por meio de uma prova de conceito no btcd que codifica épocas de blocos em fragmentos e os troca entre peers. A abordagem permanece experimental, não é uma funcionalidade upstream do btcd.
 contributions:
   - id: github-bitcoin-bitcoin-36194
     title:
@@ -109,7 +109,7 @@ discussions:
     date: '2026-06-20'
     href: >-
       https://delvingbitcoin.org/t/fountain-codes-a-way-to-reduce-blockchain-storage-costs/2624
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

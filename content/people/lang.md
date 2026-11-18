@@ -21,7 +21,7 @@ links:
   - label: GitHub
     href: 'https://github.com/gusttav-lang'
     icon: github
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 affiliations:
   - organization: Tether
     role: { EN: QVAC contributor, BR: Contribuidor do QVAC }
@@ -31,9 +31,9 @@ projects:
     href: https://github.com/tetherto/qvac
     current: true
     contribution:
-      EN: Contributed a merged fix for a KV-cache save race in multi-turn tool-calling completions.
-      BR: Contribuiu com uma correção integrada de uma condição de corrida no salvamento do cache KV em
-        completions de múltiplos turnos com chamadas de ferramentas.
+      EN: "Works on QVAC inference reliability across delegated model connections, tool calling and KV-cache reuse, with fixes and end-to-end regression tests."
+      BR: "Trabalha na confiabilidade da inferência no QVAC, abrangendo conexões com modelos delegados, chamadas de ferramentas e reutilização do cache KV, com correções e testes de regressão de ponta a ponta."
+
 ---
 ## EN
 

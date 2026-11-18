@@ -40,7 +40,8 @@ with `/`. The directory uses initials when a portrait is unavailable.
 
 - **Identity:** `name`, `image`, `handle` (without @), `pseudonymous`,
   localized `location`, an optional `projectLabel` for the directory, `focus` (a list of topics), and `links` (label, URL, and
-  optional icon). `updatedAt` is an optional editorial date.
+  optional icon, including `gitlab`). `updatedAt` is an optional profile-wide editorial
+  date, displayed in the profile header rather than below its final section.
 - **History:** Add an item to `programs` for each program participation and to
   `affiliations` for other roles or organizations. Each item has an
   `organization` and a localized `role`. Add `status` (`current` or `past`),
@@ -53,8 +54,16 @@ with `/`. The directory uses initials when a portrait is unavailable.
   `program: grants` and a status determine the directory filters. `work` is the translated project or topic label for that
   participation. `name` is the program’s display name. For Launchpad alumni
   (`bitcoin-dev-launchpad`), add `cohort` and, where published, `fundedBy`.
+  Team cards use the current Vinteum position, while the Team filter remains
+  collective. Fellow labels omit the start year; dated history remains intact.
+  Do not use an employer-valued programme field as the directory's project label.
 - **Projects:** Each `projects` item has a `name` and optional `href`,
-  localized `description` and `contribution`, and a boolean `current`.
+  localized `description` and `contribution`, and a boolean `current`. Describe
+  the contributor's technical scope and purpose, not a count of pull requests or
+  an inventory of a few narrow patches presented as their whole contribution.
+  Keep concrete patch-level detail in Selected Contributions; broaden summaries
+  only as far as primary evidence supports, without inventing ownership or work.
+  Only explicitly past projects display a Past badge; current flags remain in the data.
 - **Activity:** `contributions`, `discussions`, `writing` and `media` use unique
   item IDs within each list, localized `title`, and optional `href`, `source`,
   `date`, localized `description`, and `featured`. Contributions specify a
@@ -72,6 +81,11 @@ with `/`. The directory uses initials when a portrait is unavailable.
   not a later repository deposit date. Do not duplicate the same work in Writing
   or Selected Contributions, or mistake a thesis supervisor for a coauthor.
   The section is hidden when there are no entries.
+- **Courses:** `courses` uses the activity fields for original teaching playlists
+  or course material, separately from talks and podcasts. Video courses use
+  `mediaType: video` and an original local `thumbnail`, like media cards. Link
+  the actual course, preserve its official title, and omit unverified dates or
+  lesson counts. Empty course sections stay hidden.
 - **Connections:** An optional `connections` entry uses another published
   profile's `slug` and a localized `reason`.
 
@@ -108,10 +122,16 @@ summaries, selected-contribution descriptions, publications and programme histor
 Keep the supporting public link with the relevant entry instead of in the bio.
 
 Fellowships and grants remain in `programs` as the single source used by directory
-filters. The profile renders them as **Affiliations**, using their Fellow or
-Grantee role, status, dates, work and description. Other programme participation,
-such as the Bitcoin Dev Launchpad, stays under **Community & programs**. Do not
-create duplicate fellowship/grant rows in `affiliations` just for display.
+filters. The profile renders them as **Affiliations** using only institution,
+Fellow/Grantee role and useful dates. Technical work and career narratives do not
+belong in the affiliation display. Current/Past labels are hidden when the period
+already conveys the state; Past remains useful when an end date is unknown.
+Bitcoin Dev Launchpad and Summer of Bitcoin student cards under **Community &
+programs** show only programme name, organization attribution and cohort, without
+project, funder, alumni role or status. Summer of Bitcoin uses the verified annual
+cohort year when available; do not infer student participation from mentoring or
+host-company employment, or infer a Vinteum fellowship from either programme. Preserve the full underlying history for filters and provenance; do
+not create duplicate fellowship/grant rows in `affiliations` just for display.
 
 Grants and fellowships from other organizations also belong in `affiliations`,
 with their own role, status and period. Keep concurrent funding relationships
@@ -121,8 +141,10 @@ well as the programme rosters when updating a profile.
 
 Keep contributor roles in software projects under `projects`, including creator,
 maintainer, developer and reviewer. Those roles alone do not establish an
-institutional affiliation. For example, BDK belongs in Projects while a grant
-from the Bitcoin Dev Kit Foundation belongs in Affiliations.
+institutional affiliation. Sustained technical research, BIP review and education
+initiatives can also be projects when supported by actual public work; programme
+participation by itself is not a project. For example, BDK belongs in Projects
+while a grant from the Bitcoin Dev Kit Foundation belongs in Affiliations.
 
 ## Initial profiles
 

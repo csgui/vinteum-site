@@ -52,8 +52,8 @@ projects:
       EN: Optimized C library for EC operations on curve secp256k1
       BR: Biblioteca C otimizada para operações na curva secp256k1.
     contribution:
-      EN: Deduplicated Silent Payments test setup.
-      BR: Eliminou duplicação na preparação dos testes de Silent Payments.
+      EN: "Contributed to Silent Payments test maintainability in libsecp256k1 by consolidating shared setup and reusable test helpers."
+      BR: "Contribuiu para a manutenção dos testes de Silent Payments na libsecp256k1, consolidando a preparação compartilhada e helpers reutilizáveis de teste."
   - name: libmultiprocess
     href: 'https://github.com/bitcoin-core/libmultiprocess'
     description:
@@ -64,10 +64,8 @@ projects:
         Biblioteca C++ para chamadas de funções e referências a objetos entre
         processos.
     contribution:
-      EN: Added serialization helpers and tests, child-process error reporting, code-generation
-        rebuild dependencies and event-loop thread names.
-      BR: Adicionou helpers e testes de serialização, comunicação de erros de processos filhos,
-        dependências de rebuild da geração de código e nomes para threads do event loop.
+      EN: "Works on reliable interprocess communication in libmultiprocess, covering serialization, child-process lifecycle and diagnostics, generated-code build consistency and regression tests."
+      BR: "Trabalha na confiabilidade da comunicação entre processos na libmultiprocess, abrangendo serialização, ciclo de vida e diagnóstico de processos filhos, consistência da compilação do código gerado e testes de regressão."
 contributions:
   - id: github-bitcoin-core-secp256k1-1972
     title:
@@ -132,7 +130,7 @@ discussions:
         bridge for consumer-specific RPC translation. This remains a design sketch.
       BR: Abriu uma discussão de design propondo capabilities Cap’n Proto por domínio e uma ponte separada
         para a tradução de RPCs específica de cada consumidor. Ainda é um esboço de design.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

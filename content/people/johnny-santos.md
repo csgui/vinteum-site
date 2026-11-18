@@ -7,7 +7,7 @@ programs:
     organization: Vinteum
     role:
       EN: Grantee
-      BR: Bolsista
+      BR: Grantee
     status: current
     work:
       EN: P2Pool V2
@@ -56,8 +56,8 @@ projects:
       EN: P2Poolv2 - Rebooting P2Pool for Bitcoin
       BR: Implementação P2Pool V2 para mineração Bitcoin descentralizada.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: "Contributes to decentralized mining infrastructure, working on share processing, mining-protocol compatibility and local network testing, alongside compact-block relay experiments."
+      BR: "Contribui para a infraestrutura de mineração descentralizada, trabalhando no processamento de shares, na compatibilidade com protocolos de mineração e em testes locais de rede, além de experimentos com retransmissão de blocos compactos."
   - name: bitcoin-capnp
     href: https://github.com/johnnyasantoss/bitcoin-capnp
     description:
@@ -114,7 +114,7 @@ writing:
     date: '2026-08-05'
     source: johnnyasantos.com
     href: 'https://johnnyasantos.com/blog/2026/08/05/my-work-on-p2poolv2/'
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

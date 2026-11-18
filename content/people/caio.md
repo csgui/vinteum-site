@@ -18,8 +18,12 @@ links:
   - label: GitHub
     href: 'https://github.com/kiocos'
     icon: github
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 affiliations:
+  - organization: PPQ
+    role: { EN: Employment, BR: Vínculo empregatício }
+    status: current
+    href: https://ppq.ai/
   - organization: Boltz
     role: { EN: Developer, BR: Desenvolvedor }
     status: past
@@ -33,10 +37,8 @@ projects:
       BR: Cliente de swaps sem custódia que cobre todo o ciclo da operação, incluindo o funcionamento
         normal e a recuperação em caso de falha.
     contribution:
-      EN: Developed rescue-key recovery and backend-independent refunds for timed-out swaps, with end-to-end
-        recovery tests.
-      BR: Desenvolveu recuperação por rescue key e reembolsos de swaps expirados sem depender do backend,
-        com testes de recuperação ponta a ponta.
+      EN: "Contributed to atomic-swap recovery and refund handling, with end-to-end tests for recovering funds from timed-out swaps."
+      BR: "Contribuiu para a recuperação e o reembolso de swaps atômicos, com testes ponta a ponta para recuperar fundos de swaps expirados."
 contributions:
   - id: boltz-rust-swap-recovery
     title:
@@ -55,8 +57,8 @@ contributions:
 ---
 ## EN
 
-Caio is an alumnus of the first Bitcoin Dev Launchpad cohort. His Bitcoin engineering work has focused on non-custodial atomic swaps, client-side verification and recovery tools at Boltz.
+Caio works at PPQ and is an alumnus of the first Bitcoin Dev Launchpad cohort. His previous Bitcoin engineering work at Boltz focused on non-custodial atomic swaps, client-side verification and recovery tools.
 
 ## PT
 
-Caio é ex-participante da primeira turma do Bitcoin Dev Launchpad. Seu trabalho em engenharia Bitcoin se concentrou em atomic swaps sem custódia, verificação no cliente e ferramentas de recuperação na Boltz.
+Caio trabalha na PPQ e é ex-participante da primeira turma do Bitcoin Dev Launchpad. Seu trabalho anterior em engenharia Bitcoin na Boltz se concentrou em atomic swaps sem custódia, verificação no cliente e ferramentas de recuperação.

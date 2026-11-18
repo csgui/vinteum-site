@@ -7,7 +7,7 @@ programs:
     organization: Vinteum
     role:
       EN: Grantee
-      BR: Bolsista
+      BR: Grantee
     status: past
     start: '2023-12'
     end: '2026-08'
@@ -18,6 +18,22 @@ programs:
     description:
       EN: "Became a BDK maintainer in April 2025, following earlier BDK and Fedimint work through Summer of Bitcoin."
       BR: "Tornou-se mantenedor do BDK em abril de 2025, após trabalho no BDK e no Fedimint pelo Summer of Bitcoin."
+  - program: "summer-of-bitcoin"
+    name: "Summer of Bitcoin"
+    organization: "Summer of Bitcoin"
+    role: {"EN": "Alumnus", "BR": "Ex-participante"}
+    status: "past"
+    cohort: 2022
+    href: "https://www.summerofbitcoin.org/program-details/2022/r/recPLKAWw1UFZb7Sl"
+    work: {"EN": "BDK: real-time block events and mempool.space integration", "BR": "BDK: eventos de blocos em tempo real e integração com mempool.space"}
+  - program: "summer-of-bitcoin"
+    name: "Summer of Bitcoin"
+    organization: "Summer of Bitcoin"
+    role: {"EN": "Alumnus", "BR": "Ex-participante"}
+    status: "past"
+    cohort: 2023
+    href: "https://www.summerofbitcoin.org/program-details/2023/r/reckGTBbHuT6Amdhk"
+    work: {"EN": "Fedimint", "BR": "Fedimint"}
 focus:
   - Wallets
   - Rust
@@ -40,10 +56,8 @@ projects:
       EN: A modern, lightweight, descriptor-based wallet library written in Rust!
       BR: Biblioteca Rust para construir carteiras Bitcoin baseadas em descriptors.
     contribution:
-      EN: Contributed merged canonicalization and transaction-ordering changes. Research directions include
-        BitcoinKernel/IPC chain sources and UTXO-oriented wallet models.
-      BR: Contribuiu com mudanças integradas de canonicalização e ordenação de transações. Direções de pesquisa
-        incluem fontes de dados BitcoinKernel/IPC e modelos de carteira orientados a UTXOs.
+      EN: "Maintains BDK’s Rust wallet infrastructure, working on transaction-graph correctness, canonical chain views and the separation of chain-data access from wallet logic. Wallet fuzzing remains proposed, and his signer-separation proposal was closed without merging."
+      BR: "Mantém a infraestrutura de carteiras do BDK em Rust, trabalhando na correção de grafos de transações, nas visões canônicas da cadeia e na separação entre acesso a dados da cadeia e lógica de carteiras. O fuzzing de carteiras segue como proposta, e sua proposta de separar signers foi fechada sem integração."
 contributions:
   - id: github-bitcoindevkit-bdk-2038
     title:
@@ -92,10 +106,10 @@ contributions:
         Closed without merging.
       BR: Propôs remover as APIs de assinatura de Wallet em favor de Psbt::sign do rust-bitcoin e de uma
         implementação de GetKey. Fechado sem integração.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 affiliations:
   - organization: Btrust
-    role: { EN: Grantee, BR: Bolsista }
+    role: { EN: Grantee, BR: Grantee }
     status: current
     start: '2026-09'
 media:

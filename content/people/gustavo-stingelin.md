@@ -16,11 +16,7 @@ programs:
       EN: Lightning Labs
       BR: Lightning Labs
     href: /programs/fellowship
-    description:
-      EN: Moved from LND contributions to btcwallet storage work. Joined Lightning Labs in July
-        2026 to work on Loop alongside btcwallet.
-      BR: Passou de contribuições no LND ao trabalho de armazenamento do btcwallet. Ingressou na
-        Lightning Labs em julho de 2026 para trabalhar no Loop e no btcwallet.
+
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
     organization: Vinteum
@@ -51,8 +47,8 @@ projects:
       EN: A secure bitcoin wallet daemon written in Go (golang)
       BR: Software de carteira Bitcoin escrito em Go.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: "Works on btcwallet's SQL storage architecture and wallet internals, including key handling and cryptographic correctness, on the sql-wallet development branch."
+      BR: "Trabalha na arquitetura de armazenamento SQL e nos componentes internos do btcwallet, incluindo tratamento de chaves e correção criptográfica, na branch de desenvolvimento sql-wallet."
 contributions:
   - id: github-btcsuite-btcwallet-1488
     title:
@@ -81,7 +77,7 @@ contributions:
     description:
       EN: Implemented WalletStore for PostgreSQL and SQLite, merged into the sql-wallet development branch.
       BR: Implementou WalletStore para PostgreSQL e SQLite, integrado à branch de desenvolvimento sql-wallet.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 affiliations:
   - organization: Lightning Labs
     role: { EN: Developer, BR: Desenvolvedor }

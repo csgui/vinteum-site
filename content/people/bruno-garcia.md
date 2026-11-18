@@ -51,10 +51,11 @@ projects:
       EN: "Bitcoin full-node software and reference implementation of the protocol."
       BR: "Software de nó completo e implementação de referência do protocolo Bitcoin."
     contribution:
-      EN: "Contributes fuzz targets and regression tests for wallet transaction creation, descriptor migration, address and connection management, script semantics and peer eviction. Uses mutation testing to find behavior that existing tests fail to detect."
-      BR: "Contribui com alvos de fuzzing e testes de regressão para criação de transações, migração para descritores, gestão de endereços e conexões, semântica de scripts e expulsão de peers. Usa testes de mutação para encontrar comportamentos que os testes existentes não detectam."
+      EN: "Contributes fuzzing and regression tests across Bitcoin Core's wallet, networking and script logic. Uses mutation testing to identify gaps in test coverage."
+      BR: "Contribui com fuzzing e testes de regressão nos componentes de carteira, rede e lógica de scripts do Bitcoin Core. Usa testes de mutação para identificar lacunas na cobertura de testes."
   - name: "Bitcoinfuzz"
     href: "https://github.com/bitcoinfuzz/bitcoinfuzz"
+    current: true
     description:
       EN: "Differential-fuzzing framework comparing how independent Bitcoin, Lightning and related library implementations process identical inputs."
       BR: "Framework de fuzzing diferencial que compara como implementações independentes de Bitcoin, Lightning e bibliotecas relacionadas processam as mesmas entradas."
@@ -63,12 +64,22 @@ projects:
       BR: "Criou o framework para investigar divergências entre implementações e detectar bugs."
   - name: "bcore-mutation"
     href: "https://github.com/brunoerg/bcore-mutation"
+    current: true
     description:
       EN: "Mutation-testing tool for Bitcoin Core and libsecp256k1."
       BR: "Ferramenta de testes de mutação para Bitcoin Core e libsecp256k1."
     contribution:
       EN: "Develops tooling that generates mutants for changed or covered code, runs test commands against them and persists results for resumed analysis."
       BR: "Desenvolve ferramentas que geram mutantes de código alterado ou coberto por testes, executam comandos de teste contra eles e salvam resultados para retomar a análise."
+  - name: Fuzzamoto
+    href: https://github.com/oss-garage/fuzzamoto
+    current: true
+    description:
+      EN: Holistic fuzzing framework for Bitcoin protocol implementations.
+      BR: Framework de fuzzing holístico para implementações do protocolo Bitcoin.
+    contribution:
+      EN: "Contributes fuzzing scenarios and protocol-message generators for testing Bitcoin node behavior and compact-block relay."
+      BR: "Contribui com cenários de fuzzing e geradores de mensagens de protocolo para testar o comportamento de nós Bitcoin e a retransmissão de blocos compactos."
 media:
   - id: opensats-developer-spotlight
     title:
@@ -263,6 +274,19 @@ publications:
       EN: "A preliminary study of differential fuzzing to reduce manual equivalent-mutant analysis, investigating timeout-based classification and the value of existing fuzzing seed corpora."
       BR: "Estudo preliminar sobre fuzzing diferencial para reduzir o esforço manual na análise de mutantes equivalentes, investigando classificação por limite de tempo e o valor de corpora de sementes já existentes."
 contributions:
+  - id: fuzzamoto-compact-block-relay
+    title:
+      EN: Feedback-driven compact-block relay fuzzing
+      BR: Fuzzing de relay de blocos compactos orientado por feedback
+    date: '2026-11-13'
+    source: 'oss-garage/fuzzamoto · #150'
+    type: PR
+    href: https://github.com/oss-garage/fuzzamoto/pull/150
+    description:
+      EN: Added generators for compact-block requests and missing-transaction requests, using recorded
+        node announcements to insert follow-up requests on later mutation passes. Merged in November 2026.
+      BR: Adicionou geradores de requisições de blocos compactos e de transações ausentes, usando anúncios
+        registrados do nó para inserir requisições subsequentes em novas rodadas de mutação. Integrado em novembro de 2026.
   - id: "github-bitcoin-bitcoin-27549"
     title:
       EN: "Network-aware address-manager fuzzing"

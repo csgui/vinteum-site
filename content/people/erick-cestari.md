@@ -21,7 +21,7 @@ programs:
     organization: Vinteum
     role:
       EN: Grantee
-      BR: Bolsista
+      BR: Grantee
     status: current
     work:
       EN: Bitcoinfuzz / Smite
@@ -40,6 +40,15 @@ programs:
       BR: Bitcoinfuzz / Smite
     href: /programs/bitcoin-dev-launchpad
     fundedBy: Vinteum
+affiliations:
+  - organization: Lightning Labs
+    role:
+      EN: Security engineering intern
+      BR: Estagiário de engenharia de segurança
+    status: past
+    start: '2026-03'
+    end: '2026-06'
+    href: 'https://lightning.engineering/'
 focus:
   - Fuzzing
   - Lightning
@@ -66,26 +75,76 @@ projects:
         Fuzzing diferencial de implementações e bibliotecas do protocolo
         Bitcoin.
     contribution:
-      EN: Maintains Bitcoinfuzz, reviews contributor changes and investigates whether divergences
-        indicate implementation defects or protocol ambiguities. Targets include Lightning P2P parsing,
-        BOLT 4 onion decoding, Schnorr signature verification and PSBT parsing. Improves differential
-        tests and handling of known divergences.
-      BR: Mantém o Bitcoinfuzz, revisa mudanças de contribuidores e investiga se divergências indicam
-        defeitos nas implementações ou ambiguidades no protocolo. Os alvos incluem parsing de mensagens
-        P2P Lightning, decodificação onion de BOLT 4, verificação de assinaturas Schnorr e parsing
-        de PSBTs. Aprimora testes diferenciais e o tratamento de divergências conhecidas.
+      EN: Maintains and extends cross-implementation testing, reviews contributions and investigates
+        disagreements to distinguish implementation bugs from protocol ambiguities. His work broadens
+        Bitcoin and Lightning coverage and keeps known differences from obscuring new findings.
+      BR: Mantém e amplia os testes entre implementações, revisa contribuições e investiga divergências
+        para distinguir bugs de ambiguidades no protocolo. Seu trabalho expande a cobertura de Bitcoin
+        e Lightning e evita que diferenças conhecidas ocultem novas descobertas.
   - name: Smite
     href: 'https://github.com/lnfuzz/smite'
     description:
       EN: Snapshot fuzzing for the Bitcoin Lightning Network.
       BR: Fuzzing baseado em snapshots para a Lightning Network.
     contribution:
-      EN: Implements BOLT 4 onion routing to exercise Lightning protocol behavior. His snapshot-fuzzing
-        work on Smite also forms part of his undergraduate thesis.
-      BR: Implementa roteamento onion de BOLT 4 para exercitar o comportamento do protocolo Lightning.
-        Seu trabalho com fuzzing baseado em snapshots no Smite também faz parte do trabalho de conclusão
-        de curso.
+      EN: Develops the protocol and testing infrastructure needed to explore Lightning channel behavior
+        with snapshot fuzzing. His work connects structured test scenarios and coverage improvements
+        to investigating crashes and reporting implementation defects upstream.
+      BR: Desenvolve a infraestrutura de protocolo e testes para explorar o comportamento de canais
+        Lightning com fuzzing baseado em snapshots. Seu trabalho conecta cenários estruturados e
+        melhorias de cobertura à investigação de crashes e ao relato de defeitos aos projetos de origem.
+  - name: Fuzzamoto
+    href: 'https://github.com/oss-garage/fuzzamoto'
+    description:
+      EN: Full-node fuzzing for Bitcoin protocol implementations.
+      BR: Fuzzing de nós completos de implementações do protocolo Bitcoin.
+    contribution:
+      EN: Contributes to transport support and reusable testing infrastructure so fuzzing scenarios can
+        exercise Bitcoin Core through both legacy and BIP324 encrypted connections, extending protocol
+        coverage beyond isolated library tests.
+      BR: Contribui para o suporte a transportes e a infraestrutura reutilizável de testes para que
+        cenários de fuzzing exercitem o Bitcoin Core por conexões legadas e criptografadas com BIP324,
+        ampliando a cobertura do protocolo além dos testes isolados de bibliotecas.
 contributions:
+  - id: github-eclair-3385
+    title:
+      EN: Report missing balance validation in Eclair splicing
+      BR: Relatar ausência de validação de saldo no splicing do Eclair
+    date: '2026-09-25'
+    source: 'ACINQ/eclair · #3385'
+    type: Research
+    href: 'https://github.com/ACINQ/eclair/issues/3385'
+    description:
+      EN: Found with Smite that Eclair acknowledges an excessive splice-out before aborting later,
+        rather than rejecting it as specified. Reported upstream as a protocol-compliance issue.
+      BR: Identificou com o Smite que o Eclair aceita inicialmente uma retirada excessiva via splicing
+        e só depois aborta, em vez de rejeitá-la conforme a especificação. Relatou a divergência ao projeto.
+  - id: github-lightning-9492
+    title:
+      EN: Report unchecked output amounts in Core Lightning
+      BR: Relatar valores de saída não validados no Core Lightning
+    date: '2026-09-10'
+    source: 'ElementsProject/lightning · #9492'
+    type: Research
+    href: 'https://github.com/ElementsProject/lightning/issues/9492'
+    description:
+      EN: Found with Smite that missing amount checks in interactive transaction handling could crash
+        channel-related daemons. Reported the defect, which was subsequently fixed upstream.
+      BR: Identificou com o Smite que a falta de validação de valores em transações interativas podia
+        causar crashes em daemons de canais. Relatou o defeito, que depois foi corrigido pelo projeto.
+  - id: github-lightning-9483
+    title:
+      EN: Fix uninitialized channel state in Core Lightning
+      BR: Corrigir estado de canal não inicializado no Core Lightning
+    date: '2026-09-14'
+    source: 'ElementsProject/lightning · #9483'
+    type: PR
+    href: 'https://github.com/ElementsProject/lightning/pull/9483'
+    description:
+      EN: Authored the merged initialization fix for a flag governing unexpected transaction signatures.
+        Discovered with Smite, it removes undefined behavior from peer-message handling.
+      BR: Criou a correção integrada de inicialização de uma flag que controla assinaturas de transações
+        inesperadas. Descoberta com o Smite, elimina comportamento indefinido no tratamento de mensagens.
   - id: github-bitcoinfuzz-bitcoinfuzz-708
     title:
       EN: Handle known btcd and rust-bitcoin P2P divergences
@@ -134,12 +193,29 @@ writing:
     date: '2026-08-25'
     source: erickcestari.dev
     href: 'https://erickcestari.dev/blog/ping-flood-oom/'
-updatedAt: '2026-11-17'
+media:
+  - id: youtube-LEaZI1OQpK0
+    title:
+      EN: 'Differential Fuzzing | Erick Cestari | bitcoin++ exploits edition | Feb 2026 Florianópolis, Brazil'
+      BR: 'Differential Fuzzing | Erick Cestari | bitcoin++ exploits edition | Feb 2026 Florianópolis, Brazil'
+    source: bitcoin++
+    href: 'https://www.youtube.com/watch?v=LEaZI1OQpK0'
+    mediaType: video
+    thumbnail: /assets/images/people/media/erick-LEaZI1OQpK0.jpg
+  - id: youtube-vGFdaVoa3BE
+    title:
+      EN: Differential Fuzzing on Lightning Network - Erick Cestari
+      BR: Differential Fuzzing on Lightning Network - Erick Cestari
+    source: bitcoin++
+    href: 'https://www.youtube.com/watch?v=vGFdaVoa3BE'
+    mediaType: video
+    thumbnail: /assets/images/people/media/erick-vGFdaVoa3BE.jpg
+updatedAt: '2026-11-18'
 ---
 ## EN
 
-Erick Cestari works on Bitcoinfuzz and Smite, testing Bitcoin and Lightning implementations through differential and snapshot fuzzing. His contributions include P2P message testing and BOLT 4 onion routing.
+Erick Cestari is a Bitcoin and Lightning security researcher who maintains Bitcoinfuzz and contributes to Smite. Through fuzzing and protocol testing, he has reported bugs and vulnerabilities affecting Lightning implementations, including Core Lightning and Eclair, and helps develop reusable open-source testing infrastructure.
 
 ## PT
 
-Erick Cestari trabalha no Bitcoinfuzz e no Smite, testando implementações de Bitcoin e Lightning com fuzzing diferencial e baseado em snapshots. Suas contribuições incluem testes de mensagens P2P e roteamento onion de BOLT 4.
+Erick Cestari é pesquisador de segurança de Bitcoin e Lightning, mantenedor do Bitcoinfuzz e contribuidor do Smite. Com fuzzing e testes de protocolo, relatou bugs e vulnerabilidades em implementações Lightning, incluindo Core Lightning e Eclair, e contribui para desenvolver infraestrutura reutilizável de testes de código aberto.

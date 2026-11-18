@@ -16,9 +16,7 @@ programs:
       EN: Floresta
       BR: Floresta
     href: /programs/fellowship
-    description:
-      EN: "After São Paulo BitDevs and Summer of Bitcoin, worked on Floresta during the Vinteum fellowship and Bitcoin Dev Launchpad. Early consensus-rule implementation took place under mentorship; he later returned to Summer of Bitcoin as a mentor."
-      BR: "Após São Paulo BitDevs e Summer of Bitcoin, trabalhou no Floresta durante a fellowship da Vinteum e o Bitcoin Dev Launchpad. A implementação inicial de regras de consenso teve mentoria; depois, voltou ao Summer of Bitcoin como mentor."
+
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
     organization: Vinteum
@@ -32,6 +30,14 @@ programs:
       BR: Floresta
     href: /programs/bitcoin-dev-launchpad
     fundedBy: OpenSats
+  - program: "summer-of-bitcoin"
+    name: "Summer of Bitcoin"
+    organization: "Summer of Bitcoin"
+    role: {"EN": "Alumnus", "BR": "Ex-participante"}
+    status: "past"
+    cohort: 2024
+    href: "https://www.summerofbitcoin.org/program-details/2024/r/rectcEvzVdwHh7gwb"
+    work: {"EN": "Floresta: migration from async-std to Tokio", "BR": "Floresta: migração de async-std para Tokio"}
 focus:
   - Rust
   - Bitcoin Nodes
@@ -40,31 +46,26 @@ links:
   - label: GitHub
     href: 'https://github.com/jaoleal'
     icon: github
+  - label: "X"
+    href: "https://x.com/jaoleall"
+    icon: "twitter"
 projects:
+  - name: Floresta
+    href: https://github.com/getfloresta/Floresta
+    description:
+      EN: Lightweight Bitcoin node software using Utreexo, with embeddable Rust libraries.
+      BR: Software de nó Bitcoin leve com Utreexo e bibliotecas Rust integráveis em outras aplicações.
+    contribution:
+      EN: Develops consensus validation, Bitcoin Core-compatible RPC interfaces and wallet descriptor tooling, alongside build infrastructure and tests. Descriptor work includes proposals still under review.
+      BR: Desenvolve validação de consenso, interfaces RPC compatíveis com Bitcoin Core e ferramentas de descritores de carteira, além de infraestrutura de compilação e testes. O trabalho com descritores inclui propostas ainda em revisão.
   - name: rust-bitcoinkernel
     href: https://github.com/sedited/rust-bitcoinkernel
     description:
-      EN: Rust bindings for the bitcoin kernel library
+      EN: Rust bindings for the Bitcoin Core validation library.
       BR: Bindings Rust para a biblioteca de validação do Bitcoin Core.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
-  - name: rust-bitcoin
-    href: https://github.com/rust-bitcoin/rust-bitcoin
-    description:
-      EN: Rust Bitcoin library
-      BR: Bibliotecas Rust para desenvolver aplicações Bitcoin.
-    contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
-  - name: floresta-nix
-    href: https://github.com/getfloresta/floresta-nix
-    description:
-      EN: Nix packages, services and development resources for Floresta.
-      BR: Pacotes, serviços e recursos de desenvolvimento Nix para Floresta.
-    contribution:
-      EN: Develops Nix build tooling for Floresta, including the reusable floresta-build.nix module.
-      BR: Desenvolve ferramentas Nix para compilar o Floresta, incluindo o módulo reutilizável floresta-build.nix.
+      EN: Contributes portable build support for Rust BitcoinKernel bindings, enabling Android integration with cross-compilation tooling and CI coverage.
+      BR: Contribui para a portabilidade da compilação dos bindings Rust de BitcoinKernel, viabilizando integração com Android por meio de compilação cruzada e cobertura em CI.
 contributions:
   - id: github-sedited-rust-bitcoinkernel-158
     title:
@@ -104,14 +105,12 @@ contributions:
     type: PR
     href: https://github.com/getfloresta/Floresta/pull/590
     description:
-      EN: Merged getblock response refactoring and verbosity level 2 for compatibility with the Bitcoin
-        Core API.
-      BR: Reestruturou respostas de getblock e adicionou o nível de verbosidade 2 para compatibilidade com
-        a API do Bitcoin Core; PR integrado.
-updatedAt: '2026-11-17'
+      EN: Proposed getblock response refactoring and verbosity level 2 for Bitcoin Core API compatibility. This pull request was closed without merging.
+      BR: Propôs a reestruturação das respostas de getblock e o nível de verbosidade 2 para compatibilidade com a API do Bitcoin Core. Este pull request foi fechado sem integração.
+updatedAt: '2026-11-18'
 affiliations:
   - organization: OpenSats
-    role: { EN: Grantee, BR: Bolsista }
+    role: { EN: Grantee, BR: Grantee }
     status: current
     start: '2026-09'
     href: 'https://opensats.org/blog/fourteenth-wave-of-bitcoin-grants'

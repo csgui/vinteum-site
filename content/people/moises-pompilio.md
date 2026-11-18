@@ -54,8 +54,8 @@ projects:
       EN: 'A lightweight and embeddable Bitcoin client, built for sovereignty.'
       BR: Cliente Bitcoin compacto e integrável em outras aplicações.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: "Contributes across Floresta’s validation, P2P error handling, RPC compatibility and watch-only wallet integration, with functional and integration testing that also covers Electrum behavior."
+      BR: "Contribui para validação, tratamento de erros P2P, compatibilidade de RPCs e integração de carteiras somente de observação no Floresta, com testes funcionais e de integração que também abrangem o comportamento Electrum."
 contributions:
   - id: github-getfloresta-Floresta-1376
     title:
@@ -85,7 +85,7 @@ contributions:
       BR: Separa verificações estruturais de raízes de Merkle, compromissos de witness e
         peso dos blocos da verificação de altura da coinbase exigida pelo BIP34, com fixtures
         reutilizáveis e testes de blocos inválidos.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 media:
   - id: moises-alumni-outlook-2026
     title:
@@ -101,7 +101,7 @@ media:
     mediaType: article
 affiliations:
   - organization: OpenSats
-    role: { EN: Grantee, BR: Bolsista }
+    role: { EN: Grantee, BR: Grantee }
     status: current
     start: '2025-11'
     href: 'https://opensats.org/projects/floresta'

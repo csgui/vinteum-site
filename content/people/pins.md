@@ -7,7 +7,7 @@ programs:
     organization: Vinteum
     role:
       EN: Grantee
-      BR: Bolsista
+      BR: Grantee
     status: current
     work:
       EN: LND
@@ -31,19 +31,16 @@ projects:
       EN: An alternative full node bitcoin implementation written in Go (golang)
       BR: Implementação de nó Bitcoin em Go.
     contribution:
-      EN: Added the VerifyLowS helper for ECDSA signatures.
-      BR: Adicionou o helper VerifyLowS para assinaturas ECDSA.
+      EN: "Contributed to ECDSA signature-validation tooling used by the Bitcoin and Lightning stack, including low-S verification support."
+      BR: "Contribuiu para ferramentas de validação de assinaturas ECDSA usadas na infraestrutura Bitcoin e Lightning, incluindo suporte à verificação low-S."
   - name: lnd
     href: 'https://github.com/lightningnetwork/lnd'
     description:
       EN: Lightning Network Daemon ⚡️
       BR: Implementação de nó Lightning.
     contribution:
-      EN: Added Taproot fallback invoice addresses and proposed coverage-guided fuzz harnesses
-        for channel links and funding. The fuzzing pull requests remain open.
-      BR: Adicionou endereços Taproot de fallback em invoices e propôs harnesses de fuzzing guiado
-        por cobertura para channel links e financiamento. Os pull requests de fuzzing permanecem
-        abertos.
+      EN: "Works on Lightning invoice compatibility and channel-state-machine testing in lnd. His coverage-guided fuzzing proposals explore channel operation and opening under adversarial events and reconnects; those pull requests remain open."
+      BR: "Trabalha na compatibilidade de invoices Lightning e em testes das máquinas de estados de canais no lnd. Suas propostas de fuzzing guiado por cobertura exploram a operação e a abertura de canais diante de eventos adversariais e reconexões; esses pull requests permanecem abertos."
 contributions:
   - id: github-btcsuite-btcd-2524
     title:
@@ -91,7 +88,7 @@ contributions:
         messages and reservation accounting. Open pull request.
       BR: Propõe um harness de fuzzing em Go para fluxos simultâneos de abertura de canais, mensagens
         de handshake inválidas e controle de reservas. Pull request aberto.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

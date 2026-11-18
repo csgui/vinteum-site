@@ -47,8 +47,8 @@ projects:
       EN: Differential Fuzzing of Bitcoin protocol implementations and libraries
       BR: Fuzzing diferencial de implementações e bibliotecas Bitcoin.
     contribution:
-      EN: Added rust-bitcoin to EllSwift differential fuzzing targets.
-      BR: Adicionou rust-bitcoin aos alvos de fuzzing diferencial de EllSwift.
+      EN: "Contributes to differential testing of BIP324’s EllSwift encoding across Bitcoin implementations, extending rust-bitcoin coverage to detect behavioral inconsistencies and regressions."
+      BR: "Contribui para testes diferenciais da codificação EllSwift do BIP324 entre implementações Bitcoin, ampliando a cobertura de rust-bitcoin para detectar inconsistências de comportamento e regressões."
   - name: BIP324 Traffic Lab
     href: https://github.com/victorandre957/bip324-traffic-lab
     description:
@@ -75,10 +75,8 @@ projects:
       EN: Bitcoin full-node software.
       BR: Software de nó completo Bitcoin.
     contribution:
-      EN: Proposed opt-in randomization of the P2P listening port; the pull request was closed
-        without merge.
-      BR: Propôs randomização opcional da porta P2P de escuta; o pull request foi encerrado sem
-        integração.
+      EN: "Explored Bitcoin Core P2P listening behavior through a tested proposal for persistent, opt-in port randomization. The proposal was closed without merging."
+      BR: "Explorou o comportamento de escuta P2P do Bitcoin Core por meio de uma proposta testada de randomização de porta opcional e persistente. A proposta foi fechada sem integração."
 contributions:
   - id: github-bitcoinfuzz-bitcoinfuzz-637
     title:
@@ -144,7 +142,7 @@ writing:
     source: victorandre957.github.io
     href: >-
       https://victorandre957.github.io/personal_blog/posts/what-bip324-changes-for-bitcoin-p2p/
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

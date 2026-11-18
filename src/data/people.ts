@@ -67,7 +67,7 @@ export interface Person {
     links: {
         label: string;
         href: string;
-        icon?: "github" | "twitter" | "nostr" | "website" | "blog" | "youtube" | "linkedin" | "discord" | "instagram" | "keybase" | "email" | "scholar";
+        icon?: "github" | "gitlab" | "twitter" | "nostr" | "website" | "blog" | "youtube" | "linkedin" | "discord" | "instagram" | "keybase" | "email" | "scholar";
     }[];
     affiliations: Affiliation[];
     programs: Participation[];
@@ -76,14 +76,15 @@ export interface Person {
     discussions: ProfileItem[];
     writing: ProfileItem[];
     publications: AcademicPublication[];
+    courses: ProfileItem[];
     media: ProfileItem[];
     connections: { slug: string; reason: LocalizedText }[];
 }
 
-export type ProfileSection = "projects" | "contributions" | "discussions" | "writing" | "publications" | "media";
+export type ProfileSection = "projects" | "contributions" | "discussions" | "writing" | "publications" | "courses" | "media";
 
 export function getProfileSections(person: Person): ProfileSection[] {
-    const sections: ProfileSection[] = ["projects", "contributions", "discussions", "writing", "publications", "media"];
+    const sections: ProfileSection[] = ["projects", "contributions", "discussions", "writing", "publications", "courses", "media"];
     return sections.filter((section) => person[section].length > 0);
 }
 
@@ -92,6 +93,18 @@ export function getDirectoryRole(person: Person): DirectoryRole | undefined {
     if (primary?.status === "past") return "alumni";
     if (primary?.status === "current") return primary.program === "grants" ? "grantee" : "fellow";
     return person.affiliations.find(({ directoryRole }) => directoryRole)?.directoryRole;
+}
+
+export function getDirectoryRoleDetails(person: Person, locale: "EN" | "BR") {
+    const role = getDirectoryRole(person);
+    const team = role === "team" ? person.affiliations.find((entry) =>
+        entry.organization === "Vinteum" && entry.directoryRole === "team" && entry.status !== "past",
+    ) : undefined;
+    return {
+        role,
+        title: team?.role[locale],
+        year: role === "fellow" ? undefined : getPrimaryParticipation(person)?.start?.slice(0, 4),
+    };
 }
 
 export function getPrimaryParticipation(person: Person): Participation | undefined {
@@ -106,15 +119,29 @@ export function getPrimaryParticipation(person: Person): Participation | undefin
     );
 }
 
+export type CommunityProgramme = Pick<Participation, "program" | "name" | "organization"> & Partial<Participation>;
+
 export function getProfileRelationships(person: Person): {
-    affiliations: (Affiliation & { work?: LocalizedText; description?: LocalizedText })[];
-    programs: Participation[];
+    affiliations: Affiliation[];
+    programs: CommunityProgramme[];
 } {
     const isAffiliation = ({ program }: Participation) => program === "grants" || program === "fellowship";
     return {
-        affiliations: [...person.affiliations, ...person.programs.filter(isAffiliation)],
-        programs: person.programs.filter((entry) => !isAffiliation(entry)),
+        affiliations: [...person.affiliations, ...person.programs.filter(isAffiliation).map(
+            ({ organization, role, directoryRole, status, start, end, href }) =>
+                ({ organization, role, directoryRole, status, start, end, href }),
+        )],
+        programs: person.programs.filter((entry) => !isAffiliation(entry)).map((entry) =>
+            entry.program === "bitcoin-dev-launchpad" || entry.program === "summer-of-bitcoin"
+                ? { program: entry.program, name: entry.name, organization: entry.organization, cohort: entry.cohort, href: entry.href }
+                : entry,
+        ),
     };
+}
+
+export function getAffiliationStatusLabel({ status, start, end }: Pick<Affiliation, "status" | "start" | "end">): ParticipationStatus | undefined {
+    if (status === "past" && !end) return status;
+    return start || end ? undefined : status;
 }
 
 export interface OrganizationLogo {
@@ -131,6 +158,7 @@ const organizationLogos: Readonly<Record<string, OrganizationLogo>> = {
     "Human Rights Foundation (Bitcoin Development Fund)": { src: "/assets/logos/affiliations/hrf.svg", background: "#ffffff" },
     "Lightning Labs": { src: "/assets/logos/affiliations/lightning-labs.png", background: "#ffffff" },
     "OpenSats": { src: "/assets/logos/affiliations/opensats.png" },
+    "PPQ": { src: "/assets/logos/affiliations/ppq.png", background: "#111111" },
     "Second": { src: "/assets/logos/affiliations/second.png", background: "#ffffff" },
     "Spiral": { src: "/assets/logos/affiliations/spiral.svg", background: "#ffffff" },
     "Tether": { src: "/assets/logos/affiliations/tether.png" },
@@ -141,7 +169,11 @@ export function getOrganizationLogo(organization: string): OrganizationLogo | un
 }
 
 export function getProjectLabel(person: Person, locale: "EN" | "BR") {
-    return getPrimaryParticipation(person)?.work?.[locale] ?? person.projectLabel ?? person.projects[0]?.name
+    const work = getPrimaryParticipation(person)?.work?.[locale];
+    const namesAnAffiliation = work && person.affiliations.some(({ organization }) =>
+        normalizeSearch(organization) === normalizeSearch(work),
+    );
+    return (namesAnAffiliation ? undefined : work) ?? person.projectLabel ?? person.projects[0]?.name
         ?? person.affiliations.find(({ directoryRole }) => directoryRole === "team")?.role[locale];
 }
 

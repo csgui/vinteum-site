@@ -62,7 +62,7 @@ const schema: z.ZodType<Person> = z.object({
                 label: z.string().min(1),
                 href: socialLink,
                 icon: z
-                    .enum(["github", "twitter", "nostr", "website", "blog", "youtube", "linkedin", "discord", "instagram", "keybase", "email", "scholar"])
+                    .enum(["github", "gitlab", "twitter", "nostr", "website", "blog", "youtube", "linkedin", "discord", "instagram", "keybase", "email", "scholar"])
                     .optional(),
             }),
         )
@@ -103,6 +103,7 @@ const schema: z.ZodType<Person> = z.object({
         doi: z.string().regex(/^10\.\d{4,9}\/\S+$/).optional(),
         href: link,
     })).default([]),
+    courses: z.array(item).default([]),
     media: z.array(item).default([]),
     connections: z.array(z.object({ slug: z.string(), reason: localized })).default([]),
 });

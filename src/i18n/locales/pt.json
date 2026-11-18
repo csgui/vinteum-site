@@ -833,7 +833,8 @@
         "affiliations": "Vínculos",
         "present": "Atual",
         "programs": "Comunidade e programas",
-        "updated": "Atualizado em",
+        "by": "Por",
+        "updated": "Perfil atualizado em",
         "connections": "Pessoas relacionadas",
         "profileNavigation": "Seções do perfil",
         "since": "desde",
@@ -869,6 +870,7 @@
             "discussions": "Discussões",
             "writing": "Textos",
             "publications": "Publicações acadêmicas",
+            "courses": "Cursos",
             "media": "Mídia"
         },
         "headings": {
@@ -877,6 +879,7 @@
             "discussions": "Discussões técnicas",
             "writing": "Artigos e textos",
             "publications": "Publicações acadêmicas",
+            "courses": "Cursos",
             "media": "Palestras, podcasts e mídia"
         },
         "supportTitle": "Apoie o trabalho open source em Bitcoin",

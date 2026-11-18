@@ -43,10 +43,16 @@ projects:
       EN: Tooling to monitor for P2P anomalies and attacks using Bitcoin Core honey pot nodes
       BR: Ferramentas para monitorar anomalias e ataques na rede P2P do Bitcoin.
     contribution:
-      EN: Contributed merged compact-block reconstruction log metrics and Grafana dashboards tracking requested
-        transactions and reconstruction time.
-      BR: Contribuiu com métricas integradas de logs de reconstrução de blocos compactos e dashboards Grafana
-        para acompanhar transações solicitadas e tempo de reconstrução.
+      EN: Develops log-based network observability and dashboards for studying compact-block relay, measuring reconstruction behavior and investigating anomalies with instrumented Bitcoin nodes.
+      BR: Desenvolve observabilidade de rede baseada em logs e dashboards para estudar a retransmissão de blocos compactos, medir a reconstrução e investigar anomalias com nós Bitcoin instrumentados.
+  - name: BNOC
+    href: https://bnoc.xyz/
+    description:
+      EN: Bitcoin Network Operations Collective, a forum for Bitcoin network observations and research.
+      BR: Bitcoin Network Operations Collective, fórum de observações e pesquisa sobre a rede Bitcoin.
+    contribution:
+      EN: Publishes ongoing P2P measurement research and reproducible investigations, combining retained node logs, compact-block reconstruction analysis and controlled network experiments with public technical discussion.
+      BR: Publica pesquisa contínua de medições P2P e investigações reproduzíveis, combinando logs preservados de nós, análise de reconstrução de blocos compactos e experimentos controlados de rede com discussão técnica pública.
 contributions:
   - id: github-peer-observer-peer-observer-465
     title:
@@ -92,6 +98,17 @@ contributions:
         web interface. Data-integrity edge cases remain under investigation.
       BR: Desenvolve uma ferramenta experimental de gravação e análise do mempool do Bitcoin Core, com API
         de backend e interface web. Casos-limite de integridade dos dados seguem sob investigação.
+  - id: bnoc-compact-block-warnet-investigation
+    title:
+      EN: Reproducing compact-block reconstruction degradation in Warnet
+      BR: Reprodução da degradação de reconstrução de blocos compactos no Warnet
+    source: BNOC
+    type: Research
+    date: '2026-11-04'
+    href: https://bnoc.xyz/t/compact-block-reconstruction-degradation-between-september-october-2026/198/9
+    description:
+      EN: Published a controlled network experiment investigating how transaction-chain broadcasts and competing spends affect compact-block reconstruction, with reproducible scenarios and measurements of extra-pool capacity.
+      BR: Publicou um experimento controlado de rede que investiga como a transmissão de cadeias de transações e gastos concorrentes afetam a reconstrução de blocos compactos, com cenários reproduzíveis e medições da capacidade do extra pool.
 discussions:
   - id: compact-block-degradation
     title:
@@ -105,7 +122,7 @@ discussions:
     date: '2026-10-22'
     href: >-
       https://bnoc.xyz/t/compact-block-reconstruction-degradation-between-september-october-2026/198
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

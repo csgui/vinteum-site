@@ -50,9 +50,8 @@ projects:
       EN: Tooling to monitor for P2P anomalies and attacks using Bitcoin Core honey pot nodes
       BR: Ferramentas para monitorar anomalias e ataques na rede P2P do Bitcoin.
     contribution:
-      EN: Contributed merged archive safety and low-data mode changes, plus a reusable replay library.
-      BR: Contribuiu com mudanças integradas de segurança de arquivos e modo de dados reduzidos, além de
-        uma biblioteca reutilizável de replay.
+      EN: "Contributes to Bitcoin P2P observability through peer-observer’s event archive and replay infrastructure, working on safe archive processing, storage efficiency and reusable, testable replay tooling."
+      BR: "Contribui para a observabilidade P2P do Bitcoin por meio da infraestrutura de arquivamento e replay de eventos do peer-observer, trabalhando no processamento seguro de arquivos, na eficiência de armazenamento e em ferramentas de replay reutilizáveis e testáveis."
 contributions:
   - id: github-peer-observer-peer-observer-509
     title:
@@ -106,7 +105,7 @@ contributions:
       BR: Integrou campos adicionais de getpeerinfo, mantendo os schemas RPC do servidor e cliente alinhados
         e ampliando a documentação e os testes funcionais da CLI. Campos de funcionalidades não implementadas
         retornam valores neutros explícitos.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

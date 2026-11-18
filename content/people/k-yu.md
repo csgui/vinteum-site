@@ -43,22 +43,22 @@ links:
     href: 'https://www.linkedin.com/in/caio-ueda-sampaio-23511b253/'
     icon: linkedin
 projects:
-  - name: Bitcoinfuzz Corpora
-    href: 'https://github.com/bitcoinfuzz/corpora'
+  - name: Bitcoinfuzz
+    href: https://github.com/bitcoinfuzz/bitcoinfuzz
     description:
-      EN: Fuzz corpora for bitcoinfuzz
-      BR: Corpus de teste para fuzzing diferencial no Bitcoinfuzz.
+      EN: Differential fuzzing framework comparing independent Bitcoin implementations.
+      BR: Framework de fuzzing diferencial que compara implementações independentes de Bitcoin.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Develops implementation integrations and differential test targets, investigates behavioral differences and improves build, CI and corpus infrastructure for reproducible testing.
+      BR: Desenvolve integrações de implementações e alvos de testes diferenciais, investiga diferenças de comportamento e melhora a infraestrutura de compilação, CI e corpora para testes reproduzíveis.
   - name: Bitcoin Core
-    href: 'https://github.com/bitcoin/bitcoin'
+    href: https://github.com/bitcoin/bitcoin
     description:
-      EN: Bitcoin Core integration/staging tree
-      BR: 'Bitcoin Core: implementação de nó e carteira Bitcoin.'
+      EN: Bitcoin node and wallet implementation.
+      BR: Implementação de nó e carteira Bitcoin.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Contributes consensus-validation tests and BitcoinKernel API work, alongside code review aimed at improving validation coverage and making kernel behavior accessible to downstream testing tools.
+      BR: Contribui com testes de validação de consenso e trabalho na API de BitcoinKernel, além de revisão de código voltada a ampliar a cobertura de validação e expor o comportamento do kernel a ferramentas de teste.
 contributions:
   - id: github-bitcoinfuzz-corpora-81
     title:
@@ -102,7 +102,7 @@ contributions:
         a concrete test diff in the PR discussion.
       BR: Sugeriu testar GetVersion() em TransactionView e no wrapper proprietário Transaction, com um diff
         concreto de testes na discussão do PR.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

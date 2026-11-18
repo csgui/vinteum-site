@@ -53,8 +53,8 @@ projects:
       EN: "A protocol suite under development for collaborative Bitcoin transaction construction, aimed at decentralized, privacy-preserving transactions."
       BR: "Uma suíte de protocolos em desenvolvimento para a construção colaborativa de transações Bitcoin, voltada a transações descentralizadas com preservação de privacidade."
     contribution:
-      EN: "Cindy develops transport abstractions and Tor support, improves documentation and its CI, and reviews concurrent PSBT construction and metadata scrubbing. Typed transport channels and onion-address validation are merged; the Tor connector and listener remain under review."
-      BR: "Cindy desenvolve abstrações de transporte e suporte ao Tor, aprimora a documentação e sua integração contínua e revisa a construção concorrente de PSBTs e a remoção de metadados. Os canais de transporte tipados e a validação de endereços onion já foram integrados; o conector e o listener Tor seguem em revisão."
+      EN: "Cindy develops transport abstractions and Tor support, improves documentation and its CI, and reviews concurrent PSBT construction and metadata scrubbing."
+      BR: "Cindy desenvolve abstrações de transporte e suporte ao Tor, aprimora a documentação e sua integração contínua e revisa a construção concorrente de PSBTs e a remoção de metadados."
   - name: lumen-fingerprints
     href: https://github.com/fungi-protocol/lumen-fingerprints
     description:

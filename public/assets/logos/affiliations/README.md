@@ -53,6 +53,13 @@ for organizations without a registered asset.
 - Official source: https://opensats.org/media-kit
 - Downloaded asset: https://opensats.org/static/brand/opensats-icon.png
 
+### PPQ / PayPerQ
+
+- File: `ppq.png`
+- Official source: https://ppq.ai/
+- Downloaded asset: https://ppq.ai/flame2.png
+- Display background: `#111111`, preserving contrast for the pale flame base.
+
 ### Second
 
 - File: `second.png`

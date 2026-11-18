@@ -10,12 +10,20 @@ programs:
     organization: Vinteum
     role:
       EN: Grantee
-      BR: Bolsista
+      BR: Grantee
     status: current
     work:
       EN: Floresta
       BR: Floresta
     href: /programs/grants
+  - program: "summer-of-bitcoin"
+    name: "Summer of Bitcoin"
+    organization: "Summer of Bitcoin"
+    role: {"EN": "Alumnus", "BR": "Ex-participante"}
+    status: "past"
+    cohort: 2022
+    href: "https://www.summerofbitcoin.org/program-details/2022/r/recPLKAWw1UFZb7Sl"
+    work: {"EN": "Rust Utreexo library", "BR": "Biblioteca Utreexo em Rust"}
 focus:
   - Utreexo
   - Bitcoin Nodes
@@ -317,7 +325,7 @@ media:
     date: '2023-08-20'
     mediaType: article
     thumbnail: /assets/images/people/grantees/davidsonsouza.jpg
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

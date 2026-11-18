@@ -21,7 +21,7 @@ programs:
     organization: Vinteum
     role:
       EN: Grantee
-      BR: Bolsista
+      BR: Grantee
     status: current
     work:
       EN: BtcPayServer
@@ -30,7 +30,7 @@ programs:
     description:
       EN: Progressed from fellow to grantee and joined BTCPay Server’s core development
         team.
-      BR: Passou de fellow a bolsista e entrou na equipe central de desenvolvimento do BTCPay
+      BR: Passou de fellow a grantee e entrou na equipe central de desenvolvimento do BTCPay
         Server.
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
@@ -65,17 +65,16 @@ projects:
         payment processor.
       BR: Processador de pagamentos Bitcoin open source e auto-hospedável.
     contribution:
-      EN: Implemented multisig setup, granular wallet permissions and Payment Request list improvements.
-      BR: Implementou configuração multisig, permissões granulares de carteiras e melhorias na
-        listagem de Payment Requests.
+      EN: "Develops merchant payment and wallet workflows in BTCPay Server, working on collaborative multisig setup, wallet access control and payment-request management and reporting."
+      BR: "Desenvolve fluxos de pagamentos e carteiras para lojistas no BTCPay Server, trabalhando na configuração colaborativa de multisig, no controle de acesso a carteiras e na gestão e nos relatórios de solicitações de pagamento."
   - name: BTCPay Server Vault
     href: https://github.com/btcpayserver/BTCPayServer.Vault
     description:
       EN: Desktop signing tool for software and hardware wallets.
       BR: Ferramenta desktop de assinatura com carteiras de software e hardware.
     contribution:
-      EN: Added native macOS ARM64 release packaging.
-      BR: Adicionou empacotamento de versão nativa para macOS ARM64.
+      EN: "Contributes to Vault’s desktop release and hardware-wallet tooling compatibility, providing a native Apple Silicon build path with signed and notarized macOS packaging."
+      BR: "Contribui para a compatibilidade das versões desktop e das ferramentas de carteiras de hardware do Vault, oferecendo uma versão nativa para Apple Silicon com empacotamento macOS assinado e notarizado."
   - name: BTCPay Server Floresta Plugin
     href: https://github.com/thgO-O/btcpayserver-plugin-floresta
     description:
@@ -147,7 +146,7 @@ contributions:
         Merged pull request.
       BR: Adiciona colunas de data e labels, busca, filtros de data e relatórios aos Payment Requests.
         Pull request integrado.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 
@@ -155,4 +154,4 @@ thgO-O contributes to BTCPay Server as a member of its core development team. Hi
 
 ## PT
 
-thgO-O contribui para o BTCPay Server como integrante de sua equipe central de desenvolvimento. Seu trabalho abrange pagamentos, permissões de carteiras, configuração multisig e plugins, após a passagem de fellow a bolsista da Vinteum.
+thgO-O contribui para o BTCPay Server como integrante de sua equipe central de desenvolvimento. Seu trabalho abrange pagamentos, permissões de carteiras, configuração multisig e plugins, após a passagem de fellow a grantee da Vinteum.

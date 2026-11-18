@@ -46,16 +46,16 @@ projects:
       EN: Open-Source Bitcoin Mining Firmware
       BR: Firmware open source para mineração Bitcoin.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: "Contributes to mining-firmware development and contributor documentation, with proposed work on pool-protocol support, configuration and hardware control."
+      BR: "Contribui para o desenvolvimento do firmware de mineração e a documentação para contribuidores, com propostas de suporte a protocolos de pool, configuração e controle de hardware."
   - name: minesploit
     href: 'https://github.com/johnnyasantoss/minesploit'
     description:
       EN: A metasploit like framework and REPL for white hackers on bitcoin mining
       BR: Framework e REPL para pesquisa de segurança em mineração Bitcoin.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: "Contributed to interactive execution of mining-security research modules, connecting the command-line workflow to module execution and result reporting."
+      BR: "Contribuiu para a execução interativa de módulos de pesquisa de segurança em mineração, conectando o fluxo de linha de comando à execução dos módulos e à apresentação de resultados."
 contributions:
   - id: github-256foundation-mujina-67
     title:
@@ -82,8 +82,8 @@ contributions:
     type: PR
     href: https://github.com/256foundation/mujina/pull/65
     description:
-      EN: Open draft PR adds extended channels, reconnect handling and protocol integration tests; not merged.
-      BR: PR aberto em rascunho adiciona canais estendidos, reconexão e testes de integração do protocolo;
+      EN: Open draft PR adds extended channels, reconnect handling and protocol tests; not merged.
+      BR: PR aberto em rascunho adiciona canais estendidos, reconexão e testes de protocolo;
         não integrado.
   - id: github-jayrmotta-mujina-3
     title:
@@ -124,7 +124,7 @@ contributions:
         when readings are unsafe or unavailable.
       BR: PR de firmware aberto e não integrado regula a ventoinha pela temperatura do ASIC e usa velocidade
         máxima quando as leituras são inseguras ou indisponíveis.
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

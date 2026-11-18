@@ -37,7 +37,7 @@ links:
     href: 'https://github.com/yan-pi'
     icon: github
   - label: X
-    href: 'https://x.com/yamigake'
+    href: 'https://x.com/baianosh'
     icon: twitter
   - label: Website
     href: 'https://indianboy.sh/'
@@ -55,17 +55,16 @@ projects:
       EN: 'A CLI wallet library and REPL tool to demo and test the BDK library '
       BR: Carteira de linha de comando e REPL para testar e demonstrar o BDK.
     contribution:
-      EN: Added a command to delete saved wallet configuration without deleting wallet databases.
-      BR: Adicionou um comando para remover configurações salvas sem apagar os bancos de dados
-        das carteiras.
+      EN: "Contributes to BDK’s command-line wallet configuration workflows, keeping saved configuration management separate from wallet database storage."
+      BR: "Contribui para os fluxos de configuração de carteiras na linha de comando do BDK, mantendo a gestão das configurações salvas separada do armazenamento dos bancos de dados das carteiras."
   - name: BlockSci (Clube Bitcoin UnB)
     href: 'https://github.com/ClubeBitcoinUnB/BlockSci'
     description:
       EN: A high-performance tool for blockchain science and exploration
       BR: Fork do BlockSci para análise e exploração de dados de blockchains.
     contribution:
-      EN: Migrated CI to GitHub Actions with Linux, macOS ARM64 and Nix checks.
-      BR: Migrou o CI para GitHub Actions com verificações de Linux, macOS ARM64 e Nix.
+      EN: "Contributes to reproducible cross-platform builds and automated validation in the Clube Bitcoin UnB BlockSci fork, covering Linux, Apple Silicon and Nix environments."
+      BR: "Contribui para builds reproduzíveis em diferentes plataformas e validação automatizada no fork do BlockSci do Clube Bitcoin UnB, abrangendo ambientes Linux, Apple Silicon e Nix."
   - name: BDK Wallet (Vinteum research fork)
     href: https://github.com/vinteumorg/bdk_wallet
     description:
@@ -130,7 +129,7 @@ writing:
     date: '2026-04-10'
     source: indianboy.sh
     href: 'https://indianboy.sh/blog/floresta-on-steamdeck'
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 ---
 ## EN
 

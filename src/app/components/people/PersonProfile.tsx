@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { formatPersonDate, getOrganizationLogo, getPrimaryParticipation, getProfileRelationships, getProfileSections, sortProfileItems, type AcademicPublication, type Affiliation, type Person, type ProfileItem, type ProfileSection } from "@/data/people";
+import { formatPersonDate, getAffiliationStatusLabel, getOrganizationLogo, getPrimaryParticipation, getProfileRelationships, getProfileSections, sortProfileItems, type AcademicPublication, type Affiliation, type Person, type ProfileItem, type ProfileSection } from "@/data/people";
 import Markdown from "react-markdown";
 import { PeopleHeroArt, PeopleSupport, PersonAvatar } from "./PeoplePrimitives";
 import styles from "./people.module.css";
@@ -100,10 +100,11 @@ function MediaGrid({ items }: { items: ProfileItem[] }) {
 function AffiliationDetails({ entry }: { entry: Affiliation }) {
     const { locale, t } = useLanguage();
     const { start, end, status } = entry;
+    const statusLabel = getAffiliationStatusLabel(entry);
     return (
         <p>
             {entry.role[locale]}
-            {status && ` · ${t(`people.${status}`)}`}
+            {statusLabel && ` · ${t(`people.${statusLabel}`)}`}
             {start && <> · <time dateTime={start}>{formatPersonDate(start, locale)}</time></>}
             {end && <>{start ? " – " : ` · ${t("people.affiliationEnd")} `}<time dateTime={end}>{formatPersonDate(end, locale)}</time></>}
             {start && !end && status === "current" && ` – ${t("people.present")}`}
@@ -155,8 +156,6 @@ function ProfileSidebar({ person, relatedPeople }: { person: Person; relatedPeop
                                         )}
                                     </h3>
                                     <AffiliationDetails entry={affiliation} />
-                                    {affiliation.work && <p>{affiliation.work[locale]}</p>}
-                                    {affiliation.description && <p>{affiliation.description[locale]}</p>}
                                 </div>
                             </li>
                         ))}
@@ -176,8 +175,8 @@ function ProfileSidebar({ person, relatedPeople }: { person: Person; relatedPeop
                                         program.name
                                     )}
                                 </h3>
-                                <p>{program.organization}{program.cohort && ` · ${t("people.cohort")} ${program.cohort}`}</p>
-                                <AffiliationDetails entry={program} />
+                                <p>{t("people.by")} {program.organization}{program.cohort && ` · ${t("people.cohort")} ${program.cohort}`}</p>
+                                {program.role && <AffiliationDetails entry={{ ...program, role: program.role }} />}
                                 {program.work && <p>{program.work[locale]}</p>}
                                 {program.description && <p>{program.description[locale]}</p>}
                                 {program.fundedBy && <p>{t("people.fundedBy")} {program.fundedBy}</p>}
@@ -324,6 +323,14 @@ export function PersonProfile({
                                 ))}
                             </ul>
                         )}
+                        {person.updatedAt && (
+                            <p className={styles.profileUpdated}>
+                                {t("people.updated")}{" "}
+                                <time dateTime={person.updatedAt}>
+                                    {formatPersonDate(person.updatedAt, locale, true)}
+                                </time>
+                            </p>
+                        )}
                     </div>
                     <div className={styles.profilePortrait}>
                         <PersonAvatar person={person} priority />
@@ -356,7 +363,7 @@ export function PersonProfile({
                             .map((section) => {
                                 const isOverview = active === "overview";
                                 const items = person[section];
-                                const visibleCount = isOverview ? (section === "media" ? 2 : 3) : items.length;
+                                const visibleCount = isOverview ? (section === "media" || section === "courses" ? 2 : 3) : items.length;
                                 return (
                                     <section
                                         key={section}
@@ -428,10 +435,8 @@ export function PersonProfile({
                                                                         </a>
                                                                     ) : project.name}
                                                                 </h3>
-                                                                {typeof project.current === "boolean" && (
-                                                                    <span>
-                                                                        {project.current ? t("people.current") : t("people.past")}
-                                                                    </span>
+                                                                {project.current === false && (
+                                                                    <span>{t("people.past")}</span>
                                                                 )}
                                                             </div>
                                                             {project.description && <p>{project.description[locale]}</p>}
@@ -439,8 +444,8 @@ export function PersonProfile({
                                                         </li>
                                                     ))}
                                             </ul>
-                                        ) : section === "media" ? (
-                                            <MediaGrid items={person.media.slice(0, visibleCount)} />
+                                        ) : section === "media" || section === "courses" ? (
+                                            <MediaGrid items={person[section].slice(0, visibleCount)} />
                                         ) : (
                                             <>
                                                 <ItemList
@@ -466,14 +471,6 @@ export function PersonProfile({
                     {(person.affiliations.length > 0 || person.programs.length > 0 || person.focus.length > 0 || relatedPeople.length > 0) &&
                         <ProfileSidebar person={person} relatedPeople={relatedPeople} />}
                 </div>
-                {person.updatedAt && (
-                    <p className={styles.profileUpdated}>
-                        {t("people.updated")}{" "}
-                        <time dateTime={person.updatedAt}>
-                            {formatPersonDate(person.updatedAt, locale, true)}
-                        </time>
-                    </p>
-                )}
                 <PeopleSupport />
             </div>
         </div>

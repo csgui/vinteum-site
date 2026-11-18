@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { filterPeople, getDirectoryRole, getPrimaryParticipation, getProjectLabel, type Person } from "@/data/people";
+import { filterPeople, getDirectoryRoleDetails, getProjectLabel, type Person } from "@/data/people";
 import { PeopleHeroArt, PersonAvatar } from "./PeoplePrimitives";
 import styles from "./people.module.css";
 
@@ -74,8 +74,7 @@ export function PeopleDirectory({ people, filters = "" }: { people: Person[]; fi
                     <ul className={styles.peopleGrid}>
                         {filtered.map((person, index) => {
                             const project = getProjectLabel(person, locale);
-                            const personRole = getDirectoryRole(person);
-                            const start = getPrimaryParticipation(person)?.start;
+                            const { role: personRole, title, year } = getDirectoryRoleDetails(person, locale);
                             return (
                                 <li key={person.slug}>
                                     <Link href={`/people/${person.slug}`} className={styles.personCard}>
@@ -84,8 +83,8 @@ export function PeopleDirectory({ people, filters = "" }: { people: Person[]; fi
                                         {project && <p>{project}</p>}
                                         {personRole && (
                                             <span className={styles.role} data-role={personRole}>
-                                                {t(`people.roles.${personRole}`)}
-                                                {start && ` · ${start.slice(0, 4)}`}
+                                                {title ?? t(`people.roles.${personRole}`)}
+                                                {year && ` · ${year}`}
                                             </span>
                                         )}
                                     </Link>

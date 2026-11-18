@@ -14,9 +14,7 @@ programs:
       EN: Krux
       BR: Krux
     href: /programs/bitcoin-dev-launchpad
-    description:
-      EN: "After Bitcoin Dev Launchpad, continued studying, reading code and experimenting at Casa21 before contributing to Krux. Moved into independently supported open-source work and entered 42 School to deepen his computer-science foundations."
-      BR: "Após o Bitcoin Dev Launchpad, continuou estudando, lendo código e experimentando na Casa21 antes de contribuir ao Krux. Passou a trabalhar com apoio independente em open source e ingressou na 42 School para aprofundar sua formação em ciência da computação."
+
     fundedBy: OpenSats
 focus:
   - Hardware Wallets
@@ -40,8 +38,8 @@ projects:
         Aplicativo gráfico para instalar o firmware Krux em dispositivos
         compatíveis.
     contribution:
-      EN: "Contributed 2 merged pull requests adding Nix compatibility and tzt device support, extending installation across development environments and hardware."
-      BR: "Contribuiu com 2 pull requests integrados para compatibilidade com Nix e suporte ao dispositivo tzt, ampliando os ambientes de desenvolvimento e o hardware atendidos pelo instalador."
+      EN: "Contributes to firmware-installation tooling, platform compatibility and device support, with automated tests across installer workflows."
+      BR: "Contribui para ferramentas de instalação de firmware, compatibilidade entre plataformas e suporte a dispositivos, com testes automatizados dos fluxos do instalador."
 contributions:
   - id: github-selfcustody-krux-installer-162
     title:
@@ -59,20 +57,12 @@ contributions:
     source: 'selfcustody/krux-installer · #158'
     type: PR
     href: 'https://github.com/selfcustody/krux-installer/pull/158'
-updatedAt: '2026-11-17'
+updatedAt: '2026-11-18'
 affiliations:
   - organization: OpenSats
-    role: { EN: Grantee, BR: Bolsista }
+    role: { EN: Grantee, BR: Grantee }
     status: current
-media:
-  - id: bdl-alumni-krux-trajectory
-    title:
-      EN: From Bitcoin Dev Launchpad to Krux
-      BR: Do Bitcoin Dev Launchpad ao Krux
-    source: Vinteum
-    href: 'https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook'
-    date: '2026-08'
-    mediaType: article
+
 ---
 ## EN
 
