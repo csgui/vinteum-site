@@ -37,7 +37,7 @@ links:
     href: 'https://github.com/yan-pi'
     icon: github
   - label: X
-    href: 'https://x.com/baianosh'
+    href: 'https://x.com/yanfsb'
     icon: twitter
   - label: Website
     href: 'https://indianboy.sh/'
