@@ -59,9 +59,19 @@ with `/`. The directory uses initials when a portrait is unavailable.
   item IDs within each list, localized `title`, and optional `href`, `source`,
   `date`, localized `description`, and `featured`. Contributions specify a
   `type` such as `PR`, `Code Review`, `Research`, `Tooling`, `Documentation`
-  or `Protocol Specification`. Use `writing` for publications and `media`
-  for talks, interviews and podcasts. Media accepts `mediaType` (`video` or
-  `article`) and `thumbnail`.
+  or `Protocol Specification`. Use `writing` for blog posts, books and other
+  non-academic texts, and `media` for talks, interviews, podcasts and coverage
+  about the person. Media accepts `mediaType` (`video` or `article`) and `thumbnail`.
+- **Academic publications:** `publications` is a separate optional section for
+  papers and theses. Each entry uses the activity fields plus an ordered
+  `authors` list, `venue`, optional `doi`, and `publicationType` (`paper`,
+  `conference-abstract`, `preprint`, `masters-thesis` or `doctoral-thesis`). Keep
+  preprints and conference abstracts explicitly labelled. A direct `href` to the DOI, publisher or institutional
+  repository is required. Preserve original titles and author order; translate
+  descriptions, not official titles. Use the work's publication/degree year,
+  not a later repository deposit date. Do not duplicate the same work in Writing
+  or Selected Contributions, or mistake a thesis supervisor for a coauthor.
+  The section is hidden when there are no entries.
 - **Connections:** An optional `connections` entry uses another published
   profile's `slug` and a localized `reason`.
 

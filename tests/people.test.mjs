@@ -18,6 +18,45 @@ test("loads bilingual Markdown and derives the slug from the filename", () => {
     assert.equal(parseProfile("alvaro.md", minimal).bio, undefined);
 });
 
+test("loads academic publications with citation metadata separately from writing", () => {
+    const citation = {
+        id: "paper-fixture",
+        title: { EN: "Paper fixture", BR: "Artigo de teste" },
+        date: "2025",
+        authors: ["Example Author", "Example Coauthor"],
+        venue: "Example conference",
+        publicationType: "paper",
+        href: "https://example.org/paper",
+    };
+    const person = parseProfile("academic.md", `---\nname: Academic fixture\npublications: ${JSON.stringify([citation])}\n---\n`);
+    assert.deepEqual(person.publications, [citation]);
+    assert.deepEqual(person.writing, []);
+    assert.deepEqual(parseProfile("minimal.md", minimal).publications, []);
+});
+
+test("preserves preprint status and DOI without presenting it as a published journal paper", () => {
+    const citation = {
+        id: "preprint-fixture",
+        title: { EN: "Preprint fixture", BR: "Preprint de teste" },
+        authors: ["Example Author"],
+        venue: "Example preprint repository",
+        publicationType: "preprint",
+        doi: "10.1234/example",
+        href: "https://example.org/preprint",
+    };
+    const person = parseProfile("preprint.md", `---\nname: Academic fixture\npublications: ${JSON.stringify([citation])}\n---\n`);
+    assert.deepEqual(person.publications, [citation]);
+});
+
+test("shows an academic-publications section only when a profile has publications", () => {
+    assert.equal(typeof profileData.getProfileSections, "function");
+    const person = parseProfile("academic.md", minimal);
+    assert.deepEqual(profileData.getProfileSections(person), []);
+    const withPaper = { ...person, publications: [{ id: "paper-fixture" }] };
+    assert.deepEqual(profileData.getProfileSections(withPaper), ["publications"]);
+    assert.deepEqual(profileData.getProfileSections({ ...withPaper, writing: [{ id: "blog-fixture" }] }), ["writing", "publications"]);
+});
+
 test("rejects invalid slugs, missing names and unsupported link protocols", () => {
     assert.throws(() => parseProfile("Bad Slug.md", minimal), /Bad Slug\.md/);
     assert.throws(() => parseProfile("without-name.md", ""), /without-name\.md/);
@@ -283,6 +322,23 @@ test("links selected contributions to direct work rather than annual reports or 
             assert.doesNotMatch(project.href ?? "", /Vinteum-Year-Four-Report|alumni-outlook|developer-spotlight/i, `${person.slug}: ${project.name} links to a proxy rather than the project`);
         }
     }
+});
+
+test("prioritizes Bitcoin Core in Bruno's projects without treating BDL as a software project", () => {
+    const bruno = getPerson("bruno-garcia");
+    assert.equal(bruno.projects[0]?.name, "Bitcoin Core");
+    assert.ok(!bruno.projects.some(({ name }) => name === "Bitcoin Dev Launchpad"));
+    assert.equal(bruno.projects.filter(({ name }) => name === "bcore-mutation").length, 1);
+    assert.ok(bruno.contributions.some(({ href }) => href.startsWith("https://github.com/bitcoin/bitcoin/pull/")));
+});
+
+test("shows Fungi as Cindy's current project while retaining historical Payjoin pull requests", () => {
+    const cindy = getPerson("bc1cindy");
+    assert.equal(cindy.projects[0]?.name, "Fungi Protocol");
+    assert.equal(cindy.projects[0]?.current, true);
+    assert.ok(!cindy.projects.some(({ name }) => name === "Payjoin Dev Kit"));
+    for (const number of [945, 962]) assert.ok(cindy.contributions.some(({ href }) => href === `https://github.com/payjoin/rust-payjoin/pull/${number}`));
+    for (const name of ["lumen-fingerprints", "decluster"]) assert.ok(cindy.projects.some((project) => project.name === name));
 });
 
 const baseUrl = process.env.PEOPLE_TEST_URL;

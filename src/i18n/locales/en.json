@@ -855,19 +855,28 @@
             "Documentation": "Documentation",
             "Protocol Specification": "Protocol Specification"
         },
+        "publicationTypes": {
+            "paper": "Paper",
+            "conference-abstract": "Conference abstract",
+            "preprint": "Preprint",
+            "masters-thesis": "Master’s dissertation",
+            "doctoral-thesis": "Doctoral thesis"
+        },
         "tabs": {
             "overview": "Overview",
             "projects": "Projects",
             "contributions": "Contributions",
             "discussions": "Discussions",
             "writing": "Writing",
+            "publications": "Academic publications",
             "media": "Media"
         },
         "headings": {
             "projects": "Projects",
             "contributions": "Selected contributions",
             "discussions": "Technical discussions",
-            "writing": "Publications & writing",
+            "writing": "Articles & writing",
+            "publications": "Academic publications",
             "media": "Talks, podcasts & media"
         },
         "supportTitle": "Fund open-source Bitcoin work",

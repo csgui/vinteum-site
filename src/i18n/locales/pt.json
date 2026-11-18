@@ -855,19 +855,28 @@
             "Documentation": "Documentação",
             "Protocol Specification": "Especificação de protocolo"
         },
+        "publicationTypes": {
+            "paper": "Artigo acadêmico",
+            "conference-abstract": "Resumo de congresso",
+            "preprint": "Preprint",
+            "masters-thesis": "Dissertação de mestrado",
+            "doctoral-thesis": "Tese de doutorado"
+        },
         "tabs": {
             "overview": "Visão geral",
             "projects": "Projetos",
             "contributions": "Contribuições",
             "discussions": "Discussões",
-            "writing": "Publicações",
+            "writing": "Textos",
+            "publications": "Publicações acadêmicas",
             "media": "Mídia"
         },
         "headings": {
             "projects": "Projetos",
             "contributions": "Contribuições selecionadas",
             "discussions": "Discussões técnicas",
-            "writing": "Publicações e artigos",
+            "writing": "Artigos e textos",
+            "publications": "Publicações acadêmicas",
             "media": "Palestras, podcasts e mídia"
         },
         "supportTitle": "Apoie o trabalho open source em Bitcoin",

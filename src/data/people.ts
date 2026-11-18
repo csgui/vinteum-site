@@ -37,6 +37,13 @@ export interface ProfileItem {
     href?: string;
 }
 
+export interface AcademicPublication extends ProfileItem {
+    authors: string[];
+    venue: string;
+    publicationType: "paper" | "conference-abstract" | "preprint" | "masters-thesis" | "doctoral-thesis";
+    doi?: string;
+}
+
 export interface PersonProject {
     name: string;
     href?: string;
@@ -68,8 +75,16 @@ export interface Person {
     contributions: (ProfileItem & { type: ContributionType })[];
     discussions: ProfileItem[];
     writing: ProfileItem[];
+    publications: AcademicPublication[];
     media: ProfileItem[];
     connections: { slug: string; reason: LocalizedText }[];
+}
+
+export type ProfileSection = "projects" | "contributions" | "discussions" | "writing" | "publications" | "media";
+
+export function getProfileSections(person: Person): ProfileSection[] {
+    const sections: ProfileSection[] = ["projects", "contributions", "discussions", "writing", "publications", "media"];
+    return sections.filter((section) => person[section].length > 0);
 }
 
 export function getDirectoryRole(person: Person): DirectoryRole | undefined {
@@ -140,7 +155,7 @@ export function formatPersonDate(date: string, locale: "EN" | "BR", full = false
     }).format(new Date(`${date.length === 7 ? `${date}-01` : date}T12:00:00Z`));
 }
 
-export function sortProfileItems(items: ProfileItem[]): ProfileItem[] {
+export function sortProfileItems<T extends ProfileItem>(items: T[]): T[] {
     return [...items].sort((a, b) =>
         Number(Boolean(b.featured)) - Number(Boolean(a.featured)) ||
         (b.date ?? "").localeCompare(a.date ?? ""),

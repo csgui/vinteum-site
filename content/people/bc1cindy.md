@@ -46,17 +46,15 @@ links:
     href: 'https://linktr.ee/CindyBTC'
     icon: website
 projects:
-  - name: Payjoin Dev Kit
-    href: 'https://github.com/payjoin/rust-payjoin'
+  - name: "Fungi Protocol"
+    href: "https://github.com/fungi-protocol/fungi"
+    current: true
     description:
-      EN: Supercharged batching to save you fees and preserve your privacy
-      BR: >-
-        Implementação de Payjoin para pagamentos colaborativos com maior
-        privacidade.
+      EN: "A protocol suite under development for collaborative Bitcoin transaction construction, aimed at decentralized, privacy-preserving transactions."
+      BR: "Uma suíte de protocolos em desenvolvimento para a construção colaborativa de transações Bitcoin, voltada a transações descentralizadas com preservação de privacidade."
     contribution:
-      EN: Contributed 2 merged pull requests covering RPC integration and session persistence.
-      BR: Contribuiu com 2 pull requests integrados, envolvendo integração RPC e persistência de
-        sessões.
+      EN: "Cindy develops transport abstractions and Tor support, improves documentation and its CI, and reviews concurrent PSBT construction and metadata scrubbing. Typed transport channels and onion-address validation are merged; the Tor connector and listener remain under review."
+      BR: "Cindy desenvolve abstrações de transporte e suporte ao Tor, aprimora a documentação e sua integração contínua e revisa a construção concorrente de PSBTs e a remoção de metadados. Os canais de transporte tipados e a validação de endereços onion já foram integrados; o conector e o listener Tor seguem em revisão."
   - name: lumen-fingerprints
     href: https://github.com/fungi-protocol/lumen-fingerprints
     description:
@@ -187,7 +185,40 @@ contributions:
       BR: Apontou uma comparação de valores unit cujo assert não podia falhar e explicou por que o Clippy
         em modo de aviso não a detectava no CI. Depois aprovou a mudança nos traits de junção, que foi
         integrada.
-updatedAt: '2026-11-17'
+  - id: "github-fungi-protocol-fungi-32"
+    title:
+      EN: "Typed transport channels for Fungi"
+      BR: "Canais de transporte tipados no Fungi"
+    date: "2026-09-28"
+    source: "fungi-protocol/fungi · #32"
+    type: "PR"
+    href: "https://github.com/fungi-protocol/fungi/pull/32"
+    description:
+      EN: "Introduced typed send/receive channels and builders with privacy tags and optional peer identity. Merged transport abstraction."
+      BR: "Introduziu canais tipados de envio e recebimento e builders com marcadores de privacidade e identidade opcional dos peers. Abstração de transporte integrada."
+  - id: "github-fungi-protocol-fungi-149"
+    title:
+      EN: "Validated onion-service addresses"
+      BR: "Validação de endereços de serviços onion"
+    date: "2026-11-02"
+    source: "fungi-protocol/fungi · #149"
+    type: "PR"
+    href: "https://github.com/fungi-protocol/fungi/pull/149"
+    description:
+      EN: "Added onion-address types with v3 version and checksum validation, preserving parse errors for invalid addresses. Merged."
+      BR: "Adicionou tipos de endereços onion com validação de versão v3 e checksum, preservando erros de parsing para endereços inválidos. Integrado."
+  - id: "github-fungi-protocol-docs-50"
+    title:
+      EN: "Generate Fungi documentation from a single chapter index"
+      BR: "Gerar a documentação do Fungi a partir de um índice único"
+    date: "2026-10-19"
+    source: "fungi-protocol/docs · #50"
+    type: "Documentation"
+    href: "https://github.com/fungi-protocol/docs/pull/50"
+    description:
+      EN: "Reorganized the documentation build around one chapter index and a generator that produces mdBook content while removing frontmatter. Merged."
+      BR: "Reorganizou a compilação da documentação com um índice único de capítulos e um gerador que produz conteúdo mdBook sem frontmatter. Integrado."
+updatedAt: '2026-11-18'
 ---
 ## EN
 

@@ -4,16 +4,15 @@ import Image from "next/image";
 import { useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { formatPersonDate, getOrganizationLogo, getPrimaryParticipation, getProfileRelationships, sortProfileItems, type Affiliation, type Person, type ProfileItem } from "@/data/people";
+import { formatPersonDate, getOrganizationLogo, getPrimaryParticipation, getProfileRelationships, getProfileSections, sortProfileItems, type AcademicPublication, type Affiliation, type Person, type ProfileItem, type ProfileSection } from "@/data/people";
 import Markdown from "react-markdown";
 import { PeopleHeroArt, PeopleSupport, PersonAvatar } from "./PeoplePrimitives";
 import styles from "./people.module.css";
 
-type Section = "overview" | "projects" | "contributions" | "discussions" | "writing" | "media";
-type ContentSection = Exclude<Section, "overview">;
-const sections: ContentSection[] = ["projects", "contributions", "discussions", "writing", "media"];
+type Section = "overview" | ProfileSection;
+type ContentSection = ProfileSection;
 
-function ItemList({ items }: { items: ProfileItem[] }) {
+function ItemList({ items }: { items: (ProfileItem & Partial<AcademicPublication>)[] }) {
     const { locale, t } = useLanguage();
     return (
         <ul className={styles.itemList}>
@@ -34,6 +33,11 @@ function ItemList({ items }: { items: ProfileItem[] }) {
                                 <time dateTime={item.date}>{formatPersonDate(item.date, locale)}</time>
                             )}
                         </div>
+                        {item.authors && <p className={styles.itemMeta}>{item.authors.join("; ")}</p>}
+                        {item.doi && <p className={styles.itemMeta}>DOI: {item.doi}</p>}
+                        {item.publicationType && (
+                            <p className={styles.itemMeta}>{[t(`people.publicationTypes.${item.publicationType}`), item.venue].filter(Boolean).join(" · ")}</p>
+                        )}
                         {(item.type || item.source) && (
                             <p className={styles.itemMeta}>{[item.type && t(`people.contributionTypes.${item.type}`), item.source].filter(Boolean).join(" · ")}</p>
                         )}
@@ -235,7 +239,7 @@ export function PersonProfile({
     requestedType?: string | null;
 }) {
     const { locale, t } = useLanguage();
-    const availableSections = sections.filter((section) => person[section].length > 0);
+    const availableSections = getProfileSections(person);
     const primary = getPrimaryParticipation(person) ?? person.affiliations.find(({ directoryRole }) => directoryRole);
     const requested = requestedTab;
     const active: Section = availableSections.includes(requested as ContentSection)

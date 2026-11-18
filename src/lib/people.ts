@@ -96,6 +96,13 @@ const schema: z.ZodType<Person> = z.object({
         .default([]),
     discussions: z.array(item).default([]),
     writing: z.array(item).default([]),
+    publications: z.array(item.extend({
+        authors: z.array(z.string().trim().min(1)).min(1),
+        venue: z.string().trim().min(1),
+        publicationType: z.enum(["paper", "conference-abstract", "preprint", "masters-thesis", "doctoral-thesis"]),
+        doi: z.string().regex(/^10\.\d{4,9}\/\S+$/).optional(),
+        href: link,
+    })).default([]),
     media: z.array(item).default([]),
     connections: z.array(z.object({ slug: z.string(), reason: localized })).default([]),
 });
