@@ -4,6 +4,8 @@ image: /assets/images/people/team/bruno.png
 updatedAt: '2026-11-18'
 focus:
   - Bitcoin Core
+  - Fuzzing
+  - Security
   - Mentorship
 links:
   - label: GitHub
