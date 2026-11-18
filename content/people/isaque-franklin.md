@@ -42,9 +42,6 @@ links:
   - label: Website
     href: 'https://www.harlock.xyz/'
     icon: website
-  - label: Blog
-    href: 'https://www.harlock.xyz/'
-    icon: blog
 projects:
   - name: odin-secp256k1
     href: https://github.com/odin-bitcoin/odin-secp256k1

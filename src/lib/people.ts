@@ -66,6 +66,7 @@ const schema: z.ZodType<Person> = z.object({
                     .optional(),
             }),
         )
+        .refine((links) => new Set(links.map(({ href }) => href)).size === links.length, "Profile links must use distinct URLs.")
         .default([]),
     affiliations: z.array(affiliation).default([]),
     programs: z.array(affiliation.extend({

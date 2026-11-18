@@ -42,9 +42,6 @@ links:
   - label: Website
     href: 'https://viniciuscestari.dev/'
     icon: website
-  - label: Blog
-    href: 'https://viniciuscestari.dev/'
-    icon: blog
 projects:
   - name: libsecp256k1
     href: 'https://github.com/bitcoin-core/secp256k1'

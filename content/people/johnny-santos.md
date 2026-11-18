@@ -46,9 +46,6 @@ links:
   - label: Website
     href: 'https://johnnyasantos.com/'
     icon: website
-  - label: Blog
-    href: 'https://johnnyasantos.com/'
-    icon: blog
 projects:
   - name: P2Pool V2
     href: https://github.com/p2poolv2/p2poolv2

@@ -49,9 +49,6 @@ links:
   - label: Website
     href: 'https://satsfy.xyz/'
     icon: website
-  - label: Blog
-    href: 'https://satsfy.xyz/'
-    icon: blog
 projects:
   - name: corepc
     href: 'https://github.com/rust-bitcoin/corepc'

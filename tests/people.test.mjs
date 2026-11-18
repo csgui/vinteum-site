@@ -78,6 +78,19 @@ test("rejects invalid slugs, missing names and unsupported link protocols", () =
     assert.throws(() => parseProfile("bad-link.md", "---\nname: Álvaro\nlinks:\n  - label: Bad\n    href: javascript:alert(1)\n---\n"), /bad-link\.md/);
 });
 
+test("rejects repeated social URLs even when their labels and icons differ", () => {
+    const links = [
+        { label: "Website", href: "https://erickcestari.dev/", icon: "website" },
+        { label: "Blog", href: "https://erickcestari.dev/", icon: "blog" },
+    ];
+    assert.throws(
+        () => parseProfile("duplicate-links.md", `---\nname: Duplicate fixture\nlinks: ${JSON.stringify(links)}\n---\n`),
+        (error) => error.cause?.issues?.some(({ path, message }) => path[0] === "links" && message.includes("distinct URLs")),
+    );
+    const distinct = links.map((link, i) => ({ ...link, href: i ? "https://erickcestari.dev/posts" : link.href }));
+    assert.equal(parseProfile("distinct-links.md", `---\nname: Distinct fixture\nlinks: ${JSON.stringify(distinct)}\n---\n`).links.length, 2);
+});
+
 test("a Markdown file alone adds a searchable directory entry", (context) => {
     const directory = mkdtempSync(join(tmpdir(), "vinteum-people-"));
     context.after(() => rmSync(directory, { recursive: true, force: true }));

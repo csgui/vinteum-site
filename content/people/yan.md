@@ -42,9 +42,6 @@ links:
   - label: Website
     href: 'https://indianboy.sh/'
     icon: website
-  - label: Blog
-    href: 'https://indianboy.sh/'
-    icon: blog
   - label: GitHub
     href: 'https://github.com/yanfsb'
     icon: github

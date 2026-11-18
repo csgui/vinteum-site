@@ -63,9 +63,6 @@ links:
   - label: X
     href: 'https://x.com/iamflops'
     icon: twitter
-  - label: Blog
-    href: 'https://erickcestari.dev/'
-    icon: blog
 projects:
   - name: Bitcoinfuzz
     href: 'https://github.com/bitcoinfuzz/bitcoinfuzz'
