@@ -35,15 +35,15 @@ links:
     icon: nostr
 projects:
   - name: Bitcoin Dev Kit
-    href: 'https://github.com/bitcoindevkit/bdk'
+    href: https://github.com/bitcoindevkit/bdk
     description:
-      EN: 'A modern, lightweight, descriptor-based wallet library written in Rust!'
-      BR: >-
-        Biblioteca Rust para construir carteiras Bitcoin baseadas em
-        descriptors.
+      EN: A modern, lightweight, descriptor-based wallet library written in Rust!
+      BR: Biblioteca Rust para construir carteiras Bitcoin baseadas em descriptors.
     contribution:
-      EN: "Contributed 2 merged pull requests on canonicalization and transaction ordering. Maintenance work also includes reviews, releases and contributor guidance."
-      BR: "Contribuiu com 2 pull requests integrados sobre canonicalização e ordenação de transações. A manutenção também inclui revisões, lançamentos e orientação a contribuidores."
+      EN: Contributed merged canonicalization and transaction-ordering changes. Research directions include
+        BitcoinKernel/IPC chain sources and UTXO-oriented wallet models.
+      BR: Contribuiu com mudanças integradas de canonicalização e ordenação de transações. Direções de pesquisa
+        incluem fontes de dados BitcoinKernel/IPC e modelos de carteira orientados a UTXOs.
 contributions:
   - id: github-bitcoindevkit-bdk-2038
     title:
@@ -70,24 +70,28 @@ contributions:
     href: 'https://github.com/bitcoindevkit/bdk/pull/2027'
   - id: bdk-structure-aware-fuzzing-signing
     title:
-      EN: "Structure-aware wallet fuzzing and signing separation"
-      BR: "Fuzzing estruturado de carteiras e separação de assinatura"
-    source: "Vinteum · Year Four Report · August 2025–August 2026"
-    type: Tooling
-    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+      EN: Structure-aware wallet fuzzing proposal
+      BR: Proposta de fuzzing estruturado de carteiras
+    source: 'bitcoindevkit/bdk_wallet · #271'
+    type: PR
+    href: https://github.com/bitcoindevkit/bdk_wallet/pull/271
     description:
-      EN: "Developed structure-aware fuzzing that generates valid but adversarial wallet states, and worked toward separating signing from bdk_wallet."
-      BR: "Desenvolveu fuzzing estruturado que gera estados de carteira válidos, mas adversariais, e trabalhou para separar a assinatura do bdk_wallet."
-  - id: bdk-kernel-ipc-utxo-research
+      EN: Open pull request introducing LibFuzzer targets and structured generators for wallet updates,
+        transaction creation, signing and persistence.
+      BR: Pull request aberto que introduz alvos LibFuzzer e geradores estruturados para atualizações de
+        carteira, criação de transações, assinatura e persistência.
+  - id: bdk-wallet-signer-separation
     title:
-      EN: "BitcoinKernel, IPC and UTXO-oriented wallet research"
-      BR: "Pesquisa de carteiras com BitcoinKernel, IPC e orientação a UTXOs"
-    source: "Vinteum · Year Four Report · August 2025–August 2026"
-    type: Research
-    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+      EN: Proposal to separate signers from Wallet
+      BR: Proposta de separação dos signers de Wallet
+    source: 'bitcoindevkit/bdk_wallet · #235'
+    type: PR
+    href: https://github.com/bitcoindevkit/bdk_wallet/pull/235
     description:
-      EN: "BitcoinKernel- and IPC-based chain sources and a more UTXO-oriented wallet model remained research directions during August 2025–August 2026."
-      BR: "Fontes de dados da cadeia baseadas em BitcoinKernel e IPC e um modelo de carteira mais orientado a UTXOs permaneciam direções de pesquisa entre agosto de 2025 e agosto de 2026."
+      EN: Proposed removing Wallet signer APIs in favor of rust-bitcoin’s Psbt::sign and a GetKey implementation.
+        Closed without merging.
+      BR: Propôs remover as APIs de assinatura de Wallet em favor de Psbt::sign do rust-bitcoin e de uma
+        implementação de GetKey. Fechado sem integração.
 updatedAt: '2026-11-17'
 affiliations:
   - organization: Btrust

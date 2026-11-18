@@ -25,25 +25,33 @@ affiliations:
     status: past
 projects:
   - name: Boltz atomic-swap client
-    href: 'https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook'
+    href: https://github.com/BoltzExchange/boltz-web-app
     current: false
     description:
-      EN: Non-custodial swap client covering the full swap lifecycle, including normal operation and failure recovery.
-      BR: Cliente de swaps sem custódia que cobre todo o ciclo da operação, incluindo o funcionamento normal e a recuperação em caso de falha.
+      EN: Non-custodial swap client covering the full swap lifecycle, including normal operation and failure
+        recovery.
+      BR: Cliente de swaps sem custódia que cobre todo o ciclo da operação, incluindo o funcionamento
+        normal e a recuperação em caso de falha.
     contribution:
-      EN: Worked on hardware-wallet compatibility, mobile support and client-side verification. User support and bug reports helped guide reliability improvements.
-      BR: Trabalhou com compatibilidade de hardware wallets, suporte móvel e verificação no cliente. O suporte aos usuários e relatos de bugs orientaram melhorias de confiabilidade.
+      EN: Developed rescue-key recovery and backend-independent refunds for timed-out swaps, with end-to-end
+        recovery tests.
+      BR: Desenvolveu recuperação por rescue key e reembolsos de swaps expirados sem depender do backend,
+        com testes de recuperação ponta a ponta.
 contributions:
   - id: boltz-rust-swap-recovery
-    type: Tooling
     title:
-      EN: Rust tool for recovering swap data
-      BR: Ferramenta em Rust para recuperação de dados de swaps
-    href: 'https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook'
-    source: Bitcoin Dev Launchpad alumni outlook, August 2026
+      EN: Rust API for restoring swap data
+      BR: API em Rust para restaurar dados de swaps
+    date: '2025-07-25'
+    source: 'BoltzExchange/boltz-backend · #1010'
+    type: PR
+    href: https://github.com/BoltzExchange/boltz-backend/pull/1010
     description:
-      EN: Built a rescue tool that recovers the information needed to claim or refund funds when a user loses local swap data.
-      BR: Criou uma ferramenta para recuperar as informações necessárias ao resgate ou reembolso de fundos quando o usuário perde os dados locais do swap.
+      EN: Merged a swap-restore endpoint that locates swaps from an extended public key and returns claim
+        or refund details. Recovery logic and endpoint tests live in the Rust backend.
+      BR: Integrou um endpoint de restauração que localiza swaps a partir de uma chave pública estendida
+        e retorna dados de resgate ou reembolso. A lógica de recuperação e os testes do endpoint estão
+        no backend Rust.
 ---
 ## EN
 

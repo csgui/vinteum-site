@@ -52,8 +52,8 @@ projects:
       EN: Optimized C library for EC operations on curve secp256k1
       BR: Biblioteca C otimizada para operações na curva secp256k1.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Deduplicated Silent Payments test setup.
+      BR: Eliminou duplicação na preparação dos testes de Silent Payments.
   - name: libmultiprocess
     href: 'https://github.com/bitcoin-core/libmultiprocess'
     description:
@@ -64,11 +64,10 @@ projects:
         Biblioteca C++ para chamadas de funções e referências a objetos entre
         processos.
     contribution:
-      EN: Contributed one merged pull request. Worked on serialization helpers, generated
-        code, process-error handling, tests and builds, alongside IPC review.
-      BR: Contribuição por meio de um pull request integrado. Trabalhou em helpers de serialização,
-        código gerado, tratamento de erros de processos, testes e builds, além de revisão
-        de IPC.
+      EN: Added serialization helpers and tests, child-process error reporting, code-generation
+        rebuild dependencies and event-loop thread names.
+      BR: Adicionou helpers e testes de serialização, comunicação de erros de processos filhos,
+        dependências de rebuild da geração de código e nomes para threads do event loop.
 contributions:
   - id: github-bitcoin-core-secp256k1-1972
     title:
@@ -94,18 +93,18 @@ contributions:
         logs.
       BR: Permite distinguir workers e threads de limpeza do event loop nas ferramentas
         de processos e nos logs.
-  - id: vinicius-rpc-over-ipc-prototype
+  - id: github-2140-dev-bitcoin-42
     title:
-      EN: RPC-over-IPC prototype in the 2140 fork
-      BR: Protótipo de RPC via IPC no fork 2140
-    source: Vinteum · 2026
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: 'ipc: add NodeRpc interface for LND'
+      BR: 'ipc: add NodeRpc interface for LND'
+    source: '2140-dev/bitcoin · #42'
+    type: PR
+    href: https://github.com/2140-dev/bitcoin/pull/42
     description:
-      EN: Developed an RPC-over-IPC prototype in the 2140 fork that evolved toward a generic
-        Cap’n Proto interface after feedback.
-      BR: Desenvolveu um protótipo de RPC via IPC no fork 2140 que evoluiu, após feedback,
-        para uma interface Cap’n Proto genérica.
-    type: Research
+      EN: Proposed a NodeRpc IPC interface for the methods LND needs. Closed without merge; feedback
+        led to a separate generic-interface design discussion.
+      BR: Propôs uma interface IPC NodeRpc para os métodos necessários ao LND. Encerrado sem integração;
+        o feedback levou a uma discussão separada sobre uma interface genérica.
 writing:
   - id: personal-blog-hunting-live-mutants
     title:
@@ -121,6 +120,18 @@ writing:
     date: '2026-08-14'
     source: viniciuscestari.dev
     href: 'https://viniciuscestari.dev/posts/bitcoin-core-ipc-on-the-wire'
+discussions:
+  - id: github-2140-dev-bitcoin-discussion-48
+    title:
+      EN: 'How should we shape the IPC schema for #24?'
+      BR: 'How should we shape the IPC schema for #24?'
+    source: '2140-dev/bitcoin · #48'
+    href: https://github.com/2140-dev/bitcoin/discussions/48
+    description:
+      EN: Opened a design discussion proposing domain-specific Cap’n Proto capabilities and a separate
+        bridge for consumer-specific RPC translation. This remains a design sketch.
+      BR: Abriu uma discussão de design propondo capabilities Cap’n Proto por domínio e uma ponte separada
+        para a tradução de RPCs específica de cada consumidor. Ainda é um esboço de design.
 updatedAt: '2026-11-17'
 ---
 ## EN

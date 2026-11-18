@@ -166,31 +166,31 @@ contributions:
     type: PR
   - id: davidson-souza-sync-designs
     title:
-      EN: Swift Sync and alternative synchronization research
-      BR: Swift Sync e pesquisa de sincronização alternativa
-    source: Vinteum · 2026 annual report
-    type: Research
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Testing and review of SwiftSync accumulator building
+      BR: Testes e revisão da construção do acumulador com SwiftSync
+    date: '2026-10-15'
+    source: 'getfloresta/Floresta · #1115'
+    type: Code Review
+    href: https://github.com/getfloresta/Floresta/pull/1115#pullrequestreview-5537204929
     description:
-      EN: Collaborated with JoseSK999 on an assumevalid-based Swift Sync implementation and experimented
-        with a faster design independent of assumevalid. Both synchronization designs were in
-        progress in 2026.
-      BR: Colaborou com JoseSK999 em uma implementação de Swift Sync baseada em assumevalid e
-        experimentou um desenho mais rápido, independente de assumevalid. Os dois desenhos de
-        sincronização estavam em desenvolvimento em 2026.
+      EN: Reviewed JoseSK999’s assume-valid SwiftSync implementation and reported completing mainnet initial
+        block download on several machines. The implementation was merged in October 2026.
+      BR: Revisou a implementação assume-valid de SwiftSync de JoseSK999 e relatou concluir o download
+        inicial da mainnet em várias máquinas. A implementação foi integrada em outubro de 2026.
   - id: davidson-souza-compact-filter-rescans
     title:
-      EN: Compact filters for earlier historical rescans
-      BR: Filtros compactos para antecipar buscas históricas
-    source: Vinteum · 2026 annual report
-    type: Research
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: FiltersMan for compact-filter downloads and rescans
+      BR: FiltersMan para download de filtros compactos e buscas históricas
+    date: '2026-09-17'
+    source: 'getfloresta/Floresta · #1338'
+    type: PR
+    href: https://github.com/getfloresta/Floresta/pull/1338
     description:
-      EN: Worked on compact-filter improvements to support historical rescans before full chain
-        processing finishes. The improvements were in progress in 2026.
-      BR: Trabalhou em melhorias nos filtros compactos para permitir buscas por transações históricas
-        antes do processamento completo da cadeia. As melhorias estavam em desenvolvimento em
-        2026.
+      EN: Proposed a service that stores filter headers, fetches and verifies filters on demand and pages
+        rescan results to bound memory use. The pull request remains open and marked work in progress.
+      BR: Propôs um serviço que armazena cabeçalhos de filtros, busca e verifica filtros sob demanda e
+        pagina resultados de buscas históricas para limitar o uso de memória. O pull request segue aberto
+        e marcado como trabalho em andamento.
 discussions:
   - id: implicit-deletions
     title:

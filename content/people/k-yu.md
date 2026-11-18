@@ -67,7 +67,7 @@ contributions:
     date: '2026-11-13'
     source: 'bitcoinfuzz/corpora · #81'
     type: PR
-    href: 'https://github.com/bitcoinfuzz/corpora/pull/81'
+    href: https://github.com/bitcoinfuzz/corpora/pull/81
   - id: github-bitcoin-bitcoin-36686
     title:
       EN: 'test: cover cumulative input value range in CheckTxInput tests.'
@@ -75,27 +75,33 @@ contributions:
     date: '2026-11-04'
     source: 'bitcoin/bitcoin · #36686'
     type: PR
-    href: 'https://github.com/bitcoin/bitcoin/pull/36686'
-  - id: bitcoinfuzz-libbitcoin-system-integration
+    href: https://github.com/bitcoin/bitcoin/pull/36686
+  - id: github-bitcoinfuzz-bitcoinfuzz-575
     title:
-      EN: "libbitcoin-system differential-fuzzing integration"
-      BR: "Integração de libbitcoin-system para fuzzing diferencial"
-    source: "Vinteum · Year Four Report · August 2025–August 2026"
-    type: Research
-    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+      EN: Add libbitcoin-system integration to Bitcoinfuzz
+      BR: Integrar libbitcoin-system ao Bitcoinfuzz
+    date: '2026-06-10'
+    source: 'bitcoinfuzz/bitcoinfuzz · #575'
+    type: PR
+    href: https://github.com/bitcoinfuzz/bitcoinfuzz/pull/575
     description:
-      EN: "Completed the libbitcoin-system integration in Bitcoinfuzz, examining script verification, transaction validation, address parsing and block deserialization. Investigated disagreements to distinguish genuine bugs from permissible implementation differences, with upstream fixes and improvements to corpora, CI and documentation."
-      BR: "Concluiu a integração de libbitcoin-system ao Bitcoinfuzz, examinando verificação de scripts, validação de transações, interpretação de endereços e desserialização de blocos. Investigou divergências para distinguir bugs reais de diferenças permitidas de implementação, com correções upstream e melhorias em corpora, CI e documentação."
-  - id: bitcoin-core-psbtv2-kernel-review
+      EN: Merged the libbitcoin-system module with script, transaction, address and block targets plus build
+        and CI integration.
+      BR: Adicionou o módulo libbitcoin-system, com alvos de scripts, transações, endereços e blocos e integração
+        de compilação e CI; PR integrado.
+  - id: github-bitcoin-kernel-version-discussion-36283
     title:
-      EN: "Bitcoin Core workflow, PSBTv2 and BitcoinKernel review"
-      BR: "Fluxo de desenvolvimento do Bitcoin Core e revisão de PSBTv2 e BitcoinKernel"
-    source: "Vinteum · Year Four Report · August 2025–August 2026"
+      EN: Review transaction-version wrapper test coverage
+      BR: Revisar cobertura de testes dos wrappers de versão de transação
+    date: '2026-09-17'
+    source: 'bitcoin/bitcoin · #36283'
     type: Code Review
-    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    href: https://github.com/bitcoin/bitcoin/pull/36283#issuecomment-5716550593
     description:
-      EN: "As the Bitcoinfuzz integration matured, studied Bitcoin Core’s build system, tests and development workflow. Began reviewing changes involving PSBTv2, BitcoinKernel bindings and transaction encapsulation."
-      BR: "Com o amadurecimento da integração ao Bitcoinfuzz, estudou o sistema de compilação, os testes e o fluxo de desenvolvimento do Bitcoin Core. Passou a revisar mudanças envolvendo PSBTv2, bindings de BitcoinKernel e encapsulamento de transações."
+      EN: Suggested testing GetVersion() on TransactionView as well as the owning Transaction wrapper, providing
+        a concrete test diff in the PR discussion.
+      BR: Sugeriu testar GetVersion() em TransactionView e no wrapper proprietário Transaction, com um diff
+        concreto de testes na discussão do PR.
 updatedAt: '2026-11-17'
 ---
 ## EN

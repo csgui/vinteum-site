@@ -61,7 +61,7 @@ contributions:
     date: '2026-11-13'
     source: 'btcsuite/btcwallet · #1488'
     type: PR
-    href: 'https://github.com/btcsuite/btcwallet/pull/1488'
+    href: https://github.com/btcsuite/btcwallet/pull/1488
   - id: github-btcsuite-btcwallet-1485
     title:
       EN: 'wallet: hash the compressed point in ECDH'
@@ -69,19 +69,18 @@ contributions:
     date: '2026-11-09'
     source: 'btcsuite/btcwallet · #1485'
     type: PR
-    href: 'https://github.com/btcsuite/btcwallet/pull/1485'
-  - id: gustavo-stingelin-btcwallet-sql
+    href: https://github.com/btcsuite/btcwallet/pull/1485
+  - id: github-btcsuite-btcwallet-1125
     title:
-      EN: btcwallet SQL migration
-      BR: Migração do btcwallet para SQL
-    source: Vinteum · First-cohort alumni outlook
-    type: Tooling
-    href: https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook
+      EN: Implement WalletStore for PostgreSQL and SQLite
+      BR: Implementar WalletStore para PostgreSQL e SQLite
+    date: '2025-12-11'
+    source: 'btcsuite/btcwallet · #1125'
+    type: PR
+    href: https://github.com/btcsuite/btcwallet/pull/1125
     description:
-      EN: Worked on migrating btcwallet storage to SQL with SQLite and PostgreSQL support. The
-        migration was ongoing in August 2026.
-      BR: Trabalhou na migração do armazenamento do btcwallet para SQL, com suporte a SQLite e
-        PostgreSQL. A migração permanecia em andamento em agosto de 2026.
+      EN: Implemented WalletStore for PostgreSQL and SQLite, merged into the sql-wallet development branch.
+      BR: Implementou WalletStore para PostgreSQL e SQLite, integrado à branch de desenvolvimento sql-wallet.
 updatedAt: '2026-11-17'
 affiliations:
   - organization: Lightning Labs

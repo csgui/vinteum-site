@@ -45,17 +45,14 @@ links:
     icon: twitter
 projects:
   - name: peer-observer
-    href: 'https://github.com/peer-observer/peer-observer'
+    href: https://github.com/peer-observer/peer-observer
     description:
-      EN: >-
-        Tooling to monitor for P2P anomalies and attacks using Bitcoin Core
-        honey pot nodes
+      EN: Tooling to monitor for P2P anomalies and attacks using Bitcoin Core honey pot nodes
       BR: Ferramentas para monitorar anomalias e ataques na rede P2P do Bitcoin.
     contribution:
-      EN: Contributed 2 merged pull requests. Worked on data collection, archiving, Prometheus/Grafana
-        monitoring and DNS seed tracking.
-      BR: Contribuição por meio de 2 pull requests integrados. Trabalhou com coleta de dados,
-        arquivamento, monitoramento com Prometheus/Grafana e acompanhamento de seeds DNS.
+      EN: Contributed merged archive safety and low-data mode changes, plus a reusable replay library.
+      BR: Contribuiu com mudanças integradas de segurança de arquivos e modo de dados reduzidos, além de
+        uma biblioteca reutilizável de replay.
 contributions:
   - id: github-peer-observer-peer-observer-509
     title:
@@ -85,18 +82,30 @@ contributions:
         grandes payloads brutos no arquivo.
   - id: octavio-network-replay-floresta
     title:
-      EN: Reusable network replay and Floresta monitoring
-      BR: Replay reutilizável de rede e monitoramento do Floresta
-    source: Vinteum · 2026
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Reusable network replay library
+      BR: Biblioteca reutilizável de replay de rede
+    source: 'peer-observer/peer-observer · #464'
+    type: PR
+    href: https://github.com/peer-observer/peer-observer/pull/464
     description:
-      EN: Developed a reusable replay library testable without invoking the CLI. Adapting
-        the tooling to Floresta led to getpeerinfo RPC contributions and a Floresta-compatible
-        fork-observer deployment.
-      BR: Desenvolveu uma biblioteca de replay reutilizável, testável sem executar a CLI.
-        A adaptação ao Floresta levou a contribuições no RPC getpeerinfo e à implantação
-        de um fork-observer compatível.
-    type: Tooling
+      EN: Merged a refactor moving archive replay into a library module, with focused tests that do not
+        spawn the CLI and contextual error reporting.
+      BR: Integrou uma refatoração que move o replay de arquivos para um módulo de biblioteca, com testes
+        específicos que não iniciam a CLI e relatos de erro contextualizados.
+  - id: octavio-floresta-getpeerinfo
+    title:
+      EN: Core-compatible getpeerinfo fields in Floresta
+      BR: Campos getpeerinfo compatíveis com o Core no Floresta
+    source: 'getfloresta/Floresta · #1233'
+    type: PR
+    href: https://github.com/getfloresta/Floresta/pull/1233
+    description:
+      EN: Merged additional getpeerinfo fields, keeping RPC server/client schemas aligned and extending
+        documentation and CLI functional tests. Fields for unsupported functionality return explicit neutral
+        values.
+      BR: Integrou campos adicionais de getpeerinfo, mantendo os schemas RPC do servidor e cliente alinhados
+        e ampliando a documentação e os testes funcionais da CLI. Campos de funcionalidades não implementadas
+        retornam valores neutros explícitos.
 updatedAt: '2026-11-17'
 ---
 ## EN

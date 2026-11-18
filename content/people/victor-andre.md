@@ -47,8 +47,38 @@ projects:
       EN: Differential Fuzzing of Bitcoin protocol implementations and libraries
       BR: Fuzzing diferencial de implementações e bibliotecas Bitcoin.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Added rust-bitcoin to EllSwift differential fuzzing targets.
+      BR: Adicionou rust-bitcoin aos alvos de fuzzing diferencial de EllSwift.
+  - name: BIP324 Traffic Lab
+    href: https://github.com/victorandre957/bip324-traffic-lab
+    description:
+      EN: Warnet lab for controlled Bitcoin P2P v2 packet captures.
+      BR: Laboratório Warnet para capturas controladas de pacotes Bitcoin P2P v2.
+    contribution:
+      EN: Builds reproducible traffic scenarios and exports PCAPs, node logs and run metadata.
+        Capture analysis is handled separately.
+      BR: Constrói cenários reproduzíveis de tráfego e exporta PCAPs, logs dos nós e metadados
+        das execuções. A análise das capturas é feita separadamente.
+  - name: BIP324 Traffic Analysis
+    href: https://github.com/victorandre957/bip324-traffic-analysis
+    description:
+      EN: Experimental passive analysis of BIP324 packet metadata.
+      BR: Análise passiva experimental de metadados de pacotes BIP324.
+    contribution:
+      EN: Analyzes packet size, direction, timing and TCP flows without decrypting messages. Results
+        are heuristic candidates, not decoded messages.
+      BR: Analisa tamanho, direção, tempo dos pacotes e fluxos TCP sem descriptografar mensagens.
+        Os resultados são candidatos heurísticos, não mensagens decodificadas.
+  - name: Bitcoin Core
+    href: https://github.com/bitcoin/bitcoin
+    description:
+      EN: Bitcoin full-node software.
+      BR: Software de nó completo Bitcoin.
+    contribution:
+      EN: Proposed opt-in randomization of the P2P listening port; the pull request was closed
+        without merge.
+      BR: Propôs randomização opcional da porta P2P de escuta; o pull request foi encerrado sem
+        integração.
 contributions:
   - id: github-bitcoinfuzz-bitcoinfuzz-637
     title:
@@ -63,22 +93,18 @@ contributions:
         round trips.
       BR: Adiciona rust-bitcoin ao teste diferencial da decodificação EllSwift e de round
         trips a partir de chaves secretas.
-  - id: victor-bip324-traffic-lab
+  - id: github-bitcoin-bitcoin-35585
     title:
-      EN: BIP324 Traffic Lab and passive traffic analysis
-      BR: BIP324 Traffic Lab e análise passiva de tráfego
-    source: Vinteum · 2026
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Randomized P2P listening-port proposal
+      BR: Proposta de porta P2P de escuta aleatória
+    source: 'bitcoin/bitcoin · #35585'
+    type: PR
+    href: https://github.com/bitcoin/bitcoin/pull/35585
     description:
-      EN: Developed a Warnet-based BIP324 Traffic Lab and a passive-analysis pipeline examining
-        packet size, timing, direction, flow structure and ports. The work investigates
-        what remains observable despite encryption. In 2026, port randomisation was still
-        an implementation and discussion direction.
-      BR: Desenvolveu um BIP324 Traffic Lab baseado em Warnet e um pipeline de análise passiva
-        de tamanho, tempo, direção dos pacotes, estrutura dos fluxos e portas. O trabalho
-        investiga o que permanece observável apesar da criptografia. Em 2026, a randomização
-        de portas ainda era uma direção de implementação e discussão.
-    type: Research
+      EN: Proposed an opt-in randomized P2P listening port persisted across restarts, with unit
+        and functional tests. Closed without merge.
+      BR: Propôs uma porta P2P de escuta aleatória, opcional e persistida entre reinícios, com
+        testes unitários e funcionais. Encerrado sem integração.
 discussions:
   - id: passive-traffic-bnoc
     title:

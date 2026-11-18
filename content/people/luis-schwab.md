@@ -45,15 +45,14 @@ links:
     href: 'https://luisschwab.net/'
 projects:
   - name: rust-esplora-client
-    href: 'https://github.com/bitcoindevkit/rust-esplora-client'
+    href: https://github.com/bitcoindevkit/rust-esplora-client
     description:
-      EN: >-
-        Asynchronous and blocking clients and types for interacting with Esplora
-        servers over HTTP.
+      EN: Asynchronous and blocking clients and types for interacting with Esplora servers over HTTP.
       BR: Clientes e tipos Rust para consultar servidores Esplora por HTTP.
     contribution:
-      EN: "Contributed one merged pull request extending Esplora APIs. Also maintained BDK’s Esplora and Electrum clients and contributed to rust-bitcoin."
-      BR: "Contribuiu com um pull request integrado que amplia as APIs Esplora. Também manteve os clientes Esplora e Electrum do BDK e contribuiu ao rust-bitcoin."
+      EN: Contributed a merged pull request implementing missing Esplora API methods and response types.
+      BR: Contribuiu com um pull request integrado que implementa métodos e tipos de resposta ausentes da
+        API Esplora.
   - name: Floresta
     href: 'https://github.com/getfloresta/Floresta'
     description:
@@ -81,24 +80,28 @@ contributions:
     href: 'https://github.com/getfloresta/Floresta/pull/523'
   - id: bdk-floresta-validating-wallet-client
     title:
-      EN: "Connecting BDK wallets to Floresta"
-      BR: "Integração de carteiras BDK com Floresta"
-    source: "Vinteum · August 2026 alumni outlook"
+      EN: Connecting BDK wallets to Floresta
+      BR: Integração de carteiras BDK com Floresta
+    source: luisschwab/bdk-floresta
     type: Tooling
-    href: "https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook"
+    href: https://github.com/luisschwab/bdk-floresta
     description:
-      EN: "Worked on bdk-floresta to connect BDK wallets to Floresta as a private, fully validating client. The integration remained in progress in August 2026."
-      BR: "Trabalhou no bdk-floresta para conectar carteiras BDK ao Floresta como cliente privado com validação completa. A integração permanecia em andamento em agosto de 2026."
+      EN: Develops a work-in-progress Floresta-powered BDK chain-source crate for local wallet synchronization
+        with an embedded validating node.
+      BR: Desenvolve um crate de fonte de dados Floresta para o BDK, ainda em andamento, para sincronização
+        local de carteiras com um nó validador integrado.
   - id: brasilia-bitdevs-university-courses
     title:
-      EN: "Brasília BitDevs and university Bitcoin courses"
-      BR: "Brasília BitDevs e disciplinas universitárias de Bitcoin"
-    source: "Vinteum · August 2026 alumni outlook"
+      EN: Brasília BitDevs seminar reading list
+      BR: Lista de leituras do seminário do Brasília BitDevs
+    source: ClubeBitcoinUnB/bitdevs.bsb.br/commits/034c95bd155b9fac2292216ef54aec7ea0e67437
     type: Documentation
-    href: "https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook"
+    href: https://github.com/ClubeBitcoinUnB/bitdevs.bsb.br/commit/034c95bd155b9fac2292216ef54aec7ea0e67437
     description:
-      EN: "Organized Brasília BitDevs and assisted with university Bitcoin courses alongside open-source development."
-      BR: "Organizou o Brasília BitDevs e apoiou disciplinas universitárias de Bitcoin em paralelo ao desenvolvimento open source."
+      EN: Added wallet-fingerprinting and Payjoin privacy research to the April 2026 Socratic Seminar reading
+        list.
+      BR: Acrescentou pesquisa sobre identificação de carteiras e privacidade do Payjoin à lista de leituras
+        do Seminário Socrático de abril de 2026.
 updatedAt: '2026-11-17'
 affiliations:
   - organization: Human Rights Foundation (Bitcoin Development Fund)

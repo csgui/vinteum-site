@@ -38,15 +38,23 @@ links:
     icon: github
 projects:
   - name: krux
-    href: 'https://github.com/selfcustody/krux'
+    href: https://github.com/selfcustody/krux
     description:
       EN: Open-source signing device firmware for Bitcoin
       BR: Firmware open source para dispositivos de assinatura Bitcoin.
     contribution:
-      EN: Contributed 2 merged pull requests covering SeedXOR backups and button tests. Work on
-        Krux also covers CI, hardware support and wallet functionality.
-      BR: Contribuiu com 2 pull requests integrados, envolvendo backups SeedXOR e testes de botões.
-        O trabalho no Krux também abrange CI, suporte a hardware e funcionalidades de carteira.
+      EN: Contributed 2 merged pull requests covering SeedXOR backups and button tests. Work on Krux also
+        covers CI, hardware support and wallet functionality.
+      BR: Contribuiu com 2 pull requests integrados, envolvendo backups SeedXOR e testes de botões. O trabalho
+        no Krux também abrange CI, suporte a hardware e funcionalidades de carteira.
+  - name: Krux Installer
+    href: https://github.com/selfcustody/krux-installer
+    description:
+      EN: Graphical installer for Krux firmware.
+      BR: Instalador gráfico do firmware Krux.
+    contribution:
+      EN: Created and maintains the graphical installer for Krux firmware.
+      BR: Criou e mantém o instalador gráfico do firmware Krux.
 contributions:
   - id: github-selfcustody-krux-727
     title:
@@ -55,7 +63,7 @@ contributions:
     date: '2025-10-11'
     source: 'selfcustody/krux · #727'
     type: PR
-    href: 'https://github.com/selfcustody/krux/pull/727'
+    href: https://github.com/selfcustody/krux/pull/727
   - id: github-selfcustody-krux-600
     title:
       EN: Coverage 100% src/krux/buttons.py
@@ -63,29 +71,32 @@ contributions:
     date: '2025-06-02'
     source: 'selfcustody/krux · #600'
     type: PR
-    href: 'https://github.com/selfcustody/krux/pull/600'
-  - id: guilherme-martins-installer
+    href: https://github.com/selfcustody/krux/pull/600
+  - id: github-getfloresta-Floresta-402
     title:
-      EN: Krux Installer
-      BR: Krux Installer
-    source: Vinteum · First-cohort alumni outlook
-    type: Tooling
-    href: https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook
+      EN: Restructure Floresta functional tests
+      BR: Reestruturar testes funcionais do Floresta
+    date: '2025-03-12'
+    source: 'getfloresta/Floresta · #402'
+    type: PR
+    href: https://github.com/getfloresta/Floresta/pull/402
     description:
-      EN: Created Krux Installer before working on Floresta testing.
-      BR: Criou o Krux Installer antes de trabalhar em testes do Floresta.
-  - id: guilherme-martins-floresta-testing
+      EN: Merged a test-suite directory structure, uv-based dependency management and updated test scripts.
+      BR: Reestruturou os diretórios das suítes de teste, adotou uv para dependências e atualizou os scripts
+        de testes; PR integrado.
+  - id: github-getfloresta-Floresta-609
     title:
-      EN: Floresta functional tests and RPC compatibility
-      BR: Testes funcionais e compatibilidade RPC no Floresta
-    source: Vinteum · First-cohort alumni outlook
-    type: Tooling
-    href: https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook
+      EN: Match gettxout responses to Bitcoin Core
+      BR: Compatibilizar respostas de gettxout com Bitcoin Core
+    date: '2025-08-29'
+    source: 'getfloresta/Floresta · #609'
+    type: PR
+    href: https://github.com/getfloresta/Floresta/pull/609
     description:
-      EN: Improved Floresta functional tests and compatibility with Bitcoin Core RPC, then brought
-        that testing focus back to Krux.
-      BR: Melhorou os testes funcionais do Floresta e a compatibilidade com o RPC do Bitcoin Core;
-        depois levou esse foco em testes de volta ao Krux.
+      EN: Merged fixes to gettxout values, confirmations, coinbase information and scriptPubKey response
+        fields.
+      BR: Corrigiu valores, confirmações, informações de coinbase e campos de scriptPubKey na resposta de
+        gettxout; PR integrado.
 updatedAt: '2026-11-17'
 affiliations:
   - organization: OpenSats

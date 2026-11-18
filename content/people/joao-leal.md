@@ -42,7 +42,7 @@ links:
     icon: github
 projects:
   - name: rust-bitcoinkernel
-    href: 'https://github.com/sedited/rust-bitcoinkernel'
+    href: https://github.com/sedited/rust-bitcoinkernel
     description:
       EN: Rust bindings for the bitcoin kernel library
       BR: Bindings Rust para a biblioteca de validação do Bitcoin Core.
@@ -50,13 +50,21 @@ projects:
       EN: Contributed one merged pull request.
       BR: Contribuição por meio de um pull request integrado.
   - name: rust-bitcoin
-    href: 'https://github.com/rust-bitcoin/rust-bitcoin'
+    href: https://github.com/rust-bitcoin/rust-bitcoin
     description:
       EN: Rust Bitcoin library
       BR: Bibliotecas Rust para desenvolver aplicações Bitcoin.
     contribution:
       EN: Contributed one merged pull request.
       BR: Contribuição por meio de um pull request integrado.
+  - name: floresta-nix
+    href: https://github.com/getfloresta/floresta-nix
+    description:
+      EN: Nix packages, services and development resources for Floresta.
+      BR: Pacotes, serviços e recursos de desenvolvimento Nix para Floresta.
+    contribution:
+      EN: Develops Nix build tooling for Floresta, including the reusable floresta-build.nix module.
+      BR: Desenvolve ferramentas Nix para compilar o Floresta, incluindo o módulo reutilizável floresta-build.nix.
 contributions:
   - id: github-sedited-rust-bitcoinkernel-158
     title:
@@ -65,7 +73,7 @@ contributions:
     date: '2026-07-22'
     source: 'sedited/rust-bitcoinkernel · #158'
     type: PR
-    href: 'https://github.com/sedited/rust-bitcoinkernel/pull/158'
+    href: https://github.com/sedited/rust-bitcoinkernel/pull/158
   - id: github-rust-bitcoin-rust-bitcoin-6502
     title:
       EN: Add default_rpc_port method to NetworkExt trait
@@ -73,17 +81,33 @@ contributions:
     date: '2026-07-09'
     source: 'rust-bitcoin/rust-bitcoin · #6502'
     type: PR
-    href: 'https://github.com/rust-bitcoin/rust-bitcoin/pull/6502'
-  - id: floresta-consensus-rpc-nix
+    href: https://github.com/rust-bitcoin/rust-bitcoin/pull/6502
+  - id: github-getfloresta-Floresta-165
     title:
-      EN: "Floresta consensus, RPC compatibility and Nix tooling"
-      BR: "Consenso, compatibilidade RPC e ferramentas Nix no Floresta"
-    source: "Vinteum · August 2026 alumni outlook"
-    type: Tooling
-    href: "https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook"
+      EN: Implement transaction consensus rules in Floresta
+      BR: Implementar regras de consenso de transações no Floresta
+    date: '2024-07-10'
+    source: 'getfloresta/Floresta · #165'
+    type: PR
+    href: https://github.com/getfloresta/Floresta/pull/165
     description:
-      EN: "Implemented consensus rules under mentorship before focusing on RPC compatibility so existing applications could use Floresta as a backend. Also built floresta-nix."
-      BR: "Implementou regras de consenso com mentoria antes de se concentrar na compatibilidade RPC para que aplicações existentes pudessem usar o Floresta como backend. Também criou o floresta-nix."
+      EN: Merged transaction-validation work covering missing consensus checks, based on Bitcoin Core validation
+        and discussion with the project maintainer.
+      BR: Implementou verificações de consenso ausentes na validação de transações, com base no Bitcoin
+        Core e em discussão com o mantenedor; PR integrado.
+  - id: github-getfloresta-Floresta-590
+    title:
+      EN: Make Floresta getblock compatible with Bitcoin Core
+      BR: Compatibilizar getblock do Floresta com Bitcoin Core
+    date: '2025-07-28'
+    source: 'getfloresta/Floresta · #590'
+    type: PR
+    href: https://github.com/getfloresta/Floresta/pull/590
+    description:
+      EN: Merged getblock response refactoring and verbosity level 2 for compatibility with the Bitcoin
+        Core API.
+      BR: Reestruturou respostas de getblock e adicionou o nível de verbosidade 2 para compatibilidade com
+        a API do Bitcoin Core; PR integrado.
 updatedAt: '2026-11-17'
 affiliations:
   - organization: OpenSats

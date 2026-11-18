@@ -93,14 +93,11 @@ contributions:
     date: '2026-11-13'
     source: 'bitcoinfuzz/bitcoinfuzz · #708'
     type: PR
-    href: 'https://github.com/bitcoinfuzz/bitcoinfuzz/pull/708'
+    href: https://github.com/bitcoinfuzz/bitcoinfuzz/pull/708
     description:
-      EN: >-
-        Accounts for known parsing differences so differential tests can focus
-        on unexpected behavior.
-      BR: >-
-        Considera diferenças conhecidas de parsing para que os testes
-        diferenciais possam focar em comportamentos inesperados.
+      EN: Accounts for known parsing differences so differential tests can focus on unexpected behavior.
+      BR: Considera diferenças conhecidas de parsing para que os testes diferenciais possam focar em comportamentos
+        inesperados.
   - id: github-lnfuzz-smite-170
     title:
       EN: 'smite: add BOLT 4 onion routing (Sphinx)'
@@ -108,20 +105,20 @@ contributions:
     date: '2026-11-05'
     source: 'lnfuzz/smite · #170'
     type: PR
-    href: 'https://github.com/lnfuzz/smite/pull/170'
-  - id: erick-cestari-fuzzing-infrastructure
+    href: https://github.com/lnfuzz/smite/pull/170
+  - id: github-oss-garage-fuzzamoto-92
     title:
-      EN: Fuzz harnesses and encrypted-transport testing
-      BR: Harnesses de fuzzing e testes de transporte criptografado
-    source: Vinteum · 2026 annual report
-    type: Tooling
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Add BIP324 v2 transport support to Fuzzamoto
+      BR: Adicionar transporte v2 BIP324 ao Fuzzamoto
+    date: '2026-01-09'
+    source: 'oss-garage/fuzzamoto · #92'
+    type: PR
+    href: https://github.com/oss-garage/fuzzamoto/pull/92
     description:
-      EN: Improved fuzz harnesses, corpus management and CI across Bitcoin projects. Added BIP324
-        encrypted-transport support in Fuzzamoto, extending node-level testing beyond legacy transport.
-      BR: Melhorou harnesses de fuzzing, gerenciamento de corpus e CI em projetos Bitcoin. Adicionou
-        suporte ao transporte criptografado BIP324 no Fuzzamoto, ampliando os testes de nós além
-        do transporte legado.
+      EN: Merged encrypted P2P transport support, including initiator/responder roles and a feature flag
+        for fuzzing Bitcoin Core over v2 connections.
+      BR: Adicionou suporte integrado ao transporte P2P criptografado, com papéis de iniciador e respondente
+        e uma flag para fuzzing do Bitcoin Core por conexões v2.
 writing:
   - id: personal-blog-eclair-oom-pending-channels
     title:

@@ -75,24 +75,28 @@ contributions:
     href: 'https://github.com/getfloresta/Floresta/pull/833'
   - id: btcd-fountain-code-storage-prototype
     title:
-      EN: "Fountain-coded block storage prototype in btcd"
-      BR: "Protótipo de armazenamento de blocos com fountain codes no btcd"
-    source: "Vinteum · Year Four Report · August 2025–August 2026"
+      EN: Fountain-coded block storage prototype in btcd
+      BR: Protótipo de armazenamento de blocos com fountain codes no btcd
+    source: lucasdbr05/btcd · poc/fountain-codes
     type: Research
-    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+    href: https://github.com/lucasdbr05/btcd/tree/poc/fountain-codes/fountain
     description:
-      EN: "Explored whether pruned nodes could contribute historical block data using fountain codes. Progressed from simulations to a btcd proof of concept that groups blocks into epochs, stores encoded droplets and exchanges them between peers. Tested isolated regtest networks with Warnet."
-      BR: "Investigou se nós podados poderiam contribuir dados históricos de blocos usando fountain codes. Avançou de simulações para uma prova de conceito no btcd que agrupa blocos em épocas, armazena fragmentos codificados e os troca entre peers. Testou redes regtest isoladas com Warnet."
+      EN: Experimental btcd branch grouping blocks into epochs, persisting encoded droplets and exchanging
+        epoch and droplet messages between peers.
+      BR: Branch experimental do btcd que agrupa blocos em épocas, persiste fragmentos codificados e troca
+        mensagens de épocas e fragmentos entre peers.
   - id: btcd-compact-block-relay
     title:
-      EN: "Compact-block reconstruction and fallback in btcd"
-      BR: "Reconstrução de blocos compactos e fallback no btcd"
-    source: "Vinteum · Year Four Report · August 2025–August 2026"
-    type: Tooling
-    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+      EN: Compact-block relay proposal for btcd
+      BR: Proposta de retransmissão de blocos compactos no btcd
+    source: 'btcsuite/btcd · #2610'
+    type: PR
+    href: https://github.com/btcsuite/btcd/pull/2610
     description:
-      EN: "Implemented compact-block relay in btcd and iterated through review, covering reconstruction, requests for missing transactions and fallback behavior."
-      BR: "Implementou retransmissão de blocos compactos no btcd e fez ajustes após revisão, incluindo reconstrução, pedidos de transações ausentes e comportamento de fallback."
+      EN: Open pull request implementing BIP152 compact-block relay across btcd peer, sync-manager and server
+        layers, with transaction-ID and witness-transaction-ID relay.
+      BR: Pull request aberto que implementa retransmissão de blocos compactos BIP152 nas camadas de peers,
+        sincronização e servidor do btcd, com IDs de transações e de transações com witness.
 discussions:
   - id: fountain-codes-storage
     title:

@@ -42,14 +42,16 @@ writing:
     source: edil.com.br
     href: 'https://edil.com.br/blog/creating-a-custom-bitcoin-signet'
 projects:
-  - name: Bitcoin research and technical education
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+  - name: Bitcoin course
+    href: https://github.com/edilmedeiros/bitcoin-course
     description:
-      EN: Research supervision in cryptography, privacy and protocol investigation, connecting implementation work with well-defined questions and rigorous methods.
-      BR: Orientação de pesquisa em criptografia, privacidade e investigação do protocolo, conectando o trabalho de implementação a perguntas bem definidas e métodos rigorosos.
+      EN: 'Lecture notes for Bitcoin: Technical Aspects and Protocol Implementation.'
+      BR: 'Notas de aula de Bitcoin: Aspectos Técnicos e Implementação do Protocolo.'
     contribution:
-      EN: Teaches Bitcoin at the university and helps lead Casa21 deep dives with fellows and grantees, studying BIPs, reviewing code and discussing protocol design.
-      BR: Leciona Bitcoin na universidade e ajuda a conduzir deep dives na Casa21 com fellows e grantees, estudando BIPs, revisando código e discutindo o desenho do protocolo.
+      EN: Develops English-language university teaching material, redesigning the Bitcoin course he taught
+        at the University of Brasília in 2024.
+      BR: Desenvolve material universitário em inglês, reformulando o curso de Bitcoin que lecionou na
+        Universidade de Brasília em 2024.
 ---
 ## EN
 

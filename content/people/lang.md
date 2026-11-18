@@ -28,11 +28,12 @@ affiliations:
     status: current
 projects:
   - name: QVAC
-    href: 'https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook'
+    href: https://github.com/tetherto/qvac
     current: true
     contribution:
-      EN: Joined the project at Tether after transitioning from corporate software engineering.
-      BR: Passou a trabalhar no projeto na Tether após a transição de uma carreira corporativa em engenharia de software.
+      EN: Contributed a merged fix for a KV-cache save race in multi-turn tool-calling completions.
+      BR: Contribuiu com uma correção integrada de uma condição de corrida no salvamento do cache KV em
+        completions de múltiplos turnos com chamadas de ferramentas.
 ---
 ## EN
 

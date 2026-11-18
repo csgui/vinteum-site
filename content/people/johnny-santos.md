@@ -51,13 +51,21 @@ links:
     icon: blog
 projects:
   - name: P2Pool V2
-    href: 'https://github.com/p2poolv2/p2poolv2'
+    href: https://github.com/p2poolv2/p2poolv2
     description:
       EN: P2Poolv2 - Rebooting P2Pool for Bitcoin
       BR: Implementação P2Pool V2 para mineração Bitcoin descentralizada.
     contribution:
       EN: Contributed 2 merged pull requests.
       BR: Contribuição por meio de 2 pull requests integrados.
+  - name: bitcoin-capnp
+    href: https://github.com/johnnyasantoss/bitcoin-capnp
+    description:
+      EN: Experimental Rust client for Bitcoin Core Cap’n Proto IPC.
+      BR: Cliente Rust experimental para IPC Cap’n Proto do Bitcoin Core.
+    contribution:
+      EN: Develops an experimental Rust client for Bitcoin Core IPC and used it to reproduce a use-after-free bug.
+      BR: Desenvolve um cliente Rust experimental para IPC do Bitcoin Core e o usou para reproduzir um bug de use-after-free.
 contributions:
   - id: github-p2poolv2-p2poolv2-672
     title:
@@ -66,7 +74,7 @@ contributions:
     date: '2026-10-01'
     source: 'p2poolv2/p2poolv2 · #672'
     type: PR
-    href: 'https://github.com/p2poolv2/p2poolv2/pull/672'
+    href: https://github.com/p2poolv2/p2poolv2/pull/672
   - id: github-p2poolv2-p2poolv2-623
     title:
       EN: Avoid non-determinism in uncle processing
@@ -74,27 +82,30 @@ contributions:
     date: '2026-09-04'
     source: 'p2poolv2/p2poolv2 · #623'
     type: PR
-    href: 'https://github.com/p2poolv2/p2poolv2/pull/623'
-  - id: p2poolv2-compact-relay
+    href: https://github.com/p2poolv2/p2poolv2/pull/623
+  - id: github-p2poolv2-p2poolv2-446
     title:
-      EN: "Compact-block relay for P2Poolv2"
-      BR: "Retransmissão de blocos compactos no P2Poolv2"
-    source: "Vinteum · Year Four Report · August 2025–August 2026"
-    type: Tooling
-    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+      EN: Prototype compact-block relay for P2Poolv2
+      BR: Prototipar retransmissão de blocos compactos no P2Poolv2
+    date: '2026-03-26'
+    source: 'p2poolv2/p2poolv2 · #446'
+    type: PR
+    href: https://github.com/p2poolv2/p2poolv2/pull/446
     description:
-      EN: "Adapted compact-block relay to P2Poolv2’s architecture, changing synchronization, message flow and reconstruction. The implementation was approaching completion in August 2026."
-      BR: "Adaptou a retransmissão de blocos compactos à arquitetura do P2Poolv2, com mudanças em sincronização, fluxo de mensagens e reconstrução. A implementação estava próxima da conclusão em agosto de 2026."
-  - id: p2poolv2-network-testing-capnp
+      EN: Proposed compact share-block messages, negotiation and relay handling. Closed without merging.
+      BR: Propôs mensagens de blocos compactos de shares, negociação e retransmissão. Fechado sem integração.
+  - id: github-p2poolv2-p2poolv2-332
     title:
-      EN: "Persistent testnet deployment and Bitcoin Core IPC experiments"
-      BR: "Implantação persistente em testnet e experimentos com IPC do Bitcoin Core"
-    source: "Vinteum · Year Four Report · August 2025–August 2026"
-    type: Tooling
-    href: "/assets/files/Vinteum-Year-Four-Report-2026.pdf"
+      EN: Improve the P2Poolv2 local container cluster
+      BR: Melhorar o cluster local de contêineres do P2Poolv2
+    date: '2026-03-31'
+    source: 'p2poolv2/p2poolv2 · #332'
+    type: PR
+    href: https://github.com/p2poolv2/p2poolv2/pull/332
     description:
-      EN: "Used testnet nodes to investigate header synchronization, storage and networking problems, with a persistent deployment for longer-running tests. Improved containers and CI, and experimented with Bitcoin Core’s Cap’n Proto interface through bitcoin-capnp."
-      BR: "Usou nós em testnet para investigar problemas de sincronização de cabeçalhos, armazenamento e comunicação, com implantação persistente para testes prolongados. Melhorou contêineres e CI e experimentou a interface Cap’n Proto do Bitcoin Core pelo bitcoin-capnp."
+      EN: Merged fixes to Compose volume paths and a multistage Bitcoin Core image for local network testing.
+      BR: Corrigiu caminhos de volumes no Compose e criou uma imagem multiestágio do Bitcoin Core para testes
+        locais de rede; PR integrado.
 writing:
   - id: personal-blog-my-work-on-p2poolv2
     title:

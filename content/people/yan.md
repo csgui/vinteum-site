@@ -55,16 +55,27 @@ projects:
       EN: 'A CLI wallet library and REPL tool to demo and test the BDK library '
       BR: Carteira de linha de comando e REPL para testar e demonstrar o BDK.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Added a command to delete saved wallet configuration without deleting wallet databases.
+      BR: Adicionou um comando para remover configurações salvas sem apagar os bancos de dados
+        das carteiras.
   - name: BlockSci (Clube Bitcoin UnB)
     href: 'https://github.com/ClubeBitcoinUnB/BlockSci'
     description:
       EN: A high-performance tool for blockchain science and exploration
       BR: Fork do BlockSci para análise e exploração de dados de blockchains.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Migrated CI to GitHub Actions with Linux, macOS ARM64 and Nix checks.
+      BR: Migrou o CI para GitHub Actions com verificações de Linux, macOS ARM64 e Nix.
+  - name: BDK Wallet (Vinteum research fork)
+    href: https://github.com/vinteumorg/bdk_wallet
+    description:
+      EN: Fork of BDK Wallet used for descriptor-metadata experiments.
+      BR: Fork do BDK Wallet usado em experimentos com metadados de descritores.
+    contribution:
+      EN: Researches compact script-index metadata and sparse restoration. Benchmarks isolate local
+        script processing rather than end-to-end network recovery.
+      BR: Pesquisa metadados compactos de índices de scripts e restauração esparsa. Os benchmarks
+        isolam o processamento local de scripts, não a recuperação completa pela rede.
 contributions:
   - id: github-bitcoindevkit-bdk-cli-312
     title:
@@ -90,24 +101,20 @@ contributions:
         Bitcoin UnB BlockSci fork.
       BR: Migra o CI para GitHub Actions com verificações de Linux, macOS ARM64 e Nix no
         fork do BlockSci do Clube Bitcoin UnB.
-  - id: yan-compact-descriptor-metadata
+  - id: github-vinteumorg-bdk_wallet-13
     title:
-      EN: Compact descriptor metadata and research API
-      BR: Metadados compactos de descritores e API de pesquisa
-    source: Vinteum · 2026
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Descriptor-metadata validation and sparse restoration
+      BR: Validação de metadados de descritores e restauração esparsa
+    source: 'vinteumorg/bdk_wallet · #13'
+    type: PR
+    href: https://github.com/vinteumorg/bdk_wallet/pull/13
     description:
-      EN: Researched compact metadata for derived, revealed and used script indices, building
-        on proposed BIP393 annotations and exploring Elias–Fano encoding. Expanded a proof
-        of concept into a reusable research API for encoding, decoding, wallet import/export
-        and selected-index derivation. In 2026, the research remained in benchmarking and
-        validation.
-      BR: Pesquisou metadados compactos para índices de scripts derivados, revelados e usados,
-        partindo das anotações propostas no BIP393 e explorando a codificação Elias–Fano.
-        Ampliou uma prova de conceito para uma API reutilizável de pesquisa com codificação,
-        decodificação, importação/exportação de carteiras e derivação de índices específicos.
-        Em 2026, a pesquisa permanecia em benchmarking e validação.
-    type: Research
+      EN: Adds experimental descriptor-metadata validation and sparse wallet-restoration benchmarks,
+        including base64 and bech32 encoding changes. Open research pull request in a fork, not
+        upstream BDK.
+      BR: Adiciona validação experimental de metadados de descritores e benchmarks de restauração
+        esparsa de carteiras, incluindo mudanças nas codificações base64 e bech32. Pull request
+        de pesquisa aberto em um fork, não no BDK upstream.
 writing:
   - id: personal-blog-floresta-mainnet-journey
     title:

@@ -51,8 +51,10 @@ projects:
       EN: Cashu Development Kit
       BR: Kit de desenvolvimento para aplicações Cashu.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: Removed redundant DLEQ proof storage and improved mint-information retrieval and CLI
+        HTTP-proxy support.
+      BR: Removeu armazenamento redundante de provas DLEQ e melhorou a consulta de informações
+        da mint e o suporte a proxy HTTP na CLI.
 contributions:
   - id: github-cashubtc-cdk-2226
     title:

@@ -64,7 +64,7 @@ contributions:
     date: '2026-07-04'
     source: '256foundation/mujina · #67'
     type: Documentation
-    href: 'https://github.com/256foundation/mujina/pull/67'
+    href: https://github.com/256foundation/mujina/pull/67
   - id: github-johnnyasantoss-minesploit-1
     title:
       EN: Interactive execution of payloads
@@ -72,45 +72,58 @@ contributions:
     date: '2026-02-28'
     source: 'johnnyasantoss/minesploit · #1'
     type: PR
-    href: 'https://github.com/johnnyasantoss/minesploit/pull/1'
-  - id: jayr-motta-stratum-v2
+    href: https://github.com/johnnyasantoss/minesploit/pull/1
+  - id: github-256foundation-mujina-65
     title:
-      EN: Stratum V2 integration in Mujina
-      BR: Integração de Stratum V2 no Mujina
-    source: Vinteum · 2026 annual report
-    type: Research
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Draft Stratum V2 support for Mujina
+      BR: Suporte a Stratum V2 em rascunho para Mujina
+    date: '2026-06-05'
+    source: '256foundation/mujina · #65'
+    type: PR
+    href: https://github.com/256foundation/mujina/pull/65
     description:
-      EN: Worked on Stratum V2 integration, addressing reviewer feedback and studying channel
-        design and BIP 323. Integration was in progress in 2026.
-      BR: Trabalhou na integração de Stratum V2, respondendo a revisões e estudando o desenho
-        de canais e o BIP 323. A integração estava em andamento em 2026.
-  - id: jayr-motta-nonce-slicing
+      EN: Open draft PR adds extended channels, reconnect handling and protocol integration tests; not merged.
+      BR: PR aberto em rascunho adiciona canais estendidos, reconexão e testes de integração do protocolo;
+        não integrado.
+  - id: github-jayrmotta-mujina-3
     title:
-      EN: Nonce-space slicing across ASIC chips
-      BR: Divisão do espaço de nonces entre chips ASIC
-    source: Vinteum · 2026 annual report
-    type: Research
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Compute BM13xx HCN nonce ranges
+      BR: Calcular intervalos de nonce HCN para BM13xx
+    date: '2026-06-18'
+    source: 'jayrmotta/mujina · #3'
+    type: PR
+    href: https://github.com/jayrmotta/mujina/pull/3
     description:
-      EN: Experimented with nonce-space slicing to understand how mining work is distributed across
-        ASIC chips.
-      BR: Experimentou a divisão do espaço de nonces para entender como o trabalho de mineração
-        é distribuído entre chips ASIC.
-  - id: jayr-motta-firmware-configuration
+      EN: Open, unmerged PR in his public Mujina fork computes nonce ranges from chip topology and clock
+        frequency, replacing the BM1370 small-engine count with the big-core divisor.
+      BR: PR aberto e não integrado em seu fork público do Mujina calcula intervalos de nonce pela topologia
+        dos chips e frequência, usando os núcleos principais como divisor no BM1370.
+  - id: github-256foundation-mujina-88
     title:
-      EN: Mujina configuration and hardware development
-      BR: Configuração e desenvolvimento de hardware no Mujina
-    source: Vinteum · 2026 annual report
-    type: Tooling
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Introduce the Mujina configuration tree
+      BR: Introduzir a árvore de configuração do Mujina
+    date: '2026-08-05'
+    source: '256foundation/mujina · #88'
+    type: PR
+    href: https://github.com/256foundation/mujina/pull/88
     description:
-      EN: Work in progress in 2026 included a configuration-system proof of concept following
-        review of MIP-0001, firmware work such as fan control, and preparation of a small hardware
-        lab.
-      BR: As frentes em andamento em 2026 incluíam uma prova de conceito do sistema de configuração
-        após a revisão da MIP-0001, trabalho no firmware, como controle de ventoinhas, e preparação
-        de um pequeno laboratório de hardware.
+      EN: Open, unmerged PR populates a configuration tree from environment variables and exposes it read-only
+        through the HTTP API; no persistence or write path.
+      BR: PR aberto e não integrado preenche uma árvore de configuração por variáveis de ambiente e a expõe
+        para leitura na API HTTP; sem persistência nem escrita.
+  - id: github-256foundation-mujina-33
+    title:
+      EN: Add PI-based Bitaxe fan control
+      BR: Adicionar controle PI da ventoinha do Bitaxe
+    date: '2026-03-03'
+    source: '256foundation/mujina · #33'
+    type: PR
+    href: https://github.com/256foundation/mujina/pull/33
+    description:
+      EN: Open, unmerged firmware PR regulates fan speed from ASIC temperature and falls back to full speed
+        when readings are unsafe or unavailable.
+      BR: PR de firmware aberto e não integrado regula a ventoinha pela temperatura do ASIC e usa velocidade
+        máxima quando as leituras são inseguras ou indisponíveis.
 updatedAt: '2026-11-17'
 ---
 ## EN

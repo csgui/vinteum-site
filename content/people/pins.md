@@ -31,19 +31,19 @@ projects:
       EN: An alternative full node bitcoin implementation written in Go (golang)
       BR: Implementação de nó Bitcoin em Go.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Added the VerifyLowS helper for ECDSA signatures.
+      BR: Adicionou o helper VerifyLowS para assinaturas ECDSA.
   - name: lnd
     href: 'https://github.com/lightningnetwork/lnd'
     description:
       EN: Lightning Network Daemon ⚡️
       BR: Implementação de nó Lightning.
     contribution:
-      EN: Contributed one merged pull request. Built coverage-guided fuzz targets for Channel
-        Link and Funding Manager and expanded reusable testing infrastructure in 2026.
-      BR: Contribuição por meio de um pull request integrado. Construiu alvos de fuzzing
-        guiado por cobertura para Channel Link e Funding Manager e ampliou a infraestrutura
-        reutilizável de testes em 2026.
+      EN: Added Taproot fallback invoice addresses and proposed coverage-guided fuzz harnesses
+        for channel links and funding. The fuzzing pull requests remain open.
+      BR: Adicionou endereços Taproot de fallback em invoices e propôs harnesses de fuzzing guiado
+        por cobertura para channel links e financiamento. Os pull requests de fuzzing permanecem
+        abertos.
 contributions:
   - id: github-btcsuite-btcd-2524
     title:
@@ -67,21 +67,30 @@ contributions:
     description:
       EN: Adds Taproot (P2TR) fallback addresses to BOLT-11 Lightning invoices.
       BR: Adiciona endereços Taproot (P2TR) de fallback às invoices Lightning BOLT-11.
-  - id: pins-lnd-state-machine-fuzzing
+  - id: github-lightningnetwork-lnd-10865
     title:
-      EN: LND state-machine fuzzing and interoperability
-      BR: Fuzzing de máquinas de estados do LND e interoperabilidade
-    source: Vinteum · 2026
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: 'htlcswitch: add link state machine fuzz harness'
+      BR: 'htlcswitch: add link state machine fuzz harness'
+    source: 'lightningnetwork/lnd · #10865'
+    type: PR
+    href: https://github.com/lightningnetwork/lnd/pull/10865
     description:
-      EN: Built coverage-guided fuzz targets for LND’s Channel Link and Funding Manager
-        state machines and expanded reusable testing infrastructure in 2026. Also participated
-        in the Lightning specification meeting, where implementation teams coordinate interoperability.
-      BR: Construiu alvos de fuzzing guiado por cobertura para as máquinas de estados Channel
-        Link e Funding Manager do LND e ampliou a infraestrutura reutilizável de testes
-        em 2026. Também participou do encontro de especificação Lightning, no qual equipes
-        de implementações coordenam interoperabilidade.
-    type: Tooling
+      EN: Proposes a coverage-guided channel-link state-machine harness with adversarial messages,
+        disconnects and balance invariants. Open pull request.
+      BR: Propõe um harness de fuzzing guiado por cobertura para a máquina de estados do channel
+        link, com mensagens adversariais, desconexões e invariantes de saldo. Pull request aberto.
+  - id: github-lightningnetwork-lnd-10972
+    title:
+      EN: 'funding: add coverage-guided fuzz harness for the channel-opening state machine'
+      BR: 'funding: add coverage-guided fuzz harness for the channel-opening state machine'
+    source: 'lightningnetwork/lnd · #10972'
+    type: PR
+    href: https://github.com/lightningnetwork/lnd/pull/10972
+    description:
+      EN: Proposes a Go fuzz harness for concurrent channel-opening flows, malformed handshake
+        messages and reservation accounting. Open pull request.
+      BR: Propõe um harness de fuzzing em Go para fluxos simultâneos de abertura de canais, mensagens
+        de handshake inválidas e controle de reservas. Pull request aberto.
 updatedAt: '2026-11-17'
 ---
 ## EN

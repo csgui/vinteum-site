@@ -36,32 +36,34 @@ writing:
     href: 'https://brunoerg.xyz/2026/03/10/dos-floresta.html'
 projects:
   - name: Bitcoinfuzz
-    href: 'https://brunoerg.xyz/2025/08/21/the-state-of-bitcoinfuzz.html'
+    href: https://github.com/bitcoinfuzz/bitcoinfuzz
     description:
-      EN: Differential-fuzzing framework comparing how independent Bitcoin, Lightning and related library implementations process identical inputs.
-      BR: Framework de fuzzing diferencial que compara como implementações independentes de Bitcoin, Lightning e bibliotecas relacionadas processam as mesmas entradas.
+      EN: Differential-fuzzing framework comparing how independent Bitcoin, Lightning and related library
+        implementations process identical inputs.
+      BR: Framework de fuzzing diferencial que compara como implementações independentes de Bitcoin, Lightning
+        e bibliotecas relacionadas processam as mesmas entradas.
     contribution:
       EN: Created the framework to investigate implementation disagreements and detect bugs.
       BR: Criou o framework para investigar divergências entre implementações e detectar bugs.
   - name: Bitcoin Dev Launchpad
-    href: 'https://opensats.org/blog/developer-spotlight-bruno-garcia'
+    href: /programs/bitcoin-dev-launchpad
     description:
       EN: Technical training and mentorship connecting protocol study with upstream contribution.
       BR: Formação técnica e mentoria que conectam o estudo do protocolo à contribuição nos projetos.
     contribution:
       EN: Helped launch the programme and mentors fellows and grantees.
       BR: Ajudou a criar o programa e orienta fellows e grantees.
-contributions:
-  - id: core-fuzzing-mutation-testing
-    type: Tooling
-    title:
-      EN: Fuzzing, mutation testing and Bitcoin Core review
-      BR: Fuzzing, testes de mutação e revisão do Bitcoin Core
-    href: 'https://opensats.org/blog/developer-spotlight-bruno-garcia'
-    source: OpenSats developer spotlight
+  - name: bcore-mutation
+    href: https://github.com/brunoerg/bcore-mutation
     description:
-      EN: Finds failures with generated inputs and evaluates test coverage by checking whether tests detect deliberately introduced faults. Code review complements these automated techniques.
-      BR: Busca falhas com entradas geradas e avalia a cobertura dos testes verificando se eles detectam defeitos introduzidos deliberadamente. A revisão de código complementa essas técnicas automatizadas.
+      EN: Mutation-testing tool for Bitcoin Core and libsecp256k1.
+      BR: Ferramenta de testes de mutação para Bitcoin Core e libsecp256k1.
+    contribution:
+      EN: Develops tooling that generates mutants for changed or covered code, runs test commands against
+        them and persists results for resumed analysis.
+      BR: Desenvolve ferramentas que geram mutantes de código alterado ou coberto por testes, executam
+        comandos de teste contra eles e salvam resultados para retomar a análise.
+contributions: []
 ---
 ## EN
 

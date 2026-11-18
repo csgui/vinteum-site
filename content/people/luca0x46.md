@@ -53,6 +53,14 @@ projects:
     contribution:
       EN: Contributed one merged pull request.
       BR: Contribuição por meio de um pull request integrado.
+  - name: Bark
+    href: https://gitlab.com/ark-bitcoin/bark
+    description:
+      EN: Ark wallet, server and libraries developed by Second.
+      BR: Carteira, servidor e bibliotecas Ark desenvolvidos pela Second.
+    contribution:
+      EN: Contributed VTXO fuzz targets and a barkd REST test framework.
+      BR: Contribuiu com alvos de fuzzing de VTXOs e um framework de testes REST do barkd.
 contributions:
   - id: github-getfloresta-Floresta-565
     title:
@@ -64,14 +72,28 @@ contributions:
     href: 'https://github.com/getfloresta/Floresta/pull/565'
   - id: second-bark-automated-testing
     title:
-      EN: "Bark, SDK and application test infrastructure"
-      BR: "Infraestrutura de testes de Bark, SDK e aplicações"
-    source: "Vinteum · August 2026 alumni outlook"
-    type: Tooling
-    href: "https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook"
+      EN: Bark VTXO fuzz targets
+      BR: Alvos de fuzzing de VTXOs no Bark
+    source: ark-bitcoin/bark · !1557
+    type: PR
+    href: https://gitlab.com/ark-bitcoin/bark/-/merge_requests/1557
     description:
-      EN: "At Second, worked on automated testing across Bark, its SDK and applications, including specialized test harnesses and fuzzing infrastructure."
-      BR: "Na Second, trabalhou em testes automatizados de Bark, seu SDK e aplicações, incluindo ferramentas especializadas de teste e infraestrutura de fuzzing."
+      EN: Merged fuzz targets for VTXO serialization, deserialization, field access and round-trip checks
+        using honggfuzz.
+      BR: Alvos de fuzzing integrados para serialização, desserialização, acesso a campos e verificações
+        de round-trip de VTXOs com honggfuzz.
+  - id: second-barkd-rest-test-framework
+    title:
+      EN: Bark daemon REST test framework
+      BR: Framework de testes REST do daemon Bark
+    source: ark-bitcoin/bark · !1708
+    type: PR
+    href: https://gitlab.com/ark-bitcoin/bark/-/merge_requests/1708
+    description:
+      EN: Merged an initial barkd REST test framework that creates and funds a wallet, then boards a UTXO
+        into a VTXO.
+      BR: Integrou um framework inicial de testes REST do barkd que cria e financia uma carteira e converte
+        um UTXO em VTXO por boarding.
 updatedAt: '2026-11-17'
 affiliations:
   - organization: Second

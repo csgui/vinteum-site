@@ -49,24 +49,32 @@ links:
     icon: blog
 projects:
   - name: odin-secp256k1
-    href: 'https://github.com/odin-bitcoin/odin-secp256k1'
+    href: https://github.com/odin-bitcoin/odin-secp256k1
     description:
       EN: 'Odin language bindings for Bitcoin secp256k1 library. '
       BR: Bindings da biblioteca secp256k1 para a linguagem Odin.
     contribution:
       EN: Contributed one merged pull request while experimenting with Odin bindings for libsecp256k1.
-      BR: Contribuiu com um pull request integrado enquanto experimentava bindings de libsecp256k1
-        para Odin.
+      BR: Contribuiu com um pull request integrado enquanto experimentava bindings de libsecp256k1 para
+        Odin.
   - name: WalletWasabi
-    href: 'https://github.com/WalletWasabi/WalletWasabi'
+    href: https://github.com/WalletWasabi/WalletWasabi
     description:
-      EN: >-
-        Open-source, non-custodial, privacy preserving Bitcoin wallet for
-        Windows, Linux, and Mac.
+      EN: Open-source, non-custodial, privacy preserving Bitcoin wallet for Windows, Linux, and Mac.
       BR: Carteira Bitcoin open source com foco em privacidade.
     contribution:
       EN: Contributed one merged pull request.
       BR: Contribuição por meio de um pull request integrado.
+  - name: libsecp256k1
+    href: https://github.com/bitcoin-core/secp256k1
+    description:
+      EN: Bitcoin elliptic-curve cryptography library.
+      BR: Biblioteca de criptografia de curvas elípticas para Bitcoin.
+    contribution:
+      EN: Studies libsecp256k1 arithmetic and testing, with technical writing on ECDH and the GLV endomorphism.
+        Participates in discussion of shared nonce helpers.
+      BR: Estuda aritmética e testes do libsecp256k1, com textos técnicos sobre ECDH e o endomorfismo GLV.
+        Participa da discussão sobre helpers de nonce compartilhados.
 contributions:
   - id: github-odin-bitcoin-odin-secp256k1-4
     title:
@@ -75,7 +83,7 @@ contributions:
     date: '2026-08-29'
     source: 'odin-bitcoin/odin-secp256k1 · #4'
     type: PR
-    href: 'https://github.com/odin-bitcoin/odin-secp256k1/pull/4'
+    href: https://github.com/odin-bitcoin/odin-secp256k1/pull/4
   - id: github-WalletWasabi-WalletWasabi-14639
     title:
       EN: Add k_max limit check for silent payments specified in BIP 352
@@ -83,32 +91,18 @@ contributions:
     date: '2026-06-05'
     source: 'WalletWasabi/WalletWasabi · #14639'
     type: PR
-    href: 'https://github.com/WalletWasabi/WalletWasabi/pull/14639'
-  - id: isaque-franklin-libsecp256k1-study
+    href: https://github.com/WalletWasabi/WalletWasabi/pull/14639
+  - id: github-secp256k1-nonce-helpers-review-1938
     title:
-      EN: libsecp256k1 arithmetic and exhaustive testing
-      BR: Aritmética e testes exaustivos em libsecp256k1
-    source: Vinteum · 2026 annual report
-    type: Research
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
-    description:
-      EN: Studied field and group operations, modular inversion, safeGCD and exhaustive testing
-        in libsecp256k1, connecting mathematical foundations with implementation choices in a
-        production cryptographic library. Produced technical writing from this study.
-      BR: Estudou operações de campo e de grupo, inversão modular, safeGCD e testes exaustivos
-        em libsecp256k1, conectando fundamentos matemáticos às escolhas de implementação de uma
-        biblioteca criptográfica de produção. Produziu textos técnicos a partir desse estudo.
-  - id: isaque-franklin-nested-musig2
-    title:
-      EN: Nested MuSig2 paper and fork implementation review
-      BR: Artigo de Nested MuSig2 e revisão de implementação em fork
-    source: Vinteum · 2026 annual report
+      EN: Concept ACK for shared nonce helpers
+      BR: Concept ACK para helpers de nonce compartilhados
+    date: '2026-09-29'
+    source: 'bitcoin-core/secp256k1 · #1938'
     type: Code Review
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    href: https://github.com/bitcoin-core/secp256k1/pull/1938#pullrequestreview-5353632147
     description:
-      EN: Worked through the Nested MuSig2 paper and reviewed an implementation in a libsecp256k1
-        fork.
-      BR: Estudou o artigo de Nested MuSig2 e revisou uma implementação em um fork de libsecp256k1.
+      EN: Gave a concept ACK to extracting common nonce helpers from MuSig for reuse by future modules.
+      BR: Deu concept ACK à extração de helpers comuns de nonce do MuSig para reutilização por futuros módulos.
 writing:
   - id: personal-blog-understanding-libsecp256k1s-ecdh-module
     title:

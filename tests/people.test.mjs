@@ -266,6 +266,25 @@ test("keeps Davidson's Floresta creator role in Projects rather than Affiliation
     assert.match(floresta.contribution.BR, /Criador/);
 });
 
+test("links selected contributions to direct work rather than annual reports or biography articles", () => {
+    for (const person of readPeople()) {
+        for (const item of person.contributions) {
+            assert.ok(item.href && /^https:\/\//.test(item.href), `${person.slug}: ${item.id} needs a direct public artifact`);
+            const url = new URL(item.href);
+            assert.ok(!/vinteum\.org$/.test(url.hostname) || !url.pathname.startsWith("/blog/"), `${person.slug}: ${item.id} links to an institutional summary`);
+            assert.doesNotMatch(item.href, /Vinteum-Year-Four-Report|vinteum-3-years-report|developer-spotlight|alumni-outlook/i, `${person.slug}: ${item.id}`);
+            assert.doesNotMatch(item.source ?? "", /annual report|year four report|year-four report|alumni outlook|alumni retrospective|developer spotlight/i, `${person.slug}: ${item.id} still labels a proxy source`);
+            if (url.hostname === "github.com") {
+                assert.ok(url.pathname.split("/").filter(Boolean).length >= 2 && !url.pathname.startsWith("/search"), `${person.slug}: ${item.id} links to a profile/search rather than work`);
+                if (item.type === "Code Review") assert.match(url.pathname, /\/(pull|issues|discussions|commit)\//, `${person.slug}: ${item.id} needs the reviewed artifact`);
+            }
+        }
+        for (const project of person.projects) {
+            assert.doesNotMatch(project.href ?? "", /Vinteum-Year-Four-Report|alumni-outlook|developer-spotlight/i, `${person.slug}: ${project.name} links to a proxy rather than the project`);
+        }
+    }
+});
+
 const baseUrl = process.env.PEOPLE_TEST_URL;
 test("built directory links to every canonical profile and unknown profiles return 404", { skip: !baseUrl }, async () => {
     const directory = await fetch(new URL("/people", baseUrl));

@@ -59,18 +59,17 @@ projects:
       EN: Rust library for interacting with Bitcoin Core over JSONRPC
       BR: Biblioteca Rust para interagir com o Bitcoin Core via JSON-RPC.
     contribution:
-      EN: Contributed one merged pull request.
-      BR: Contribuição por meio de um pull request integrado.
+      EN: Completed Bitcoin Core v31 RPC support, response types and integration tests.
+      BR: Concluiu o suporte aos RPCs do Bitcoin Core v31, tipos de resposta e testes de integração.
   - name: rust-bitcoin
     href: 'https://github.com/rust-bitcoin/rust-bitcoin'
     description:
       EN: Rust Bitcoin library
       BR: Bibliotecas Rust para desenvolver aplicações Bitcoin.
     contribution:
-      EN: Contributed one merged pull request. Maintained dependencies and CI and built
-        seed corpora for fuzzing.
-      BR: Contribuição por meio de um pull request integrado. Manteve dependências e CI
-        e construiu corpora iniciais para fuzzing.
+      EN: Added BIP32 seed-length validation and daily corpus-based fuzzing CI.
+      BR: Adicionou validação do comprimento de seeds BIP32 e CI diário de fuzzing baseado em
+        corpus.
 contributions:
   - id: github-rust-bitcoin-corepc-615
     title:
@@ -97,19 +96,18 @@ contributions:
       EN: Introduces a validated BIP32 seed type that rejects invalid lengths at construction.
       BR: Introduz um tipo de seed BIP32 validado que rejeita comprimentos inválidos na
         construção.
-  - id: renato-rust-bitcoin-compatibility
+  - id: github-rust-bitcoin-rust-bitcoin-6729
     title:
-      EN: Gradual API migration and fuzzing infrastructure
-      BR: Migração gradual de APIs e infraestrutura de fuzzing
-    source: Vinteum · 2026
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Daily corpus-based fuzzing
+      BR: Fuzzing diário baseado em corpus
+    source: 'rust-bitcoin/rust-bitcoin · #6729'
+    type: PR
+    href: https://github.com/rust-bitcoin/rust-bitcoin/pull/6729
     description:
-      EN: Worked on a compatibility-layer effort intended to let downstream projects migrate
-        across breaking APIs incrementally rather than all at once.
-      BR: Trabalhou em uma iniciativa de camada de compatibilidade para permitir migrações
-        graduais de projetos dependentes entre APIs incompatíveis, em vez de uma mudança
-        de uma só vez.
-    type: Tooling
+      EN: Adds daily fuzzing from a persistent qa-assets corpus, saves updated inputs and reports
+        crashes. Merged pull request.
+      BR: Adiciona fuzzing diário a partir de um corpus persistente em qa-assets, salva entradas
+        atualizadas e relata crashes. Pull request integrado.
 updatedAt: '2026-11-17'
 affiliations:
   - organization: Spiral

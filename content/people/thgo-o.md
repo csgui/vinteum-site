@@ -65,11 +65,37 @@ projects:
         payment processor.
       BR: Processador de pagamentos Bitcoin open source e auto-hospedável.
     contribution:
-      EN: Contributed 2 merged pull requests. Worked on the plugin ecosystem, a native macOS
-        ARM64 BTCPay Vault build and Payment Requests redesign.
-      BR: Contribuição por meio de 2 pull requests integrados. Trabalhou no ecossistema
-        de plugins, em uma versão nativa do BTCPay Vault para macOS ARM64 e na reformulação
-        de Payment Requests.
+      EN: Implemented multisig setup, granular wallet permissions and Payment Request list improvements.
+      BR: Implementou configuração multisig, permissões granulares de carteiras e melhorias na
+        listagem de Payment Requests.
+  - name: BTCPay Server Vault
+    href: https://github.com/btcpayserver/BTCPayServer.Vault
+    description:
+      EN: Desktop signing tool for software and hardware wallets.
+      BR: Ferramenta desktop de assinatura com carteiras de software e hardware.
+    contribution:
+      EN: Added native macOS ARM64 release packaging.
+      BR: Adicionou empacotamento de versão nativa para macOS ARM64.
+  - name: BTCPay Server Floresta Plugin
+    href: https://github.com/thgO-O/btcpayserver-plugin-floresta
+    description:
+      EN: Experimental watch-only Floresta backend for BTCPay Server.
+      BR: Backend experimental Floresta, somente de observação, para o BTCPay Server.
+    contribution:
+      EN: Develops an alpha plugin for tracking BTC payments without the usual Bitcoin Core and
+        NBXplorer setup; not ready for unattended production stores.
+      BR: Desenvolve um plugin alfa para acompanhar pagamentos BTC sem a configuração usual de
+        Bitcoin Core e NBXplorer; ainda não está pronto para lojas em produção sem supervisão.
+  - name: BTCPay Server Lightning Manager
+    href: https://github.com/thgO-O/btcpayserver-plugin-lightning-manager
+    description:
+      EN: BTCPay plugin for managing Lightning nodes and wallets.
+      BR: Plugin do BTCPay para gerenciar nós e carteiras Lightning.
+    contribution:
+      EN: Develops backend-specific payment, balance, peer and channel tools. LND, CLN and Eclair
+        have automated coverage; Phoenixd and Blink still await manual validation.
+      BR: Desenvolve ferramentas de pagamentos, saldos, peers e canais conforme o backend. LND,
+        CLN e Eclair têm cobertura automatizada; Phoenixd e Blink ainda aguardam validação manual.
 contributions:
   - id: github-btcpayserver-btcpayserver-7218
     title:
@@ -97,18 +123,30 @@ contributions:
         creating, signing and broadcasting transactions.
       BR: Move a interface de carteiras para uma área de plugin e separa permissões para
         visualizar, criar, assinar e transmitir transações.
-  - id: thgoo-btcpay-plugin-backends
+  - id: github-btcpayserver-BTCPayServer.Vault-91
     title:
-      EN: Experimental Floresta plugin and Lightning backends
-      BR: Plugin experimental com Floresta e backends Lightning
-    source: Vinteum · 2026
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: 'build: add macos arm64 vault release'
+      BR: 'build: add macos arm64 vault release'
+    source: 'btcpayserver/BTCPayServer.Vault · #91'
+    type: PR
+    href: https://github.com/btcpayserver/BTCPayServer.Vault/pull/91
     description:
-      EN: Worked on an experimental Floresta-backed on-chain plugin and Lightning Manager
-        support for multiple Lightning backends.
-      BR: Trabalhou em um plugin experimental com Floresta como backend on-chain e no suporte
-        do Lightning Manager a múltiplos backends Lightning.
-    type: Tooling
+      EN: Adds a native macOS ARM64 release with an ARM64 HWI binary and signed, notarized DMG
+        packaging. Merged pull request.
+      BR: Adiciona uma versão nativa para macOS ARM64 com binário HWI ARM64 e empacotamento DMG
+        assinado e notarizado. Pull request integrado.
+  - id: github-btcpayserver-btcpayserver-7015
+    title:
+      EN: '[Feature] Payment Request Improvements'
+      BR: '[Feature] Payment Request Improvements'
+    source: 'btcpayserver/btcpayserver · #7015'
+    type: PR
+    href: https://github.com/btcpayserver/btcpayserver/pull/7015
+    description:
+      EN: Adds Payment Request date and label columns, search and date filters, and reporting.
+        Merged pull request.
+      BR: Adiciona colunas de data e labels, busca, filtros de data e relatórios aos Payment Requests.
+        Pull request integrado.
 updatedAt: '2026-11-17'
 ---
 ## EN

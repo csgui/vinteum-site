@@ -34,8 +34,18 @@ projects:
       EN: Stratum V2 pool and miner applications
       BR: Aplicações Stratum V2 para pools e mineradores.
     contribution:
-      EN: Contributed 2 merged pull requests.
-      BR: Contribuição por meio de 2 pull requests integrados.
+      EN: Refactored job declaration into a reusable library and improved missing-transaction
+        recovery.
+      BR: Refatorou a declaração de jobs em uma biblioteca reutilizável e melhorou a recuperação
+        de transações ausentes.
+  - name: Stratum V2 UniFFI
+    href: https://github.com/stratum-mining/sv2-uniffi
+    description:
+      EN: Python and C++ bindings for the Stratum V2 reference implementation.
+      BR: Bindings Python e C++ para a implementação de referência do Stratum V2.
+    contribution:
+      EN: Contributed C++ bindings, tests and examples.
+      BR: Contribuiu com bindings C++, testes e exemplos.
 contributions:
   - id: github-stratum-mining-sv2-apps-986
     title:
@@ -68,23 +78,30 @@ contributions:
         validation rounds.
       BR: Solicita novamente transações que desaparecem do mempool do nó entre rodadas de
         validação.
-  - id: plebhash-reusable-job-declaration
+  - id: github-stratum-mining-sv2-apps-299
     title:
-      EN: Reusable job declaration and language bindings
-      BR: Declaração de jobs reutilizável e bindings
-    source: Vinteum · 2026
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Reusable Job Declarator Server library
+      BR: Biblioteca reutilizável do Job Declarator Server
+    source: 'stratum-mining/sv2-apps · #299'
+    type: PR
+    href: https://github.com/stratum-mining/sv2-apps/pull/299
     description:
-      EN: Connected the Stratum V2 reference implementation to Bitcoin Core, led extraction
-        of the Job Declarator Server into the reusable jd_server_sv2 library, and developed
-        sv2-uniffi bindings for C++ and Python. The library is designed to let pools integrate
-        the Job Declaration Protocol without depending on Core IPC.
-      BR: Conectou a implementação de referência do Stratum V2 ao Bitcoin Core, liderou
-        a extração do Job Declarator Server para a biblioteca reutilizável jd_server_sv2
-        e desenvolveu bindings C++ e Python com sv2-uniffi. A biblioteca foi projetada para
-        permitir a integração do Job Declaration Protocol por pools sem dependência do IPC
-        do Core.
-    type: Tooling
+      EN: Extracts jd_server_sv2 with a modular JobValidationEngine, a Bitcoin Core IPC implementation
+        and pool integration. Merged pull request.
+      BR: Extrai jd_server_sv2 com uma JobValidationEngine modular, implementação via IPC do Bitcoin
+        Core e integração ao pool. Pull request integrado.
+  - id: github-stratum-mining-sv2-uniffi-13
+    title:
+      EN: C++ bindings for Stratum V2
+      BR: Bindings C++ para Stratum V2
+    source: 'stratum-mining/sv2-uniffi · #13'
+    type: PR
+    href: https://github.com/stratum-mining/sv2-uniffi/pull/13
+    description:
+      EN: Adds C++ binding generation, tests and examples alongside the existing Python bindings.
+        Merged pull request.
+      BR: Adiciona geração de bindings C++, testes e exemplos ao lado dos bindings Python existentes.
+        Pull request integrado.
 updatedAt: '2026-11-17'
 affiliations:
   - organization: Btrust

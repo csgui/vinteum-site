@@ -71,10 +71,17 @@ check rendered routes, start the production build with `pnpm start` and run
 
 ## Source and relationship checks
 
-Technical descriptions can be enriched from Vinteum's published annual reports,
-public announcements and upstream contributions. Keep useful public source links
-with the text. Do not copy private reports, internal register links, assessments,
-compensation or undisclosed security findings into these files.
+Use the brain, annual reports and announcements as discovery maps. Selected
+contributions must link to the work itself: a public repository, pull request,
+commit, issue, review, discussion, paper or original technical publication. Read
+the target and verify the contributor's role and the claims in its description.
+A report or alumni article is not a substitute for that direct link. Keep broad
+study or project context out of Selected Contributions when no concrete public
+artifact can be verified; never invent a link or attach a loosely related PR to
+a bundle of claims. Project links should open the actual project.
+
+Do not copy private reports, internal register links, assessments, compensation
+or undisclosed security findings into these files.
 
 Programme history and current affiliations are separate records. Check status and
 dates against the canonical community register before marking a relationship

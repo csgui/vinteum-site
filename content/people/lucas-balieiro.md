@@ -42,13 +42,15 @@ links:
     icon: github
 projects:
   - name: Stratum V2
-    href: 'https://github.com/stratum-mining/stratum'
+    href: https://github.com/stratum-mining/stratum
     description:
       EN: Stratum V2 protocol libraries
       BR: Bibliotecas do protocolo Stratum V2.
     contribution:
-      EN: "Contributed 2 merged pull requests on message validation and structured fuzzing. Also expanded fuzz-testing coverage, reviewed code, tested changes and wrote technical reports to investigate unexpected behavior and prevent regressions alongside feature development."
-      BR: "Contribuiu com 2 pull requests integrados sobre validação de mensagens e fuzzing estruturado. Também ampliou a cobertura de fuzzing, revisou código, testou mudanças e escreveu relatos técnicos para investigar comportamentos inesperados e prevenir regressões em paralelo ao desenvolvimento de funcionalidades."
+      EN: Contributed merged changes validating F32 serialization and adding structured fuzz generators
+        for SV2 datatypes and messages.
+      BR: Contribuiu com mudanças integradas para validar a serialização de F32 e acrescentar geradores
+        estruturados de fuzzing para tipos e mensagens SV2.
 contributions:
   - id: github-stratum-mining-stratum-2436
     title:
@@ -68,14 +70,28 @@ contributions:
     href: 'https://github.com/stratum-mining/stratum/pull/2350'
   - id: sv2-solo-mining-interoperability
     title:
-      EN: "Solo-mining tools and Stratum V2 interoperability tests"
-      BR: "Ferramentas de mineração solo e testes de interoperabilidade Stratum V2"
-    source: "Vinteum · August 2026 alumni outlook"
-    type: Tooling
-    href: "https://www.vinteum.org/blog/bitcoin-dev-launchpad-first-cohort-alumni-outlook"
+      EN: Automatic container startup in sv2-ui
+      BR: Inicialização automática de contêineres no sv2-ui
+    source: 'stratum-mining/sv2-ui · #184'
+    type: PR
+    href: https://github.com/stratum-mining/sv2-ui/pull/184
     description:
-      EN: "Worked on solo-mining tools such as sv2-ui and interoperability and compliance infrastructure through interoperability-tests-sv2."
-      BR: "Trabalhou em ferramentas de mineração solo como sv2-ui e em infraestrutura de interoperabilidade e conformidade pelo interoperability-tests-sv2."
+      EN: Merged automatic restart of mining containers from saved application state, with startup status
+        in the dashboard.
+      BR: Integrou a reinicialização automática dos contêineres de mineração a partir do estado salvo, com
+        o status de inicialização no dashboard.
+  - id: sv2-interoperability-extranonce-tests
+    title:
+      EN: Stratum V2 extranonce compliance tests
+      BR: Testes de conformidade de extranonce no Stratum V2
+    source: 'stratum-mining/interoperability-tests-sv2 · #27'
+    type: PR
+    href: https://github.com/stratum-mining/interoperability-tests-sv2/pull/27
+    description:
+      EN: Open pull request extending the M-OEMCS-3 compliance scenario to request minimum extranonce sizes
+        of 4, 10 and 32 bytes and report undersized server responses.
+      BR: Pull request aberto que amplia o cenário de conformidade M-OEMCS-3 para solicitar extranonces
+        mínimos de 4, 10 e 32 bytes e relatar respostas menores do servidor.
 updatedAt: '2026-11-17'
 affiliations:
   - organization: OpenSats

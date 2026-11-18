@@ -57,6 +57,27 @@ projects:
       EN: Contributed 2 merged pull requests covering RPC integration and session persistence.
       BR: Contribuiu com 2 pull requests integrados, envolvendo integração RPC e persistência de
         sessões.
+  - name: lumen-fingerprints
+    href: https://github.com/fungi-protocol/lumen-fingerprints
+    description:
+      EN: Transaction-construction fingerprint survey and reporting tools.
+      BR: Ferramentas para levantamento e análise de características da construção de transações.
+    contribution:
+      EN: Builds a Floresta-backed scanner and reports for script types, ordering, nSequence, sighash,
+        fee rounding, amounts and change.
+      BR: Desenvolve um scanner baseado no Floresta e relatórios sobre tipos de script, ordenação, nSequence,
+        sighash, arredondamento de taxas, valores e troco.
+  - name: decluster
+    href: https://github.com/bc1cindy/decluster
+    description:
+      EN: Experimental laboratory for Bitcoin transaction de-anonymization failure modes.
+      BR: Laboratório experimental de modos de falha da desanonimização de transações Bitcoin.
+    contribution:
+      EN: Studies construction fingerprints, amount models and graph structure as separate evidence channels,
+        including abstention and cannot-link outcomes; results are model-relative, not proof of ownership.
+      BR: Estuda características de construção, modelos de valores e estrutura do grafo como canais de
+        evidência separados, incluindo abstenção e resultados cannot-link; os resultados dependem do modelo
+        e não provam propriedade.
 contributions:
   - id: github-payjoin-rust-payjoin-962
     title:
@@ -76,53 +97,96 @@ contributions:
     href: 'https://github.com/payjoin/rust-payjoin/pull/945'
   - id: bc1cindy-wallet-fingerprints
     title:
-      EN: Wallet transaction fingerprints
-      BR: Características identificáveis de transações de carteiras
-    source: Vinteum · 2026 annual report
-    type: Research
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Shuffle change outputs on hardware-wallet and BCH sends
+      BR: Embaralhar o troco em envios com hardware wallet e BCH
+    date: '2026-07-26'
+    source: 'cake-tech/cake_wallet · #3432'
+    type: PR
+    href: https://github.com/cake-tech/cake_wallet/pull/3432
     description:
-      EN: Investigated implementation choices that make wallet transactions distinguishable. Issues
-        and patches across Cake Wallet, Bull Bitcoin, Liana, bitcoin_base and rust-payjoin addressed
-        transaction ordering, change behavior, locktimes and coin selection.
-      BR: Investigou escolhas de implementação que tornam transações de carteiras distinguíveis.
-        Issues e patches em Cake Wallet, Bull Bitcoin, Liana, bitcoin_base e rust-payjoin abordaram
-        ordenação de transações, comportamento do troco, locktimes e seleção de moedas.
-  - id: bc1cindy-lumen-fingerprints
+      EN: Merged output-order randomization for hardware-wallet BTC/LTC and Bitcoin Cash sends, removing
+        deterministic placement of change.
+      BR: Integrou a aleatorização da ordem dos outputs em envios BTC/LTC com hardware wallet e Bitcoin
+        Cash, removendo a posição determinística do troco.
+  - id: github-cake-wallet-3385
     title:
-      EN: Chain-wide transaction construction with lumen-fingerprints
-      BR: Construção de transações na blockchain com lumen-fingerprints
-    source: Vinteum · 2026 annual report
-    type: Tooling
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Anti-fee-sniping locktime for Cake Wallet
+      BR: Locktime contra fee sniping no Cake Wallet
+    date: '2026-08-19'
+    source: 'cake-tech/cake_wallet · #3385'
+    type: PR
+    href: https://github.com/cake-tech/cake_wallet/pull/3385
     description:
-      EN: Worked on lumen-fingerprints, using Floresta to study transaction construction across
-        the chain.
-      BR: Trabalhou em lumen-fingerprints, usando Floresta para estudar a construção de transações
-        ao longo da blockchain.
-  - id: bc1cindy-decluster
+      EN: Merged current-tip locktimes for normal Bitcoin sends and Payjoin PSBT construction, with zero
+        used when unsynchronized.
+      BR: Integrou locktimes na altura atual para envios Bitcoin e construção de PSBTs Payjoin, usando
+        zero quando não sincronizado.
+  - id: github-cake-wallet-3408
     title:
-      EN: Experimental payment-graph analysis with decluster
-      BR: Análise experimental do grafo de pagamentos com decluster
-    source: Vinteum · 2026 annual report
-    type: Research
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+      EN: Randomized coin selection and changeless payments
+      BR: Seleção de moedas aleatória e pagamentos sem troco
+    date: '2026-08-19'
+    source: 'cake-tech/cake_wallet · #3408'
+    type: PR
+    href: https://github.com/cake-tech/cake_wallet/pull/3408
     description:
-      EN: Worked on decluster, an experimental framework combining wallet fingerprints, transaction
-        amounts, payment-graph structure and dense-subset-sum analysis.
-      BR: Trabalhou em decluster, um framework experimental que combina características de carteiras,
-        valores de transações, estrutura do grafo de pagamentos e análise de dense-subset-sum.
+      EN: Merged branch-and-bound selection for changeless transactions and a securely shuffled single-random-draw
+        fallback, including shuffled RBF top-ups and Payjoin candidates.
+      BR: Integrou seleção branch-and-bound para transações sem troco e alternativa single-random-draw
+        com embaralhamento seguro, incluindo entradas adicionais de RBF e candidatas a Payjoin.
+  - id: github-liana-2192
+    title:
+      EN: Canonical spend and recovery inputs in Liana
+      BR: Entradas canônicas de gasto e recuperação no Liana
+    date: '2026-07-09'
+    source: 'wizardsardine/liana · #2192'
+    type: PR
+    href: https://github.com/wizardsardine/liana/pull/2192
+    description:
+      EN: Proposed sorting coin candidates by outpoint and sharing PSBT-input construction between spend
+        and recovery paths to reduce divergent fingerprints. Open pull request.
+      BR: Propôs ordenar moedas por outpoint e compartilhar a construção de entradas PSBT entre gasto
+        e recuperação para reduzir características divergentes. Pull request aberto.
+  - id: github-bitcoin-base-21
+    title:
+      EN: Canonical RBF sequence on every input
+      BR: Sequence canônico de RBF em todas as entradas
+    date: '2026-07-11'
+    source: 'mrtnetwork/bitcoin_base · #21'
+    type: PR
+    href: https://github.com/mrtnetwork/bitcoin_base/pull/21
+    description:
+      EN: Merged use of 0xFFFFFFFD on every input in both transaction builders, replacing an unusual value
+        that also enabled a relative timelock.
+      BR: Integrou o uso de 0xFFFFFFFD em todas as entradas dos dois construtores de transações, substituindo
+        um valor incomum que também ativava um timelock relativo.
+  - id: github-bullbitcoin-mobile-2431
+    title:
+      EN: Exclude unconfirmed Payjoin receiver candidates
+      BR: Excluir candidatas não confirmadas do recebedor Payjoin
+    date: '2026-07-09'
+    source: 'SatoshiPortal/bullbitcoin-mobile · #2431'
+    type: PR
+    href: https://github.com/SatoshiPortal/bullbitcoin-mobile/pull/2431
+    description:
+      EN: Proposed requiring confirmations for Payjoin receiver inputs, avoiding an observable zero-confirmation
+        fingerprint and replacement risk. Open pull request.
+      BR: Propôs exigir confirmações para entradas do recebedor Payjoin, evitando uma característica observável
+        de zero confirmações e o risco de substituição. Pull request aberto.
   - id: bc1cindy-fungi-psbt-review
     title:
-      EN: Concurrent PSBT development in Fungi
-      BR: Desenvolvimento de PSBTs concorrentes no Fungi
-    source: Vinteum · 2026 annual report
+      EN: Review of concurrent-PSBT join traits
+      BR: Revisão dos traits de junção de PSBTs concorrentes
+    date: '2026-11-10'
+    source: 'fungi-protocol/concurrent-psbt · #16'
     type: Code Review
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
+    href: https://github.com/fungi-protocol/concurrent-psbt/pull/16#discussion_r3652556816
     description:
-      EN: Reviewed concurrent PSBT development in Fungi as part of transaction-privacy research.
-      BR: Revisou o desenvolvimento de PSBTs concorrentes no Fungi como parte da pesquisa em privacidade
-        de transações.
+      EN: Flagged a unit-value comparison whose assertion could not fail and explained why warn-only Clippy
+        CI missed it. Later approved the join-trait change, which was merged.
+      BR: Apontou uma comparação de valores unit cujo assert não podia falhar e explicou por que o Clippy
+        em modo de aviso não a detectava no CI. Depois aprovou a mudança nos traits de junção, que foi
+        integrada.
 updatedAt: '2026-11-17'
 ---
 ## EN

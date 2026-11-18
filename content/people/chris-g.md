@@ -45,20 +45,16 @@ links:
     icon: blog
 projects:
   - name: Floresta
-    href: 'https://github.com/getfloresta/Floresta'
+    href: https://github.com/getfloresta/Floresta
     description:
-      EN: 'A lightweight and embeddable Bitcoin client, built for sovereignty.'
+      EN: A lightweight and embeddable Bitcoin client, built for sovereignty.
       BR: Cliente Bitcoin compacto e integrável em outras aplicações.
     contribution:
-      EN: Contributed one merged pull request. Maintainer work includes component modularization,
-        clearer subsystem boundaries, development roadmaps and contributor coordination, alongside
-        architectural proposals, mentoring and guidance on implementation decisions. The architecture
-        targets both an embeddable Bitcoin backend and a standalone node.
-      BR: Contribuiu com um pull request integrado. A manutenção inclui modularização de componentes,
-        limites mais claros entre subsistemas, planejamento do desenvolvimento e coordenação de
-        contribuidores, além de propostas de arquitetura, mentoria e orientação de decisões de implementação.
-        A arquitetura visa tanto um backend Bitcoin integrável em outras aplicações quanto um nó
-        independente.
+      EN: Maintains Floresta and contributes consensus validation changes. Rebased and resolved conflicts
+        in the BIP68 implementation while preserving the original contributor’s commits and authorship.
+      BR: Atua na manutenção do Floresta e contribui com mudanças de validação de consenso. Rebaseou e
+        resolveu conflitos na implementação de BIP68, preservando os commits e a autoria do contribuidor
+        original.
   - name: hintsfile
     href: 'https://github.com/2140-dev/hintsfile'
     description:
@@ -88,20 +84,6 @@ contributions:
     source: '2140-dev/hintsfile · #11'
     type: PR
     href: 'https://github.com/2140-dev/hintsfile/pull/11'
-  - id: chris-g-utreexo-lisp
-    title:
-      EN: Independent Utreexo reference implementation in Lisp
-      BR: Implementação de referência independente de Utreexo em Lisp
-    source: Vinteum · 2026 annual report
-    type: Research
-    href: /assets/files/Vinteum-Year-Four-Report-2026.pdf
-    description:
-      EN: Was developing an independent Utreexo reference implementation in Lisp in 2026. Reimplementing
-        the accumulator separately allows examination of its operations and assumptions without
-        inheriting production-code abstractions.
-      BR: Em 2026, desenvolvia uma implementação de referência independente de Utreexo em Lisp.
-        Reimplementar o acumulador separadamente permite examinar suas operações e premissas sem
-        herdar as abstrações do código de produção.
 writing:
   - id: personal-blog-article-p-adics
     title:
