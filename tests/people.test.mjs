@@ -111,12 +111,11 @@ test("maintains one identity per contributor and covers the published program ro
     const count = (program, status) => people.filter(({ programs }) =>
         programs.some((entry) => entry.organization === "Vinteum" && entry.program === program && entry.status === status),
     ).length;
-    // Relationship snapshot checked against the canonical register on 2026-11-17.
-    // The public programme pages keep independent rosters and may lag this directory.
+    // Vinteum funding history is independent of current grants from other organizations.
     assert.equal(count("fellowship", "current"), 11);
     assert.equal(count("fellowship", "past"), 13);
-    assert.equal(count("grants", "current"), 7);
-    assert.equal(count("grants", "past"), 1);
+    assert.equal(count("grants", "current"), 6);
+    assert.equal(count("grants", "past"), 2);
 
     for (const slug of ["erick-cestari", "thgo-o"]) {
         const person = getPerson(slug);
@@ -326,6 +325,27 @@ test("keeps Grantee untranslated in Portuguese relationship roles", () => {
             if (entry.role.EN === "Grantee") assert.equal(entry.role.BR, "Grantee", person.slug);
         }
     }
+});
+
+test("uses Bitcoin Network Operations Collective as the monitoring initiative for all four contributors", () => {
+    for (const slug of ["edil-medeiros", "m4ycon", "octavio-lucca", "raphael-dutenkefer"]) {
+        const projects = getPerson(slug).projects.filter(({ name }) => name === "Bitcoin Network Operations Collective");
+        assert.equal(projects.length, 1, slug);
+        assert.equal(projects[0].href, "https://bnoc.xyz/");
+        assert.doesNotMatch(projects[0].description.EN + projects[0].description.BR, /forum|fórum/i);
+        assert.ok(projects[0].contribution.EN && projects[0].contribution.BR, slug);
+    }
+});
+
+test("ends Plebhash's Vinteum grant with Leonardo's without ending the separate Btrust grant", () => {
+    const person = getPerson("plebhash");
+    const grant = person.programs.find(({ program, organization }) => program === "grants" && organization === "Vinteum");
+    const leonardo = getPerson("leonardo-lima").programs.find(({ program, organization }) => program === "grants" && organization === "Vinteum");
+    assert.equal(grant.status, "past");
+    assert.equal(grant.end, leonardo.end);
+    assert.equal(grant.end, "2026-08");
+    assert.equal(getDirectoryRole(person), "alumni");
+    assert.ok(person.affiliations.some(({ organization, status }) => organization === "Btrust" && status === "current"));
 });
 
 test("keeps bios short and link-free while details live in profile sections", () => {

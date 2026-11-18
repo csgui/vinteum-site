@@ -84,11 +84,11 @@ projects:
     contribution:
       EN: "Reviews Bitcoin protocol proposals, focusing on synchronization, relay design and specification clarity."
       BR: "Revisa propostas para o protocolo Bitcoin, com foco em sincronização, desenho de mecanismos de propagação e clareza das especificações."
-  - name: Bitcoin Network Observatory Collective
+  - name: Bitcoin Network Operations Collective
     href: https://bnoc.xyz/
     description:
-      EN: "Public technical discussion of Bitcoin network observation and reproducible research."
-      BR: "Discussão técnica pública sobre observação da rede Bitcoin e pesquisa reproduzível."
+      EN: "A decentralized initiative to monitor Bitcoin's peer-to-peer network, investigate attacks and anomalies, and feed measurements back into development. Connects contributors, monitoring infrastructure, datasets and analysis tools."
+      BR: "Iniciativa descentralizada para monitorar a rede peer-to-peer do Bitcoin, investigar ataques e anomalias e levar evidências para o desenvolvimento do protocolo. Conecta colaboradores, infraestrutura de observação, conjuntos de dados e ferramentas de análise."
     contribution:
       EN: "Participates in research discussions, proposing comparisons of compact-block relay heuristics and examining network-traffic privacy methodology and experimental witness-storage ideas."
       BR: "Participa de discussões de pesquisa, propondo comparações de heurísticas de propagação de blocos compactos e examinando metodologias de privacidade no tráfego de rede e ideias experimentais de armazenamento de testemunhas."

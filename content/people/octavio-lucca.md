@@ -13,8 +13,8 @@ programs:
     start: '2026-04'
     cohort: 2
     work:
-      EN: Peer Observer / BNOC
-      BR: Peer Observer / BNOC
+      EN: Peer Observer / Bitcoin Network Operations Collective
+      BR: Peer Observer / Bitcoin Network Operations Collective
     href: /programs/fellowship
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
@@ -44,6 +44,14 @@ links:
     href: 'https://x.com/octavio_lucca'
     icon: twitter
 projects:
+  - name: Bitcoin Network Operations Collective
+    href: https://bnoc.xyz/
+    description:
+      EN: "A decentralized initiative to monitor Bitcoin's peer-to-peer network, investigate attacks and anomalies, and feed measurements back into development. Connects contributors, monitoring infrastructure, datasets and analysis tools."
+      BR: "Iniciativa descentralizada para monitorar a rede peer-to-peer do Bitcoin, investigar ataques e anomalias e levar evidências para o desenvolvimento do protocolo. Conecta colaboradores, infraestrutura de observação, conjuntos de dados e ferramentas de análise."
+    contribution:
+      EN: "Develops network observability infrastructure, from node data collection and archiving to reusable replay tooling and DNS-seed monitoring. Adapts monitoring tools to Floresta to extend observations across node implementations."
+      BR: "Desenvolve infraestrutura de observabilidade de rede, da coleta e do arquivamento de dados de nós a ferramentas reutilizáveis de replay e monitoramento de seeds DNS. Adapta ferramentas ao Floresta para ampliar as observações entre implementações de nós."
   - name: peer-observer
     href: https://github.com/peer-observer/peer-observer
     description:

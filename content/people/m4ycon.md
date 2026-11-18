@@ -12,8 +12,8 @@ programs:
     start: '2026-04'
     cohort: 2
     work:
-      EN: Peer Observer / BNOC
-      BR: Peer Observer / BNOC
+      EN: Peer Observer / Bitcoin Network Operations Collective
+      BR: Peer Observer / Bitcoin Network Operations Collective
     href: /programs/fellowship
   - program: bitcoin-dev-launchpad
     name: Bitcoin Dev Launchpad
@@ -45,11 +45,11 @@ projects:
     contribution:
       EN: Develops log-based network observability and dashboards for studying compact-block relay, measuring reconstruction behavior and investigating anomalies with instrumented Bitcoin nodes.
       BR: Desenvolve observabilidade de rede baseada em logs e dashboards para estudar a retransmissão de blocos compactos, medir a reconstrução e investigar anomalias com nós Bitcoin instrumentados.
-  - name: BNOC
+  - name: Bitcoin Network Operations Collective
     href: https://bnoc.xyz/
     description:
-      EN: Bitcoin Network Operations Collective, a forum for Bitcoin network observations and research.
-      BR: Bitcoin Network Operations Collective, fórum de observações e pesquisa sobre a rede Bitcoin.
+      EN: "A decentralized initiative to monitor Bitcoin's peer-to-peer network, investigate attacks and anomalies, and feed measurements back into development. Connects contributors, monitoring infrastructure, datasets and analysis tools."
+      BR: "Iniciativa descentralizada para monitorar a rede peer-to-peer do Bitcoin, investigar ataques e anomalias e levar evidências para o desenvolvimento do protocolo. Conecta colaboradores, infraestrutura de observação, conjuntos de dados e ferramentas de análise."
     contribution:
       EN: Publishes ongoing P2P measurement research and reproducible investigations, combining retained node logs, compact-block reconstruction analysis and controlled network experiments with public technical discussion.
       BR: Publica pesquisa contínua de medições P2P e investigações reproduzíveis, combinando logs preservados de nós, análise de reconstrução de blocos compactos e experimentos controlados de rede com discussão técnica pública.
@@ -102,7 +102,7 @@ contributions:
     title:
       EN: Reproducing compact-block reconstruction degradation in Warnet
       BR: Reprodução da degradação de reconstrução de blocos compactos no Warnet
-    source: BNOC
+    source: Bitcoin Network Operations Collective
     type: Research
     date: '2026-11-04'
     href: https://bnoc.xyz/t/compact-block-reconstruction-degradation-between-september-october-2026/198/9
@@ -118,7 +118,7 @@ discussions:
       BR: >-
         Compact block reconstruction degradation between September - October
         2026
-    source: BNOC
+    source: Bitcoin Network Operations Collective
     date: '2026-10-22'
     href: >-
       https://bnoc.xyz/t/compact-block-reconstruction-degradation-between-september-october-2026/198

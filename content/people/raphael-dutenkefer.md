@@ -22,10 +22,18 @@ programs:
       BR: Fellow
     status: current
     work:
-      EN: BNOC
-      BR: BNOC
+      EN: Bitcoin Network Operations Collective
+      BR: Bitcoin Network Operations Collective
     start: '2026-10'
 projects:
+  - name: Bitcoin Network Operations Collective
+    href: https://bnoc.xyz/
+    description:
+      EN: "A decentralized initiative to monitor Bitcoin's peer-to-peer network, investigate attacks and anomalies, and feed measurements back into development. Connects contributors, monitoring infrastructure, datasets and analysis tools."
+      BR: "Iniciativa descentralizada para monitorar a rede peer-to-peer do Bitcoin, investigar ataques e anomalias e levar evidências para o desenvolvimento do protocolo. Conecta colaboradores, infraestrutura de observação, conjuntos de dados e ferramentas de análise."
+    contribution:
+      EN: "Develops network measurement and analysis tools, combining Bitcoin peer discovery with observations of public Electrum servers to study header propagation, network structure and potential shared infrastructure."
+      BR: "Desenvolve ferramentas de medição e análise de rede, combinando descoberta de peers Bitcoin com observações de servidores Electrum públicos para estudar propagação de cabeçalhos, estrutura da rede e possíveis infraestruturas compartilhadas."
   - name: Bitcoin Topology Discovery
     href: 'https://github.com/dutenrapha/bitcoin-topology-discovery'
     description:
@@ -57,7 +65,7 @@ discussions:
       EN: 'Electrum Server Monitoring: Header Propagation and Shared Infrastructure'
       BR: 'Electrum Server Monitoring: Header Propagation and Shared Infrastructure'
     date: '2026-08-25'
-    source: BNOC
+    source: Bitcoin Network Operations Collective
     href: >-
       https://bnoc.xyz/t/electrum-server-monitoring-header-propagation-and-shared-infrastructure/167
     description:

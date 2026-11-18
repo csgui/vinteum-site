@@ -8,7 +8,8 @@ programs:
     role:
       EN: Grantee
       BR: Grantee
-    status: current
+    status: past
+    end: '2026-08'
     work:
       EN: Stratum V2
       BR: Stratum V2
